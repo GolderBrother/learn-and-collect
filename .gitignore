@@ -1,0 +1,11 @@
+./**/*.DS_Store
+node_modules/
+**/node_modules/
+**/.vscode/
+dist/
+npm-debug.log
+.idea/
+**/.svn/
+**/**/.svn/
+**/.project
+/技术书籍
