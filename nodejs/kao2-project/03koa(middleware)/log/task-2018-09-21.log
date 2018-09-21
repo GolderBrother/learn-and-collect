@@ -1,0 +1,122 @@
+[2018-09-21T11:26:03.127] [ERROR] cheese - ReferenceError: asd is not defined
+    at app.use (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\06index.js:26:5)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@4.1.0@koa-compose\index.js:34:12
+    at Application.handleRequest (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa@2.5.3@koa\lib\application.js:151:12)
+    at Server.handleRequest (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa@2.5.3@koa\lib\application.js:133:19)
+    at emitTwo (events.js:126:13)
+    at Server.emit (events.js:214:7)
+    at parserOnIncoming (_http_server.js:619:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:112:17)
+[2018-09-21T11:26:36.542] [ERROR] cheese - TypeError: Assignment to constant variable.
+    at app.use (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\06index.js:27:7)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@4.1.0@koa-compose\index.js:34:12
+    at Application.handleRequest (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa@2.5.3@koa\lib\application.js:151:12)
+    at Server.handleRequest (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa@2.5.3@koa\lib\application.js:133:19)
+    at emitTwo (events.js:126:13)
+    at Server.emit (events.js:214:7)
+    at parserOnIncoming (_http_server.js:619:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:112:17)
+[2018-09-21T11:31:42.511] [ERROR] cheese - TypeError: Assignment to constant variable.
+    at router.get (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\06index.js:35:7)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at router.use (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\06index.js:30:11)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+[2018-09-21T11:31:42.515] [ERROR] cheese - { Error: ENOENT: no such file or directory, open 'E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\not exist'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\wamp\\www\\web\\front-end-project\\Learn-and-Share\\nodejs\\kao2-project\\03koa(middleware)\\not exist',
+  headerSent: true }
+[2018-09-21T11:53:20.666] [ERROR] cheese - TypeError: Assignment to constant variable.
+    at router.get (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\06index.js:41:7)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at errorToLogger (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\middleware\logger.js:24:11)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+[2018-09-21T11:53:20.673] [ERROR] cheese - { Error: ENOENT: no such file or directory, open 'E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\not exist'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\wamp\\www\\web\\front-end-project\\Learn-and-Share\\nodejs\\kao2-project\\03koa(middleware)\\not exist',
+  headerSent: true }
+[2018-09-21T11:53:26.579] [ERROR] cheese - TypeError: Assignment to constant variable.
+    at router.get (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\06index.js:41:7)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at errorToLogger (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\middleware\logger.js:24:11)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+[2018-09-21T11:53:26.580] [ERROR] cheese - { Error: ENOENT: no such file or directory, open 'E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\not exist'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\wamp\\www\\web\\front-end-project\\Learn-and-Share\\nodejs\\kao2-project\\03koa(middleware)\\not exist',
+  headerSent: true }
+[2018-09-21T11:56:11.150] [ERROR] cheese - TypeError: Assignment to constant variable.
+    at router.get (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\06index.js:42:7)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at errorToLogger (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\middleware\logger.js:24:11)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+[2018-09-21T11:56:11.163] [ERROR] cheese - { Error: ENOENT: no such file or directory, open 'E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\not exist'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\wamp\\www\\web\\front-end-project\\Learn-and-Share\\nodejs\\kao2-project\\03koa(middleware)\\not exist',
+  headerSent: true }
+[2018-09-21T11:56:30.458] [ERROR] cheese - ReferenceError: sad is not defined
+    at router.get (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\06index.js:42:5)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at errorToLogger (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\middleware\logger.js:24:11)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+[2018-09-21T11:56:30.466] [ERROR] cheese - { Error: ENOENT: no such file or directory, open 'E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\not exist'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\wamp\\www\\web\\front-end-project\\Learn-and-Share\\nodejs\\kao2-project\\03koa(middleware)\\not exist',
+  headerSent: true }
+[2018-09-21T11:59:12.387] [ERROR] cheese - ReferenceError: sad is not defined
+    at router.get (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\06index.js:18:5)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at errorToLogger (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\middleware\logger.js:24:11)
+    at dispatch (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+[2018-09-21T11:59:12.398] [ERROR] cheese - { Error: ENOENT: no such file or directory, open 'E:\wamp\www\web\front-end-project\Learn-and-Share\nodejs\kao2-project\03koa(middleware)\not exist'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\wamp\\www\\web\\front-end-project\\Learn-and-Share\\nodejs\\kao2-project\\03koa(middleware)\\not exist',
+  headerSent: true }

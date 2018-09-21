@@ -13,7 +13,7 @@ function getSomething(){
 }
 
 async function testAsycn(){
-	return {'name':'dingsheng'}
+	return {'name':'james'}
 }
 
 async function test(){
@@ -22,3 +22,5 @@ async function test(){
 	console.log(v1,v2);
 }
 test();
+
+// sonmething {name: "james"}

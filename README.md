@@ -177,7 +177,9 @@
 | pm2 | http://www.cnblogs.com/chyingp/p/pm2-documentation.html   | node生产环境部署工具 |
 | ThinkPHP5 | [https://www.kancloud.cn/manual/thinkphp5/118003](https://www.kancloud.cn/manual/thinkphp5/118003) | php TP 框架|
 | Mamp | [https://www.mamp.info/en/](https://www.mamp.info/en/) |  mac PHP集成环境 |
-| Koa2中文学习资料 | https://chenshenhai.github.io/koa2-note/note/static/middleware.html | 学习资料
+| Koa2中文学习资料 | [https://chenshenhai.github.io/koa2-note/note/static/middleware.html](https://chenshenhai.github.io/koa2-note/note/static/middleware.html) | 学习资料
+| koa2入门笔记 | [https://www.jianshu.com/p/d3afa36aa17a]([https://www.jianshu.com/p/d3afa36aa17a]) | koa2入门笔记
+
 | PHP中文网 | http://www.phpstudy.net/ | 前后端相关教程 |
 
 ### 数据库相关技术

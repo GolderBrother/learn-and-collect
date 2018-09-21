@@ -1,0 +1,32 @@
+一、认识middleware中间件
+在HelloWorld的demo中，代码如下
+
+const Koa = require('koa');
+const app = new Koa();
+
+app.use(async (ctx,next) => {
+  await next()
+  ctx.body = 'Hello World';
+});
+
+app.listen(3000);
+它的作用是：每收到一个 http 请求，Koa 都会调用通过 app.use() 注册的 async 函数，同时为该函数传入 ctx 和 next 两个参数，最后给页面返回一个`Hello World'.
+
+
+上述代码中，由 async 标记的函数称为『异步函数』，在异步函数中，可以用 await 调用另一个异步函数，async 和 await 这两个关键字将在 ES7 中引入。
+参数 ctx 是由 koa 传入的，我们可以通过它来访问 request 和 response，next 是 koa 传入的将要处理的下一个异步函数。
+这里的 async 函数就是我们所说的中间件，正是因为中间件的扩展性才使得 Koa 的代码简单灵活。
+
+
+
+下面我们简单介绍一下传入中间件的两个参数。
+
+ctx : ctx 作为上下文使用，包含了基本的 ctx.request 和 ctx.response。另外，还对 Koa 内部一些常用的属性或者方法做了代理操作，使得我们可以直接通过 ctx 获取。
+比如，ctx.request.url 可以写成 ctx.url。 -- 除此之外，Koa 还约定了一个中间件的存储空间 ctx.state。通过 state 可以存储一些数据，比如用户数据，版本信息等。如果你使用 webpack 打包的话，
+可以使用中间件，将加载资源的方法作为 ctx.state 的属性传入到 view 层，方便获取资源路径。
+
+next : next 参数的作用是将处理的控制权转交给下一个中间件，而 next() 后面的代码，将会在下一个中间件及后面的中间件（如果有的话）执行结束后再执行。
+
+所以： 中间件的顺序很重要！
+
+https://www.jianshu.com/p/d3afa36aa17a

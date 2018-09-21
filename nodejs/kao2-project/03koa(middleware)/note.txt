@@ -1,0 +1,96 @@
+常用中间件
+1. koa-json中间件 返回json格式的数据
+如果需要响应返回json数据，我们只需要设置响应数据类型为json格式，并把json数据挂载在响应体body上即可实现返回json数据。
+
+ctx.set("Content-Type", "application/json")
+ctx.body = JSON.stringify(jsonData)
+但是这样每次返回响应都需要写重复的代码，我们再次引入一个koa-json中间件，它会自动将我们返回的数据转换为json格式。
+
+
+2.log4js 是 Node.js 中一个成熟的记录日志的第三方模块。
+
+(1) 日志分类 :日志可以大体上分为访问日志和应用日志。访问日志一般记录客户端对项目的访问，主要是 http 请求。这些数据属于运营数据，也可以反过来帮助改进和提升网站的性能和用户体验；
+应用日志是项目中需要特殊标记和记录的位置打印的日志，包括出现异常的情况，方便开发人员查询项目的运行状态和定位 bug 。应用日志包含了debug、info、warn 和 error等级别的日志。
+
+日志等级：log4js 中的日志输出可分为如下7个等级：
+
+ALL、TRACE、DEBUG、INFO、WARN、ERROR、FATAL、MARK、OFF
+
+ALL：输出所有的日志 
+
+OFF：所有日志都不输出
+
+其它：输出级别相等或者高级别的日志。
+
+在应用中按照级别记录了日志之后，可以按照指定级别输出高于指定级别的日志。
+
+(2) 日志切割：当我们的项目在线上环境稳定运行后，访问量会越来越大，日志文件也会越来越大。日益增大的文件对查看和跟踪问题带来了诸多不便，同时增大了服务器的压力。
+虽然可以按照类型将日志分为两个文件，但并不会有太大的改善。所以我们按照日期将日志文件进行分割。比如：今天将日志输出到 task-2017-12-24.log 文件，明天会输出到 task-2017-12-25.log 文件。
+减小单个文件的大小不仅方便开发人员按照日期排查问题，还方便对日志文件进行迁移。因此，我们修改日志类型为日期文件，按照日期切割日志输出，以减小单个日志文件的大小。
+
+3. 错误处理
+错误处理是应用健壮性非常重要的一部分。koa 里面提供了 error 事件，当发生错误时，可以通过监听该事件，对错误进行统一的处理。
+
+代码目录结构
+在真正的应用开发中，我们不可能将所有代码都写在app.js中，一般会将代码进行分层。
+
+1. 分离路由
+我们将所有的router抽离出来，在app.js同级目录创建一个router目录，并在index.js文件中暴露接口，这样可以进一步将对应的路由处理逻辑放在不同的文件里。然后只需要在app.js中引入路由主文件，将app传入即可
+
+// app.js 
+const router=require('./router/index')
+...
+router(app)
+// router/index.js
+const router = require('koa-router')()
+module.export=(app)=>{
+  router.get('/',async (ctx,next)=>{
+    ...
+    await next();
+    ...
+  })
+  ...
+  app.use(router.routes(),router.allowedMethods())
+
+}
+2. 分离controller层，新增一个controller文件夹，将router对应路由的业务处理逻辑提取出来，如下
+// controller/home.js
+module.export={
+  index:async (ctx,next)=>{
+    ...
+  },
+  home:async (ctx,next)=>{
+    ctx.body='<h1>Home Page</h1>'
+  }
+}
+// router/index.js
+const router = require('koa-router')()
+const HomeController = require('../controller/home')
+module.export=(app)=>{
+  router.get('/',HomeController.home)
+  ...
+  app.use(router.routes(),router.allowedMethods())
+
+}
+目前的代码结构目录已经比较清晰了，适用于以 node 作为中间层的项目。如果想要把 node 作为真正的后端去操作数据库等，建议再分出一层 service，用于处理数据层面的交互，比如调用 model 处理数据库，调用第三方接口等，而controller 里面只做一些简单的参数处理。
+
+3. 分离中间件
+此外，随着项目的增大，中间件的数量也越来越多，建议可以把所有的中间件抽出来放在一个middleware文件夹下，不管是第三方中间件，还是自定义的中间件，统一放在此处处理。
+
+4. view
+提供视图，根据选择的模板引擎定义视图，可以通过render渲染后作为响应主体返回给前端，也可以定义一些错误页面如404等。
+
+5. public静态文件目录以及log日志文件目录。
+最终的应用结构如下：
+../img/project_structure.webp
+
+运行部署
+运行：采用 nodemon 来代替 node 以启动应用。当代码发生变化时候，nodemon 会帮我们自动重启。
+cnpm i nodemon -g
+...
+nodemon app.js
+部署：使用 pm2，pm2 是一个带有负载均衡功能的Node应用的进程管理器。
+cnpm i pm2 -g
+...
+pm2 start app.js
+

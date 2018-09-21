@@ -8,4 +8,4 @@ async function  test(){
 	const v=await takeLongTime();
 	console.log(v);
 }
-test();
+test();  //long-time-valueS
