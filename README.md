@@ -41,6 +41,7 @@
 * [开发基本原则](前端规范/doc/md/基本原则.md)
 * [拉卡拉前端](前端规范/doc/md/拉卡拉前端.md)
 * [开发环境配置入门教程](前端规范/doc/md/配置入门教程.md)
+* [分享个人习惯的命名方式](https://juejin.im/post/5b6ad6b0e51d4519171766e2?utm_source=gold_browser_extension)
 
 
 ### 一些值得学习的博客
@@ -65,6 +66,8 @@
 * [querystring博客教程](http://yijiebuyi.com/blog/d37512fc6df0fc4d0adfc2ec5c3d46ff.html)
 * [Loading gif 在线生成网站](https://loading.io/)
 
+### css相关动画库
+* [CSS3 动画库，也是目前最通用的动画库。](https://daneden.github.io/animate.css/)
 
 ### vue相关知识
 * [VueJS 开发常见问题集锦](https://segmentfault.com/a/1190000010230843)
@@ -159,6 +162,9 @@
 | MintUI | [http://mint-ui.github.io/#!/en]([http://mint-ui.github.io/#!/en]) | 饿了么移动端vueUI框架 |
 | Vant | [https://youzan.github.io/vant/]([https://youzan.github.io/vant/]) | 有赞前端团队基于有赞统一的规范实现的 Vue 组件
 | vue-ydui | http://vue.ydui.org/ | vue 微信UI框架 |
+| Muse-UI | https://muse-ui.org/#/zh-CN | 基于 Vue 2.0 优雅的 Material Design UI 组件库
+| KEEN UI | http://www.worldlink.com.cn/osdir/keen-ui.html | 由Vue编写的基本UI组件的轻量级集合，并受Material Design的启发。
+
  
 ###　微信小程序UI组件库
 | 技术名称 | 网站 | 描述 |
@@ -174,18 +180,20 @@
 | Node | [http://www.bslxx.com/a/mianfeivueke/Node_js/2018/0403/1895.html](http://www.bslxx.com/a/mianfeivueke/Node_js/2018/0403/1895.html) | 大厂全栈大神狼叔说，如何正确的学习Node.js |
 | Experess | [http://www.expressjs.com.cn/](http://www.expressjs.com.cn/) | nodejs 框架|
 | Express中文文档 | https://www.zybuluo.com/bajian/note/444152#reqapp | nodejs框架 |
+| pm2 | https://www.cnblogs.com/zhoujie/p/nodejs4.html   | nodejs高大上的部署方式-PM2 |
 | pm2 | http://www.cnblogs.com/chyingp/p/pm2-documentation.html   | node生产环境部署工具 |
 | ThinkPHP5 | [https://www.kancloud.cn/manual/thinkphp5/118003](https://www.kancloud.cn/manual/thinkphp5/118003) | php TP 框架|
 | Mamp | [https://www.mamp.info/en/](https://www.mamp.info/en/) |  mac PHP集成环境 |
 | Koa2中文学习资料 | [https://chenshenhai.github.io/koa2-note/note/static/middleware.html](https://chenshenhai.github.io/koa2-note/note/static/middleware.html) | 学习资料
 | koa2入门笔记 | [https://www.jianshu.com/p/d3afa36aa17a]([https://www.jianshu.com/p/d3afa36aa17a]) | koa2入门笔记
-
 | PHP中文网 | http://www.phpstudy.net/ | 前后端相关教程 |
+| PHWafer 服务端 SDK | https://www.npmjs.com/package/wafer-node-sdk | Wafer 服务端 SDK 是腾讯云为微信小程序开发者提供的快速开发库 |
 
 ### 数据库相关技术
 | 技术名称 | 网站 | 描述 |
-| ------ | ------ | ------|
+| ------ | ------ | ------| 
 | knex.js | [https://www.songxingguo.com/2018/06/30/knex.js-query/](https://www.songxingguo.com/2018/06/30/knex.js-query/) | knex.js中文文档-查询|
+| knex.js笔记 | [https://blog.csdn.net/liuyueyi1995/article/details/53782047](https://blog.csdn.net/liuyueyi1995/article/details/53782047) | knex.js笔记|
 | Navicat | [https://www.navicat.com.cn/](https://www.navicat.com.cn/) |  数据库客户端 |
 | mysql | [https://blog.csdn.net/luyaran/article/details/53421979](https://blog.csdn.net/luyaran/article/details/53421979) | MySQL数据类型和常用字段属性总结 |
 | mysql | [http://www.cnblogs.com/yyjie/p/7788413.html](http://www.cnblogs.com/yyjie/p/7788413.html) | 深入理解SQL的四种连接-左外连接、右外连接、内连接、全连接 |
@@ -232,6 +240,7 @@
 - [团队领袖](https://leader.js.cool/#/)
 - [node调试指南](https://github.com/nswbmw/node-in-debugging)
 - [让你英语进阶的资料](https://github.com/byoungd/English-level-up-tips-for-Chinese)
+- [前端常用插件、工具类库汇总，不要重复造轮子啦！！！](https://juejin.im/post/5ba7d5dd5188255c6140cc9d?utm_source=gold_browser_extension)
 
 ### 代码编辑器相关
 
@@ -261,8 +270,13 @@
 
 ### 面试题目简历相关
 
-- [收藏的面试指南](./booksdata/interview.md)
+- [收藏的面试指南](./booksdata/interview.md) 
+- [前端面试题整理汇总](http://web.jobbole.com/88177/)
+- [Web前端面试题目汇总](http://www.cnblogs.com/bigboyLin/p/5272902.html)
+- [2017年前端面试题整理汇总100题](https://blog.csdn.net/kebi007/article/details/54882425)
+- [Web前端岗位面试题有哪些？](https://www.zhihu.com/question/41466747?sort=created)
 - [2018前端面试总结 掘金技术征文](https://juejin.im/post/5b94d8965188255c5a0cdc02)
+- [那些年你踩过的坑，都在这里了～](https://juejin.im/post/5ba6e77e6fb9a05d0b14359b?utm_source=gold_browser_extension)
 - [CSS实现水平垂直居中的1010种方式（史上最全）](https://juejin.im/post/5b9a4477f265da0ad82bf921?utm_source=gold_browser_extension)
 
 ### chrome常用插件
