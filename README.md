@@ -284,6 +284,14 @@
 - [收藏的面试指南](./booksdata/interview.md)
 - [二万五千字面试指南](https://juejin.im/post/5ba34e54e51d450e5162789b)
 
+- [(1)【半月刊 4】前端高频面试题及答案汇总](https://juejin.im/post/5cb3376bf265da039c0543da)
+
+
+- [(2)【周刊-2】三年大厂面试官-前端面试题披露（偏难）](https://juejin.im/post/5cb0315f518825215e61ec14)
+
+- [(3)【周刊-1】三年大厂面试官-面试题精选及答案](https://juejin.im/post/5ca9de22e51d452b5372ed90)
+
+
 ### chrome常用插件
 
 - [收藏的chrome插件](./booksdata/chromeplugin.md)
