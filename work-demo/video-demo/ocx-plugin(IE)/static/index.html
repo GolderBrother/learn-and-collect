@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/flexbox.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>东莞塘厦产业园 dashboard</title>
+    <script type="text/javascript" src="./js/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="./js/jquery/jquery-1.10.2.min.js"></script>
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script> -->
+</head>
+
+<body>
+    <div class="dashboard-panel">
+        <div class="dashboard-container">
+            <header class="dashboard-head">
+                <div class="dashboard-head-bg">
+                    <div class="dashboard-head-content flex-box flex-direction_column justify-content_flex-start align-items_center">
+                        <div class="dashboard-head-title">
+                            <h2>
+                                中控智慧东莞产业园
+                            </h2>
+                        </div>
+                        <div class="dashboard-head-time-box">
+                            <div class="time-items">
+                                <span class="time-icon"></span>
+                                <span class="time-item time-bar">2019-02-18 14:05 星期五</span>
+                                <!-- <span class="time-item time-two">14:60</span>
+                                <span class="time-item time-three">星期五</span> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-head-collapse">
+                        <div class="btn-collapse">
+                            <img src="./images/icon_collapse.png" alt="collapse">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="dashboard-body flex-box flex-direction_row justify-content_flex-start align-items_start">
+                <section class="chartPanel-left">
+                    <div class="chartPanel-hardware-device-online-box">
+                        <div class="chartPanel-hardware-device-online-wrapper">
+                            <div class="chartPanel-hardware-device-online-container">
+                                <div class="chartPanel-hardware-device-head">
+                                    <!-- <div class="hardware-deivce-head-icon"></div> -->
+                                    <div class="hardware-device-head-title">
+                                        <h3 class="chart-box-title title__icon">
+                                            园区硬件设备在线率
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="chartPanel-hardware-device-body">
+                                    <div class="chartPanel-hardware-device-items flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                        <div class="chartPanel-hardware-device-item chartPanel-hardware-device-att">
+                                            <div class="hardware-device-item-outer-circle flex-box flex-direction_row justify-content_flex-center align-items_center">
+                                                <div class="hardware-device-item-inner-circle">
+                                                </div>
+                                            </div>
+                                            <div class="hardware-device-item-box">
+                                                <div id="hardware-device-item-att-box" class="hardware-device-item-chart-box"></div>
+                                                <div class="hardware-device-item-data-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                    <div class="hardware-device-item-data-num">
+                                                        <span class="hardware-device-data-num">88</span>
+                                                        <i>%</i>
+                                                    </div>
+                                                    <div class="hardware-device-item-data-title">考勤在线率</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chartPanel-hardware-device-item chartPanel-hardware-device-acc">
+                                            <div class="hardware-device-item-outer-circle flex-box flex-direction_row justify-content_flex-center align-items_center">
+                                                <div class="hardware-device-item-inner-circle">
+                                                </div>
+                                            </div>
+                                            <div class="hardware-device-item-box">
+                                                <div id="hardware-device-item-acc-box" class="hardware-device-item-chart-box"></div>
+                                                <div class="hardware-device-item-data-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                    <div class="hardware-device-item-data-num">
+                                                        <span class="hardware-device-data-num">88</span>
+                                                        <i>%</i>
+                                                    </div>
+                                                    <div class="hardware-device-item-data-title">门禁在线率</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chartPanel-hardware-device-items flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                        <div class="chartPanel-hardware-device-item chartPanel-hardware-device-video">
+                                            <div class="hardware-device-item-outer-circle flex-box flex-direction_row justify-content_flex-center align-items_center">
+                                                <div class="hardware-device-item-inner-circle">
+                                                </div>
+                                            </div>
+                                            <div class="hardware-device-item-box">
+                                                <div id="hardware-device-item-video-box" class="hardware-device-item-chart-box"></div>
+                                                <div class="hardware-device-item-data-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                    <div class="hardware-device-item-data-num">
+                                                        <span class="hardware-device-data-num">88</span>
+                                                        <i>%</i>
+                                                    </div>
+                                                    <div class="hardware-device-item-data-title">视频在线率</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chartPanel-hardware-device-item chartPanel-hardware-device-park">
+                                            <div class="hardware-device-item-outer-circle flex-box flex-direction_row justify-content_flex-center align-items_center">
+                                                <div class="hardware-device-item-inner-circle">
+                                                </div>
+                                            </div>
+                                            <div class="hardware-device-item-box">
+                                                <div id="hardware-device-item-park-box" class="hardware-device-item-chart-box"></div>
+                                                <div class="hardware-device-item-data-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                    <div class="hardware-device-item-data-num">
+                                                        <span class="hardware-device-data-num">88</span>
+                                                        <i>%</i>
+                                                    </div>
+                                                    <div class="hardware-device-item-data-title">停车在线率</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chartPanel-attendence-rate-box">
+                        <div class="chartPanel-attendence-rate-wrapper">
+                            <div class="chartPanel-attendence-rate-container">
+                                <div class="chartPanel-attendence-rate-head">
+                                    <div class="attendence-rate-head-title">
+                                        <h3 class="chart-box-title">
+                                            考勤出勤率
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="chartPanel-attendence-rate-body">
+                                    <div class="chartPanel-attendence-rate-data-container flex-box flex-direction_row justify-content_flex-start">
+                                        <div class="chartPanel-attendence-rate-data-box flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                            <div class="attendence-rate-data-img">
+                                                <img src="./images/icon_attendance.png" alt="">
+                                            </div>
+                                            <div class="attendence-rate-data-num-box attendence-rate-data-num-box-amount flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                <p class="data-title">
+                                                    今日出勤人数
+                                                </p>
+                                                <h4 class="data-num-box">
+                                                    <span class="data-num">8866</span>
+                                                    <i class="data-num-percent">人</i>
+                                                </h4>
+                                                <div class="data-compare">
+                                                    <span>较昨日</span>
+                                                    <span class="top">22%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chartPanel-attendence-rate-data-box flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                            <div class="attendence-rate-data-img">
+                                                <img src="./images/icon_attendance.png" alt="">
+                                            </div>
+                                            <div class="attendence-rate-data-num-box attendence-rate-data-num-box-rate flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                <p class="data-title">
+                                                    今日出勤率
+                                                </p>
+                                                <h4 class="data-num-box">
+                                                    <span class="data-num">80</span>
+                                                    <i class="data-num-percent">%</i>
+                                                </h4>
+                                                <div class="data-compare">
+                                                    <span>较昨日</span>
+                                                    <span class="top">22%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="chartPanel-attendence-rate-trend-box">
+                                        <div class="chartPanel-attendence-rate-trend-container">
+                                            <div class="chartPanel-attendence-rate-trend-head">
+                                                <div class="chartPanel-attendence-rate-trend__title">
+                                                    <h3 class="chart-box-title">
+                                                        出勤率趋势图
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="chartPanel-attendence-rate-trend-body">
+                                                <div id="chartPanel-attendence-rate-trend-chart" class="chartPanel-attendence-rate-trend-chart">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="chartPanel-middle">
+                    <div class="chartPanel-3d-map-wrapper">
+                        <div class="chartPanel-3d-map-container">
+                            <div class="chartPanel-3d-map-builds">
+                                <!-- 根据 data-type 来区分请求，获取对应的数据信息 -->
+                                <!-- 保安室 -->
+                                <div class="chartPanel-3d-map-builds-item chartPanel-3d-map-build__security-booth"
+                                    data-type="security-booth">
+                                    <div class="chartPanel-3d-map-builds__security-booth-box">
+
+                                    </div>
+                                </div>
+
+                                <!-- 食堂 -->
+                                <div class="chartPanel-3d-map-builds-item chartPanel-3d-map-build__canteen-building"
+                                    data-type="canteen-building">
+                                    <div class="chartPanel-3d-map-builds__canteen-building-box">
+
+                                    </div>
+                                </div>
+
+                                <!-- 大厦 -->
+                                <div class="chartPanel-3d-map-builds-item chartPanel-3d-map-build__big-building"
+                                    data-type="big-building">
+                                    <div class="chartPanel-3d-map-builds__big-building-box">
+
+                                    </div>
+                                </div>
+
+                                <!-- 生产楼 -->
+                                <div class="chartPanel-3d-map-builds-item chartPanel-3d-map-build__production-building"
+                                    data-type="production-building">
+                                    <div class="chartPanel-3d-map-builds__production-building-box">
+
+                                    </div>
+                                </div>
+
+                                <!-- 停车场 -->
+                                <div class="chartPanel-3d-map-builds-item chartPanel-3d-map-build__parking-building"
+                                    data-type="parking-building">
+                                    <div class="chartPanel-3d-map-builds__parking-building-box">
+
+                                    </div>
+                                </div>
+
+                                <!-- D栋客房 -->
+                                <div class="chartPanel-3d-map-builds-item chartPanel-3d-map-build__guest-room-building"
+                                    data-type="guest-room-building">
+                                    <div class="chartPanel-3d-map-builds__guest-room-building-box">
+
+                                    </div>
+                                </div>
+
+                                <!-- 研发宿舍 -->
+                                <div class="chartPanel-3d-map-builds-item chartPanel-3d-map-build__RD-dormitory-building"
+                                    data-type="RD-dormitory-building">
+                                    <div class="chartPanel-3d-map-builds__RD-dormitory-building-box">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="building-data-box">
+                                <div class="building-data-panel">
+                                    <div class="building-data-panel__title">
+                                        <h3>没有数据</h3>
+                                    </div>
+                                    <div class="building-data-content">
+                                        <ul class="building-data-panel__list">
+                                            没有数据...
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 灯光控制 -->
+                            <div class="building-lighting-control-box">
+                                <div class="building-lighting-control-panel">
+                                    <ul class="building-lighting-control__items flex-box flex-direction_row justify-content_flex-start align-items_center">
+                                        <li>
+                                            <div class="building-lighting-control__item flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                <p class="building-lighting-control__item__title">
+                                                    一楼
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="building-lighting-control__item flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                <p class="building-lighting-control__item__title">
+                                                    二楼
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="building-lighting-control__item flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                <p class="building-lighting-control__item__title">
+                                                    六楼
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chartPanel-video-wrapper">
+                        <div class="chartPanel-video-container">
+                            <div class="chartPanel-video-items flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                <div class="chartPanel-video-item">
+                                    <div class="chartPanel-video-item-box">
+                                        <div class="chartPanel-video-item__video-box">
+                                            <video id="video-item__one" muted width="150px" height="120px" autoplay="autoplay"></video>
+                                            <!-- <div class="video" id="zkVideoOcx"></div> -->
+                                            <!-- <div class="video" id="video-item__one"></div> zkVideoOcx-->
+                                            <img src="./images/no_camera.png" alt="media error img" class="media-error-img">
+                                        </div>
+                                        <div class="chartPanel-video-item__video-content flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                            <p class="chartPanel-video-item__video-title">
+                                                张三(某某小区正门)
+                                            </p>
+                                            <p class="chartPanel-video-item__video-time">
+                                                2018-06-23 12:34:56
+                                            </p>
+                                        </div>
+                                        <div class="chartPanel-video-item-cap chartPanel-video-item-cap-one"></div>
+                                    </div>
+                                </div>
+                                <div class="chartPanel-video-item">
+                                    <div class="chartPanel-video-item-box">
+                                        <div class="chartPanel-video-item__video-box">
+                                            <!-- <img src="./images/face.jpg" alt="" width="60" height="60"> -->
+                                            <video id="video-item__two" width="150px" height="120px" autoplay="autoplay"></video>
+                                            <!-- <div class="video" id="video-item__two"></div> -->
+                                            <img src="./images/no_camera.png" alt="media error img" class="media-error-img">
+                                        </div>
+                                        <div class="chartPanel-video-item__video-content flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                            <p class="chartPanel-video-item__video-title">
+                                                张三(某某小区正门)
+                                            </p>
+                                            <p class="chartPanel-video-item__video-time">
+                                                2018-06-23 12:34:56
+                                            </p>
+                                        </div>
+                                        <div class="chartPanel-video-item-cap chartPanel-video-item-cap-two"></div>
+                                    </div>
+                                </div>
+                                <div class="chartPanel-video-item">
+                                    <div class="chartPanel-video-item-box">
+                                        <div class="chartPanel-video-item__video-box">
+                                            <!-- <img src="./images/face.jpg" alt="" width="60" height="60"> -->
+                                            <video id="video-item__three" width="150px" height="120px" autoplay="autoplay"></video>
+                                            <!-- <div class="video" id="video-item__three"></div> -->
+                                            <img src="./images/no_camera.png" alt="media error img" class="media-error-img">
+                                        </div>
+                                        <div class="chartPanel-video-item__video-content flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                            <p class="chartPanel-video-item__video-title">
+                                                张三(某某小区正门)
+                                            </p>
+                                            <p class="chartPanel-video-item__video-time">
+                                                2018-06-23 12:34:56
+                                            </p>
+                                        </div>
+                                        <div class="chartPanel-video-item-cap chartPanel-video-item-cap-three"></div>
+                                    </div>
+                                </div>
+                                <div class="chartPanel-video-item">
+                                    <div class="chartPanel-video-item-box">
+                                        <div class="chartPanel-video-item__video-box">
+                                            <!-- <img src="./images/face.jpg" alt="" width="60" height="60"> -->
+                                            <video id="video-item__four" width="150px" height="120px" autoplay="autoplay"></video>
+                                            <!-- <div class="video" id="video-item__four"></div> -->
+                                            <img src="./images/no_camera.png" width="150px" alt="media error img" class="media-error-img">
+                                        </div>
+                                        <div class="chartPanel-video-item__video-content flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                            <p class="chartPanel-video-item__video-title">
+                                                张三(某某小区正门)
+                                            </p>
+                                            <p class="chartPanel-video-item__video-time">
+                                                2018-06-23 12:34:56
+                                            </p>
+                                        </div>
+                                        <div class="chartPanel-video-item-cap chartPanel-video-item-cap-four"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="chartPanel-right">
+                    <div class="chartPanel-parking-space-use-box">
+                        <div class="chartPanel-parking-space-use-wrapper">
+                            <div class="chartPanel-parking-space-use-container">
+                                <div class="chartPanel-parking-space-use-head">
+                                    <div class="parking-space-use-head-title">
+                                        <h3 class="chart-box-title title__icon">
+                                            园区车位使用率
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="chartPanel-parking-space-use-body">
+                                    <div class="chartPanel-parking-space-use__container flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                        <div class="chartPanel-parking-space-use__left">
+                                            <div class="chartPanel-parking-space-use__left-item">
+                                                <div class="parking-space-use-item-outer-circle flex-box flex-direction_row justify-content_flex-center align-items_center">
+
+                                                </div>
+                                                <div class="parking-space-use-item-box">
+                                                    <div id="parking-space-use-item-chart-box" class="parking-space-use-item-chart-box"></div>
+                                                    <div class="parking-space-use-item-data-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                        <div class="parking-space-use-item-data-num">
+                                                            <span class="parking-space-use-data-num">88</span>
+                                                            <i>%</i>
+                                                        </div>
+                                                        <div class="parking-space-use-item-data-title">已使用</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chartPanel-parking-space-use__right">
+                                            <div class="parking-space-use__right-one  flex-box flex-direction_row justify-content_flex-center align-items_center">
+                                                <div class="parking-space-use__right-items">
+                                                    <div class="parking-space-use__right-item">
+                                                        <div class="parking-space-use__right-item-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                            <h4 class="parking-space-use__right-item-num parking-space-use__right-item-num-use">
+                                                                280
+                                                            </h4>
+                                                            <p class="parking-space-use__right-item-title">
+                                                                已使用
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="parking-space-use__right-items">
+                                                    <div class="parking-space-use__right-item">
+                                                        <div class="parking-space-use__right-item-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                            <h4 class="parking-space-use__right-item-num parking-space-use__right-item-num-unuse">
+                                                                280
+                                                            </h4>
+                                                            <p class="parking-space-use__right-item-title">
+                                                                未使用
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="parking-space-use__right-two  flex-box flex-direction_row justify-content_flex-center align-items_center">
+                                                <div class="parking-space-use__right-items">
+                                                    <div class="parking-space-use__right-item">
+                                                        <div class="parking-space-use__right-item-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                            <h4 class="parking-space-use__right-item-num parking-space-use__right-item-num-all">
+                                                                280
+                                                            </h4>
+                                                            <p class="parking-space-use__right-item-title">
+                                                                车位总数
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="parking-space-use__right-items">
+                                                    <div class="parking-space-use__right-item">
+                                                        <div class="parking-space-use__right-item-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                            <img class="icon-update" src="./images/icon_update.png" alt="">
+                                                            <p class="parking-space-use__right-item-title">
+                                                                实时更新
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="chartPanel-room-occupancy-box">
+                        <div class="chartPanel-room-occupancy-wrapper">
+                            <div class="chartPanel-room-occupancy-container">
+                                <div class="chartPanel-room-occupancy-head">
+                                    <div class="room-occupancy-head-title">
+                                        <h3 class="chart-box-title title__icon">
+                                            园区客房入住率
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="chartPanel-room-occupancy-body">
+                                    <div class="chartPanel-room-occupancy__container flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                        <div class="chartPanel-room-occupancy-item">
+                                            <div class="hardware-device-item-outer-circle flex-box flex-direction_row justify-content_flex-center align-items_center">
+
+                                            </div>
+                                            <div class="room-occupancy-item-box">
+                                                <div id="room-occupancy-item-chart-box" class="room-occupancy-item-chart-box"></div>
+                                                <div class="room-occupancy-item-data-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                    <div class="room-occupancy-item-data-num">
+                                                        <span class="room-occupancy-data-num">88</span>
+                                                        <i>%</i>
+                                                    </div>
+                                                    <div class="room-occupancy-item-data-title">已使用</div>
+                                                </div>
+                                            </div>
+                                            <div class="room-occupancy-item-num_use-box flex-box flex-direction_column justify-content_flex-center align-items_flex-start">
+                                                <h4 class="room-occupancy-use__right-item-num room-occupancy-use__right-item-num-use">
+                                                    280
+                                                </h4>
+                                                <p class="room-occupancy-use__right-item-title">
+                                                    已入住
+                                                </p>
+                                            </div>
+                                            <div class="room-occupancy-item-num_unuse-box flex-box flex-direction_column justify-content_flex-center align-items_flex-end">
+                                                <h4 class="room-occupancy-use__right-item-num room-occupancy-use__right-item-num-unuse">
+                                                    280
+                                                </h4>
+                                                <p class="room-occupancy-use__right-item-title">
+                                                    未入住
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chartPanel-conference-room-use-box">
+                        <div class="chartPanel-conference-room-use-wrapper">
+                            <div class="chartPanel-conference-room-use-container">
+                                <div class="chartPanel-conference-room-use-head">
+                                    <div class="conference-room-use-head-title">
+                                        <h3 class="chart-box-title title__icon">
+                                            园区会议室当日使用率
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="chartPanel-conference-room-use-body">
+                                    <div class="chartPanel-conference-room-use__container flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                        <div class="chartPanel-conference-room-use__left">
+                                            <div class="chartPanel-conference-room-use__left-item">
+                                                <div class="conference-room-use-item-outer-circle flex-box flex-direction_row justify-content_flex-center align-items_center">
+
+                                                </div>
+                                                <div class="conference-room-use-item-box">
+                                                    <div id="conference-room-use-item-chart-box" class="conference-room-use-item-chart-box"></div>
+                                                    <div class="conference-room-use-item-data-box flex-box flex-direction_column justify-content_flex-center align-items_center">
+                                                        <div class="conference-room-use-item-data-num">
+                                                            <span class="conference-room-use-data-num">88</span>
+                                                            <i>%</i>
+                                                        </div>
+                                                        <div class="conference-room-use-item-data-title">已使用</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chartPanel-conference-room-use__right">
+                                            <div class="conference-room-use__right_use  flex-box flex-direction_row justify-content_flex-center align-items_center">
+                                                <div class="conference-room-use__right-items">
+                                                    <div class="conference-room-use__right-item">
+                                                        <div class="conference-room-use__right-item-box flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                                            <p class="conference-room-use__right-item-title">
+                                                                已使用
+                                                            </p>
+                                                            <h4 class="conference-room-use__right-item-num conference-room-use__right-item-num-use">
+                                                                280
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="conference-room-use__right_unuse  flex-box flex-direction_row justify-content_flex-center align-items_center">
+                                                <div class="conference-room-use__right-items">
+                                                    <div class="conference-room-use__right-item">
+                                                        <div class="conference-room-use__right-item-box flex-box flex-direction_row justify-content_flex-around align-items_center">
+                                                            <p class="conference-room-use__right-item-title">
+                                                                未使用
+                                                            </p>
+                                                            <h4 class="conference-room-use__right-item-num conference-room-use__right-item-num-unuse">
+                                                                280
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
