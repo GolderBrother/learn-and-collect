@@ -1,6 +1,7 @@
 个人整理的一些常用的 Git 概念和命令集合，方便速查和快速解决某些场景下的问题，覆盖了日常开发和协同工作下的一部分场景，不只是命令行的介绍
 
-精简入门
+### 精简入门
+
 1、克隆仓库
 
 克隆仓库会下载仓库完整的文件、分支和历史记录。
@@ -64,18 +65,18 @@ Git 是一个分布式的版本控制工具，因此远程和本地可以视为�
 
 ### 常用命令
 
-#### git init
+### git init
 创建一个空白的 git 仓库
 
 ```git init```
 
-#### git add
+### git add
 ```git add [<options>] [--] <pathspec>...```
 
-#### git commit
+### git commit
 ```git commit [<options>] [--] <pathspec>...```
 
-#### git remote
+### git remote
 remote 指的是本地的 git 仓库关联的远程 git 仓库。
 
 1、查看远程仓库信息
@@ -101,7 +102,7 @@ git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<
 git remote origin git@github.com:x-cold/git-learning.git
 ```
 
-#### git branch
+### git branch
 1、列出本地存在的分支
 
 ```git branch```
@@ -136,7 +137,7 @@ git remote origin git@github.com:x-cold/git-learning.git
 ```# 以后只需要在 dev 分支执行 git push (无需额外的参数) 就可以提交到 origin/dev```
 ```git branch --set-upstream dev origin/dev```
 
-#### git checkout
+### git checkout
 检出分支:
 
 ```git checkout [<options>] <branch>```
@@ -147,17 +148,17 @@ git remote origin git@github.com:x-cold/git-learning.git
 ```除开用于分支切换，checkout 还可以用于恢复未添加到本地工作区，但是被修改过的文件。```
 
 
-# 将 index.js 恢复到当前 commit 的内容
+### 将 index.js 恢复到当前 commit 的内容
 ```git checkout index.js```
 
-#### git merge
+### git merge
 合并分支:
 
 ```git merge [<options>] [<commit>...]```
 ```# 合并远程仓库的 master 分支到当前分支```
 ```git merge origin/master```
 
-#### git rebase
+### git rebase
 变基，是一种常用且有风险的操作，会改变提交历史，谨慎使用！
 
 ```
@@ -181,7 +182,7 @@ while(存在冲突) {
 ```# 挑选出 371c2 到 971209 的所有提交记录，并合入当前分支```
 ```git cherry-pick 371c2…971209```
 
-#### git push
+### git push
 推送到远程仓库，同步本地仓库的提交历史到远程仓库
 
 ```git push [<options>] [<repository> [<refspec>...]]```
@@ -285,7 +286,7 @@ git stash
 ```git stash pop```
 
 附录
-githug[href="https://github.com/Gazler/githug], 一个专门为 git 学习路径设计的游戏
-awesome-git-addons[href="https://github.com/stevemao/awesome-git-addons], git 命令行工具扩展的合集
-git-tips[href="https://github.com/git-tips/tips], 常用使用场景和技巧集合
-lazygit[href="https://github.com/jesseduffield/lazygit"], 懒人专用的 git 命令行程序
+- [githug](href="https://github.com/Gazler/githug), 一个专门为 git 学习路径设计的游戏
+- [awesome-git-addons](href="https://github.com/stevemao/awesome-git-addons), git 命令行工具扩展的合集
+- [git-tips](href="https://github.com/git-tips/tips), 常用使用场景和技巧集合
+- [lazygit](href="https://github.com/jesseduffield/lazygit"), 懒人专用的 git 命令行程序
