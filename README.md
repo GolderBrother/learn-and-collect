@@ -302,6 +302,7 @@ https://github.com/TKkk-iOSer/WeChatPlugin-MacOS
 ### 科学上网
 
 - [收藏的vpn](./booksdata/vpn.md)
+- [科学上网翻墙](https://github.com/yangguangyu/sphard3.github.io)
 
 ### 总结
  - 把平时看到有用的常用的项目都收藏起来方便自己查找
