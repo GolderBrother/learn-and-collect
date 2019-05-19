@@ -1,0 +1,1336 @@
+html {
+    background: #10141f;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+img {
+    display: inline;
+}
+
+.dashboard-panel {
+    width: 100%;
+    background: #0c1824 url("/public/images/dashboard/images/bg_map.jpg") no-repeat center top/cover;
+}
+
+.dashboard-container {
+    /* width: 98%; */
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 12px 0;
+}
+
+.dashboard-head {
+    padding: 8px 0 0;
+}
+
+.dashboard-head-bg {
+    position: relative;
+    width: 100%;
+    background: url("/public/images/dashboard/images/head_bg.png") no-repeat center/cover;
+    overflow: hidden;
+}
+
+.dashboard-head-bg .dashboard-head-collapse {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.dashboard-head-bg .dashboard-head-collapse .btn-collapse img {
+    width: 100%;
+}
+
+
+.dashboard-head-bg .dashboard-head-content {
+    height: 100%;
+}
+
+.dashboard-head-bg .dashboard-head-title h2 {
+    font-weight: 400;
+    color: rgba(0, 180, 255, 1);
+    /* line-height: 1; */
+    -webkit-text-fill-color: rgba(114, 251, 255, 1);
+    text-shadow: 0 0 5px rgba(0, 204, 205, 1), 0px 0px 5px rgba(114, 251, 255, 1), 0 0 5px rgba(30, 174, 210, 1);
+    color: rgba(0, 180, 255, 1);
+    letter-spacing: 10px;
+}
+
+.dashboard-head-bg .dashboard-head-time-box .time-items .time-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    background: url('/public/images/dashboard/images/time_icon.png') no-repeat center/contain;
+    vertical-align: middle;
+}
+
+.dashboard-head-bg .dashboard-head-time-box .time-items .time-item {
+    color: rgba(101, 198, 231, 1);
+    vertical-align: middle;
+    /* line-height: 120px; */
+}
+
+.dashboard-body {
+    position: relative;
+    top: -70px;
+    padding: 0 0 20px;
+    overflow: hidden;
+}
+
+.chartPanel-left,
+.chartPanel-right {
+    position: relative;
+    z-index: 100;
+    transition: all ease-in-out .5s;
+}
+
+.chartPanel-left {
+    left: 0;
+}
+
+.chartPanel-right {
+    right: 0;
+}
+
+
+.chartPanel-left .chartPanel-hardware-device-online-box,
+.chartPanel-left .chartPanel-attendence-rate-box,
+.chartPanel-right .chartPanel-parking-space-use-box,
+.chartPanel-right .chartPanel-room-occupancy-box,
+.chartPanel-right .chartPanel-conference-room-use-box {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.chartPanel-left .chartPanel-hardware-device-online-box .chartPanel-hardware-device-online-container,
+.chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-container,
+.chartPanel-parking-space-use-container,
+.chartPanel-room-occupancy-container,
+.chartPanel-conference-room-use-container {
+    padding: 14px 20px 10px;
+    background: url("/public/images/dashboard/images/attendence_rate.png") no-repeat center 98%/98% auto;
+}
+
+h3.chart-box-title {
+    vertical-align: middle;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(101, 198, 231, 1);
+}
+
+
+h3.title__icon:before {
+    display: inline-block;
+    content: "";
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.chartPanel-conference-room-use-body {
+    margin: 10px 0 25px;
+}
+
+.chartPanel-left .chartPanel-hardware-device-online-box .chartPanel-hardware-device-online-container {
+    background-image: none;
+}
+
+.chartPanel-left .chartPanel-hardware-device-online-box .hardware-device-head-title h3,
+.chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-head .attendence-rate-head-title h3 {
+    vertical-align: middle;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(101, 198, 231, 1);
+}
+
+.chartPanel-left .chartPanel-hardware-device-online-box .hardware-device-head-title h3:before {
+    width: 34px;
+    height: 34px;
+    background: url('/public/images/dashboard/images/icon_hardware.png') no-repeat center/cover;
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* .chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items:nth-child(2) {
+    margin-bottom: 30px;
+} */
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .chartPanel-hardware-device-item {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .hardware-device-item-outer-circle {
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    background: url("/public/images/dashboard/images/outer_circle.png") no-repeat center/cover;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -moz-transform: rotate(0deg);
+    /* Firefox */
+    -webkit-transform: rotate(0deg);
+    /* Safari ºÍ Chrome */
+    -o-transform: rotate(0deg);
+    animation: rotateOuterCircle 10s linear infinite;
+    -webkit-animation: rotateOuterCircle 10s linear infinite;
+    -moz-animation: rotateOuterCircle 10s linear infinite;
+    -o-animation: rotateOuterCircle 10s linear infinite;
+    box-sizing: border-box;
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .hardware-device-item-inner-circle {
+    width: 84%;
+    height: 84%;
+    padding: 15px;
+    background: url("/public/images/dashboard/images/inner_circle.png") no-repeat center/cover;
+    transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    /* IE 9 */
+    -moz-transform: rotate(60deg);
+    /* Firefox */
+    -webkit-transform: rotate(60deg);
+    /* Safari ºÍ Chrome */
+    -o-transform: rotate(60deg);
+    animation: rotateInnerCircle 6s linear infinite;
+    -webkit-animation: rotateInnerCircle 6s linear infinite;
+    -moz-animation: rotateInnerCircle 6s linear infinite;
+    -o-animation: rotateInnerCircle 6s linear infinite;
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .hardware-device-item-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 126px;
+    height: 126px;
+    border-radius: 50%;
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .hardware-device-item-box .hardware-device-item-chart-box {
+    width: 100%;
+    height: 100%;
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .hardware-device-item-box .hardware-device-item-data-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-weight: 400;
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .hardware-device-item-box .hardware-device-item-data-num {
+    color: rgba(255, 204, 160, 1);
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .hardware-device-item-box .hardware-device-item-data-num span {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .hardware-device-item-box .hardware-device-item-data-num i {
+    font-size: 16px;
+}
+
+.chartPanel-left .chartPanel-hardware-device-body .chartPanel-hardware-device-items .hardware-device-item-box .hardware-device-item-data-title {
+    font-size: 12px;
+    color: rgba(128, 200, 220, 1);
+    line-height: 25px;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-container {
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-image: none;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-body,
+.chartPanel-left .chartPanel-attendence-rate-trend-box,
+.chartPanel-left .chartPanel-attendence-rate-trend-container,
+.chartPanel-left .chartPanel-attendence-rate-trend-body,
+#chartPanel-attendence-rate-trend-chart {
+    height: 100%;
+}
+
+#chartPanel-attendence-rate-trend-chart canvas {
+    height: 80% !important;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-trend-body {
+    margin-top: -40px;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-data-container {
+    background: url("/public/images/dashboard/images/attendence_rate.png") no-repeat left bottom/contain;
+}
+
+
+.chartPanel-left .chartPanel-attendence-rate-box .attendence-rate-data-num-box {
+    margin-left: 20px;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-box .attendence-rate-data-num-box .data-title {
+    font-size: 12px;
+    color: rgba(128, 200, 220, 1);
+    opacity: 0.7;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-box .attendence-rate-data-num-box .data-num-box {
+    font-size: 30px;
+    color: #EDD3AB;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-box .attendence-rate-data-num-box .data-num-box .data-num-percent {
+    font-size: 14px;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-box .attendence-rate-data-num-box .data-num .data-num-percent {
+    font-size: 12px;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-box .attendence-rate-data-num-box .data-compare {
+    color: rgba(101, 198, 231, 1);
+    opacity: 0.5;
+}
+
+.chartPanel-left .chartPanel-attendence-rate-box .attendence-rate-data-num-box .data-compare .top {
+    padding-left: 15px;
+    color: #00feff;
+    background: url("/public/images/dashboard/images/icon_rise.png") no-repeat left center/auto 65%;
+}
+
+
+
+.chartPanel-middle .chartPanel-3d-map-wrapper {
+    width: 100%;
+    height: 648px;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container {
+    position: relative;
+    height: 100%;
+    margin-top: 32px;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-builds-item {
+    /* display: none; */
+    position: absolute;
+    color: #fff;
+    background-size: cover;
+}
+
+/* 保安室 */
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__security-booth {
+    background: url("/public/images/dashboard/images/build_imgs/security_booth.png") no-repeat top center/cover;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__security-booth_active {
+    background-image: url("/public/images/dashboard/images/build_imgs/security_booth_active.png");
+    /* background-position: -1px 0px; */
+}
+
+/* 大厦 */
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__big-building {
+    background: url("/public/images/dashboard/images/build_imgs/big_building.png") no-repeat top center/cover;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__big-building_active {
+    background-image: url("/public/images/dashboard/images/build_imgs/big_building_active.png");
+    /* background-position: -1px 0px; */
+}
+
+/* 食堂 */
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__canteen-building {
+    background: url("/public/images/dashboard/images/build_imgs/canteen_building.png") no-repeat top center/cover;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__canteen-building_active {
+    background-image: url("/public/images/dashboard/images/build_imgs/canteen_building_active.png");
+    /* background-position: -1px 0px; */
+}
+
+/* 生产楼 */
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__production-building {
+    background: url("/public/images/dashboard/images/build_imgs/production_building.png") no-repeat top center/cover;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__production-building_active {
+    background-image: url("/public/images/dashboard/images/build_imgs/production_building_active.png");
+    /* background-position: -1px 0px; */
+}
+
+/* 停车场 */
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__parking-building {
+    background: url("/public/images/dashboard/images/build_imgs/parking_building.png") no-repeat top center/cover;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__parking-building_active {
+    background-image: url("/public/images/dashboard/images/build_imgs/parking_building_active.png");
+}
+
+/* D栋客房 */
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__guest-room-building {
+    background: url("/public/images/dashboard/images/build_imgs/guest_room_building.png") no-repeat top center/cover;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__guest-room-building_active {
+    background-image: url("/public/images/dashboard/images/build_imgs/guest_room_building_active.png");
+}
+
+/* 研发宿舍 */
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__RD-dormitory-building {
+    background: url("/public/images/dashboard/images/build_imgs/RD_dormitory_building.png") no-repeat top center/cover;
+}
+
+.chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__RD-dormitory-building_active {
+    background-image: url("/public/images/dashboard/images/build_imgs/RD_dormitory_building_active.png");
+}
+
+
+.chartPanel-middle .building-data-box {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    display: none;
+    width: 220px;
+    padding: 16px;
+    border: 2px solid rgba(64, 181, 231, 1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0px #66D9FF;
+    background: rgba(28, 48, 60, .7);
+}
+
+.chartPanel-middle .building-data-box .building-data-panel__title h3 {
+    font-size: 22px;
+    color: rgba(101, 198, 231, 1);
+}
+
+.chartPanel-middle .building-data-box .building-data-content {
+    margin-top: 18px;
+    color: #fff;
+}
+
+.chartPanel-middle .building-data-box .building-data-panel__list li .building-data-panel__item__title {
+    font-size: 16px;
+    color: rgba(128, 200, 220, 1);
+}
+
+.chartPanel-middle .building-data-box .building-data-panel__list li .building-data-panel__item__num {
+    font-size: 16px;
+    color: rgba(240, 205, 150, 1);
+}
+
+.chartPanel-middle .building-data-box .building-data-panel__list li .building-data-panel__item__num .unit {
+    font-size: 12px;
+}
+
+.chartPanel-middle .building-lighting-control-box {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.chartPanel-middle .building-lighting-control-box .building-lighting-control__items li {
+    margin: 0 10px;
+}
+
+.chartPanel-middle .building-lighting-control-box .building-lighting-control__item {
+    width: 66px;
+    height: 66px;
+    background: url("/public/images/dashboard/images/icon_close.png") no-repeat center/cover;
+}
+
+.chartPanel-middle .building-lighting-control-box .building-lighting-control__item.building-lighting-control__item__open {
+    background-image: url("/public/images/dashboard/images/icon_open.png");
+}
+
+.chartPanel-middle .building-lighting-control-box .building-lighting-control__item .building-lighting-control__item__title {
+    font-size: 14px;
+    color: rgba(101, 198, 231, 1);
+}
+
+
+.chartPanel-middle .chartPanel-video-wrapper .chartPanel-video-item {
+    margin: 0 1px;
+    text-align: center;
+}
+
+.chartPanel-middle .chartPanel-video-wrapper .chartPanel-video-item__video-content p {
+    font-size: 12px;
+    color: rgba(128, 200, 220, 1);
+}
+
+
+
+
+.chartPanel-attendence-rate-wrapper,
+.chartPanel-hardware-device-online-wrapper,
+.chartPanel-parking-space-use-wrapper,
+.chartPanel-room-occupancy-wrapper,
+.chartPanel-conference-room-use-wrapper {
+    background: url("/public/images/dashboard/images/shadow_bg.png") no-repeat top center/contain;
+    /* background: url(/public/images/dashboard/images/attendence-rate.png) no-repeat center 180px/98% auto; */
+    background-size: 100% 101%;
+}
+
+
+.chartPanel-right .chartPanel-parking-space-use-box .parking-space-use-head-title h3:before {
+    width: 54px;
+    height: 30px;
+    background: url('/public/images/dashboard/images/icon_car.png') no-repeat center/cover;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__left-item,
+.chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use__left-item {
+    position: relative;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use-body .parking-space-use-item-outer-circle,
+.chartPanel-right .chartPanel-conference-room-use-box .conference-room-use-item-outer-circle {
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+    background: url("/public/images/dashboard/images/outer_ring.png") no-repeat center/cover;
+}
+
+
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use-body .parking-space-use-item-box,
+.chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use-body .conference-room-use-item-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use-body .parking-space-use-item-box {}
+
+.chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use-body .conference-room-use-item-box {
+    width: 160px;
+    height: 160px;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use-body .parking-space-use-item-data-box,
+.chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use-body .conference-room-use-item-data-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-weight: 400;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .parking-space-use-item-data-box .parking-space-use-item-data-num,
+.chartPanel-right .chartPanel-conference-room-use-box .conference-room-use-item-data-box .conference-room-use-item-data-num {
+    color: rgba(255, 204, 160, 1);
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .parking-space-use-item-data-box .parking-space-use-item-data-num .parking-space-use-data-num {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .parking-space-use-item-data-box .parking-space-use-item-data-num i {
+    font-size: 12px;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .parking-space-use-item-data-box .parking-space-use-item-data-title {
+    font-size: 16px;
+    color: rgba(128, 200, 220, 1);
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__right .parking-space-use__right-item {
+    background: url("/public/images/dashboard/images/icon_already_used.png") no-repeat center/cover;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__right .parking-space-use__right-items {
+    margin: 10px;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__right .parking-space-use__right-items .icon-update {
+    transition: transform .5s;
+    -moz-transition: -moz-transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+    -o-transition: -o-transform .5s;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__right .parking-space-use__right-items .icon-update:hover {
+    transform: rotate(90deg);
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__right .parking-space-use__right-item-box {
+    height: 100%;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .parking-space-use__right-item-box .parking-space-use__right-item-num {
+    color: rgba(255, 204, 160, 1);
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .parking-space-use__right-item-box .parking-space-use__right-item-title {
+    font-size: 12px;
+    color: rgba(128, 200, 220, 1);
+}
+
+.chartPanel-right .chartPanel-room-occupancy-container {
+    margin: 13px 0;
+    padding-bottom: 20px;
+}
+
+.chartPanel-right .chartPanel-room-occupancy-container .chartPanel-room-occupancy-body {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-head-title h3:before {
+    width: 37px;
+    height: 35px;
+    background: url('/public/images/dashboard/images/icon_guest_room.png') no-repeat center/cover
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .chartPanel-room-occupancy-item {
+    position: relative;
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .hardware-device-item-outer-circle {
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    background: url("/public/images/dashboard/images/parking_outer_circle.png") no-repeat center/cover;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -moz-transform: rotate(0deg);
+    /* Firefox */
+    -webkit-transform: rotate(0deg);
+    /* Safari ºÍ Chrome */
+    -o-transform: rotate(0deg);
+    animation: rotateOuterCircle 10s linear infinite;
+    -webkit-animation: rotateOuterCircle 10s linear infinite;
+    -moz-animation: rotateOuterCircle 10s linear infinite;
+    -o-animation: rotateOuterCircle 10s linear infinite;
+    box-sizing: border-box;
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-box .room-occupancy-item-data-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: url("/public/images/dashboard/images/icon_fli1.png") no-repeat center/cover;
+
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-box .room-occupancy-item-data-num {
+    color: rgba(255, 204, 160, 1);
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-box .room-occupancy-item-data-num .room-occupancy-data-num {
+    font-size: 24px;
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-box .room-occupancy-item-data-num i {
+    font-size: 12px;
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-box .room-occupancy-item-data-title {
+    font-size: 17px;
+    color: rgba(128, 200, 220, 1);
+}
+
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-num_use-box {
+    position: absolute;
+    background: url("/public/images/dashboard/images/icon_checked_in.png") no-repeat center top/cover;
+    box-sizing: border-box;
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-use__right-item-num {
+    font-size: 20px;
+    color: rgba(255, 204, 160, 1);
+}
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-use__right-item-title {
+    font-size: 14px;
+    color: rgba(128, 200, 220, 1)
+}
+
+
+.chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-num_unuse-box {
+    position: absolute;
+    background: url("/public/images/dashboard/images/icon_no_show.png") no-repeat center top/cover;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.chartPanel-right .chartPanel-conference-room-use-box .conference-room-use-head-title h3:before {
+    width: 39px;
+    height: 35px;
+    background: url('/public/images/dashboard/images/icon_conference_room.png') no-repeat center/cover;
+}
+
+.chartPanel-right .chartPanel-parking-space-use-box .parking-space-use-item-data-box,
+.chartPanel-right .chartPanel-conference-room-use-box .conference-room-use-item-data-box {
+    border-radius: 50%;
+    background: url('/public/images/dashboard/images/icon_grid.png') no-repeat center/cover;
+}
+
+.chartPanel-right .chartPanel-conference-room-use-box .conference-room-use-item-data-box .conference-room-use-item-data-num .conference-room-use-data-num {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.chartPanel-right .chartPanel-conference-room-use-box .conference-room-use-item-data-box .conference-room-use-item-data-title {
+    font-size: 16px;
+    color: rgba(128, 200, 220, 1);
+}
+
+.chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use__right .conference-room-use__right-item-box {
+    background: url("/public/images/dashboard/images/conference_room_bg.png") no-repeat center top/cover;
+}
+
+.chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use__right .conference-room-use__right-item-title {
+    font-size: 16px;
+    color: rgba(128, 200, 220, 1);
+}
+
+.chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use__right .conference-room-use__right-item-num {
+    font-size: 30px;
+    color: rgba(255, 204, 160, 1);
+}
+
+.chartPanel-middle .chartPanel-video-container .chartPanel-video-item-box {
+    position: relative;
+    padding: 10px;
+    background: url("/public/images/dashboard/images/shadow_bg.png") no-repeat center top/100% 100%;
+}
+
+.chartPanel-middle .chartPanel-video-container .chartPanel-video-item-box .media-error-img {
+    display: none;
+    width: 100%;
+}
+
+.chartPanel-middle .chartPanel-video-container .chartPanel-video-item-box .chartPanel-video-item-cap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/public/images/dashboard/images/shadow_bg.png") no-repeat center top/100% 100%;
+    transform-style: preserve-3d;
+    animation: move 60s infinite linear;
+}
+
+#parking-space-use-item-chart-box,
+#room-occupancy-item-chart-box,
+#conference-room-use-item-chart-box {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+
+@media screen and (min-width:1366px) {
+
+    .dashboard-panel {
+        background-size: contain;
+    }
+
+    .dashboard-head-bg {
+        height: 92px;
+        background-size: cover;
+    }
+
+    .dashboard-head-bg .dashboard-head-collapse .btn-collapse {
+        width: 23px;
+        height: 23px;
+    }
+
+    .dashboard-head-bg .dashboard-head-title {
+        margin-top: 4px;
+    }
+
+    .dashboard-head-bg .dashboard-head-title h2 {
+        font-size: 28px;
+    }
+
+    .dashboard-head-bg .dashboard-head-time-box .time-items .time-item {
+        font-size: 16px;
+    }
+
+    .chartPanel-left,
+    .chartPanel-right {
+        width: 30%;
+        flex: none;
+        margin-top: 20px;
+    }
+
+    .chartPanel-middle {
+        width: 40%;
+        flex: none;
+        z-index: 10;
+    }
+
+    .chartPanel-left .chartPanel-hardware-device-online-box,
+    .chartPanel-left .chartPanel-attendence-rate-box,
+    .chartPanel-right .chartPanel-parking-space-use-box,
+    .chartPanel-right .chartPanel-room-occupancy-box,
+    .chartPanel-right .chartPanel-conference-room-use-box {
+        width: 100%;
+    }
+
+    .chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-container {
+        height: 420px;
+    }
+
+    .chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-data-container {
+        padding-bottom: 14px;
+    }
+
+    .chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-data-box:nth-child(1) {
+        margin-left: 20px;
+    }
+
+    .chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-data-box:nth-child(2) {
+        margin-left: 20px;
+    }
+
+    .chartPanel-left .chartPanel-attendence-rate-box .attendence-rate-data-num-box .data-compare {
+        font-size: 12px;
+    }
+
+    .chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use-body .parking-space-use-item-box,
+    .chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use-body .conference-room-use-item-box {
+        width: 150px;
+        height: 150px;
+    }
+
+    .chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__left-item,
+    .chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use__left-item {
+        width: 150px;
+        height: 150px;
+    }
+
+    .chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__right .parking-space-use__right-item {
+        width: 95px;
+        height: 75px;
+    }
+
+    .chartPanel-right .chartPanel-parking-space-use-box .parking-space-use__right-item-box .parking-space-use__right-item-num {
+        font-size: 24px;
+    }
+
+    .chartPanel-right .chartPanel-room-occupancy-box .chartPanel-room-occupancy-item {
+        width: 190px;
+        height: 180px;
+    }
+
+    .chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-num_use-box {
+        top: -20px;
+        left: -80px;
+        width: 169px;
+        height: 64px;
+        padding-left: 23px;
+    }
+
+    .chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-num_unuse-box {
+        bottom: -20px;
+        right: -100px;
+        width: 148px;
+        height: 74px;
+    }
+
+    .chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use__right .conference-room-use__right-item-box {
+        width: 210px;
+        height: 68px;
+    }
+
+    .chartPanel-middle .chartPanel-video-container .chartPanel-video-item-box video {
+        width: 110px;
+        height: 70px;
+    }
+
+    .chartPanel-middle .chartPanel-video-container .chartPanel-video-item-box .chartPanel-video-item-cap {
+        transform: rotateX(259deg) skew(10deg, 0deg) translateX(12px);
+        transform-origin: center center 86px;
+        -ms-transform: rotateX(259deg) skew(10deg, 0deg) translateX(12px);
+        -ms-transform-origin: center center 86px;
+        -webkit-transform: rotateX(259deg) skew(10deg, 0deg) translateX(12px);
+        -webkit-transform-origin: center center 86px;
+        -moz-transform: rotateX(259deg) skew(10deg, 0deg) translateX(12px);
+        -moz-transform-origin: center center 86px;
+        -o-transform: rotateX(259deg) skew(10deg, 0deg) translateX(12px);
+        -o-transform-origin: center center 86px;
+    }
+
+    .dashboard-head-bg .dashboard-head-collapse {
+        top: 30px;
+        right: 5px;
+    }
+
+    /* 保安室 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__security-booth {
+        width: 80px;
+        height: 86px;
+        left: 224px;
+        bottom: 167px;
+    }
+
+    /* 大厦 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__big-building {
+        width: 287px;
+        height: 226px;
+        top: 136px;
+        left: 204px;
+    }
+
+    /* 食堂 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__canteen-building {
+        width: 201px;
+        height: 121px;
+        top: 52px;
+        left: 264px;
+    }
+
+    /* 生产楼 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__production-building {
+        width: 224px;
+        height: 222px;
+        left: -7px;
+        top: 203px;
+    }
+
+    /* 停车场 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__parking-building {
+        width: 54px;
+        height: 72px;
+        top: 249px;
+        left: 478px;
+    }
+
+    /* D栋客房 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__guest-room-building {
+        width: 69px;
+        height: 50px;
+        top: 133px;
+        left: 438px;
+    }
+
+    /* 研发宿舍 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__RD-dormitory-building {
+        width: 122px;
+        height: 91px;
+        top: 23px;
+        left: 171px;
+    }
+
+
+}
+
+@media screen and (min-width:1600px) {
+
+    /* 保安室 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__security-booth {
+        width: 95px;
+        height: 103px;
+        left: 265px;
+        bottom: 74px;
+    }
+
+    /* 大厦 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__big-building {
+        width: 329px;
+        height: 267px;
+        top: 171px;
+        left: 243px;
+    }
+
+    /* 食堂 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__canteen-building {
+        width: 238px;
+        height: 136px;
+        top: 71px;
+        left: 309px;
+    }
+
+    /* 生产楼 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__production-building {
+        width: 265px;
+        height: 261px;
+        left: -9px;
+        top: 248px;
+    }
+
+    /* 停车场 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__parking-building {
+        width: 69px;
+        height: 79px;
+        top: 304px;
+        left: 557px;
+    }
+
+    /* D栋客房 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__guest-room-building {
+        width: 80px;
+        height: 56px;
+        top: 163px;
+        left: 508px;
+    }
+
+    /* 研发宿舍 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__RD-dormitory-building {
+        width: 143px;
+        height: 103px;
+        top: 37px;
+        left: 204px
+    }
+
+    .chartPanel-middle .chartPanel-video-container .chartPanel-video-item-box video {
+        width: 120px;
+        height: 86px;
+    }
+
+    /* .chartPanel-middle .chartPanel-video-container .chartPanel-video-item-box .chartPanel-video-item-cap {
+        transform-origin: center center 86px;
+        transform: rotateX(259deg) skew(10deg, 0deg) translateX(13px);
+        transform-origin: center center 86px;
+        -ms-transform: rotateX(259deg) skew(10deg, 0deg) translateX(13px);
+        -ms-transform-origin: center center 86px;
+        -webkit-transform: rotateX(259deg) skew(10deg, 0deg) translateX(13px);
+        -webkit-transform-origin: center center 86px;
+        -moz-transform: rotateX(259deg) skew(10deg, 0deg) translateX(13px);
+        -moz-transform-origin: center center 86px;
+        -o-transform: rotateX(259deg) skew(10deg, 0deg) translateX(13px);
+        -o-transform-origin: center center 86px;
+    } */
+
+
+    .chartPanel-middle .chartPanel-video-container .chartPanel-video-item:nth-child(2) .chartPanel-video-item-cap {
+        transform: rotateX(259deg) skew(6deg, 0deg) translateX(8px);
+        -ms-transform: rotateX(259deg) skew(6deg, 0deg) translateX(8px);
+        -webkit-transform: rotateX(259deg) skew(6deg, 0deg) translateX(8px);
+        -moz-transform: rotateX(259deg) skew(6deg, 0deg) translateX(8px);
+        -o-transform: rotateX(259deg) skew(6deg, 0deg) translateX(8px);
+    }
+
+    .chartPanel-middle .chartPanel-video-container .chartPanel-video-item:nth-child(3) .chartPanel-video-item-cap {
+        transform: rotateX(259deg) skew(-2deg, 0deg) translateX(-3px);
+        -ms-transform: rotateX(259deg) skew(-2deg, 0deg) translateX(-3px);
+        -webkit-transform: rotateX(259deg) skew(-2deg, 0deg) translateX(-3px);
+        -moz-transform: rotateX(259deg) skew(-2deg, 0deg) translateX(-3px);
+        -o-transform: rotateX(259deg) skew(-2deg, 0deg) translateX(-3px);
+    }
+
+    .chartPanel-middle .chartPanel-video-container .chartPanel-video-item:nth-child(4) .chartPanel-video-item-cap {
+        transform: rotateX(259deg) skew(-8deg, 0deg) translateX(-12px);
+        -ms-transform: rotateX(259deg) skew(-8deg, 0deg) translateX(-12px);
+        -webkit-transform: rotateX(259deg) skew(-8deg, 0deg) translateX(-12px);
+        -moz-transform: rotateX(259deg) skew(-8deg, 0deg) translateX(-12px);
+        -o-transform: rotateX(259deg) skew(-8deg, 0deg) translateX(-12px);
+    }
+}
+
+@media screen and (min-width:1920px) {
+
+    .dashboard-panel {
+        background-size: cover;
+    }
+
+    .dashboard-head-bg {
+        height: 130px;
+        background-size: cover;
+    }
+
+    .dashboard-head-bg .dashboard-head-collapse .btn-collapse {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dashboard-head-bg .dashboard-head-title {
+        margin-top: 10px;
+    }
+
+    .dashboard-head-bg .dashboard-head-title h2 {
+        font-size: 38px;
+    }
+
+    .dashboard-head-bg .dashboard-head-time-box .time-items .time-item {
+        font-size: 18px;
+    }
+
+    .chartPanel-left {
+        float: left;
+        flex: .8;
+        z-index: 100;
+    }
+
+    .chartPanel-middle {
+        flex: 1.2;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .chartPanel-right {
+        float: right;
+        flex: .8;
+        z-index: 100;
+    }
+
+
+    .chartPanel-left .chartPanel-hardware-device-online-box,
+    .chartPanel-left .chartPanel-attendence-rate-box,
+    .chartPanel-right .chartPanel-parking-space-use-box,
+    .chartPanel-right .chartPanel-room-occupancy-box,
+    .chartPanel-right .chartPanel-conference-room-use-box {
+        width: 548px;
+    }
+
+
+    .chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-data-box:nth-child(1) {
+        margin-left: 30px;
+    }
+
+    .chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-data-box:nth-child(2) {
+        margin-left: 60px;
+    }
+
+
+    .chartPanel-left .chartPanel-attendence-rate-box .attendence-rate-data-num-box .data-compare {
+        font-size: 16px;
+    }
+
+    .chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-container {
+        height: 465px;
+    }
+
+    .chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use-body .parking-space-use-item-box,
+    .chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use-body .conference-room-use-item-box {
+        width: 160px;
+        height: 160px;
+    }
+
+    .chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__left-item,
+    .chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use__left-item {
+        width: 170px;
+        height: 170px;
+    }
+
+    .chartPanel-right .chartPanel-parking-space-use-box .chartPanel-parking-space-use__right .parking-space-use__right-item {
+        width: 117px;
+        height: 87px;
+    }
+
+    .chartPanel-right .chartPanel-parking-space-use-box .parking-space-use__right-item-box .parking-space-use__right-item-num {
+        font-size: 30px;
+    }
+
+    .chartPanel-right .chartPanel-room-occupancy-box .chartPanel-room-occupancy-item {
+        width: 200px;
+        height: 190px;
+    }
+
+    .chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-num_use-box {
+        top: -20px;
+        left: -130px;
+        width: 199px;
+        height: 73px;
+        padding-left: 30px;
+    }
+
+    .chartPanel-right .chartPanel-room-occupancy-box .room-occupancy-item-num_unuse-box {
+        bottom: -15px;
+        right: -130px;
+        width: 168px;
+        height: 84px;
+    }
+
+    .chartPanel-right .chartPanel-conference-room-use-box .chartPanel-conference-room-use__right .conference-room-use__right-item-box {
+        width: 210px;
+        height: 68px;
+    }
+
+    .chartPanel-middle .chartPanel-video-container .chartPanel-video-item-box video {
+        width: 160px;
+        height: 120px;
+    }
+
+    .chartPanel-left .chartPanel-attendence-rate-box .chartPanel-attendence-rate-data-container {
+        padding-bottom: 20px;
+    }
+
+    .dashboard-head-bg .dashboard-head-collapse {
+        top: 46px;
+        right: 4px;
+    }
+
+    /* 保安室 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__security-booth {
+        width: 115px;
+        height: 124px;
+        left: 325px;
+        bottom: -16px;
+    }
+
+    /* 大厦 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__big-building {
+        width: 401px;
+        height: 321px;
+        top: 179px;
+        left: 296px;
+    }
+
+    /* 食堂 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__canteen-building {
+        width: 285px;
+        height: 169px;
+        top: 60px;
+        left: 378px;
+    }
+
+    /* 生产楼 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__production-building {
+        width: 327px;
+        height: 311px;
+        left: -9px;
+        top: 273px;
+    }
+
+    /* 停车场 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__parking-building {
+        width: 84px;
+        height: 101px;
+        top: 338px;
+        left: 675px;
+    }
+
+    /* D栋客房 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__guest-room-building {
+        width: 94px;
+        height: 72px;
+        top: 170px;
+        left: 618px;
+    }
+
+    /* 研发宿舍 */
+    .chartPanel-middle .chartPanel-3d-map-container .chartPanel-3d-map-builds .chartPanel-3d-map-build__RD-dormitory-building {
+        width: 176px;
+        height: 133px;
+        top: 16px;
+        left: 248px;
+    }
+
+    .chartPanel-middle .chartPanel-video-container .chartPanel-video-item-box .chartPanel-video-item-cap {
+        transform-origin: center center 106px;
+        transform: rotateX(259deg) skew(10deg, 0deg) translateX(15px);
+        transform-origin: center center 106px;
+        -ms-transform: rotateX(259deg) skew(10deg, 0deg) translateX(15px);
+        -ms-transform-origin: center center 106px;
+        -webkit-transform: rotateX(259deg) skew(10deg, 0deg) translateX(15px);
+        -webkit-transform-origin: center center 106px;
+        -moz-transform: rotateX(259deg) skew(10deg, 0deg) translateX(15px);
+        -moz-transform-origin: center center 106px;
+        -o-transform: rotateX(259deg) skew(10deg, 0deg) translateX(15px);
+        -o-transform-origin: center center 106px;
+    }
+
+    /* .chartPanel-conference-room-use-body {
+        margin: 10px 0;
+    } */
+}
+
+
+
+@keyframes rotateOuterCircle {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -webkit-transform: rotate(0deg);
+        /* Safari ºÍ Chrome */
+        -o-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        /* IE 9 */
+        -moz-transform: rotate(360deg);
+        /* Firefox */
+        -webkit-transform: rotate(360deg);
+        /* Safari ºÍ Chrome */
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateInnerCircle {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -webkit-transform: rotate(0deg);
+        /* Safari ºÍ Chrome */
+        -o-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        /* IE 9 */
+        -moz-transform: rotate(360deg);
+        /* Firefox */
+        -webkit-transform: rotate(360deg);
+        /* Safari ºÍ Chrome */
+        -o-transform: rotate(360deg);
+    }
+}

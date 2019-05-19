@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<style type="text/css">
+		body {
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+		}
+
+		.box {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: space-around;
+			align-items: center;
+			flex-flow: row nowrap;
+		}
+
+		.item1 {
+			background: red;
+			height: 200px;
+			width: 100%;
+		}
+
+		.item2 {
+			background: blue;
+			height: 200px;
+			width: 50%;
+		}
+
+		.item3 {
+			background: green;
+			height: 200px;
+			width: 50%;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="app" class="box">
+		<canvas id="cvs" width="600" height="600" style="border:1px solid #ddd"></canvas>
+	</div>
+
+	<script type="text/javascript">
+
+
+		function drawRect() {
+			drawCircle(130, 90);
+			drawCircle(330, 290);
+			drawLine(130, 90, 330, 290);
+			drawTriangle(130, 90, 330, 290);
+			drawCircle(150, 400);
+			drawLine(330, 290, 150, 400);
+			drawTriangle(330, 290, 150, 400);
+		}
+
+		// 画三角形
+		function drawTriangle(x1, y1, x2, y2) {
+			var cvs = document.getElementById('cvs');
+			var ctx = cvs.getContext('2d');
+			var type = 'fill';
+			drawArrow(ctx, x1, y1, x2, y2,30,30,5,"#7ac143")
+		}
+
+		/**
+		 * 绘制箭头
+		 * @author james.zhang
+		 * @date 2019.04.12
+		 * @param {HTMLCanvasElement} ctx 画布对象
+		 * @param {Number} fromX 起点的横坐标
+		 * @param {Number} fromY 起点的纵坐标 
+		 * @param {Number} toX 终点的横坐标
+		 * @param {Number} toY 终点的纵坐标
+		 * @param {Number} theta 三角斜边一直线夹角
+		 * @param {Number} headlen 三角斜边长度
+		 * @param {Number} width 箭头线宽度
+		 * @param {Number} color 箭头颜色 
+		 */
+		function drawArrow(ctx, fromX, fromY, toX, toY,theta,headlen,width,color) {
+			var theta = theta || 30,
+				headlen = headlen || 10,
+				width = width || 1,
+				color = color || '#000',
+				angle = Math.atan2(fromY - toY, fromX - toX) * 180 / Math.PI,
+				angle1 = (angle + theta) * Math.PI / 180,
+				angle2 = (angle - theta) * Math.PI / 180,
+				topX = headlen * Math.cos(angle1),
+				topY = headlen * Math.sin(angle1),
+				botX = headlen * Math.cos(angle2),
+				botY = headlen * Math.sin(angle2);
+			ctx.save();
+			ctx.beginPath();
+			var arrowX, arrowY;
+			ctx.moveTo(fromX, fromY);
+			ctx.lineTo(toX, toY);
+			arrowX = toX + topX;
+			arrowY = toY + topY;
+			ctx.moveTo(arrowX, arrowY);
+			ctx.lineTo(toX, toY);
+			arrowX = toX + botX;
+			arrowY = toY + botY;
+			ctx.lineTo(arrowX, arrowY);
+			ctx.strokeStyle = color;
+			ctx.lineWidth = width;
+			ctx.stroke();
+			ctx.restore();
+		}
+
+
+		// 画线
+		function drawLine(x1, y1, x2, y2) {
+			var cvs = document.getElementById('cvs');
+			var ctx = cvs.getContext('2d');
+			ctx.lineWidth = 5;
+			ctx.strokeStyle = "#7ac143";
+			ctx.beginPath();
+			ctx.moveTo(x1, y1);
+			ctx.lineTo(x2, y2);
+			ctx.stroke();
+		}
+	
+		// 画圆
+		function drawCircle(x, y, color) {
+			var cvs = document.getElementById('cvs');
+			var ctx = cvs.getContext('2d');
+			ctx.beginPath();
+			// ctx.fillStyle = "#7ac143";
+			ctx.fillStyle = color;
+			ctx.arc(x, y, 8, 0, 360 * Math.PI / 180, true);
+			ctx.fill();
+		}
+
+		drawRect();
+	</script>
+</body>
+
+</html>

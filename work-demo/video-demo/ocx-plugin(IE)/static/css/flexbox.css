@@ -1,0 +1,129 @@
+/** 兼容新旧浏览器的flex写法
+  *	author:james
+  */
+/* 定义 */
+.flex-box {
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+
+.flex-direction_row {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+/*伸缩流方向*/
+.flex-direction_column {
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+/*主轴对齐*/
+.justify-content_start {
+    -webkit-box-pack: start;
+    -moz-justify-content: start;
+    -webkit-justify-content: start;
+    justify-content: start;
+}
+
+.justify-content_flex-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.justify-content_flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.justify-content_flex-justify {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.justify-content_flex-around {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    justify-content: space-around;
+}
+
+
+
+/*侧轴对齐*/
+.align-items_flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.align-items_flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.align-items_center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.align-items_baseline {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+}
+
+/*伸缩性*/
+.flex_auto {
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    -webkit-flex: auto;
+    flex: auto;
+}
+
+.flex_1 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+/*显示顺序*/
+.order_2 {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+}
+
+.order_3 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    order: 3;
+}

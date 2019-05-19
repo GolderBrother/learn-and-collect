@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media Player PNaCl</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="author" content="videoexpertsgroup" />
+    <meta name="copyright" lang="ru" content="videoexpertsgroup" />
+    <meta name="description" content="Demo VXG Media Player for Chrome" />
+    <meta name="keywords" content="" />
+    <!-- vxgplayer -->
+    <script type="text/javascript" src="./vxgplayer-1.8.31.min.js"></script>
+    <link href="./vxgplayer-1.8.31.min.css" rel="stylesheet" />
+
+    <!-- demo page -->
+    <link href="https://www.videoexpertsgroup.com/nacl_player_api/demo.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://www.videoexpertsgroup.com/nacl_player_api/zenburn.min.css" rel="stylesheet">
+    </script>
+</head>
+
+<body>
+
+    <div class="menu-fixed">
+        <div class="menu">
+            <div class="menu-left">
+                <a href="?">VXG Media Player (1.8.31)</a>
+            </div>
+            <div class="menu-right">
+                <a class="menu-item-right" href="#demo">Demo</a>
+                <a class="menu-item-right" href="#examples">Examples</a>
+                <a class="menu-item-right" href="#support">Support</a>
+                <a class="menu-item-right" href="#download">Download</a>
+                <a class="menu-item-right" href="#jsapi">API</a>
+            </div>
+        </div>
+    </div>
+    <div id="runtimePlayers">
+
+        <div id="vxg_media_player1" class="vxgplayer" url="" aspect-ratio latency="3000000" autostart controls avsync></div>
+
+    </div>
+
+    <script>
+        function initVxgPlayer(vxgSrc, vxgId) {
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log("DOMContentLoaded");
+                console.log('===player.src=' + vxgplayer(vxgId).src());
+                console.log('===player.volume()=' + vxgplayer(vxgId).volume());
+                console.log('===player.autohide()=' + vxgplayer(vxgId).autohide());
+                console.log('===player.isMute()=' + vxgplayer(vxgId).isMute());
+                console.log('===player.isPlaying()=' + vxgplayer(vxgId).isPlaying());
+                console.log('===player.autoreconnect()=' + vxgplayer(vxgId).autoreconnect());
+                vxgplayer(vxgId).onReadyStateChange(function(onreadyState) {
+                    console.log("player LOADED: versionPLG=" + vxgplayer(vxgId).versionPLG() +
+                        " versionAPP=" + vxgplayer(vxgId).versionAPP());
+                    vxgplayer(vxgId).src(vxgSrc);
+                    vxgplayer(vxgId).play();
+                });
+                vxgplayer(vxgId).onError(function(onErr) {
+                    console.log("player ERROR: " + vxgplayer(vxgId).error() + " decoder:" + vxgplayer(vxgId)
+                        .errorDecoder());
+                });
+            });
+
+            function setVxgSrc(src, vxgId) {
+                var player = vxgplayer(vxgId);
+                player.src(src); // set src
+            }
+            setVxgSrc(vxgSrc, vxgId);
+        }
+        setTimeout(() => {
+            initVxgPlayer("rtsp://admin:admin123@192.168.204.88:554/stream/realtime?channel=1&streamtype=0", "vxg_media_player1");
+        }, 10)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+Google Chrome version 45 and above no longer support NPAPI which is used by VLC plugin.
+Google 浏览器启用方法
+https://www.vboxcomm.com/enable-vlc-web-plugin-in-google-chrome-npapi.html?tmpl=component
+
+Google Chrome v43.0.2357.130 32位版 离线包
+http://dl.google.com/chrome/win/B6585D9F8CF5DBD2/43.0.2357.130_chrome_installer.exe
+http://redirector.gvt1.com/edgedl/chrome/win/B6585D9F8CF5DBD2/43.0.2357.130_chrome_installer.exe
+Google Chrome v43.0.2357.130 64位版 离线包
+http://dl.google.com/chrome/win/E1CA8F569E08619C/43.0.2357.130_chrome64_installer.exe
+http://redirector.gvt1.com/edgedl/chrome/win/E1CA8F569E08619C/43.0.2357.130_chrome64_installer.exe
+
+谷歌浏览器Chrome 44.0.2403.157更新日志：
+常规修复更新。
+本软件支持Windows XP、Vista、Win7、Win8、Win8.1以及Win10，41.5MB。
+下载地址：
+32位离线包：https://dl.google.com/chrome/win/F24BEBCD670E2ACB/44.0.2403.157_chrome_installer.exe
+64位离线包：https://dl.google.com/chrome/win/1119FA397D484864/44.0.2403.157_chrome64_installer.exe
+MAC版下载：http://www.google.com/chrome?platform=mac&hl=zh_CN
+
+
+
+火狐浏览器52以下版本（亲测）
+http://www.cnblogs.com/ningheshutong/p/7955519.html
+https://wiki.videolan.org/Documentation:WebPlugin/
+火狐浏览器各版本的下载地址 http://ftp.mozilla.org/pub/mozilla.org//firefox/releases/
+
+
+
+qq浏览器测试过当前最新版9.7（12900）
+谷歌内核53.0.2785/IE 11.48.17134.0
+
+VLC配当前最新版本vlc-3.0.2-win32.exe
+
+https://videoconverter.wondershare.com/vlc/vlc-web-plugins-for-top-browsers.html

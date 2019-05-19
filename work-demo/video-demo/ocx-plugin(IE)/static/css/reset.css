@@ -1,0 +1,228 @@
+@charset "utf-8";
+/*初始化样式*/
+
+/*清除内外边距*/
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+span,
+a,
+em,
+/*strucural elements 结构元素*/
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+/*list elements 列表元素*/
+pre,
+/*text formatting elements 文本格式元素*/
+fieldset,
+lengend,
+button,
+input,
+textarea,
+form,
+/*form elements 表单元素*/
+table,
+tbody,
+tfoot,
+tr,
+th,
+td,
+/*table elements 表格元素*/
+img,
+strong,
+area,
+del,
+select {
+	margin: 0;
+	padding: 0;
+}
+
+/*设置默认字体*/
+body,
+button,
+input,
+select,
+textarea {
+	font-family: "Microsoft YaHei", "微软雅黑", Arial, Verdana, "microsoft yahei";
+	line-height: 1.5;
+	-ms-overflow-style: scrollbar;
+	font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+address,
+caption,
+cite,
+em,
+strong {
+	font-size: 1em;
+	font-style: normal;
+	font-weight: normal;
+}
+
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+nav,
+figure,
+menu {
+	display: block;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
+/*边框边缘的线*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+	font-style: normal;
+}
+
+/*将斜体扶正*/
+/*code,kbd,pre,samp,tt{ font-family: "Courier New",Courier,monospace; }*/
+/*统一等宽字体*/
+
+/*small{
+	font-size: 12px;
+} */
+/*小于12px的中文很难阅读，让small正常化*/
+
+/*重置列表元素*/
+
+ul,
+ol {
+	list-style: none outside none;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: medium none;
+}
+
+a:active {
+	text-decoration: none;
+	list-style: none;
+}
+
+sup {
+	vertical-align: text-top;
+}
+
+sub {
+	vertical-align: text-bottom;
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+}
+
+/*使得表单元素在ie下能继承字体大小*/
+fieldset,
+img {
+	border: medium none;
+}
+
+input,
+select,
+button {
+	vertical-align: middle;
+	border: none;
+}
+
+img {
+	border: 0;
+	display: block;
+}
+
+em,
+address,
+i,
+cite {
+	font-style: normal;
+}
+
+.flo-l {
+	float: left;
+	display: inline;
+}
+
+/*左浮动*/
+/*display:inline--->可修复ie6中双边间距的bug*/
+.flo-r {
+	float: right;
+	display: inline;
+}
+
+/*右浮动*/
+
+/*清除浮动，防止高度塌陷*/
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix::after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0;
+}
+
+.pos-r {
+	position: relative;
+}
+
+/*相对定位*/
+.pos-a {
+	position: absolute;
+}
+
+/*绝对定位*/
+
+.ove-h {
+	overflow: hidden;
+}

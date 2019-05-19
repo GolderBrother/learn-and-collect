@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vlc</title>
+    <style>
+        .vlc {
+            width: 720px;
+            height: 410px;
+            /* background: url("./imgs/face.jpg") no-repeat center/cover; */
+        }
+        
+        #vlc3 {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+	<object type='application/x-vlc-plugin' pluginspage="http://www.videolan.org/" id='vlc1' events='false' width="720" height="410">
+    <param name='mrl' value='rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov' />
+    <param name='volume' value='50' />
+    <param name='autoplay' value='true' />
+    <param name='loop' value='false' />
+    <param name='fullscreen' value='false' />
+    <param name='controls' value='true' />
+</object>
+<object type='application/x-vlc-plugin' pluginspage="http://www.videolan.org/" id='vlc2' events='false' width="720" height="410">
+    <param name='mrl' value='rtsp://127.0.0.1:8554/1' />
+    <param name='volume' value='50' />
+    <param name='autoplay' value='true' />
+    <param name='loop' value='false' />
+    <param name='fullscreen' value='false' />
+    <param name='controls' value='true' />
+</object>
+-->
+    <div class="vlc">
+        <object type='application/x-vlc-plugin' pluginspage="http://www.videolan.org/" id='vlc3' events='false' width="720" height="410">
+            <param name='mrl' value='' />
+            <param name='volume' value='100' />
+            <param name='autoplay' value='true' />
+            <param name='loop' value='false' />
+            <param name='fullscreen' val ue='true' />
+            <param name='controls' value='false' />
+        </object>
+    </div>
+    <script type="text/javascript">
+        window.onload = function() {
+
+        }
+
+        function initVlcPlayer() {
+            var vlc = document.getElementById("vlc3");
+            // setTimeout(function() {
+
+            // }, 100);
+            var options = new Array(":aspect-ratio=4:3", "--rtsp-tcp");
+            var id = vlc.playlist.add(
+                "rtsp://admin:admin123@192.168.204.89:554/stream/realtime?channel=1&streamtype=0",
+                "fancy name", options);
+            vlc.playlist.playItem(id);
+            console.log(vlc.playlist)
+            vlc.video.marquee.text = "ZKTeco";
+            vlc.video.marquee.color = 0x7AC143;
+            vlc.video.marquee.position = "top-right";
+            vlc.video.marquee.x = "20";
+            vlc.video.marquee.y = "20";
+            vlc.video.marquee.enable();
+        }
+        initVlcPlayer();
+    </script>
+</body>
+
+</html>
