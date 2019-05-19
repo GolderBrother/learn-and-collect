@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <title>原型&继承</title>
+    <script>
+    window.onload = function(){
+        function f() {};//函数对象   typeof f;
+        var o = {};//普通对象
+        function f() {};
+        var f1 = new f();//实例属于普通对象
+
+
+        var cat1 = {};//创建一个空对象
+        cat1.name="大明";
+        cat1.color ="黄色";
+        var cat2 = {};//创建一个空对象
+        cat2.name="小明";
+        cat2.color ="白色";
+
+
+        function cat(name,color){   //普通函数
+            return {
+                name:name,
+                color:color
+            }
+        };
+        var cat1 = cat("大明","黄色"); //
+        var cat2 = cat("小明","白色");
+       // cat1.name
+
+        function Cat(name,color){   //构造函数
+            this.name = name;
+            this.color = color;
+        };
+        var cat1 = new Cat("大明","黄色");
+        var cat2 = new Cat("小明","白色");
+        //cat1.name
+
+        function Cat(name,color){   //构造函数
+            this.name = name;
+            this.color = color;
+            this.type='动物';
+            this.eat = function(){console.log("吃老鼠")};
+        };
+        var cat1 = new Cat("大明","黄色");
+        var cat2 = new Cat("小明","白色");
+
+        //prototype 原型对象
+        function Cat(name,color){   //构造函数
+            this.name = name;
+            this.color = color;
+            //this.type='动物';
+           // this.eat = function(){console.log("吃老鼠")};
+        };
+        Cat.prototype.type='动物';
+        Cat.prototype.eat = function(){console.log("吃老鼠")};
+        var cat1 = new Cat("大明","黄色");
+        var cat2 = new Cat("小明","白色");
+
+        //继承  3种
+        //1、prototype
+        function Animal(){   //构造函数
+            this.type = '动物';
+        };
+        function Cat(name,color){   //构造函数
+            this.name = name;
+            this.color = color;
+        };
+        Cat.prototype = new Animal()
+        var cat1 = new Cat("大明","黄色");
+        cat1.type
+
+        //2、prototype
+        function Animal(){   //构造函数
+            //this.type = '动物';
+        };
+        Animal.prototype.type = '动物';
+        function Cat(name,color){   //构造函数
+            this.name = name;
+            this.color = color;
+        };
+        Cat.prototype = Animal.prototype;
+        Cat.prototype.abc = 'abc';
+        var cat1 = new Cat("大明","黄色");
+        console.log(Animal.prototype);
+        //3,apply()  call() 在一个对象中调用另一个对象    参数不同
+        function Animal(){   //构造函数
+            this.type = '动物';
+        };
+        function Cat(name,color){   //构造函数
+            Animal.apply(this);    //Animal对象在Cat对象中执行
+            this.name = name;
+            this.color = color;
+        };
+        var cat1 = new Cat("大明","黄色");
+        cat1.type
+
+
+        function Cat(name,color){   //构造函数
+            this.name = name;
+            this.color = color;
+        };
+        var o = {};
+        //Cat.apply(o,['大白','red']);  //cat在O对象中执行
+        Cat.call(o,'大白','red'); 
+        o.name
+
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

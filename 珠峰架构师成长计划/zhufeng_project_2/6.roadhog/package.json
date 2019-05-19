@@ -1,0 +1,14 @@
+{
+  "name": "6.roadhog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "roadhog dev",
+    "build":"roadhog build",
+    "test":"roadhog test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

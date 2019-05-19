@@ -1,0 +1,25 @@
+{
+  "name": "egg-news",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env EGG_SERVER_ENV=local egg-bin dev",
+    "prod": "cross-env EGG_SERVER_ENV=prod egg-bin dev",
+    "test": "egg-bin test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "egg": "^2.14.1",
+    "egg-mock": "^3.20.1",
+    "egg-view-nunjucks": "^2.2.0",
+    "express": "^4.16.4",
+    "moment": "^2.23.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "egg-bin": "^4.9.0"
+  }
+}

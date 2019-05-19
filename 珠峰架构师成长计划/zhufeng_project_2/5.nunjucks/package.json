@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express": "^4.16.4",
+    "nunjucks": "^3.1.4"
+  }
+}

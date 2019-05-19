@@ -1,0 +1,950 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+
+            珠峰架构师成长计划
+
+        </div>
+        <ul>
+            <li><a href="../index.html">0.Async</a></li>
+            <li><a href="../html/0.editor.html">0.editor</a></li>
+            <li><a href="../html/0.module.html">0.module</a></li>
+            <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+            <li><a href="../html/2.Promise.html">2.Promise</a></li>
+            <li><a href="../html/3.Node.html">3.Node</a></li>
+            <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+            <li><a href="../html/5.REPL.html">5.REPL</a></li>
+            <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+            <li><a href="../html/7.module&amp;NPM.html">7.module&amp;NPM</a></li>
+            <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+            <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+            <li class="active"><a href="../html/10.fs.html">10.fs</a></li>
+            <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+            <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+            <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+            <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+            <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+            <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+            <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+            <li><a href="../html/13.tcp.html">13.tcp</a></li>
+            <li><a href="../html/14.http-1.html">14.http-1</a></li>
+            <li><a href="../html/14.http-2.html">14.http-2</a></li>
+            <li><a href="../html/15.compress.html">15.compress</a></li>
+            <li><a href="../html/16.crypto.html">16.crypto</a></li>
+            <li><a href="../html/17.process.html">17.process</a></li>
+            <li><a href="../html/18.yargs.html">18.yargs</a></li>
+            <li><a href="../html/19.cache.html">19.cache</a></li>
+            <li><a href="../html/20.action.html">20.action</a></li>
+            <li><a href="../html/21.https.html">21.https</a></li>
+            <li><a href="../html/22.cookie.html">22.cookie</a></li>
+            <li><a href="../html/23.session.html">23.session</a></li>
+            <li><a href="../html/24.express-1.html">24.express-1</a></li>
+            <li><a href="../html/24.express-2.html">24.express-2</a></li>
+            <li><a href="../html/24.express-3.html">24.express-3</a></li>
+            <li><a href="../html/24.express-4.html">24.express-4</a></li>
+            <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+            <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+            <li><a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a></li>
+            <li><a href="../html/26.webpack-3.tapable.html">26.webpack-3.tapable</a></li>
+            <li><a href="../html/26.webpack-4-AST.html">26.webpack-4-AST</a></li>
+            <li><a href="../html/26.webpack-5-source.html">26.webpack-5-source</a></li>
+            <li><a href="../html/26.webpack-6-loader.html">26.webpack-6-loader</a></li>
+            <li><a href="../html/26.webpack-7-plugin.html">26.webpack-7-plugin</a></li>
+            <li><a href="../html/26.webpack-8-hand.html">26.webpack-8-hand</a></li>
+            <li><a href="../html/27.react-1.html">27.react-1</a></li>
+            <li><a href="../html/27.react-2.html">27.react-2</a></li>
+            <li><a href="../html/27.react-3.html">27.react-3</a></li>
+            <li><a href="../html/27.react-4-immutable.html">27.react-4-immutable</a></li>
+            <li><a href="../html/27.react-5-react-dom-diff.html">27.react-5-react-dom-diff</a></li>
+            <li><a href="../html/27.react-6.html">27.react-6</a></li>
+            <li><a href="../html/28.react-mobx.html">28.react-mobx</a></li>
+            <li><a href="../html/28.redux-0.html">28.redux-0</a></li>
+            <li><a href="../html/28.redux-1.html">28.redux-1</a></li>
+            <li><a href="../html/28.redux-2-中间件.html">28.redux-2-中间件</a></li>
+            <li><a href="../html/28.redux-3-saga.html">28.redux-3-saga</a></li>
+            <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+            <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+            <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+            <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+            <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+            <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+            <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+            <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+            <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+            <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+            <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+            <li><a href="../html/30.cms-4-egg.html">30.cms-4-egg</a></li>
+            <li><a href="../html/30.cms-5-api.html">30.cms-5-api</a></li>
+            <li><a href="../html/30.cms-6-roadhog.html">30.cms-6-roadhog</a></li>
+            <li><a href="../html/30.cms-7-umi.html">30.cms-7-umi</a></li>
+            <li><a href="../html/30.cms-8-dva.html">30.cms-8-dva</a></li>
+            <li><a href="../html/30.cms-9-dva.html">30.cms-9-dva</a></li>
+            <li><a href="../html/30.cms-10-dva.html">30.cms-10-dva</a></li>
+            <li><a href="../html/30.cms-11-front.html">30.cms-11-front</a></li>
+            <li><a href="../html/31.cms-12-api.html">31.cms-12-api</a></li>
+            <li><a href="../html/31.cms-13-front.html">31.cms-13-front</a></li>
+            <li><a href="../html/31.cms-14-deploy.html">31.cms-14-deploy</a></li>
+            <li><a href="../html/32.ant.html">32.ant</a></li>
+            <li><a href="../html/33.redis.html">33.redis</a></li>
+            <li><a href="../html/34.unittest.html">34.unittest</a></li>
+            <li><a href="../html/35.jwt.html">35.jwt</a></li>
+            <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+            <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+            <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+            <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+            <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+            <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+            <li><a href="../html/38.chat.html">38.chat</a></li>
+            <li><a href="../html/38.chat2.html">38.chat2</a></li>
+            <li><a href="../html/38.chat2.html">38.chat2</a></li>
+            <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+            <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+            <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+            <li><a href="../html/40.deploy.html">40.deploy</a></li>
+            <li><a href="../html/41.safe.html">41.safe</a></li>
+            <li><a href="../html/42.test.html">42.test</a></li>
+            <li><a href="../html/43.nginx.html">43.nginx</a></li>
+            <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+            <li><a href="../html/45.docker.html">45.docker</a></li>
+            <li><a href="../html/46.elastic.html">46.elastic</a></li>
+            <li><a href="../html/47.oauth.html">47.oauth</a></li>
+            <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+            <li><a href="../html/49.nunjucks.html">49.nunjucks</a></li>
+            <li><a href="../html/50.ketang.html">50.ketang</a></li>
+            <li><a href="../html/index.html">index</a></li>
+            <li><a href="../html/51.typescript.html">51.typescript</a></li>
+            <li><a href="../html/52.UML.html">52.UML</a></li>
+            <li><a href="../html/53.design.html">53.design</a></li>
+            <li><a href="../html/index.html">index</a></li>
+        </ul>
+    </div>
+
+
+    <div class="warpper">
+
+        <div class="page-toc">
+            <ul>
+                <li><a href="#t01. fs模块">1. fs模块</a></li>
+                <li><a href="#t12. 整体读取文件">2. 整体读取文件</a>
+                    <ul>
+                        <li><a href="#t22.1 异步读取">2.1 异步读取</a></li>
+                        <li><a href="#t32.2 同步读取">2.2 同步读取</a></li>
+                    </ul>
+                </li>
+                <li><a href="#t43. 写入文件">3. 写入文件</a>
+                    <ul>
+                        <li><a href="#t53.1 异步写入">3.1 异步写入</a></li>
+                        <li><a href="#t63.2 同步写入">3.2 同步写入</a></li>
+                        <li><a href="#t73.3 追加文件">3.3 追加文件</a></li>
+                        <li><a href="#t83.4 拷贝文件">3.4 拷贝文件</a></li>
+                    </ul>
+                </li>
+                <li><a href="#t94. 从指定位置处开始读取文件">4. 从指定位置处开始读取文件</a>
+                    <ul>
+                        <li><a href="#t104.1 打开文件">4.1 打开文件</a></li>
+                        <li><a href="#t114.2 读取文件">4.2 读取文件</a></li>
+                        <li><a href="#t124.3 写入文件">4.3 写入文件</a></li>
+                        <li><a href="#t134.4 同步磁盘缓存">4.4 同步磁盘缓存</a></li>
+                        <li><a href="#t144.5 关闭文件">4.5 关闭文件</a></li>
+                        <li><a href="#t154.6 拷贝文件">4.6 拷贝文件</a></li>
+                    </ul>
+                </li>
+                <li><a href="#t165 目录操作">5 目录操作</a>
+                    <ul>
+                        <li><a href="#t175.1 创建目录">5.1 创建目录</a></li>
+                        <li><a href="#t185.2 判断一个文件是否有权限访问">5.2 判断一个文件是否有权限访问</a></li>
+                        <li><a href="#t195.3 读取目录下所有的文件">5.3 读取目录下所有的文件</a></li>
+                        <li><a href="#t205.4 查看文件目录信息">5.4 查看文件目录信息</a></li>
+                        <li><a href="#t215.5 移动文件或目录">5.5 移动文件或目录</a></li>
+                        <li><a href="#t225.6 删除文件">5.6 删除文件</a></li>
+                        <li><a href="#t235.7 截断文件">5.7 截断文件</a></li>
+                        <li><a href="#t245.8  监视文件或目录">5.8 监视文件或目录</a></li>
+                    </ul>
+                </li>
+                <li><a href="#t256 递归创建目录">6 递归创建目录</a>
+                    <ul>
+                        <li><a href="#t266.1 同步创建目录">6.1 同步创建目录</a></li>
+                        <li><a href="#t276.2 异步创建目录">6.2 异步创建目录</a></li>
+                        <li><a href="#t286.3 Async+Await创建目录">6.3 Async+Await创建目录</a></li>
+                    </ul>
+                </li>
+                <li><a href="#t297. 递归删除目录">7. 递归删除目录</a>
+                    <ul>
+                        <li><a href="#t307.1  同步删除目录(深度优先)">7.1 同步删除目录(深度优先)</a></li>
+                        <li><a href="#t317.2 异步删除非空目录(Promise版)">7.2 异步删除非空目录(Promise版)</a></li>
+                        <li><a href="#t327.3 异步串行删除目录(深度优先)">7.3 异步串行删除目录(深度优先)</a></li>
+                        <li><a href="#t337.4 异步并行删除目录(深度优先)">7.4 异步并行删除目录(深度优先)</a></li>
+                        <li><a href="#t347.5 同步删除目录(广度优先)">7.5 同步删除目录(广度优先)</a></li>
+                        <li><a href="#t357.6 异步删除目录(广度优先)">7.6 异步删除目录(广度优先)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#t368.  遍历算法">8. 遍历算法</a>
+                    <ul>
+                        <li><a href="#t378.1 同步深度优先+先序遍历">8.1 同步深度优先+先序遍历</a></li>
+                        <li><a href="#t388.2 异步深度优先+先序遍历">8.2 异步深度优先+先序遍历</a></li>
+                        <li><a href="#t398.3 同步广度优先+先序遍历">8.3 同步广度优先+先序遍历</a></li>
+                        <li><a href="#t408.4 异步广度优先+先序遍历">8.4 异步广度优先+先序遍历</a></li>
+                    </ul>
+                </li>
+                <li><a href="#t418. path模块">8. path模块</a></li>
+                <li><a href="#t429. flags">9. flags</a></li>
+                <li><a href="#t4310. 助记">10. 助记</a></li>
+                <li><a href="#t4411. linux权限">11. linux权限</a></li>
+            </ul>
+        </div>
+
+        <div class="content markdown-body">
+            <h2 id="t01. fs模块">1. fs模块 <a href="#t01. fs模块"> # </a></h2>
+            <ul>
+                <li>在Node.js中，使用fs模块来实现所有有关文件及目录的创建、写入及删除操作。</li>
+                <li>在fs模块中，所有的方法都分为同步和异步两种实现。</li>
+                <li>具有<code>sync</code>后缀的方法为同步方法，不具有<code>sync</code>后缀的方法为异步方法。</li>
+            </ul>
+            <h2 id="t12. 整体读取文件">2. 整体读取文件 <a href="#t12. 整体读取文件"> # </a></h2>
+            <h3 id="t22.1 异步读取">2.1 异步读取 <a href="#t22.1 异步读取"> # </a></h3>
+            <pre><code class="lang-js">fs.readFile(path[, options], callback)
+    </code></pre>
+            <ul>
+                <li>options<ul>
+                        <li>encoding</li>
+                        <li>flag flag <string> 默认 = 'r'</string>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 id="t32.2 同步读取">2.2 同步读取 <a href="#t32.2 同步读取"> # </a></h3>
+            <pre><code class="lang-js">fs.readFileSync(path[, options])
+    </code></pre>
+            <h2 id="t43. 写入文件">3. 写入文件 <a href="#t43. 写入文件"> # </a></h2>
+            <h3 id="t53.1 异步写入">3.1 异步写入 <a href="#t53.1 异步写入"> # </a></h3>
+            <pre><code class="lang-js">fs.writeFile(file, data[, options], callback)
+    </code></pre>
+            <ul>
+                <li>options<ul>
+                        <li>encoding</li>
+                        <li>flag flag <string> 默认 = 'w'</string>
+                        </li>
+                        <li>mode 读写权限，默认为0666</li>
+                    </ul>
+                </li>
+            </ul>
+            <pre><code class="lang-js"><span class="hljs-keyword">let</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+    fs.writeFile(<span class="hljs-string">'./1.txt'</span>,<span class="hljs-built_in">Date</span>.now()+<span class="hljs-string">'\n'</span>,{<span class="hljs-attr">flag</span>:<span class="hljs-string">'a'</span>},<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ok'</span>);
+    });
+    </code></pre>
+            <h3 id="t63.2 同步写入">3.2 同步写入 <a href="#t63.2 同步写入"> # </a></h3>
+            <pre><code class="lang-js">fs.writeFileSync(file, data[, options])
+    </code></pre>
+            <h3 id="t73.3 追加文件">3.3 追加文件 <a href="#t73.3 追加文件"> # </a></h3>
+            <blockquote>
+                <p>fs.appendFile(file, data[, options], callback)</p>
+            </blockquote>
+            <pre><code class="lang-js">fs.appendFile(<span class="hljs-string">'./1.txt'</span>,<span class="hljs-built_in">Date</span>.now()+<span class="hljs-string">'\n'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ok'</span>);
+    })
+    </code></pre>
+            <h3 id="t83.4 拷贝文件">3.4 拷贝文件 <a href="#t83.4 拷贝文件"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">copy</span>(<span class="hljs-params">src,target</span>)</span>{
+      fs.readFile(src,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err,data</span>)</span>{
+        fs.writeFile(target,data);
+      })
+    }
+    </code></pre>
+            <h2 id="t94. 从指定位置处开始读取文件">4. 从指定位置处开始读取文件 <a href="#t94. 从指定位置处开始读取文件"> # </a></h2>
+            <h3 id="t104.1 打开文件">4.1 打开文件 <a href="#t104.1 打开文件"> # </a></h3>
+            <blockquote>
+                <p>fs.open(filename,flags,[mode],callback);</p>
+                <ul>
+                    <li>FileDescriptor 是文件描述符</li>
+                    <li>FileDescriptor 可以被用来表示文件</li>
+                    <li>in -- 标准输入(键盘)的描述符</li>
+                    <li>out -- 标准输出(屏幕)的描述符</li>
+                    <li>err -- 标准错误输出(屏幕)的描述符</li>
+                </ul>
+            </blockquote>
+            <pre><code class="lang-js">fs.open(<span class="hljs-string">'./1,txt'</span>,<span class="hljs-string">'r'</span>,<span class="hljs-number">0600</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err,fd</span>)</span>{});
+    </code></pre>
+            <h3 id="t114.2 读取文件">4.2 读取文件 <a href="#t114.2 读取文件"> # </a></h3>
+            <blockquote>
+                <p>fs.read(fd, buffer, offset, length, position, callback((err, bytesRead, buffer)))</p>
+            </blockquote>
+            <pre><code class="lang-js"><span class="hljs-comment">//珠峰培训</span>
+    <span class="hljs-keyword">const</span> fs=<span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+    <span class="hljs-keyword">const</span> path=<span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+    fs.open(path.join(__dirname,<span class="hljs-string">'1.txt'</span>),<span class="hljs-string">'r'</span>,<span class="hljs-number">0o666</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err,fd</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(err);
+        <span class="hljs-keyword">let</span> buf = Buffer.alloc(<span class="hljs-number">6</span>);
+         fs.read(fd,buf,<span class="hljs-number">0</span>,<span class="hljs-number">6</span>,<span class="hljs-number">3</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, bytesRead, buffer</span>)</span>{
+           <span class="hljs-built_in">console</span>.log(bytesRead);<span class="hljs-comment">//6</span>
+           <span class="hljs-built_in">console</span>.log(buffer===buf);<span class="hljs-comment">//true</span>
+           <span class="hljs-built_in">console</span>.log(buf.toString());<span class="hljs-comment">//峰培</span>
+         })
+    })
+    </code></pre>
+            <h3 id="t124.3 写入文件">4.3 写入文件 <a href="#t124.3 写入文件"> # </a></h3>
+            <blockquote>
+                <p>fs.write(fd, buffer[, offset[, length[, position]]], callback)</p>
+            </blockquote>
+            <pre><code class="lang-js"><span class="hljs-keyword">const</span> fs=<span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+    <span class="hljs-keyword">const</span> path=<span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+    fs.open(path.join(__dirname,<span class="hljs-string">'1.txt'</span>),<span class="hljs-string">'w'</span>,<span class="hljs-number">0o666</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err,fd</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(err);
+        <span class="hljs-keyword">let</span> buf=Buffer.from(<span class="hljs-string">'珠峰培训'</span>);
+         fs.write(fd,buf,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">0</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, bytesWritten, buffer</span>)</span>{
+           <span class="hljs-built_in">console</span>.log(bytesWritten);<span class="hljs-comment">//6</span>
+           <span class="hljs-built_in">console</span>.log(buffer===buf);<span class="hljs-comment">//true</span>
+           <span class="hljs-built_in">console</span>.log(buf.toString());<span class="hljs-comment">//珠峰培训</span>
+         })
+    })
+    </code></pre>
+            <h3 id="t134.4 同步磁盘缓存">4.4 同步磁盘缓存 <a href="#t134.4 同步磁盘缓存"> # </a></h3>
+            <blockquote>
+                <p>fs.fsync(fd,[callback]);</p>
+            </blockquote>
+            <h3 id="t144.5 关闭文件">4.5 关闭文件 <a href="#t144.5 关闭文件"> # </a></h3>
+            <blockquote>
+                <p>fs.close(fd,[callback]);</p>
+            </blockquote>
+            <pre><code class="lang-js"><span class="hljs-keyword">let</span> buf = Buffer.from(<span class="hljs-string">'珠峰培训'</span>);
+    fs.open(<span class="hljs-string">'./2.txt'</span>, <span class="hljs-string">'w'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, fd</span>) </span>{
+      fs.write(fd, buf, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, written, buffer</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(written);
+        fs.fsync(fd, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+          fs.close(fd, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'写入完毕!'</span>)
+            }
+          );
+        });
+      })
+    });
+    </code></pre>
+            <h3 id="t154.6 拷贝文件">4.6 拷贝文件 <a href="#t154.6 拷贝文件"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-keyword">let</span> BUFFER_SIZE=<span class="hljs-number">1</span>;
+    <span class="hljs-keyword">const</span> path=<span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+    <span class="hljs-keyword">const</span> fs=<span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">copy</span>(<span class="hljs-params">src,dest,callback</span>) </span>{
+        <span class="hljs-keyword">let</span> buf=Buffer.alloc(BUFFER_SIZE);
+        fs.open(src,<span class="hljs-string">'r'</span>,(err,readFd)=&gt;{
+            fs.open(dest,<span class="hljs-string">'w'</span>,(err,writeFd) =&gt; {
+                !<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">read</span>(<span class="hljs-params"></span>) </span>{
+                    fs.read(readFd,buf,<span class="hljs-number">0</span>,BUFFER_SIZE,<span class="hljs-literal">null</span>,(err,bytesRead) =&gt; {
+                        bytesRead&amp;&amp;fs.write(writeFd,buf,<span class="hljs-number">0</span>,bytesRead,read);
+                    });
+                }()
+            })
+        });
+    }
+    copy(path.join(__dirname,<span class="hljs-string">'1.txt'</span>),path.join(__dirname,<span class="hljs-string">'2.txt'</span>),()=&gt;<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ok'</span>));
+    </code></pre>
+            <h2 id="t165 目录操作">5 目录操作 <a href="#t165 目录操作"> # </a></h2>
+            <h3 id="t175.1 创建目录">5.1 创建目录 <a href="#t175.1 创建目录"> # </a></h3>
+            <blockquote>
+                <p>fs.mkdir(path[, mode], callback)</p>
+                <p>要求父目录必须存在</p>
+            </blockquote>
+            <h3 id="t185.2 判断一个文件是否有权限访问">5.2 判断一个文件是否有权限访问 <a href="#t185.2 判断一个文件是否有权限访问"> # </a></h3>
+            <blockquote>
+                <p>fs.access(path[, mode], callback)</p>
+                <pre><code class="lang-js">fs.access(<span class="hljs-string">'/etc/passwd'</span>, fs.constants.R_OK | fs.constants.W_OK, (err) =&gt; {
+      <span class="hljs-built_in">console</span>.log(err ? <span class="hljs-string">'no access!'</span> : <span class="hljs-string">'can read/write'</span>);
+    });
+    </code></pre>
+            </blockquote>
+            <h3 id="t195.3 读取目录下所有的文件">5.3 读取目录下所有的文件 <a href="#t195.3 读取目录下所有的文件"> # </a></h3>
+            <blockquote>
+                <p>fs.readdir(path[, options], callback)</p>
+            </blockquote>
+            <h3 id="t205.4 查看文件目录信息">5.4 查看文件目录信息 <a href="#t205.4 查看文件目录信息"> # </a></h3>
+            <blockquote>
+                <p>fs.stat(path, callback)</p>
+            </blockquote>
+            <ul>
+                <li>stats.isFile()</li>
+                <li>stats.isDirectory()</li>
+                <li>atime(Access Time)上次被读取的时间。</li>
+                <li>ctime(State Change Time)：属性或内容上次被修改的时间。</li>
+                <li>mtime(Modified time)：档案的内容上次被修改的时间。</li>
+            </ul>
+            <h3 id="t215.5 移动文件或目录">5.5 移动文件或目录 <a href="#t215.5 移动文件或目录"> # </a></h3>
+            <pre><code class="lang-js">fs.rename(oldPath, newPath, callback)
+    </code></pre>
+            <h3 id="t225.6 删除文件">5.6 删除文件 <a href="#t225.6 删除文件"> # </a></h3>
+            <pre><code class="lang-js">fs.unlink(path, callback)
+    </code></pre>
+            <h3 id="t235.7 截断文件">5.7 截断文件 <a href="#t235.7 截断文件"> # </a></h3>
+            <pre><code class="lang-js">fs.ftruncate(fd[, len], callback)
+    </code></pre>
+            <pre><code class="lang-js"><span class="hljs-keyword">const</span> fd = fs.openSync(<span class="hljs-string">'temp.txt'</span>, <span class="hljs-string">'r+'</span>);
+    <span class="hljs-comment">// 截断文件至前4个字节</span>
+    fs.ftruncate(fd, <span class="hljs-number">4</span>, (err) =&gt; {
+      <span class="hljs-built_in">console</span>.log(fs.readFileSync(<span class="hljs-string">'temp.txt'</span>, <span class="hljs-string">'utf8'</span>));
+    });
+    </code></pre>
+            <h3 id="t245.8  监视文件或目录">5.8 监视文件或目录 <a href="#t245.8  监视文件或目录"> # </a></h3>
+            <pre><code class="lang-js">fs.watchFile(filename[, options], listener)
+    </code></pre>
+            <pre><code class="lang-js"><span class="hljs-keyword">let</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+    fs.watchFile(<span class="hljs-string">'1.txt'</span>, (curr, prev) =&gt; {
+      <span class="hljs-comment">//parse() 方法可解析一个日期时间字符串，并返回 1970/1/1 午夜距离该日期时间的毫秒数。</span>
+      <span class="hljs-keyword">if</span>(<span class="hljs-built_in">Date</span>.parse(prev.ctime)==<span class="hljs-number">0</span>){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'创建'</span>);
+      }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-built_in">Date</span>.parse(curr.ctime)==<span class="hljs-number">0</span>){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'删除'</span>);
+      }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-built_in">Date</span>.parse(prev.ctime) != <span class="hljs-built_in">Date</span>.parse(curr.ctime)){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'修改'</span>);
+      }
+    });
+    </code></pre>
+            <h2 id="t256 递归创建目录">6 递归创建目录 <a href="#t256 递归创建目录"> # </a></h2>
+            <h3 id="t266.1 同步创建目录">6.1 同步创建目录 <a href="#t266.1 同步创建目录"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-keyword">let</span> fs=<span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+    <span class="hljs-keyword">let</span> path=<span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makepSync</span>(<span class="hljs-params">dir</span>) </span>{
+        <span class="hljs-keyword">let</span> parts=dir.split(path.sep);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i=<span class="hljs-number">1</span>;i&lt;=parts.length;i++){
+            <span class="hljs-keyword">let</span> parent=parts.slice(<span class="hljs-number">0</span>,i).join(path.sep);
+            <span class="hljs-keyword">try</span> {
+                fs.accessSync(parent);
+            } <span class="hljs-keyword">catch</span> (error) {
+                fs.mkdirSync(parent);
+            }
+    
+        }
+    }
+    </code></pre>
+            <h3 id="t276.2 异步创建目录">6.2 异步创建目录 <a href="#t276.2 异步创建目录"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makepAsync</span>(<span class="hljs-params">dir,callback</span>) </span>{
+        <span class="hljs-keyword">let</span> parts=dir.split(path.sep);
+        <span class="hljs-keyword">let</span> i=<span class="hljs-number">1</span>;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">if</span> (i&gt;parts.length)
+                <span class="hljs-keyword">return</span> callback&amp;&amp;callback();    
+            <span class="hljs-keyword">let</span> parent=parts.slice(<span class="hljs-number">0</span>,i++).join(path.sep);
+            fs.access(parent,err =&gt; {
+                <span class="hljs-keyword">if</span> (err) {
+                    fs.mkdir(parent,next);
+                } <span class="hljs-keyword">else</span> {
+                    next();
+                }
+            });
+        }
+        next();
+    }
+    </code></pre>
+            <h3 id="t286.3 Async+Await创建目录">6.3 Async+Await创建目录 <a href="#t286.3 Async+Await创建目录"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mkdir</span>(<span class="hljs-params">parent</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve,reject</span>) =&gt;</span> {
+            fs.mkdir(parent,err =&gt; {
+                <span class="hljs-keyword">if</span> (err) reject(err);
+                <span class="hljs-keyword">else</span> resolve();
+            });
+        });
+    }
+    
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">access</span>(<span class="hljs-params">parent</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve,reject</span>) =&gt;</span> {
+            fs.access(parent,err =&gt; {
+                <span class="hljs-keyword">if</span> (err) reject(err);
+                <span class="hljs-keyword">else</span> resolve();
+            });
+        });
+    }
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makepPromise</span>(<span class="hljs-params">dir,callback</span>) </span>{
+        <span class="hljs-keyword">let</span> parts=dir.split(path.sep);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i=<span class="hljs-number">1</span>;i&lt;=parts.length;i++){
+            <span class="hljs-keyword">let</span> parent=parts.slice(<span class="hljs-number">0</span>,i).join(path.sep);
+            <span class="hljs-keyword">try</span> {
+                <span class="hljs-keyword">await</span> access(parent);
+            }<span class="hljs-keyword">catch</span>(err) {
+                <span class="hljs-keyword">await</span> mkdir(parent);
+            }
+    
+        }
+    }
+    </code></pre>
+            <h2 id="t297. 递归删除目录">7. 递归删除目录 <a href="#t297. 递归删除目录"> # </a></h2>
+            <h3 id="t307.1  同步删除目录(深度优先)">7.1 同步删除目录(深度优先) <a href="#t307.1  同步删除目录(深度优先)"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-keyword">let</span> fs=<span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+    <span class="hljs-keyword">let</span> path=<span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>)
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rmSync</span>(<span class="hljs-params">dir</span>) </span>{
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">let</span> stat = fs.statSync(dir);
+            <span class="hljs-keyword">if</span> (stat.isFile()) {
+                fs.unlinkSync(dir);
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">let</span> files=fs.readdirSync(dir);
+                files
+                    .map(<span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> path.join(dir,file))
+                    .forEach(<span class="hljs-function"><span class="hljs-params">item</span>=&gt;</span>rmSync(item));
+                fs.rmdirSync(dir);
+            }
+        } <span class="hljs-keyword">catch</span> (e) {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'删除失败!'</span>);
+        }
+    }
+    rmSync(path.join(__dirname,<span class="hljs-string">'a'</span>));
+    </code></pre>
+            <h3 id="t317.2 异步删除非空目录(Promise版)">7.2 异步删除非空目录(Promise版) <a href="#t317.2 异步删除非空目录(Promise版)"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rmPromise</span>(<span class="hljs-params">dir</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve,reject</span>) =&gt;</span> {
+            fs.stat(dir,(err,stat) =&gt; {
+                <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> reject(err);
+                <span class="hljs-keyword">if</span> (stat.isDirectory()) {
+                    fs.readdir(dir,(err,files) =&gt; {
+                        <span class="hljs-keyword">let</span> paths = files.map(<span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> path.join(dir,file));
+                        <span class="hljs-keyword">let</span> promises = paths.map(<span class="hljs-function"><span class="hljs-params">p</span>=&gt;</span>rmPromise(p));
+                        <span class="hljs-built_in">Promise</span>.all(promises).then(<span class="hljs-function">(<span class="hljs-params">(</span>) =&gt;</span> fs.rmdir(dir,resolve)));
+                    });
+                } <span class="hljs-keyword">else</span> {
+                    fs.unlink(dir,resolve);
+                }
+            });
+        });
+    }
+    rmPromise(path.join(__dirname,<span class="hljs-string">'a'</span>)).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'删除成功'</span>);
+    })
+    </code></pre>
+            <h3 id="t327.3 异步串行删除目录(深度优先)">7.3 异步串行删除目录(深度优先) <a href="#t327.3 异步串行删除目录(深度优先)"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rmAsyncSeries</span>(<span class="hljs-params">dir,callback</span>) </span>{
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            fs.stat(dir,(err,stat) =&gt; {
+                <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> callback(err);
+                <span class="hljs-keyword">if</span> (stat.isDirectory()) {
+                    fs.readdir(dir,(err,files) =&gt; {
+                        <span class="hljs-keyword">let</span> paths = files.map(<span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> path.join(dir,file));
+                        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params">index</span>) </span>{
+                            <span class="hljs-keyword">if</span> (index&gt;=files.length) <span class="hljs-keyword">return</span> fs.rmdir(dir,callback);
+                            <span class="hljs-keyword">let</span> current=paths[index];
+                            rmAsyncSeries(current,()=&gt;next(index+<span class="hljs-number">1</span>));
+                        }
+                        next(<span class="hljs-number">0</span>);
+                    });
+                } <span class="hljs-keyword">else</span> {
+                    fs.unlink(dir,callback);
+                }
+            })
+        },<span class="hljs-number">1000</span>);
+    }
+    
+    <span class="hljs-built_in">console</span>.time(<span class="hljs-string">'cost'</span>);
+    rmAsyncSeries(path.join(__dirname,<span class="hljs-string">'a'</span>),err =&gt; {
+         <span class="hljs-built_in">console</span>.timeEnd(<span class="hljs-string">'cost'</span>);
+    })
+    </code></pre>
+            <h3 id="t337.4 异步并行删除目录(深度优先)">7.4 异步并行删除目录(深度优先) <a href="#t337.4 异步并行删除目录(深度优先)"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rmAsyncParallel</span>(<span class="hljs-params">dir,callback</span>) </span>{
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            fs.stat(dir,(err,stat) =&gt; {
+                <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> callback(err);
+                <span class="hljs-keyword">if</span> (stat.isDirectory()) {
+                    fs.readdir(dir,(err,files) =&gt; {
+                        <span class="hljs-keyword">let</span> paths=files.map(<span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> path.join(dir,file));
+                        <span class="hljs-keyword">if</span> (paths.length&gt;<span class="hljs-number">0</span>) {
+                            <span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;
+                            <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">done</span>(<span class="hljs-params"></span>) </span>{
+                                <span class="hljs-keyword">if</span> (++i == paths.length) {
+                                    fs.rmdir(dir,callback);
+                                }
+                            }
+                          paths.forEach(<span class="hljs-function"><span class="hljs-params">p</span>=&gt;</span>rmAsyncParallel(p,done));
+                        } <span class="hljs-keyword">else</span> {
+                            fs.rmdir(dir,callback);
+                        }
+                    });
+                } <span class="hljs-keyword">else</span> {
+                    fs.unlink(dir,callback);
+                }
+            })
+        },<span class="hljs-number">1000</span>);
+    }
+    <span class="hljs-built_in">console</span>.time(<span class="hljs-string">'cost'</span>);
+    rmAsyncParallel(path.join(__dirname,<span class="hljs-string">'a'</span>),err =&gt; {
+         <span class="hljs-built_in">console</span>.timeEnd(<span class="hljs-string">'cost'</span>);
+    })
+    </code></pre>
+            <h3 id="t347.5 同步删除目录(广度优先)">7.5 同步删除目录(广度优先) <a href="#t347.5 同步删除目录(广度优先)"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rmSync</span>(<span class="hljs-params">dir</span>)</span>{
+        <span class="hljs-keyword">let</span> arr=[dir];
+        <span class="hljs-keyword">let</span> index=<span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (arr[index]) {
+            <span class="hljs-keyword">let</span> current=arr[index++];
+            <span class="hljs-keyword">let</span> stat=fs.statSync(current);
+            <span class="hljs-keyword">if</span> (stat.isDirectory()) {
+                <span class="hljs-keyword">let</span> dirs=fs.readdirSync(current);
+                arr=[...arr,...dirs.map(<span class="hljs-function"><span class="hljs-params">d</span> =&gt;</span> path.join(current,d))];
+            }
+        }
+        <span class="hljs-keyword">let</span> item;
+        <span class="hljs-keyword">while</span> (<span class="hljs-literal">null</span> != (item = arr.pop())) {
+            <span class="hljs-keyword">let</span> stat = fs.statSync(item);
+            <span class="hljs-keyword">if</span> (stat.isDirectory()) {
+                fs.rmdirSync(item);
+            } <span class="hljs-keyword">else</span> {
+                fs.unlinkSync(item);
+            }
+        }
+    }
+    </code></pre>
+            <h3 id="t357.6 异步删除目录(广度优先)">7.6 异步删除目录(广度优先) <a href="#t357.6 异步删除目录(广度优先)"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rmdirWideAsync</span>(<span class="hljs-params">dir,callback</span>)</span>{
+        <span class="hljs-keyword">let</span> dirs=[dir];
+        <span class="hljs-keyword">let</span> index=<span class="hljs-number">0</span>;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rmdir</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">let</span> current = dirs.pop();
+            <span class="hljs-keyword">if</span> (current) {
+                fs.stat(current,(err,stat) =&gt; {
+                    <span class="hljs-keyword">if</span> (stat.isDirectory()) {
+                        fs.rmdir(current,rmdir);
+                    } <span class="hljs-keyword">else</span> {
+                        fs.unlink(current,rmdir);
+                    }
+                });
+            }
+        }
+        !<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">let</span> current=dirs[index++];
+            <span class="hljs-keyword">if</span> (current) {
+                fs.stat(current,(err,stat) =&gt; {
+                    <span class="hljs-keyword">if</span> (err) callback(err);
+                    <span class="hljs-keyword">if</span> (stat.isDirectory()) {
+                        fs.readdir(current,(err,files) =&gt; {
+                            dirs=[...dirs,...files.map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> path.join(current,item))];
+                            next();
+                        });
+                    } <span class="hljs-keyword">else</span> {
+                        next();
+                    }
+                });
+            } <span class="hljs-keyword">else</span> {
+                rmdir();
+            }
+    
+        }();
+    }
+    </code></pre>
+            <h2 id="t368.  遍历算法">8. 遍历算法 <a href="#t368.  遍历算法"> # </a></h2>
+            <ul>
+                <li>目录是一个树状结构，在遍历时一般使用深度优先+先序遍历算法</li>
+                <li>深度优先，意味着到达一个节点后，首先接着遍历子节点而不是邻居节点</li>
+                <li>先序遍历，意味着首次到达了某节点就算遍历完成，而不是最后一次返回某节点才算数</li>
+                <li>因此使用这种遍历方式时，下边这棵树的遍历顺序是A &gt; B &gt; D &gt; E &gt; C &gt; F。
+                    <pre><code class="lang-js">        A
+           / \
+          B   C
+         / \   \
+        D   E   F
+    </code></pre>
+                    <h3 id="t378.1 同步深度优先+先序遍历">8.1 同步深度优先+先序遍历 <a href="#t378.1 同步深度优先+先序遍历"> # </a></h3>
+                    <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deepSync</span>(<span class="hljs-params">dir</span>)</span>{
+      <span class="hljs-built_in">console</span>.log(dir);
+      fs.readdirSync(dir).forEach(<span class="hljs-function"><span class="hljs-params">file</span>=&gt;</span>{
+          <span class="hljs-keyword">let</span> child = path.join(dir,file);
+          <span class="hljs-keyword">let</span> stat = fs.statSync(child);
+          <span class="hljs-keyword">if</span>(stat.isDirectory()){
+              deepSync(child);
+          }<span class="hljs-keyword">else</span>{
+              <span class="hljs-built_in">console</span>.log(child);
+          }
+      });
+    }
+    </code></pre>
+                    <h3 id="t388.2 异步深度优先+先序遍历">8.2 异步深度优先+先序遍历 <a href="#t388.2 异步深度优先+先序遍历"> # </a></h3>
+                    <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deep</span>(<span class="hljs-params">dir,callback</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(dir);
+      fs.readdir(dir,(err,files)=&gt;{
+          !<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params">index</span>)</span>{
+              <span class="hljs-keyword">if</span>(index == files.length){
+                  <span class="hljs-keyword">return</span> callback();
+              }
+              <span class="hljs-keyword">let</span> child = path.join(dir,files[index]);
+              fs.stat(child,(err,stat)=&gt;{
+                  <span class="hljs-keyword">if</span>(stat.isDirectory()){
+                      deep(child,()=&gt;next(index+<span class="hljs-number">1</span>));
+                  }<span class="hljs-keyword">else</span>{
+                      <span class="hljs-built_in">console</span>.log(child);
+                      next(index+<span class="hljs-number">1</span>);
+                  }
+              })
+          }(<span class="hljs-number">0</span>)
+      })
+    }
+    </code></pre>
+                    <h3 id="t398.3 同步广度优先+先序遍历">8.3 同步广度优先+先序遍历 <a href="#t398.3 同步广度优先+先序遍历"> # </a></h3>
+                    <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">wideSync</span>(<span class="hljs-params">dir</span>)</span>{
+      <span class="hljs-keyword">let</span> dirs = [dir];
+      <span class="hljs-keyword">while</span>(dirs.length&gt;<span class="hljs-number">0</span>){
+          <span class="hljs-keyword">let</span> current = dirs.shift();
+          <span class="hljs-built_in">console</span>.log(current);
+          <span class="hljs-keyword">let</span> stat = fs.statSync(current);
+          <span class="hljs-keyword">if</span>(stat.isDirectory()){
+              <span class="hljs-keyword">let</span> files = fs.readdirSync(current);
+              files.forEach(<span class="hljs-function"><span class="hljs-params">item</span>=&gt;</span>{
+                  dirs.push(path.join(current,item));
+              });
+          }
+      }
+    }
+    </code></pre>
+                </li>
+            </ul>
+            <h3 id="t408.4 异步广度优先+先序遍历">8.4 异步广度优先+先序遍历 <a href="#t408.4 异步广度优先+先序遍历"> # </a></h3>
+            <pre><code class="lang-js"><span class="hljs-comment">// 异步广度遍历</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">wide</span>(<span class="hljs-params">dir, cb</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(dir);
+        cb &amp;&amp; cb()
+        fs.readdir(dir, (err, files) =&gt; {
+            !<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params">i</span>)</span>{
+                <span class="hljs-keyword">if</span>(i&gt;= files.length) <span class="hljs-keyword">return</span>;
+                <span class="hljs-keyword">let</span> child = path.join(dir,files[i]);
+                fs.stat(child,(err,stat)=&gt;{
+                    <span class="hljs-keyword">if</span>(stat.isDirectory()){
+                        wide(child, () =&gt; next(i+<span class="hljs-number">1</span>));
+                    } <span class="hljs-keyword">else</span> {
+                        <span class="hljs-built_in">console</span>.log(child);
+                        next(i+<span class="hljs-number">1</span>);
+                    }
+                })
+            }(<span class="hljs-number">0</span>);
+        })
+    }
+    wide(path.join(__dirname,<span class="hljs-string">'a'</span>));
+    </code></pre>
+            <h2 id="t418. path模块">8. path模块 <a href="#t418. path模块"> # </a></h2>
+            <p>path是node中专门处理路径的一个核心模块</p>
+            <ul>
+                <li>path.join
+                    将多个参数值字符串结合为一个路径字符串</li>
+                <li>path.basename
+                    获取一个路径中的文件名</li>
+                <li>path.extname
+                    获取一个路径中的扩展名</li>
+                <li>path.sep
+                    操作系统提定的文件分隔符</li>
+                <li>path.delimiter
+                    属性值为系统指定的环境变量路径分隔符</li>
+                <li>path.normalize
+                    将非标准的路径字符串转化为标准路径字符串 特点：<ul>
+                        <li>可以解析 . 和 ..</li>
+                        <li>多个杠可以转换成一个杠</li>
+                        <li>在windows下反杠会转化成正杠</li>
+                        <li>如结尾以杠结尾的，则保留斜杠</li>
+                    </ul>
+                </li>
+                <li>resolve<ul>
+                        <li>以应用程序根目录为起点</li>
+                        <li>如果参数是普通字符串，则意思是当前目录的下级目录</li>
+                        <li>如果参数是.. 回到上一级目录</li>
+                        <li>如果是/开头表示一个绝对的根路径</li>
+                    </ul>
+                </li>
+            </ul>
+            <pre><code class="lang-js"><span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+    <span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+    <span class="hljs-comment">/**
+     * normalize 将非标准化的路径转化成标准化的路径
+     * 1.解析. 和 ..
+     * 2.多个斜杠会转成一个斜杠
+     * 3.window下的斜杠会转成正斜杠
+     * 4.如果以斜杠会保留
+     **/</span>
+    
+    <span class="hljs-built_in">console</span>.log(path.normalize(<span class="hljs-string">'./a////b//..\\c//e//..//'</span>));
+    <span class="hljs-comment">//  \a\c\</span>
+    
+    <span class="hljs-comment">//多个参数字符串合并成一个路径 字符串</span>
+    <span class="hljs-built_in">console</span>.log(path.join(__dirname,<span class="hljs-string">'a'</span>,<span class="hljs-string">'b'</span>));
+    
+    <span class="hljs-comment">/**
+     * resolve
+     * 以就用程序为根目录，做为起点，根据参数解析出一个绝对路径
+     *  1.以应用程序为根起点
+     *  2... .
+     *  3. 普通 字符串代表子目录
+     *  4. /代表绝地路径根目录
+     */</span>
+    <span class="hljs-built_in">console</span>.log(path.resolve());<span class="hljs-comment">//空代表当前的目录 路径</span>
+    <span class="hljs-built_in">console</span>.log(path.resolve(<span class="hljs-string">'a'</span>,<span class="hljs-string">'/c'</span>));<span class="hljs-comment">// /a/b</span>
+    <span class="hljs-comment">// d:\c</span>
+    <span class="hljs-comment">//可以获取两个路径之间的相对关系</span>
+    <span class="hljs-built_in">console</span>.log(path.relative(__dirname,<span class="hljs-string">'/a'</span>));
+    <span class="hljs-comment">// a</span>
+    <span class="hljs-comment">//返回指定路径的所在目录</span>
+    <span class="hljs-built_in">console</span>.log(path.dirname(__filename)); <span class="hljs-comment">// 9.path</span>
+    <span class="hljs-built_in">console</span>.log(path.dirname(<span class="hljs-string">'./1.path.js'</span>));<span class="hljs-comment">//  9.path</span>
+    <span class="hljs-comment">//basename 获取路径中的文件名</span>
+    <span class="hljs-built_in">console</span>.log(path.basename(__filename));
+    <span class="hljs-built_in">console</span>.log(path.basename(__filename,<span class="hljs-string">'.js'</span>));
+    <span class="hljs-built_in">console</span>.log(path.extname(__filename));
+    
+    <span class="hljs-built_in">console</span>.log(path.sep);<span class="hljs-comment">//文件分隔符 window \ linux /</span>
+    <span class="hljs-built_in">console</span>.log(path.win32.sep);
+    <span class="hljs-built_in">console</span>.log(path.posix.sep);
+    <span class="hljs-built_in">console</span>.log(path.delimiter);<span class="hljs-comment">//路径 分隔符 window ; linux :</span>
+    </code></pre>
+            <h2 id="t429. flags">9. flags <a href="#t429. flags"> # </a></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:left">符号</th>
+                        <th style="text-align:left">含义</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:left">r</td>
+                        <td style="text-align:left">读文件，文件不存在报错</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">r+</td>
+                        <td style="text-align:left">读取并写入，文件不存在报错</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">rs</td>
+                        <td style="text-align:left">同步读取文件并忽略缓存</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">w</td>
+                        <td style="text-align:left">写入文件，不存在则创建，存在则清空</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">wx</td>
+                        <td style="text-align:left">排它写入文件</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">w+</td>
+                        <td style="text-align:left">读取并写入文件，不存在则创建，存在则清空</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">wx+</td>
+                        <td style="text-align:left">和w+类似，排他方式打开</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">a</td>
+                        <td style="text-align:left">追加写入</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">ax</td>
+                        <td style="text-align:left">与a类似，排他方式写入</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">a+</td>
+                        <td style="text-align:left">读取并追加写入，不存在则创建</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left">ax+</td>
+                        <td style="text-align:left">作用与a+类似，但是以排他方式打开文件</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="t4310. 助记">10. 助记 <a href="#t4310. 助记"> # </a></h2>
+            <ul>
+                <li>r 读取</li>
+                <li>w 写入</li>
+                <li>s 同步</li>
+                <li>+ 增加相反操作</li>
+                <li>x 排他方式</li>
+                <li>r+ w+的区别?<ul>
+                        <li>当文件不存在时，r+不会创建，而会导致调用失败，但w+会创建。</li>
+                        <li>如果文件存在，r+不会自动清空文件，但w+会自动把已有文件的内容清空。</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2 id="t4411. linux权限">11. linux权限 <a href="#t4411. linux权限"> # </a></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:left">文件类型与权限</th>
+                        <th style="text-align:left">链接占用的节点(i-node)</th>
+                        <th style="text-align:left">文件所有者</th>
+                        <th style="text-align:left">文件所有者的用户组</th>
+                        <th style="text-align:left">文件大小</th>
+                        <th style="text-align:left">文件的创建时间</th>
+                        <th style="text-align:left">最近修改时间</th>
+                        <th style="text-align:left">文件名称</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:left"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><img src="http://7xjf2l.com2.z0.glb.qiniucdn.com/authorigy.jpg" alt="权限"></p>
+
+            <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>.
+                Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script>
+        $('.warpper .page-toc ul ul li a').on('click', function () {
+            $('.warpper .page-toc ul ul li a').removeClass('my-active')
+            $(this).addClass('my-active')
+        })
+        // if (!$('.understand-me').length) {
+        //   var bar = $(window).height() - $('.navbar ').height() - $('.page-toc').position().top;
+        //   var count = bar / 26 / 2;
+        //   var barHeight = $('.page-toc').outerHeight();
+        //   $('.page-toc li').eq(0).children('a').addClass('red');
+        //   var arr = [];
+        //   $("h1,h2,h3,h4,h5,h6").each(function () {
+        //     arr.push($(this).position().top);
+        //   });
+        //   var timer
+        //   function dark() {
+        //     clearTimeout(timer)
+        //      timer = setTimeout(function () {
+        //      var top = Math.abs($('.page-toc > ul').position().top);
+        //      var cur = $('.content').scrollTop();
+        //      for (var i = arr.length; i >= 0; i--) {
+        //        if (arr[i] <= cur) {
+        //          break;
+        //        }
+        //      }
+        //      if (i === -1) {
+        //        i = 0;
+        //      }
+        //      $('.page-toc li a').removeClass('red');
+        //      $('.page-toc li').eq(i).children('a').addClass('red');
+        //      let height = $('.page-toc li').eq(i).position().top-$('.page-toc').height(); // 如果当前的offset出去了 回到中间可好？
+        //      $('.page-toc').scrollTop(height+$('.page-toc').height()/2);
+        //    },200)
+        //   }
+
+        //   $('.content').on('scroll', dark);
+        // }
+    </script>
+    <style>
+        /* ::-webkit-scrollbar{width:14px;}
+        ::-webkit-scrollbar-track{background-color:transparent;}
+        ::-webkit-scrollbar-thumb{background-color:transparent;}
+        ::-webkit-scrollbar-thumb:hover {background-color:transparent}
+        ::-webkit-scrollbar-thumb:active {background-color:transparent} */
+
+        .page-toc>ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+
+
+</body>
+
+</html>

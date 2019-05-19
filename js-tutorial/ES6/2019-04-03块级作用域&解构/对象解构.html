@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>对象解构</title>
+</head>
+<body>
+  
+  <script> 
+    window.onload = function(){
+		//解构不仅仅用数数组，还用于对象
+		var obj = {
+			name:'abc',
+			age:18
+		};
+		let name = obj.name;
+		let age = obj.age;
+		let {name,age} = {name:'abc',age:18};
+		//对象解构与数组解构的不同：
+		//数组解构是按次序排列的，变量的取值由位置来决定
+		//对象解构没有次序，变量必须与属性同名
+		let {type,age} = {name:'abc',age:18};  //type  undefined   type没有匹配到属性同名
+		let {x,y} = {y:2,x:1}; //x=1,y=2
+		let {x:name,y} = {y:2,x:1}; //x是没有的，  name = 1;
+		//X是匹配模式   name才是变量
+
+		let {name:n,age:a} = {name:'abc',age:18};  //n='abc'   a = 18
+
+	}
+  </script>
+</body>
+</html>

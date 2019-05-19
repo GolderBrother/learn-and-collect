@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>指令 v-on</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my',
+			data:{
+				str:'hello world',
+				age:21,
+				flag:true,
+				arr:[1,2,3,4],
+				obj:{name:'abc',id:1},
+				lists:[{name:'abc',id:1},{name:'xyz',id:2}]
+			},
+			methods:{
+				add:function(){
+					this.age++;
+				},
+				fun:function(i){
+					this.age=i;
+				}
+			}
+		})
+	}
+	</script>
+</head>
+<body> 
+	<div id="my">
+		<h1>{{age}}</h1>
+		<div v-on:click="age=18">按钮</div>
+		<div @click="age=30">按钮</div>
+		<div @click="add">加</div>
+		<div @click="fun(18)">按钮</div>
+
+		<div @mouseover="fun(10)" @mouseout="fun(20)">mouseover</div>
+		<div @mouseout="fun(20)">mouseout</div>
+		<div @dblclick="fun(100)">dblclick</div>
+
+		<!-- 按钮别名   .enter    .a -->
+		<button @keydown.enter="fun(13)">keydown</button>
+		<button @keydown.a="fun(65)">keydown</button>
+	</div>
+</body>
+</html>

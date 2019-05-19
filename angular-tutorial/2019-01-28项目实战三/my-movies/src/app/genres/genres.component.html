@@ -1,0 +1,22 @@
+
+<h3 class="orange-text">{{name}}</h3>
+<div class="row is-flex">
+  <div class="col-sm-6 col-md-4 col-lg-3 col-xs-6" *ngFor="let v of arr; let i = index;">
+      <div class="thumbnail">
+          <img src="https://image.tmdb.org/t/p/w300/{{v.poster_path}}" *ngIf="v.poster_path">
+          <div class="caption">
+              <h4 class="text-ellipsis">
+                <a title="title">name</a>
+              </h4>
+              <p><strong>First Air Date: </strong>{{v.first_air_date}}</p>
+              <p>
+                <a >View details &raquo;</a>
+                <small class="label label-success pull-right">
+                    {{v.vote_average}}
+                  <i class="glyphicon glyphicon-star"></i>
+                </small>
+              </p>
+            </div> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>computed</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <script>
+    window.onload = function(){
+        new Vue({
+            el:'#my',
+            data:{ 
+                obj:{name:'套餐A',price:20,count:1,sale:0.9,freight:5},
+                n:10
+            },
+            computed:{   //计算属性
+              total:function(){
+                return this.obj.price*this.obj.count*this.obj.sale+this.obj.freight
+              },
+              // n2:function(){
+              //   return this.n - 5;
+              // }
+              n2:{
+                get:function(){    //读取时会触发get
+                  return this.n - 5;
+                },
+                set:function(val){   //修改计算属性时会触发set
+                  console.log(val)     //val  ===== 20
+                  this.n = val;
+                }
+              }
+            },
+            methods:{
+              change:function(){
+                this.n2 = 20;   //计算属性不能直接修改    计算属性被修改触发set方法
+              }
+            }
+        })
+    }
+    </script>
+    
+</head> 
+<body>
+  <div id="my">
+      <h1>总价:{{obj.price*obj.count*obj.sale+obj.freight}}</h1>
+      <h1>总价:{{total}}</h1>
+      <div>
+        ***购买了{{obj.name}}
+        <p>单价:<input type="text" v-model="obj.price"/></p>
+        <p>份数:<input type="text" v-model="obj.count"/></p>
+      </div>
+
+      <h1>{{n}}</h1>
+      <h1>{{n2}}</h1>
+      <button @click="change">change</button>
+  </div>
+</body>
+</html>

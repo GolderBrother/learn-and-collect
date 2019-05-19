@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>computed</title>
+    <script type="text/javascript" src='vue.js'></script>
+    <script>
+    window.onload = function(){
+      //计算属性和方法的区别： 
+      //计算属性是基于依赖缓存的，计算的属性值发生变化时才会触发 
+      //方法没有缓存
+        var a = 10;
+        new Vue({
+            el:'#my',
+            data:{ 
+                obj:{name:'套餐A',price:20,count:1,sale:0.9,freight:5},
+                n:10
+            },
+            computed:{   //计算属性
+              total:function(){
+                return this.obj.price*this.obj.count*this.obj.sale+this.obj.freight
+              },
+              getN:function(){
+                console.log(a);  //a属于非响应式依赖
+                return this.n -1;
+              }
+            },
+            methods:{
+              count:function(){
+                return this.obj.price*this.obj.count*this.obj.sale+this.obj.freight
+              },
+              getN2:function(){
+                console.log(a);  //a属于非响应式依赖
+                return this.n -1;
+              },
+              change:function(){
+                setInterval(()=>{
+                  console.log('计算属性' + this.getN);
+                  console.log('方法' + this.getN2());
+                },2000)
+              }
+            }
+        })
+    }
+    </script>
+    
+</head> 
+<body>
+  <div id="my">
+      <h1>总价:{{obj.price*obj.count*obj.sale+obj.freight}}</h1>
+      <h1>(计算属性)总价:{{total}}</h1>
+      <h1>(方法）总价:{{count()}}</h1>
+      <div>
+        ***购买了{{obj.name}}
+        <p>单价:<input type="text" v-model="obj.price"/></p>
+        <p>份数:<input type="text" v-model="obj.count"/></p>
+      </div>
+
+      <!-- 比较 -->
+      <input type="text" v-model="n" />
+      <button @click="change()">计算</button>
+
+
+  </div>
+</body>
+</html>

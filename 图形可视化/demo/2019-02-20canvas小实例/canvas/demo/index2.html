@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>canvas绘图</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script>
+           //获得画布元素
+            var canvas=document.getElementById("canvas");
+            //获得2维绘图对象
+            var ctx=canvas.getContext("2d");
+            var flag = false;
+            //设置线宽
+            ctx.lineWidth = 3;
+            //颜色
+            ctx.strokeStyle= 'red';
+            canvas.onmousedown = function(e){   
+                flag = true;
+                ctx.beginPath();  //重新开始绘制
+            };
+            canvas.onmouseup = function(e){   
+                flag = false;
+            };
+            canvas.onmousemove = function(e){   //移动
+                if(!flag) return;
+                ctx.lineTo(e.clientX,e.clientY)
+                ctx.stroke();   //执行  线条
+            }
+            
+        </script>
+    </body>
+</html>

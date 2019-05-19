@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>component 按钮</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <style>
+
+    </style>
+    <script>
+    window.onload = function(){
+        new Vue({
+            el:'#my',
+            data:{ 
+              obj1:{title:'确定',color:'red'}
+            },
+            components:{  // 局部组件
+              'my-btn':{  //组件的名称
+                template:'#my-btn',
+                data(){
+                  return {
+                    
+                  }
+                },
+                props:['data']     //组件中父-子传参
+              }
+            }
+        })
+    }
+    </script>
+    <template id="my-btn">
+      <div>
+        <button :style="{color:data.color}">{{data.title}}</button>
+      </div>
+    </template>
+</head> 
+<body>
+  <div id="my">
+     <my-btn :data="obj1"></my-btn>
+     <my-btn :data="{title:'取消',color:'green'}"></my-btn>
+     <my-btn :data="{title:'点击提交',color:'blue'}"></my-btn>
+     <!-- <my-btn :title="'提交'" :color="'blue'"></my-btn> -->
+  </div>
+</body>
+</html>

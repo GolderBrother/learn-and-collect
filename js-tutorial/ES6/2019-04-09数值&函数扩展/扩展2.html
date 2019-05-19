@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>扩展</title>
+</head>
+<body>
+  
+  <script> 
+    window.onload = function(){
+		//扩展   数值
+		//ES5
+		parseInt(11.123)  //11
+		parseFloat(11.123)  //11.123
+		//ES6 Number对象
+		Number.parseInt(11.123)  //11
+		Number.parseFloat(11.123)  //11.123
+
+		Number.isInteger(12) //判断一个数值是否为整数   返回布尔
+		Number.isInteger(12) ;  //true
+		Number.isInteger(12.123) ;  //false
+
+		//Math对象   
+		Math.ceil(3.9);  // 向上4
+		Math.floor(3.9);  //向下   3
+		Math.round(3.9);   //四舍五入
+
+		Math.trunc(3.9);   //用于去除小数部分   返回整数部分
+		Math.trunc('3.9a');  //NaN
+		Number.parseInt('3.9a')   //3
+
+		Math.sign()   //判断一个数到底是正数/负/零/其它非数值，
+		//参数正数   返回+1 
+		//负数   返回-1 
+		//0   返回0
+		//其它非数值   返回NAN
+		Math.sign(3);
+
+		//ES6  新增加运算符    **  指数运算符
+		2**2   //4
+		2**3   //2*2*2
+		let a = 3;
+		a**=2;
+		console.log(a);
+		//let a+= 1;  ======  a=a+1;
+		//a**=3;   a=a*a*a
+
+		//函数扩展
+		//ES5
+		function fun(a,b){
+			b = b||10;
+			console.log(a,b)
+		};
+		fun(2);
+		//ES6
+		function fun(a,b=10){
+			console.log(a,b)
+		};
+		fun(2);
+		//ES5   arguments  对象
+		function fun(arguments){
+			console.log(arguments.length)  //error
+		};
+		fun(4234,22,35,3,234,53,23,53,235,252,5325,5325);
+		//...   rest参数  ...变量名
+		function fun(...num){
+			console.log(num)   //[4234,22,35,3,234,53,23,53,235,252,5325,5325]   将多余的参数放入数组中
+		};
+		fun(4234,22,35,3,234,53,23,53,235,252,5325,5325);
+
+		//计算 1，2，4 和
+		function add(...num){
+			let n = 0;
+			for(var v of num){   //num ====[1,2,4]
+				n+=v;
+			}
+			return n;
+		};
+		add(1,2,4);
+
+		//作用域
+		var a = 1;
+		function fun(b = a){
+			console.log(b)
+		};
+		fun();
+
+		//严格模式  ‘use strict’
+		function fun(a,b){
+			'use strict';
+			console.log(a+b);
+		};
+		fun(2,6);
+		//es6   error
+		function fun(a,b=1){
+			'use strict';
+			console.log(a+b);
+		};
+		fun(2,6);
+		//OK
+		'use strict';
+		function fun(...a){
+			console.log(a);
+		};
+		fun(2,6);
+
+		//箭头函数
+		var f = v =>v;
+		var f = function(v){
+			return v
+		};
+		var f = (a,b=1)=> a+b;
+		f(2,5);
+		var f = ({x=0,y=1} = {})=>{   //{x=0,y=1} = {x:3,y:5})
+			return {x:x,y:y}
+		};
+		f({x:3,y:5});
+
+		//注意点
+		//1、箭头函数不能用构造函数，不能实例 化
+		var F = ()=>{};
+		var f1 = new F();   //F is not a constructor
+		//2、箭头函数this指向    没有自己的this    指向外围作用域
+		var obj ={
+			name:'abc',
+			f:function(){
+				console.log(this)   //obj
+			},
+			f2:()=>{
+				console.log(this)   //window
+			}
+		};
+		obj.f();
+
+		function Person(){
+			this.name= 'aaa';
+			// setTimeout(function(){
+			// 	console.log(this)   //window
+			// },2000)
+			setTimeout(()=>{
+				console.log(this.name)   //实例化对象
+			},2000)
+		};
+		var p = new Person();
+
+		// var obj ={
+		// 	name:'abc',
+		// 	f:function(){
+		// 		console.log(this)   //obj
+		// 	},
+		// 	f2:function(){
+		// 		var fun =()=> this;     //obj
+		// 		return fun();
+		// 	}
+		// };
+		// obj.f();
+
+		//3、 arguments  参数   箭头函数没有绑定arguments   取代rest参数
+		var f = (a) =>{
+			console.log(arguments)  //arguments is not defined
+		};
+		f(1,2,3);
+		//rest 参数
+		var f = (...a) => a   //[1,2,3]
+		f(1,2,3)
+
+		//4、箭头函数没有原型属性
+		function f(){};
+		f.prototype  //ok
+		var f= ()=>{};
+		f.prototype  //error
+
+		//es6   ::双冒号运算符     babel转码器
+		// function Cat(name,color){
+		// 	this.name = name;
+		// 	this.color = color;
+		// };
+		// var o = {};   //o.name
+		// //Cat.apply(o,['abc','red']); //   CAT函数在O对象中执行
+		// o::Cat(['abc','red']);   //左边的对象绑定到右边的函数
+		// a::b(num); //====b.apply(a,num);
+	}
+  </script>
+</body>
+</html>

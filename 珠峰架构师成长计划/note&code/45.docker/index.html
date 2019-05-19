@@ -1,0 +1,630 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            珠峰架构师成长计划
+        
+    </div>
+<ul><li><a href="../index.html">0.Async</a></li><li><a href="../html/0.editor.html">0.editor</a></li><li><a href="../html/0.module.html">0.module</a></li><li><a href="../html/1.ES2015.html">1.ES2015</a></li><li><a href="../html/2.Promise.html">2.Promise</a></li><li><a href="../html/3.Node.html">3.Node</a></li><li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li><li><a href="../html/5.REPL.html">5.REPL</a></li><li><a href="../html/6.NodeCore.html">6.NodeCore</a></li><li><a href="../html/7.module&amp;NPM.html">7.module&amp;NPM</a></li><li><a href="../html/8.Encoding.html">8.Encoding</a></li><li><a href="../html/9.Buffer.html">9.Buffer</a></li><li><a href="../html/10.fs.html">10.fs</a></li><li><a href="../html/11.Stream-1.html">11.Stream-1</a></li><li><a href="../html/11.Stream-2.html">11.Stream-2</a></li><li><a href="../html/11.Stream-3.html">11.Stream-3</a></li><li><a href="../html/11.Stream-4.html">11.Stream-4</a></li><li><a href="../html/12-Network-2.html">12-Network-2</a></li><li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li><li><a href="../html/12.Network-1.html">12.Network-1</a></li><li><a href="../html/13.tcp.html">13.tcp</a></li><li><a href="../html/14.http-1.html">14.http-1</a></li><li><a href="../html/14.http-2.html">14.http-2</a></li><li><a href="../html/15.compress.html">15.compress</a></li><li><a href="../html/16.crypto.html">16.crypto</a></li><li><a href="../html/17.process.html">17.process</a></li><li><a href="../html/18.yargs.html">18.yargs</a></li><li><a href="../html/19.cache.html">19.cache</a></li><li><a href="../html/20.action.html">20.action</a></li><li><a href="../html/21.https.html">21.https</a></li><li><a href="../html/22.cookie.html">22.cookie</a></li><li><a href="../html/23.session.html">23.session</a></li><li><a href="../html/24.express-1.html">24.express-1</a></li><li><a href="../html/24.express-2.html">24.express-2</a></li><li><a href="../html/24.express-3.html">24.express-3</a></li><li><a href="../html/24.express-4.html">24.express-4</a></li><li><a href="../html/25.koa-1.html">25.koa-1</a></li><li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li><li><a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a></li><li><a href="../html/26.webpack-3.tapable.html">26.webpack-3.tapable</a></li><li><a href="../html/26.webpack-4-AST.html">26.webpack-4-AST</a></li><li><a href="../html/26.webpack-5-source.html">26.webpack-5-source</a></li><li><a href="../html/26.webpack-6-loader.html">26.webpack-6-loader</a></li><li><a href="../html/26.webpack-7-plugin.html">26.webpack-7-plugin</a></li><li><a href="../html/26.webpack-8-hand.html">26.webpack-8-hand</a></li><li><a href="../html/27.react-1.html">27.react-1</a></li><li><a href="../html/27.react-2.html">27.react-2</a></li><li><a href="../html/27.react-3.html">27.react-3</a></li><li><a href="../html/27.react-4-immutable.html">27.react-4-immutable</a></li><li><a href="../html/27.react-5-react-dom-diff.html">27.react-5-react-dom-diff</a></li><li><a href="../html/27.react-6.html">27.react-6</a></li><li><a href="../html/28.react-mobx.html">28.react-mobx</a></li><li><a href="../html/28.redux-0.html">28.redux-0</a></li><li><a href="../html/28.redux-1.html">28.redux-1</a></li><li><a href="../html/28.redux-2-中间件.html">28.redux-2-中间件</a></li><li><a href="../html/28.redux-3-saga.html">28.redux-3-saga</a></li><li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li><li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li><li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li><li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li><li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li><li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li><li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li><li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li><li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li><li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li><li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li><li><a href="../html/30.cms-4-egg.html">30.cms-4-egg</a></li><li><a href="../html/30.cms-5-api.html">30.cms-5-api</a></li><li><a href="../html/30.cms-6-roadhog.html">30.cms-6-roadhog</a></li><li><a href="../html/30.cms-7-umi.html">30.cms-7-umi</a></li><li><a href="../html/30.cms-8-dva.html">30.cms-8-dva</a></li><li><a href="../html/30.cms-9-dva.html">30.cms-9-dva</a></li><li><a href="../html/30.cms-10-dva.html">30.cms-10-dva</a></li><li><a href="../html/30.cms-11-front.html">30.cms-11-front</a></li><li><a href="../html/31.cms-12-api.html">31.cms-12-api</a></li><li><a href="../html/31.cms-13-front.html">31.cms-13-front</a></li><li><a href="../html/31.cms-14-deploy.html">31.cms-14-deploy</a></li><li><a href="../html/32.ant.html">32.ant</a></li><li><a href="../html/33.redis.html">33.redis</a></li><li><a href="../html/34.unittest.html">34.unittest</a></li><li><a href="../html/35.jwt.html">35.jwt</a></li><li><a href="../html/36.websocket-1.html">36.websocket-1</a></li><li><a href="../html/36.websocket-2.html">36.websocket-2</a></li><li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li><li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li><li><a href="../html/38.chat-3.html">38.chat-3</a></li><li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li><li><a href="../html/38.chat.html">38.chat</a></li><li><a href="../html/38.chat2.html">38.chat2</a></li><li><a href="../html/38.chat2.html">38.chat2</a></li><li><a href="../html/39.crawl-0.html">39.crawl-0</a></li><li><a href="../html/39.crawl-1.html">39.crawl-1</a></li><li><a href="../html/39.crawl-2.html">39.crawl-2</a></li><li><a href="../html/40.deploy.html">40.deploy</a></li><li><a href="../html/41.safe.html">41.safe</a></li><li><a href="../html/42.test.html">42.test</a></li><li><a href="../html/43.nginx.html">43.nginx</a></li><li><a href="../html/44.enzyme.html">44.enzyme</a></li><li class="active"><a href="../html/45.docker.html">45.docker</a></li><li><a href="../html/46.elastic.html">46.elastic</a></li><li><a href="../html/47.oauth.html">47.oauth</a></li><li><a href="../html/48.wxpay.html">48.wxpay</a></li><li><a href="../html/49.nunjucks.html">49.nunjucks</a></li><li><a href="../html/50.ketang.html">50.ketang</a></li><li><a href="../html/index.html">index</a></li><li><a href="../html/51.typescript.html">51.typescript</a></li><li><a href="../html/52.UML.html">52.UML</a></li><li><a href="../html/53.design.html">53.design</a></li><li><a href="../html/index.html">index</a></li></ul></div>
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01. 布署软件的问题">1. 布署软件的问题</a></li><li><a href="#t12. 虚拟机">2. 虚拟机</a></li><li><a href="#t23. Linux 容器">3. Linux 容器</a></li><li><a href="#t34. Docker 是什么">4. Docker 是什么</a></li><li><a href="#t45. Docker 的安装">5. Docker 的安装</a></li><li><a href="#t56. Docker架构">6. Docker架构</a></li><li><a href="#t67.阿里云加速">7.阿里云加速</a></li><li><a href="#t78. image">8. image</a><ul><li><a href="#t88.1 查找镜像">8.1 查找镜像</a></li><li><a href="#t98.2 查看镜像">8.2 查看镜像</a></li><li><a href="#t108.3 拉取镜像">8.3 拉取镜像</a></li><li><a href="#t118.4 删除镜像">8.4 删除镜像</a></li></ul></li><li><a href="#t129. 容器">9. 容器</a><ul><li><a href="#t139.1 命令">9.1 命令</a></li><li><a href="#t149.2 启动容器">9.2 启动容器</a></li><li><a href="#t159.3 查看容器">9.3 查看容器</a></li><li><a href="#t169.4 运行交互式的容器">9.4 运行交互式的容器</a></li><li><a href="#t179.5 后台运行容器">9.5 后台运行容器</a></li><li><a href="#t189.6 kill">9.6 kill</a></li><li><a href="#t199.7 删除容器">9.7 删除容器</a></li></ul></li><li><a href="#t2010. 制作个性化镜像">10. 制作个性化镜像</a><ul><li><a href="#t2110.1  编辑镜像">10.1  编辑镜像</a></li></ul></li><li><a href="#t2211. 制作Dockerfile">11. 制作Dockerfile</a><ul><li><a href="#t2311.1 编写Dockerfile">11.1 编写Dockerfile</a></li><li><a href="#t2411.2 .dockerignore">11.2 .dockerignore</a></li><li><a href="#t2511.3 Dockerfile">11.3 Dockerfile</a></li><li><a href="#t2611.4 创建image">11.4 创建image</a></li><li><a href="#t2711.5 从新的镜像运行容器">11.5 从新的镜像运行容器</a></li><li><a href="#t2811.6 CMD">11.6 CMD</a></li><li><a href="#t2911.7 发布image">11.7 发布image</a></li></ul></li><li><a href="#t3012 数据盘">12 数据盘</a><ul><li><a href="#t3112.1 默认数据盘">12.1 默认数据盘</a></li><li><a href="#t3212.2 指定数据盘">12.2 指定数据盘</a></li><li><a href="#t3312.3 指定数据盘容器">12.3 指定数据盘容器</a></li><li><a href="#t3412.4  管理数据盘">12.4  管理数据盘</a></li></ul></li><li><a href="#t3513.compose">13.compose</a><ul><li><a href="#t3613.1 blog">13.1 blog</a></li><li><a href="#t3713.2 nginx">13.2 nginx</a></li><li><a href="#t3813.3 docker-compose.yml">13.3 docker-compose.yml</a></li><li><a href="#t3913.4 启动">13.4 启动</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01. 布署软件的问题">1. 布署软件的问题 <a href="#t01. 布署软件的问题"> # </a></h2>
+<ul>
+<li>如果想让软件运行起来要保证操作系统的设置，各种库和组件的安装都是正确的</li>
+<li>热带鱼&amp;冷水鱼 冷水鱼适应的水温在5-30度，而热带鱼只能适应22-30度水温，低于22度半小时就冻死了</li>
+</ul>
+<h2 id="t12. 虚拟机">2. 虚拟机 <a href="#t12. 虚拟机"> # </a></h2>
+<ul>
+<li>虚拟机（virtual machine）就是带环境安装的一种解决方案。它可以在一种操作系统里面运行另一种操作系统<ul>
+<li>资源占用多</li>
+<li>冗余步骤多</li>
+<li>启动速度慢</li>
+</ul>
+</li>
+</ul>
+<h2 id="t23. Linux 容器">3. Linux 容器 <a href="#t23. Linux 容器"> # </a></h2>
+<ul>
+<li>由于虚拟机存在这些缺点，Linux 发展出了另一种虚拟化技术：Linux 容器（Linux Containers，缩写为 LXC）。</li>
+<li>Linux 容器不是模拟一个完整的操作系统，而是对进程进行隔离。或者说，在正常进程的外面套了一个保护层。对于容器里面的进程来说，它接触到的各种资源都是虚拟的，从而实现与底层系统的隔离。<ul>
+<li>启动快</li>
+<li>资源占用少</li>
+<li>体积小</li>
+</ul>
+</li>
+</ul>
+<h2 id="t34. Docker 是什么">4. Docker 是什么 <a href="#t34. Docker 是什么"> # </a></h2>
+<ul>
+<li>Docker 属于 Linux 容器的一种封装，提供简单易用的容器使用接口。它是目前最流行的 Linux 容器解决方案。</li>
+<li>Docker 将应用程序与该程序的依赖，打包在一个文件里面。运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样</li>
+</ul>
+<h2 id="t45. Docker 的安装">5. Docker 的安装 <a href="#t45. Docker 的安装"> # </a></h2>
+<ul>
+<li><a href="https://docs.docker.com/docker-for-mac/install/">Mac</a></li>
+<li><a href="https://docs.docker.com/docker-for-windows/install/">windows</a></li>
+<li><a href="https://docs.docker.com/install/linux/docker-ce/centos/">centos</a></li>
+</ul>
+<p>centos7.2中安装docker</p>
+<pre><code class="lang-js">yum -y install docker-io
+</code></pre>
+<p>查看docker版本</p>
+<pre><code class="lang-js">$ docker version
+$ docker info
+</code></pre>
+<p>启动docker服务</p>
+<pre><code class="lang-js">systemctl start docker
+</code></pre>
+<h2 id="t56. Docker架构">6. Docker架构 <a href="#t56. Docker架构"> # </a></h2>
+<p><img src="http://img.zhufengpeixun.cn/docker-arch.jpg" alt="docker"></p>
+<h2 id="t67.阿里云加速">7.阿里云加速 <a href="#t67.阿里云加速"> # </a></h2>
+<ul>
+<li><a href="https://dev.aliyun.com/search.html">镜像仓库</a></li>
+<li><a href="https://cr.console.aliyun.com/?spm=5176.1971733.0.2.fAi0GG#/imageList">管理中心</a></li>
+</ul>
+<pre><code class="lang-js">mkdir -p /etc/docker
+tee /etc/docker/daemon.json &lt;&lt;-<span class="hljs-string">'EOF'</span>
+{
+  <span class="hljs-string">"registry-mirrors"</span>: [<span class="hljs-string">"https://fwvjnv59.mirror.aliyuncs.com"</span>]
+}
+EOF
+systemctl daemon-reload
+systemctl restart docker
+</code></pre>
+<h2 id="t78. image">8. image <a href="#t78. image"> # </a></h2>
+<ul>
+<li>Docker 把应用程序及其依赖，打包在 image 文件里面。只有通过这个文件，才能生成 Docker 容器</li>
+<li>image 文件可以看作是容器的模板</li>
+<li>Docker 根据 image 文件生成容器的实例</li>
+<li>同一个 image 文件，可以生成多个同时运行的容器实例</li>
+<li>一个 image 文件往往通过继承另一个 image 文件，加上一些个性化设置而生成</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">images</td>
+<td style="text-align:left">查看全部镜像</td>
+<td style="text-align:left">docker image ls</td>
+</tr>
+<tr>
+<td style="text-align:left">pull</td>
+<td style="text-align:left">拉取镜像</td>
+<td style="text-align:left">docker rmi [imageName]</td>
+</tr>
+<tr>
+<td style="text-align:left">rmi</td>
+<td style="text-align:left">删除镜像</td>
+<td style="text-align:left">docker rmi [imageName]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t88.1 查找镜像">8.1 查找镜像 <a href="#t88.1 查找镜像"> # </a></h3>
+<pre><code class="lang-js">docker search ubuntu
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">NAME</td>
+<td style="text-align:left">名称</td>
+</tr>
+<tr>
+<td style="text-align:left">DESCRIPTION</td>
+<td style="text-align:left">描述</td>
+</tr>
+<tr>
+<td style="text-align:left">STARTS</td>
+<td style="text-align:left">星星的数量</td>
+</tr>
+<tr>
+<td style="text-align:left">OFFICIAL</td>
+<td style="text-align:left">是否官方源</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t98.2 查看镜像">8.2 查看镜像 <a href="#t98.2 查看镜像"> # </a></h3>
+<pre><code class="lang-js">docker image ls
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">REPOSITORY</td>
+<td style="text-align:left">仓库地址</td>
+</tr>
+<tr>
+<td style="text-align:left">TAG</td>
+<td style="text-align:left">标签</td>
+</tr>
+<tr>
+<td style="text-align:left">IMAGE_ID</td>
+<td style="text-align:left">镜像ID</td>
+</tr>
+<tr>
+<td style="text-align:left">CREATED</td>
+<td style="text-align:left">创建时间</td>
+</tr>
+<tr>
+<td style="text-align:left">SIZE</td>
+<td style="text-align:left">镜像大小</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t108.3 拉取镜像">8.3 拉取镜像 <a href="#t108.3 拉取镜像"> # </a></h3>
+<pre><code class="lang-js">docker  pull hello-world
+</code></pre>
+<ul>
+<li>docker image pull是抓取 image 文件的命令</li>
+<li>library/hello-world是 image 文件在仓库里面的位置，其中library是 image的作者，hello-world是 image 文件的名字</li>
+<li>Docker 官方提供的 image 文件，都放在library组里面，所以它的是默认组，可以省略 <code>docker image pull hello-world</code></li>
+</ul>
+<h3 id="t118.4 删除镜像">8.4 删除镜像 <a href="#t118.4 删除镜像"> # </a></h3>
+<pre><code class="lang-js">docker rmi  hello-world
+</code></pre>
+<h2 id="t129. 容器">9. 容器 <a href="#t129. 容器"> # </a></h2>
+<ul>
+<li><code>docker  run</code> 命令会从 <code>image</code> 文件，生成一个正在运行的容器实例。</li>
+<li>docker container run命令具有自动抓取 image 文件的功能。如果发现本地没有指定的 image 文件，就会从仓库自动抓取</li>
+<li>输出提示以后，hello world就会停止运行，容器自动终止。</li>
+<li>有些容器不会自动终止</li>
+<li>image 文件生成的容器实例，本身也是一个文件，称为容器文件</li>
+<li>容器生成，就会同时存在两个文件： image 文件和容器文件</li>
+<li>关闭容器并不会删除容器文件，只是容器停止运行</li>
+</ul>
+<h3 id="t139.1 命令">9.1 命令 <a href="#t139.1 命令"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">run</td>
+<td style="text-align:left">从镜像运行一个容器</td>
+<td style="text-align:left">docker image ls</td>
+</tr>
+<tr>
+<td style="text-align:left">ps</td>
+<td style="text-align:left">查看当前运行的容器</td>
+<td style="text-align:left">docker ps -a -l</td>
+</tr>
+<tr>
+<td style="text-align:left">kill [containerId]</td>
+<td style="text-align:left">终止容器(发送SIGKILL )</td>
+<td style="text-align:left">docker kill [containerId]</td>
+</tr>
+<tr>
+<td style="text-align:left">rm [containerId]</td>
+<td style="text-align:left">删除容器</td>
+<td style="text-align:left">docker rm [containerId]</td>
+</tr>
+<tr>
+<td style="text-align:left">start [containerId]</td>
+<td style="text-align:left">启动已经生成、已经停止运行的容器文件</td>
+<td style="text-align:left">docker start [containerId]</td>
+</tr>
+<tr>
+<td style="text-align:left">stop [containerId]</td>
+<td style="text-align:left">终止容器运行 (发送 SIGTERM )</td>
+<td style="text-align:left">docker stop [containerId]</td>
+</tr>
+<tr>
+<td style="text-align:left">logs [containerId]</td>
+<td style="text-align:left">查看 docker 容器的输出</td>
+<td style="text-align:left">docker logs [containerId]</td>
+</tr>
+<tr>
+<td style="text-align:left">exec [containerId]</td>
+<td style="text-align:left">进入一个正在运行的 docker 容器</td>
+<td style="text-align:left">docker container exec -it [containerID] /bin/bash</td>
+</tr>
+<tr>
+<td style="text-align:left">cp [containerId]</td>
+<td style="text-align:left">从正在运行的 Docker 容器里面，将文件拷贝到本机</td>
+<td style="text-align:left">docker container cp [containID]:app/package.json .</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t149.2 启动容器">9.2 启动容器 <a href="#t149.2 启动容器"> # </a></h3>
+<pre><code class="lang-js">docker run ubuntu /bin/echo <span class="hljs-string">"Hello world"</span>
+</code></pre>
+<ul>
+<li>docker: Docker 的二进制执行文件。</li>
+<li>run:与前面的 docker 组合来运行一个容器。</li>
+<li>ubuntu指定要运行的镜像，Docker首先从本地主机上查找镜像是否存在，如果不存在，Docker 就会从镜像仓库 Docker Hub 下载公共镜像。</li>
+<li>/bin/echo "Hello world": 在启动的容器里执行的命令</li>
+</ul>
+<blockquote>
+<p>Docker以ubuntu镜像创建一个新容器，然后在容器里执行 bin/echo "Hello world"，然后输出结果</p>
+</blockquote>
+<h3 id="t159.3 查看容器">9.3 查看容器 <a href="#t159.3 查看容器"> # </a></h3>
+<pre><code class="lang-js">docker ps
+docker -a
+docker -l
+</code></pre>
+<ul>
+<li>-a 显示所有的容器，包括已停止的</li>
+<li>-a 显示最新的那个容器</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CONTAINER ID</td>
+<td style="text-align:left">容器ID</td>
+</tr>
+<tr>
+<td style="text-align:left">IMAGE</td>
+<td style="text-align:left">使用的镜像</td>
+</tr>
+<tr>
+<td style="text-align:left">COMMAND</td>
+<td style="text-align:left">使用的命令</td>
+</tr>
+<tr>
+<td style="text-align:left">CREATED</td>
+<td style="text-align:left">创建时间</td>
+</tr>
+<tr>
+<td style="text-align:left">STATUS</td>
+<td style="text-align:left">状态</td>
+</tr>
+<tr>
+<td style="text-align:left">PORTS</td>
+<td style="text-align:left">端口号</td>
+</tr>
+<tr>
+<td style="text-align:left">NAMES</td>
+<td style="text-align:left">自动分配的名称</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t169.4 运行交互式的容器">9.4 运行交互式的容器 <a href="#t169.4 运行交互式的容器"> # </a></h3>
+<pre><code class="lang-js">docker run -i -t ubuntu /bin/bash
+</code></pre>
+<ul>
+<li>-t=--interactive  在新容器内指定一个伪终端或终端。</li>
+<li>-i=--tty 允许你对容器内的标准输入 (STDIN) 进行交互。</li>
+</ul>
+<blockquote>
+<p>我们可以通过运行exit命令或者使用CTRL+D来退出容器。</p>
+</blockquote>
+<h3 id="t179.5 后台运行容器">9.5 后台运行容器 <a href="#t179.5 后台运行容器"> # </a></h3>
+<pre><code class="lang-js">docker run --detach centos ping www.baidu.com
+docker logs --follow ad04d9acde94
+docker stop ad04d9acde94
+</code></pre>
+<h3 id="t189.6 kill">9.6 kill <a href="#t189.6 kill"> # </a></h3>
+<pre><code class="lang-js">docker kill <span class="hljs-number">5</span>a5c3a760f61
+</code></pre>
+<h3 id="t199.7 删除容器">9.7 删除容器 <a href="#t199.7 删除容器"> # </a></h3>
+<pre><code class="lang-js">docker rm <span class="hljs-number">5</span>a5c3a760f61
+</code></pre>
+<h2 id="t2010. 制作个性化镜像">10. 制作个性化镜像 <a href="#t2010. 制作个性化镜像"> # </a></h2>
+<h3 id="t2110.1  编辑镜像">10.1  编辑镜像 <a href="#t2110.1  编辑镜像"> # </a></h3>
+<pre><code class="lang-js">docker commit -m<span class="hljs-string">"hello"</span> -a <span class="hljs-string">"zhangrenyang"</span> [containerId] zhangrenyang/hello:latest
+docker images
+docker run zhangrenyang/hello /bin/bash
+docker rm b2839066c362
+docker rmi c79ef5b3f5fc
+</code></pre>
+<h2 id="t2211. 制作Dockerfile">11. 制作Dockerfile <a href="#t2211. 制作Dockerfile"> # </a></h2>
+<ul>
+<li>Docker 的镜像是用一层一层的文件组成的</li>
+<li><code>docker inspect</code>命令可以查看镜像或者容器</li>
+<li>Layers就是镜像的层文件，只读不能修改。基于镜像创建的容器会共享这些文件层<pre><code class="lang-js">docker inspect centos
+</code></pre>
+</li>
+</ul>
+<h3 id="t2311.1 编写Dockerfile">11.1 编写Dockerfile <a href="#t2311.1 编写Dockerfile"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">FROM</td>
+<td style="text-align:left">继承的镜像</td>
+<td style="text-align:left">FROM node</td>
+</tr>
+<tr>
+<td style="text-align:left">COPY</td>
+<td style="text-align:left">拷贝</td>
+<td style="text-align:left">COPY ./app /app</td>
+</tr>
+<tr>
+<td style="text-align:left">WORKDIR</td>
+<td style="text-align:left">指定工作路径</td>
+<td style="text-align:left">WORKDIR /app</td>
+</tr>
+<tr>
+<td style="text-align:left">RUN</td>
+<td style="text-align:left">编译打包阶段运行命令</td>
+<td style="text-align:left">RUN npm install</td>
+</tr>
+<tr>
+<td style="text-align:left">EXPOSE</td>
+<td style="text-align:left">暴露端口</td>
+<td style="text-align:left">EXPOSE 3000</td>
+</tr>
+<tr>
+<td style="text-align:left">CMD</td>
+<td style="text-align:left">容器运行阶段运行命令</td>
+<td style="text-align:left">CMD npm run start</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t2411.2 .dockerignore">11.2 .dockerignore <a href="#t2411.2 .dockerignore"> # </a></h3>
+<p>表示要排除，不要打包到image中的文件路径</p>
+<pre><code class="lang-js">.git
+node_modules
+</code></pre>
+<h3 id="t2511.3 Dockerfile">11.3 Dockerfile <a href="#t2511.3 Dockerfile"> # </a></h3>
+<pre><code class="lang-js">npm install express-generator -g
+express app
+</code></pre>
+<p>Dockerfile</p>
+<pre><code class="lang-js">FROM node
+COPY ./app /app
+WORKDIR /app
+RUN npm install
+EXPOSE <span class="hljs-number">3000</span>
+</code></pre>
+<ul>
+<li>FROM  表示该镜像继承的镜像 :表示标签</li>
+<li>COPY 是将当前目录下的app目录下面的文件都拷贝到image里的/app目录中</li>
+<li>WORKDIR  指定工作路径，类似于执行 <code>cd</code> 命令</li>
+<li>RUN npm install 在/app目录下安装依赖，安装后的依赖也会打包到image目录中</li>
+<li>EXPOSE 暴露3000端口，允许外部连接这个端口</li>
+<li>CMD 执行命令</li>
+</ul>
+<h3 id="t2611.4 创建image">11.4 创建image <a href="#t2611.4 创建image"> # </a></h3>
+<pre><code class="lang-js">docker build -t express-demo .
+</code></pre>
+<ul>
+<li>-t用来指定image镜像的名称，后面还可以加冒号指定标签，如果不指定默认就是latest</li>
+<li><code>.</code> 表示Dockerfile文件的所有路径,<code>.</code>就表示当前路径</li>
+</ul>
+<h3 id="t2711.5 从新的镜像运行容器">11.5 从新的镜像运行容器 <a href="#t2711.5 从新的镜像运行容器"> # </a></h3>
+<pre><code class="lang-js">docker container run -p <span class="hljs-number">3333</span>:<span class="hljs-number">3000</span> -it express-demo /bin/bash
+</code></pre>
+<pre><code class="lang-js">npm start
+</code></pre>
+<ul>
+<li>-p参数是将容器的3000端口映射为本机的3333端口</li>
+<li>-it参数是将容器的shell容器映射为当前的shell,在本机容器中执行的命令都会发送到容器当中执行</li>
+<li>express-demo image的名称</li>
+<li>/bin/bash 容器启动后执行的第一个命令,这里是启动了bash容器以便执行脚本</li>
+<li>--rm 在容器终止运行后自动删除容器文件</li>
+</ul>
+<h3 id="t2811.6 CMD">11.6 CMD <a href="#t2811.6 CMD"> # </a></h3>
+<pre><code class="lang-js">CMD npm start
+</code></pre>
+<ul>
+<li>RUN命令在 image 文件的构建阶段执行，执行结果都会打包进入 image 文件；CMD命令则是在容器启动后执行</li>
+<li>一个 Dockerfile 可以包含多个RUN命令，但是只能有一个CMD命令</li>
+<li>指定了CMD命令以后，docker container run命令就不能附加命令了（比如前面的/bin/bash），否则它会覆盖CMD命令</li>
+</ul>
+<h3 id="t2911.7 发布image">11.7 发布image <a href="#t2911.7 发布image"> # </a></h3>
+<ul>
+<li><a href="https://hub.docker.com/">注册账户</a></li>
+</ul>
+<pre><code class="lang-js">docker login
+docker image tag [imageName] [username]/[repository]:[tag]
+docker image build -t [username]/[repository]:[tag] .
+
+docker tag express-demo zhangrenyang/express-demo:<span class="hljs-number">1.0</span><span class="hljs-number">.0</span>
+docker push zhangrenyang/express-demo:<span class="hljs-number">1.0</span><span class="hljs-number">.0</span>
+</code></pre>
+<h2 id="t3012 数据盘">12 数据盘 <a href="#t3012 数据盘"> # </a></h2>
+<ul>
+<li>删除容器的时候，容器层里创建的文件也会被删除掉，如果有些数据你想永久保存，比如Web服务器的日志，数据库管理系统中的数据，可以为容器创建一个数据盘。</li>
+<li>创建容器的时候我们可以通过<code>-v</code>或<code>--volumn</code>给它指定一下数据盘<h3 id="t3112.1 默认数据盘">12.1 默认数据盘 <a href="#t3112.1 默认数据盘"> # </a></h3>
+<pre><code class="lang-js">docker run -v /mnt -i -t --name logs centos bash
+echo <span class="hljs-number">1</span> &gt; <span class="hljs-number">1.</span>txt
+exit
+</code></pre>
+</li>
+</ul>
+<pre><code class="lang-js">docker inspect logs
+<span class="hljs-string">"Mounts"</span>: [
+    {
+        <span class="hljs-string">"Source"</span>:<span class="hljs-string">"/mnt/sda1/var/lib/docker/volumes/dea6a8b3aefafa907d883895bbf931a502a51959f83d63b7ece8d7814cf5d489/_data"</span>,
+        <span class="hljs-string">"Destination"</span>: <span class="hljs-string">"/mnt"</span>,
+    }
+]
+</code></pre>
+<ul>
+<li><code>Source</code>的值就是我们给容器指定的数据盘在主机上的位置 </li>
+<li><code>Destination</code>的值是这个数据盘在容器上的位置 </li>
+</ul>
+<h3 id="t3212.2 指定数据盘">12.2 指定数据盘 <a href="#t3212.2 指定数据盘"> # </a></h3>
+<pre><code class="lang-js">mkdir ~/data
+docker run -v ~/data:/mnt -ti --name logs2 centos bash
+cd /mnt
+echo 3 &gt; 3.txt
+exit
+cat ~/data/3.txt
+</code></pre>
+<h3 id="t3312.3 指定数据盘容器">12.3 指定数据盘容器 <a href="#t3312.3 指定数据盘容器"> # </a></h3>
+<pre><code class="lang-js">docker create -v /mnt --name logger centos
+docker run --volumes-<span class="hljs-keyword">from</span> logger --name logger3 -i -t centos bash
+docker run --volumes-<span class="hljs-keyword">from</span> logger --name logger4 -i -t centos bash
+</code></pre>
+<h3 id="t3412.4  管理数据盘">12.4  管理数据盘 <a href="#t3412.4  管理数据盘"> # </a></h3>
+<pre><code class="lang-js">docker volume ls 列出所有的数据盘
+docker volume ls -f dangling=<span class="hljs-literal">true</span> 列出已经孤立的数据盘
+docker volume rm xxxx
+docker volume ls
+docker rm logger1 logger2
+docker volume inspect xxx
+docker rm logger -v
+</code></pre>
+<h2 id="t3513.compose">13.compose <a href="#t3513.compose"> # </a></h2>
+<p>Compose 是一个用户定义和运行多个容器的 Docker 应用程序。在 Compose 中你可以使用 YAML 文件来配置你的应用服务。然后，只需要一个简单的命令，就可以创建并启动你配置的所有服务。
+使用 Compose 基本会有如下三步流程：</p>
+<ul>
+<li>在 Dockfile 中定义你的应用环境，使其可以在任何地方复制。</li>
+<li>在 docker-compose.yml 中定义组成应用程序的服务，以便它们可以在隔离的环境中一起运行。</li>
+<li>最后，运行docker-compose up，Compose 将启动并运行整个应用程序。</li>
+</ul>
+<pre><code class="lang-js">pip install docker-compose
+</code></pre>
+<h3 id="t3613.1 blog">13.1 blog <a href="#t3613.1 blog"> # </a></h3>
+<p>Dockerfile</p>
+<pre><code class="lang-js">FROM node
+RUN npm i express-generator -g
+RUN express app
+WORKDIR app
+RUN npm install
+EXPOSE <span class="hljs-number">3000</span>
+CMD [<span class="hljs-string">"npm"</span>,<span class="hljs-string">"start"</span>]
+</code></pre>
+<h3 id="t3713.2 nginx">13.2 nginx <a href="#t3713.2 nginx"> # </a></h3>
+<pre><code class="lang-js">FROM nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+EXPOSE <span class="hljs-number">80</span>
+</code></pre>
+<p>nginx.conf</p>
+<pre><code class="lang-js">events{  
+    use epoll;  
+}
+http {
+  server {
+    listen <span class="hljs-number">80</span>;
+    location / {
+      proxy_pass http:<span class="hljs-comment">//blog:3000;</span>
+    }
+  }
+}
+</code></pre>
+<h3 id="t3813.3 docker-compose.yml">13.3 docker-compose.yml <a href="#t3813.3 docker-compose.yml"> # </a></h3>
+<pre><code class="lang-js">version: <span class="hljs-string">'1'</span>
+services:
+   blog:
+     build: blog
+     networks:
+      - <span class="hljs-keyword">default</span>
+     ports:
+      - <span class="hljs-string">"3000:3000"</span>
+
+   nginx:
+     build: nginx
+     networks:
+      - <span class="hljs-keyword">default</span>
+     ports:
+      - <span class="hljs-string">"80:80"</span>
+</code></pre>
+<h3 id="t3913.4 启动">13.4 启动 <a href="#t3913.4 启动"> # </a></h3>
+<pre><code class="lang-js">docker-compose up -d
+</code></pre>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+  // if (!$('.understand-me').length) {
+  //   var bar = $(window).height() - $('.navbar ').height() - $('.page-toc').position().top;
+  //   var count = bar / 26 / 2;
+  //   var barHeight = $('.page-toc').outerHeight();
+  //   $('.page-toc li').eq(0).children('a').addClass('red');
+  //   var arr = [];
+  //   $("h1,h2,h3,h4,h5,h6").each(function () {
+  //     arr.push($(this).position().top);
+  //   });
+  //   var timer
+  //   function dark() {
+  //     clearTimeout(timer)
+  //      timer = setTimeout(function () {
+  //      var top = Math.abs($('.page-toc > ul').position().top);
+  //      var cur = $('.content').scrollTop();
+  //      for (var i = arr.length; i >= 0; i--) {
+  //        if (arr[i] <= cur) {
+  //          break;
+  //        }
+  //      }
+  //      if (i === -1) {
+  //        i = 0;
+  //      }
+  //      $('.page-toc li a').removeClass('red');
+  //      $('.page-toc li').eq(i).children('a').addClass('red');
+  //      let height = $('.page-toc li').eq(i).position().top-$('.page-toc').height(); // 如果当前的offset出去了 回到中间可好？
+  //      $('.page-toc').scrollTop(height+$('.page-toc').height()/2);
+  //    },200)
+  //   }
+
+  //   $('.content').on('scroll', dark);
+  // }
+</script>
+<style>
+
+    /* ::-webkit-scrollbar{width:14px;}
+    ::-webkit-scrollbar-track{background-color:transparent;}
+    ::-webkit-scrollbar-thumb{background-color:transparent;}
+    ::-webkit-scrollbar-thumb:hover {background-color:transparent}
+    ::-webkit-scrollbar-thumb:active {background-color:transparent} */
+
+    .page-toc > ul .red {
+        background: #f3f3f3;
+        z-index: 1;
+        border-left: 3px solid #009a61;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        color: #000
+    }
+
+
+
+
+
+</style>
+
+
+</body></html>

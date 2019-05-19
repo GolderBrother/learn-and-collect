@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>作用域</title>
+</head>
+<body>
+  
+  <script> 
+    window.onload = function(){
+      //淘宝的面试题
+			//全局变量和局部变量同名的时候 ，全局变量的作用域不包含同名局部变量的作用域
+			//全局变量和局部变量不同名的时候 ，全局变量作用域是整 个程序
+		var a = 10;    //全局
+		function f1(){    
+		    var b = 2 * a;    //NAN   a 变量提升
+		    var a = 20; //局部
+		    var c = a+1;    //   21
+		    console.log(b);  //NAN  
+			console.log(c);    //21
+		}    
+		f1()
+
+	}
+  </script>
+</body>
+</html>

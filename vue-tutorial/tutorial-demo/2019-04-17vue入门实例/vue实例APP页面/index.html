@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>软谋教育</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+<body>
+<!--页面容器-->
+  <div class="index-content" id="my">
+    <div class="banner">
+        <img v-for="(item,index) in items" :src="item" v-show="index==n"/>
+        <div class="banner-circle">
+            <ul>
+                <!-- <li v-for="(item,index) in items" :class="index==n?'selected':''"></li>  -->
+                <li v-for="(item,index) in items" :class="{'selected':index==n}" @click="curShow(index)"></li> 
+            </ul> 
+        </div>
+    </div>
+
+    <div class="index-category">
+        <div class="category" v-for="list in lists">
+            <i class="iconfont" :class="list.icon" :style="{background:list.color}"></i>
+            <label>{{list.title}}</label>
+        </div>
+	</div>
+  </div>
+
+</body>
+</html>

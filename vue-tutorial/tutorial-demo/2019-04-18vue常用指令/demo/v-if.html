@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>指令 v-if</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my',
+			data:{
+				str:'hello world',
+				age:21,
+				flag:true,
+				arr:[1,2,3,4],
+				obj:{name:'abc',id:1},
+				lists:[{name:'abc',id:1},{name:'xyz',id:2}]
+			}
+		})
+	}
+	</script>
+</head>
+<body> 
+	<div id="my">
+		<div v-show="age>=18">按钮</div>
+		<div v-if="age>=30">大于30了</div>
+		<div v-else-if="age>=25">大于25了</div>
+		<div v-else>你还小</div>
+		<div v-if="flag? age=31 : age=21">{{age}}</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+ <div class="panel panel-info" style="margin:20px;">
+         <!-- 头部 -->
+        <div class="panel-heading">
+            <h1 style="display: inline-block;">
+                {{input | uppercase}}我的购物清单列表{{date | date:'y-MM-dd HH:mm:ss'}}</h1>
+            <span>清单总数
+              <span class="label label-warning" >{{lists.length}}</span>
+            </span>
+        </div>
+        <!-- 内容 -->
+        <div class="panel-body">
+            <div class="input-group">
+              <input type="checkbox" [(ngModel)]="checkAll" 
+                        (change)="checkAllChange()"
+                        [disabled]="lists.length == 0"/> 全选
+              <input class="form-control" type="text" [(ngModel)]="input"/> 
+              <span class="input-group-btn">
+                <button class="btn btn-primary" (click)="add()">添加</button>
+                <button class="btn btn-primary" (click)="delCheck()">删除已采购</button>
+              </span>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>清单名称</th>
+                  <th>状态</th>
+                  <th>删除</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let list of lists,let i = index">
+                  <td>{{list.name}}</td>
+                  <td><input type="checkbox" [(ngModel)]="list.state" (change)="curChange()"/>{{list.state | statepipe}}</td>
+                  <td><button type="button" 
+                            class="btn btn-danger btn-sm" (click)="del(i)">
+                            删除</button>
+                        </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>

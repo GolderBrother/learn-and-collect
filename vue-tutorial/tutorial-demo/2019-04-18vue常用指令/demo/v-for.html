@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>指令 v-for</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my',
+			data:{
+				str:'hello world',
+				age:18,
+				flag:true,
+				arr:[1,2,3,4],
+				obj:{name:'abc',id:1},
+				lists:[{name:'abc',id:1},{name:'xyz',id:2}]
+			}
+		})
+	}
+	</script>
+</head>
+<body> 
+	<div id="my">
+		<ul>
+			<li v-for="(v,i) in arr">{{v}} ===== {{i}}</li>
+		</ul>
+		<ul>
+			<li v-for="(v,i) in lists">{{v.name}} ===== {{i}}</li>
+		</ul>
+		<ul>
+			<li v-for="(v,k) in obj">{{k}} ===== {{v}}</li>
+		</ul>
+	</div>
+</body>
+</html>

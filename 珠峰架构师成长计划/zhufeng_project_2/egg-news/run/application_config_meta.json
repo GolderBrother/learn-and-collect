@@ -1,0 +1,254 @@
+{
+  "keys": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js",
+  "counterKeys": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js",
+  "view": {
+    "defaultExtension": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js",
+    "defaultViewEngine": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js",
+    "mapping": {
+      ".html": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js"
+    },
+    "root": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-view@2.1.0@egg-view\\config\\config.default.js",
+    "cache": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-view@2.1.0@egg-view\\config\\config.default.js"
+  },
+  "news": {
+    "newsUrl": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js"
+  },
+  "security": {
+    "csrf": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js",
+    "domainWhiteList": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+    "protocolWhiteList": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+    "defaultMiddleware": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+    "xframe": {
+      "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+      "value": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+      "maxAge": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+      "includeSubdomains": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+      "value": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+      "value": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+      "policy": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js",
+      "checkAddress": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+    }
+  },
+  "session": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js",
+  "middleware": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js",
+  "robot": {
+    "ua": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\config\\config.default.js"
+  },
+  "helper": {
+    "shtml": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-security@2.4.1@egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "callback": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "csrf": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "templatePath": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js",
+    "dirs": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js",
+    "queryField": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js",
+    "cookieField": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-i18n@2.0.0@egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.unittest.js",
+    "eventSources": {
+      "default": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.default.js",
+      "development": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-watcher@3.1.0@egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-schedule@3.5.0@egg-schedule\\config\\config.default.js",
+      "file": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-schedule@3.5.0@egg-schedule\\config\\config.default.js"
+    }
+  },
+  "multipart": {
+    "mode": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "autoFields": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "defaultCharset": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "fieldSize": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "fields": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "fileSize": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "files": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "fileExtensions": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "whitelist": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "tmpdir": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-multipart@2.3.0@egg-multipart\\config\\config.default.js"
+    }
+  },
+  "logrotator": {
+    "filesRotateByHour": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-logrotator@3.0.5@egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-logrotator@3.0.5@egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-logrotator@3.0.5@egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-logrotator@3.0.5@egg-logrotator\\config\\config.default.js",
+    "maxFiles": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-logrotator@3.0.5@egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-logrotator@3.0.5@egg-logrotator\\config\\config.default.js",
+    "maxDays": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-logrotator@3.0.5@egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
+    "dir": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
+    "dynamic": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
+    "preload": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
+    "buffer": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js",
+    "maxFiles": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-static@2.1.1@egg-static\\config\\config.default.js"
+  },
+  "nunjucks": {
+    "autoescape": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-view-nunjucks@2.2.0@egg-view-nunjucks\\config\\config.default.js",
+    "throwOnUndefined": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-view-nunjucks@2.2.0@egg-view-nunjucks\\config\\config.default.js",
+    "trimBlocks": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-view-nunjucks@2.2.0@egg-view-nunjucks\\config\\config.default.js",
+    "lstripBlocks": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-view-nunjucks@2.2.0@egg-view-nunjucks\\config\\config.default.js",
+    "cache": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg-view-nunjucks@2.2.0@egg-view-nunjucks\\config\\config.default.js"
+  },
+  "env": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "name": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "proxy": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "protocolHeaders": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "ipHeaders": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "hostHeaders": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "pkg": {
+    "name": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "version": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "description": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "main": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "scripts": {
+      "dev": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "prod": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "test": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+    },
+    "keywords": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "author": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "license": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "dependencies": {
+      "egg": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "egg-mock": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "egg-view-nunjucks": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "express": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "moment": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "cross-env": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "egg-bin": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+    }
+  },
+  "baseDir": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "HOME": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "rundir": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "notFound": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "sitefile": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "middlewares": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "httpClient": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "encoding": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "formLimit": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "jsonLimit": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "strict": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "depth": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "parameterLimit": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+    }
+  },
+  "logger": {
+    "dir": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "encoding": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "env": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "level": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "consoleLevel": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.unittest.js",
+    "disableConsoleAfterReady": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "outputJSON": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "buffer": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.unittest.js",
+    "appLogName": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "coreLogName": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "agentLogName": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "errorLogName": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "coreLogger": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "allowDebugAtProd": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "request": {
+      "timeout": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "freeSocketTimeout": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "maxSockets": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "maxFreeSockets": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "freeSocketTimeout": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "maxSockets": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "maxFreeSockets": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "logging": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "workerStartTimeout": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "serverTimeout": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "port": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+      "hostname": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js",
+    "responseTimeout": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+  },
+  "onClientError": "C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\node_modules\\_egg@2.14.1@egg\\config\\config.default.js"
+}

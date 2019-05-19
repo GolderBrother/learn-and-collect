@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>canvas绘图</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script>
+           //获得画布元素
+            var canvas=document.getElementById("canvas");
+            //获得2维绘图对象
+            var ctx=canvas.getContext("2d");
+            //设置线宽
+            ctx.lineWidth = 3;
+            //颜色
+            ctx.strokeStyle= 'red';
+            ctx.moveTo(10,10);  //起点
+            ctx.lineTo(100,10); //下一点
+            ctx.lineTo(200,100); //下一点
+            ctx.lineTo(300,300); //下一点
+            //ctx.stroke();   //执行  线条
+            ctx.fillStyle = 'blue';  //填充色
+            ctx.fill();   //执行  填充
+            ctx.stroke();   //执行  线条
+            
+            ctx.beginPath();  //重新开始绘制
+            ctx.moveTo(300,10);  //起点
+            ctx.lineTo(300,50); //下一点
+            ctx.lineTo(400,50); //下一点
+            ctx.closePath();  //闭合
+            ctx.stroke();   //执行  线条
+        </script>
+    </body>
+</html>

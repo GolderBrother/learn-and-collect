@@ -1,0 +1,31 @@
+const  addresses = [
+    {
+        value:'广东省',
+        label:'广东省',
+        children:[
+            {
+                value:'深圳',
+                label:'深圳'
+            },
+            {
+                value:'广州',
+                label:'广州'
+            }
+        ]
+    },
+    {
+        value:'山东省',
+        label:'山东省',
+        children:[
+            {
+                value:'济南',
+                label:'济南'
+            },
+            {
+                value:'寿光',
+                label:'寿光'
+            }
+        ]
+    }
+]
+export {addresses}

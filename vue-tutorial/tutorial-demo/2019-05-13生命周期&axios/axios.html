@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script type="text/javascript" src='js/axios.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my', //挂载元素
+			data:{
+				name:'abc',
+				lists:[],
+				items:[],
+				obj:{
+					type:1,
+					name:2
+				}
+			},
+			methods:{
+				get:function(){
+					axios({
+						method:'get',  //请求的方式
+						url:'http://localhost:3333/list'
+					}).then(res=>{
+						console.log(res);
+						this.lists = res.data.result;
+					}).catch(error=>{
+						console.log(error)
+					})
+				},
+				get2:function(){   //http://localhost:3333/list?type=1&name=2
+					axios.get('http://localhost:3333/list',{params:this.obj}
+					).then(res=>{
+						console.log(res);
+						this.lists = res.data.result;
+					}).catch(error=>{
+						console.log(error)
+					})
+				},
+				sendPost:function(){
+					axios({
+						method:'post',  //请求的方式
+						url:'http://localhost:3333/list_add',
+						data:this.obj
+					}).then(res=>{
+						console.log(res);
+						this.items = res.data.result;
+					}).catch(error=>{
+						console.log(error)
+					})
+				},
+				sendPost2:function(){
+					axios.post('http://localhost:3333/list_add',this.obj
+					).then(res=>{
+						console.log(res);
+						this.items = res.data.result;
+					}).catch(error=>{
+						console.log(error)
+					})
+				}
+			},
+			mounted:function(){   //钩子函数挂载后的状态  虚拟DOM创建完成，数据马上就要渲染
+				this.get()
+			}
+		})
+	}
+	</script>
+</head>
+<body> 
+	<div id="my">
+		<button @click="get2">发送</button>
+		
+		<ul>
+			<li v-for="list in lists">{{list.name}}</li>
+		</ul>
+		<input type="text" v-model="obj.type"/>
+		<input type="text" v-model="obj.name"/>
+
+		<button @click="sendPost2()">添加</button>
+		<ul>
+			<li v-for="item in items">{{item.type}}=={{item.name}}</li>
+		</ul>
+    </div>
+	
+</body>
+</html>

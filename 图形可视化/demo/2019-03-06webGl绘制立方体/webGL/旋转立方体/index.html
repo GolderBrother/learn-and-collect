@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body onload="webGLStart()">
+ <canvas id="canvas" height="400" width="400"></canvas>
+ <script id="shader-fs" type="x-shader/x-fragment">
+    precision mediump float;
+    varying vec4 v_Color;
+    void main(void) {
+        gl_FragColor = v_Color;
+    }
+</script>
+ <script id="shader-vs" type="x-shader/x-vertex">
+    attribute vec4 aVertexPosition;
+    attribute vec4 a_Color;
+    uniform mat4 uMVMatrix;
+    uniform mat4 uPMatrix;
+    varying vec4 v_Color;
+    void main(void) {
+        gl_Position = uPMatrix * uMVMatrix * aVertexPosition;
+        v_Color=a_Color;
+    }
+</script>
+ <script src="cuon-matrix.js"></script>
+<script>
+    var gl;
+    //获取canvas元素
+    var canvas = document.getElementById('canvas');
+    //获取绘制二维上下文
+    var gl = canvas.getContext('webgl');
+    var FSIZE=4;
+    
+    function getShader(gl, id) {
+        var shaderScript = document.getElementById(id);
+        if (!shaderScript) {
+            return null;
+        }
+
+        var str = "";
+        var k = shaderScript.firstChild;
+        while (k) {
+            if (k.nodeType == 3) {
+                str += k.textContent;
+            }
+            k = k.nextSibling;
+        }
+
+        var shader;
+        if (shaderScript.type == "x-shader/x-fragment") {
+            shader = gl.createShader(gl.FRAGMENT_SHADER);  //创建片元着色器
+        } else if (shaderScript.type == "x-shader/x-vertex") {
+            shader = gl.createShader(gl.VERTEX_SHADER);//创建顶点着色器
+        } else {
+            return null;
+        }
+
+        gl.shaderSource(shader, str);//着色器使用GLSL程序代码的字符串。
+        gl.compileShader(shader); //编译着色器  把着色器源代码编译成目标代码
+        return shader;
+    }
+
+    var shaderProgram;   //合并程序
+    function initShaders() {
+        var fragmentShader = getShader(gl, "shader-fs");
+        var vertexShader = getShader(gl, "shader-vs");
+        //合并程序
+        shaderProgram = gl.createProgram();  ////创建着色器程序
+        gl.attachShader(shaderProgram, vertexShader); //把着色器信息附加到着色器程序
+        gl.attachShader(shaderProgram, fragmentShader);
+        gl.linkProgram(shaderProgram);//链接着色器程序
+        gl.useProgram(shaderProgram);//使用着色器程序
+        shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+        gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+        shaderProgram.colorAttribute = gl.getAttribLocation(shaderProgram, "a_Color");
+        gl.enableVertexAttribArray(shaderProgram.colorAttribute);
+        shaderProgram.pMatrixUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
+        shaderProgram.mvMatrixUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
+    }
+
+    //模型矩阵
+    var modelMatrix=new Matrix4();
+    //设置为旋转变换矩阵
+    modelMatrix.setRotate(0,0,0,1);
+    //视图矩阵
+    var viewMatrix=new Matrix4();
+    viewMatrix.setLookAt(3,3,7,0,0,0,0,1,0);
+    //透视投影矩阵
+    var perspectMatrix=new Matrix4();
+    perspectMatrix.setPerspective(30,1,0.1,100);//通过各参数计算透视投影矩阵，将其存储在Matrix4中
+    //矩阵相乘
+    var mvMatrix =viewMatrix.multiply(modelMatrix);
+    //两个矩阵相乘，返回的结果为一个新的matrix4对象，并且值为两个矩阵相乘的结果
+
+    //设置矩阵变量Uniform
+    function setMatrixUniforms() {
+        gl.uniformMatrix4fv(shaderProgram.pMatrixUniform, false, perspectMatrix.elements);
+        gl.uniformMatrix4fv(shaderProgram.mvMatrixUniform, false, mvMatrix.elements);
+    }
+
+    //创建缓冲区
+    var triangleVertexPositionBuffer;
+    var indexBuffer;
+    function initBuffers() {
+        triangleVertexPositionBuffer = gl.createBuffer();
+        indexBuffer=gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
+        //顶点着色器数据
+        var verticesColor= [
+            1.0,  1.0,  1.0, 1.0,  1.0,  1.0,
+            -1.0, 1.0,  1.0, 1.0,  1.0,  1.0,
+            -1.0, -1.0,  1.0, 1.0,  1.0,  1.0,
+            1.0,  -1.0,  1.0, 1.0,  1.0,  1.0,
+            1.0,  -1.0,  -1.0, 1.0,  1.0,  1.0,
+            1.0,  1.0,  -1.0, 1.0,  1.0,  1.0,
+            -1.0, 1.0, -1.0, 1.0,  1.0,  1.0,
+            -1.0, -1.0, -1.0, 1.0,  1.0,  1.0,
+        ];
+        var index=[
+                0,1,2,0,2,3,
+                0,3,4,0,4,5,
+                0,5,6,0,6,1,
+                1,6,7,1,7,2,
+                7,4,3,7,3,2,
+                4,7,6,4,6,5
+        ];
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verticesColor), gl.STATIC_DRAW);
+        triangleVertexPositionBuffer.itemSize = 3;
+        triangleVertexPositionBuffer.numItems = 36;
+        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,indexBuffer);
+        gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint8Array(index),gl.STATIC_DRAW);
+    }
+
+    function drawScene() {
+        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+        gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, 3, gl.FLOAT, false, FSIZE*6, 0);
+        gl.vertexAttribPointer(shaderProgram.colorAttribute, 3, gl.FLOAT, false, FSIZE*6, FSIZE*3);
+        //旋转变换矩阵(angle-旋转角度, x, y, z)
+        mvMatrix.rotate(1,0,0,1);
+        setMatrixUniforms();
+        //支持点（gl.POINTS）、线（gl.LINES、gl.LINE_STRIP和gl.LINE_LOOP）
+        //三角形(gl.TRIANGLES、gl.TRIANGLE_STRIP、gl.TRIANGLE_FAN)绘制
+        gl.drawElements(gl.TRIANGLES,36,gl.UNSIGNED_BYTE,0);
+        requestAnimationFrame(drawScene);
+    }
+
+    function webGLStart() {
+        initShaders();//初始化着色器
+        initBuffers();//初始化缓冲区
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);//清除画面
+        drawScene();//绘制场景
+    }
+</script>
+</body>
+</html>

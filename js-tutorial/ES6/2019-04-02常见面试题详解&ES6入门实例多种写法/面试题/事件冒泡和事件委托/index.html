@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件冒泡&事件委托</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      font-size:14px;
+    }
+    html,body{
+      width:100%;
+      height:100%;
+      overflow:hidden;
+    }
+    #btn{
+      width:100px;
+      height:30px;
+      line-height:30px;
+      text-align:center;
+      border:1px solid #2489cc;
+    }
+    #info{
+      width:300px;
+      height:100px;
+      text-align:center;
+      background:#ffe470;
+      border:1px solid #2489cc;
+      display:none;
+    }
+  </style>
+</head>
+<body>
+  <div id="d1">1
+    <div id="d2">2
+      <div id="d3">3</div>
+    </div>
+  </div>
+
+  <div>
+    <ul id="list">
+      <li>111</li>
+      <li>222</li>
+      <li>333</li>
+      <li>444</li>
+    </ul>
+  </div>
+
+  <div id='btn'>
+    <span>查看详情</span>
+    <div id="info">  
+      详细信息展示
+    </div>
+  </div>
+  
+
+  <script> 
+    window.onload = function(){
+      //事件冒泡
+      document.getElementById("d1").onclick = function(e){
+        console.log('d1');
+      };
+      document.getElementById("d2").onclick = function(e){
+        console.log('d2');
+      };
+      document.getElementById("d3").onclick = function(e){
+        event.stopPropagation();//阻止事件冒泡
+        console.log('d3');
+      };
+      //事件触发
+      var list = document.getElementById("list");
+      // var li = list.getElementsByTagName('li');
+      // for(var i=0;i<li.length;i++){
+      //     li[i].onclick = function(){
+      //         console.log(this.innerHTML);
+      //     }
+      // }
+      //事件委托实现
+      list.onclick = function(e){
+         var e = e || window.event;
+        e.target = e.target || e.srcElement;   //e.target当前触发节点
+        //console.log('123');
+        if(e.target.nodeName.toLowerCase()=='li'){    
+          console.log(e.target.innerHTML)
+        }
+      }
+
+      //事件委托2
+      var info = document.getElementById('info');
+      document.body.onclick = function(e){
+        var e = e || window.event;
+        e.target = e.target || e.srcElement;   
+        if(e.target.id=="btn"){
+          if(info.style.display == "none" || info.style.display =='' ){
+            info.style.display = "block"
+          }else{
+            info.style.display ="none"
+          }
+        }else {
+          info.style.display = "none"
+        }
+      };
+
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>canvas绘图</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script>
+           //获得画布元素
+            var canvas=document.getElementById("canvas");
+            //获得2维绘图对象
+            var ctx=canvas.getContext("2d");
+            //设置线宽
+            ctx.lineWidth = 3;
+            //颜色
+            ctx.strokeStyle= 'red';
+            //空心
+            ctx.strokeRect(0,0,200,200);
+            //实心
+            //渐变
+            var grd = ctx.createLinearGradient(0,0,200,0);
+            grd.addColorStop(0,'red');
+            grd.addColorStop(0.5,'white');
+            grd.addColorStop(1,'blue');
+            //颜色
+            ctx.fillStyle= grd;
+            ctx.fillRect(10,10,200,200);
+
+            ctx.fillStyle= 'green';
+            ctx.fillRect(300,300,200,200);
+            //清除指定的矩形区域
+            ctx.clearRect(350,350,20,20);
+            //圆
+            ctx.arc(400,200,100,0,Math.PI*2); //(x,y,半径，起始角度)
+            ctx.fill();
+            //文字
+            ctx.font = "50px '微软雅黑'";
+            ctx.shadowColor = 'black';  //阴影颜色
+            ctx.shadowOffsetX = 5;  //阴影
+            ctx.shadowOffsetY = 5;  //阴影
+            ctx.shadowBlur = 10;  //阴影模糊
+            ctx.fillText('hello world',400,50);
+            ctx.strokeText('hello world',400,150);
+
+            //图片
+            //ctx.drawImage(img,2,2,100,100)
+
+        </script>
+    </body>
+</html>

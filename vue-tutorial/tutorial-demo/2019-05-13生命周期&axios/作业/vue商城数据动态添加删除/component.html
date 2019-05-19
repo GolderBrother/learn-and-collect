@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>component</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <script>
+    window.onload = function(){
+        new Vue({
+            el:'#my',
+            data:{ 
+                arr:[1,2,3,4]
+            },
+            components:{  //组件
+              'my-name':{  //组件的名称
+                template:'#my-name',
+                data(){
+                  return {
+                    arr:[1,2,3,45,4]
+                  }
+                }
+              }
+            }
+        })
+    }
+    </script>
+    <template id="my-name">
+        <div>
+          <ul>
+            <li v-for="v in arr">{{v}}</li>
+          </ul>
+        </div>
+    </template>
+</head> 
+<body>
+  <div id="my">
+      <div>
+        <ul>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+        </ul>
+      </div>
+      <h1>1244</h1>
+      <my-name></my-name>
+      <my-name></my-name>
+      <my-name></my-name>
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="index-content">
+    <div class="banner">
+        <div *ngFor="let list of imgLists,let i = index">
+            <img [src] = 'list' *ngIf ='i==n'/>
+        </div>
+        <div class="banner-circle">
+            <ul>
+                <li *ngFor="let list of imgLists,let i = index" 
+                     [ngClass]="{'selected':i==n}"></li> 
+            </ul> 
+        </div>
+    </div>
+
+    <div class="index-category">
+        <div class="category" >
+            <i class="iconfont icon-shenghuo"></i>
+            <label>在线咨询</label>
+        </div>
+  </div>

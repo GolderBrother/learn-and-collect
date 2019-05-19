@@ -1,0 +1,36 @@
+<div class="jumbotron">
+  <p>Search for a movie using the form below</p>
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for movies..." [(ngModel)]="searchStr" name="searchStr" (keyup.enter)="searchMovies()">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="searchMovies()">Go!</button>
+        </span>
+      </div>
+    </div>
+  </form>
+</div>
+
+<h3 class="orange-text">Top Rated Movies 顶级电影</h3>
+<div class="row is-flex">
+  <div class="col-sm-6 col-md-4 col-lg-3 col-xs-6" *ngFor="let movie of topRatedMovies">
+    <!--<div class="thumbnail">
+        <img src="assets/abstract-image.jpg" >
+        <div class="caption">
+          <h4 class="text-ellipsis">
+            <a title="title">name</a>
+          </h4>
+          <p><strong>First Air Date: </strong>2018-08-01</p>
+          <p>
+            <a >View details &raquo;</a>
+            <small class="label label-success pull-right">
+              8.0
+              <i class="glyphicon glyphicon-star"></i>
+            </small>
+          </p>
+        </div> 
+      </div>
+  </div>-->
+   <movie-view [movie]="movie"></movie-view>
+</div>

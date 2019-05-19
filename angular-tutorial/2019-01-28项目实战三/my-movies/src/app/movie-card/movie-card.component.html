@@ -1,0 +1,19 @@
+<div class="thumbnail">
+  <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" *ngIf="movie.poster_path">
+  <img src="assets/abstract-image.jpg" *ngIf="!movie.poster_path">
+  <div class="caption">
+    <h4 class="text-ellipsis">
+      <!--最新影片详情参数movie,  流行电影详情参数tv  添加判断-->
+      <a routerLink="/{{type}}/{{movie.id}}" title="{{type=='movie'?movie.title:movie.name}}">{{type=='movie'?movie.title:movie.name}}</a>
+    </h4>
+    <p><strong>Release Date: </strong>{{type=='movie'?movie.release_date:movie.first_air_date}}</p>
+    <p>
+      <a routerLink="/{{type}}/{{movie.id}}">View details &raquo;</a>
+      <!--<a routerLink="/movie/{{movie.id}}">View details &raquo;</a>-->
+      <small class="label label-success pull-right" *ngIf="movie.vote_average">
+        {{movie.vote_average}}
+        <i class="glyphicon glyphicon-star"></i>
+      </small>
+    </p>
+  </div>
+</div>

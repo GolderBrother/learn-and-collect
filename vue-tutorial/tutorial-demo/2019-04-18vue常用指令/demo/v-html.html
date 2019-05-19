@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>指令 v-html</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my',
+			data:{
+				str:'hello world',
+				html:'<h2>hello</h2>'
+				
+			}
+		})
+	}
+	</script>
+	<style>
+		/* 必须要配置CSS样式，否则不生效 */
+	[v-cloak] {
+		display:none;
+	}
+	</style>
+</head>
+<body> 
+	<div id="my">
+		<!-- {{}}浏览闪烁问题 -->
+		<h1 v-cloak>{{str}}</h1>
+		<h1>{{str}}</h1>
+		<h1 v-text="str"></h1>
+		<div v-html="html"></div>
+	</div>
+</body>
+</html>

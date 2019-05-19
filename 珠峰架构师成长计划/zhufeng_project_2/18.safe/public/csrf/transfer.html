@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        当前用户名<span id="currentuser"></span>
+        当前的余额<span id="currentamount"></span>
+    </p>
+    <form onsubmit="transfer(event)">
+        请输入用户名 <input type="text" id="target">
+        请输入金额 <input type="text" id="amount">
+        <input type="submit">
+    </form>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+        function getUser(){
+            $.get('/user?ts='+Date.now()).then(result=>{
+                $('#currentuser').text(result.username);
+                $('#currentamount').text(result.amount);
+            });
+        }
+        getUser();
+        function transfer(event){
+            event.preventDefault();
+            let target = $('#target').val();
+            let amount = $('#amount').val();
+            $.post('/transfer',{target,amount}).then(result=>{
+                getUser();
+            });
+        }
+    </script>
+</body>
+</html>

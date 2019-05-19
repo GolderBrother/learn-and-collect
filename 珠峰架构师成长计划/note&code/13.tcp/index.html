@@ -1,0 +1,647 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            珠峰架构师成长计划
+        
+    </div>
+<ul><li><a href="../index.html">0.Async</a></li><li><a href="../html/0.editor.html">0.editor</a></li><li><a href="../html/0.module.html">0.module</a></li><li><a href="../html/1.ES2015.html">1.ES2015</a></li><li><a href="../html/2.Promise.html">2.Promise</a></li><li><a href="../html/3.Node.html">3.Node</a></li><li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li><li><a href="../html/5.REPL.html">5.REPL</a></li><li><a href="../html/6.NodeCore.html">6.NodeCore</a></li><li><a href="../html/7.module&amp;NPM.html">7.module&amp;NPM</a></li><li><a href="../html/8.Encoding.html">8.Encoding</a></li><li><a href="../html/9.Buffer.html">9.Buffer</a></li><li><a href="../html/10.fs.html">10.fs</a></li><li><a href="../html/11.Stream-1.html">11.Stream-1</a></li><li><a href="../html/11.Stream-2.html">11.Stream-2</a></li><li><a href="../html/11.Stream-3.html">11.Stream-3</a></li><li><a href="../html/11.Stream-4.html">11.Stream-4</a></li><li><a href="../html/12-Network-2.html">12-Network-2</a></li><li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li><li><a href="../html/12.Network-1.html">12.Network-1</a></li><li class="active"><a href="../html/13.tcp.html">13.tcp</a></li><li><a href="../html/14.http-1.html">14.http-1</a></li><li><a href="../html/14.http-2.html">14.http-2</a></li><li><a href="../html/15.compress.html">15.compress</a></li><li><a href="../html/16.crypto.html">16.crypto</a></li><li><a href="../html/17.process.html">17.process</a></li><li><a href="../html/18.yargs.html">18.yargs</a></li><li><a href="../html/19.cache.html">19.cache</a></li><li><a href="../html/20.action.html">20.action</a></li><li><a href="../html/21.https.html">21.https</a></li><li><a href="../html/22.cookie.html">22.cookie</a></li><li><a href="../html/23.session.html">23.session</a></li><li><a href="../html/24.express-1.html">24.express-1</a></li><li><a href="../html/24.express-2.html">24.express-2</a></li><li><a href="../html/24.express-3.html">24.express-3</a></li><li><a href="../html/24.express-4.html">24.express-4</a></li><li><a href="../html/25.koa-1.html">25.koa-1</a></li><li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li><li><a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a></li><li><a href="../html/26.webpack-3.tapable.html">26.webpack-3.tapable</a></li><li><a href="../html/26.webpack-4-AST.html">26.webpack-4-AST</a></li><li><a href="../html/26.webpack-5-source.html">26.webpack-5-source</a></li><li><a href="../html/26.webpack-6-loader.html">26.webpack-6-loader</a></li><li><a href="../html/26.webpack-7-plugin.html">26.webpack-7-plugin</a></li><li><a href="../html/26.webpack-8-hand.html">26.webpack-8-hand</a></li><li><a href="../html/27.react-1.html">27.react-1</a></li><li><a href="../html/27.react-2.html">27.react-2</a></li><li><a href="../html/27.react-3.html">27.react-3</a></li><li><a href="../html/27.react-4-immutable.html">27.react-4-immutable</a></li><li><a href="../html/27.react-5-react-dom-diff.html">27.react-5-react-dom-diff</a></li><li><a href="../html/27.react-6.html">27.react-6</a></li><li><a href="../html/28.react-mobx.html">28.react-mobx</a></li><li><a href="../html/28.redux-0.html">28.redux-0</a></li><li><a href="../html/28.redux-1.html">28.redux-1</a></li><li><a href="../html/28.redux-2-中间件.html">28.redux-2-中间件</a></li><li><a href="../html/28.redux-3-saga.html">28.redux-3-saga</a></li><li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li><li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li><li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li><li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li><li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li><li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li><li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li><li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li><li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li><li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li><li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li><li><a href="../html/30.cms-4-egg.html">30.cms-4-egg</a></li><li><a href="../html/30.cms-5-api.html">30.cms-5-api</a></li><li><a href="../html/30.cms-6-roadhog.html">30.cms-6-roadhog</a></li><li><a href="../html/30.cms-7-umi.html">30.cms-7-umi</a></li><li><a href="../html/30.cms-8-dva.html">30.cms-8-dva</a></li><li><a href="../html/30.cms-9-dva.html">30.cms-9-dva</a></li><li><a href="../html/30.cms-10-dva.html">30.cms-10-dva</a></li><li><a href="../html/30.cms-11-front.html">30.cms-11-front</a></li><li><a href="../html/31.cms-12-api.html">31.cms-12-api</a></li><li><a href="../html/31.cms-13-front.html">31.cms-13-front</a></li><li><a href="../html/31.cms-14-deploy.html">31.cms-14-deploy</a></li><li><a href="../html/32.ant.html">32.ant</a></li><li><a href="../html/33.redis.html">33.redis</a></li><li><a href="../html/34.unittest.html">34.unittest</a></li><li><a href="../html/35.jwt.html">35.jwt</a></li><li><a href="../html/36.websocket-1.html">36.websocket-1</a></li><li><a href="../html/36.websocket-2.html">36.websocket-2</a></li><li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li><li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li><li><a href="../html/38.chat-3.html">38.chat-3</a></li><li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li><li><a href="../html/38.chat.html">38.chat</a></li><li><a href="../html/38.chat2.html">38.chat2</a></li><li><a href="../html/38.chat2.html">38.chat2</a></li><li><a href="../html/39.crawl-0.html">39.crawl-0</a></li><li><a href="../html/39.crawl-1.html">39.crawl-1</a></li><li><a href="../html/39.crawl-2.html">39.crawl-2</a></li><li><a href="../html/40.deploy.html">40.deploy</a></li><li><a href="../html/41.safe.html">41.safe</a></li><li><a href="../html/42.test.html">42.test</a></li><li><a href="../html/43.nginx.html">43.nginx</a></li><li><a href="../html/44.enzyme.html">44.enzyme</a></li><li><a href="../html/45.docker.html">45.docker</a></li><li><a href="../html/46.elastic.html">46.elastic</a></li><li><a href="../html/47.oauth.html">47.oauth</a></li><li><a href="../html/48.wxpay.html">48.wxpay</a></li><li><a href="../html/49.nunjucks.html">49.nunjucks</a></li><li><a href="../html/50.ketang.html">50.ketang</a></li><li><a href="../html/index.html">index</a></li><li><a href="../html/51.typescript.html">51.typescript</a></li><li><a href="../html/52.UML.html">52.UML</a></li><li><a href="../html/53.design.html">53.design</a></li><li><a href="../html/index.html">index</a></li></ul></div>
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01. TCP">1. TCP</a><ul><li><a href="#t11.1 TCP服务器">1.1 TCP服务器</a><ul><li><a href="#t21.1.1 启动TCP服务器">1.1.1 启动TCP服务器</a></li><li><a href="#t31.1.2 使用TCP服务器">1.1.2 使用TCP服务器</a></li><li><a href="#t41.1.3 address">1.1.3 address</a></li><li><a href="#t51.1.4 getConnections">1.1.4 getConnections</a></li><li><a href="#t61.1.5 close">1.1.5 close</a></li></ul></li><li><a href="#t71.2 socket">1.2 socket</a><ul><li><a href="#t81.2.1 address">1.2.1 address</a></li><li><a href="#t91.2.2 读取数据">1.2.2 读取数据</a></li><li><a href="#t101.2.3 监听关闭事件">1.2.3 监听关闭事件</a></li><li><a href="#t111.2.4 pipe">1.2.4 pipe</a></li><li><a href="#t121.2.5 unpipe">1.2.5 unpipe</a></li><li><a href="#t131.2.5 pause&amp;resume">1.2.5 pause&amp;resume</a></li><li><a href="#t141.2.6 setTimeout">1.2.6 setTimeout</a></li></ul></li><li><a href="#t151.2 TCP客户端">1.2 TCP客户端</a><ul><li><a href="#t161.2.1 创建TCP客户端">1.2.1 创建TCP客户端</a></li><li><a href="#t171.2.2 向服务器端写入数据、end 、error、destroy,close">1.2.2 向服务器端写入数据、end 、error、destroy,close</a></li><li><a href="#t181.2.3 close">1.2.3 close</a></li><li><a href="#t191.2.4 unref&amp;ref">1.2.4 unref&amp;ref</a></li><li><a href="#t201.2.5 bufferSize">1.2.5 bufferSize</a></li><li><a href="#t211.2.6 keepAlive">1.2.6 keepAlive</a></li></ul></li></ul></li><li><a href="#t221.2.7 聊天室1.0">1.2.7 聊天室1.0</a></li><li><a href="#t231.2.8 聊天室2.0">1.2.8 聊天室2.0</a><ul><li><a href="#t241.3 类方法">1.3 类方法</a></li></ul></li><li><a href="#t252. UDP">2. UDP</a><ul><li><a href="#t262.1 创建socket">2.1 创建socket</a></li><li><a href="#t272.2 向外发送数据">2.2 向外发送数据</a></li><li><a href="#t282.3 address">2.3 address</a></li><li><a href="#t292.5 UDP服务器">2.5 UDP服务器</a></li><li><a href="#t302.6 UDP客户端">2.6 UDP客户端</a></li><li><a href="#t312.7 广播">2.7 广播</a><ul><li><a href="#t322.7.1 服务器">2.7.1 服务器</a></li><li><a href="#t332.7.2 客户端">2.7.2 客户端</a></li></ul></li><li><a href="#t342.8 组播">2.8 组播</a><ul><li><a href="#t352.8.1 服务器">2.8.1 服务器</a></li><li><a href="#t362.8.2 客户端">2.8.2 客户端</a></li></ul></li></ul></li><li><a href="#t37附录">附录</a><ul><li><a href="#t38软件">软件</a></li><li><a href="#t39telnet">telnet</a></li></ul></li><li><a href="#t40打开telnet功能">打开telnet功能</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01. TCP">1. TCP <a href="#t01. TCP"> # </a></h2>
+<p>在Node.js中，提供了net模块用来实现TCP服务器和客户端的通信。</p>
+<h3 id="t11.1 TCP服务器">1.1 TCP服务器 <a href="#t11.1 TCP服务器"> # </a></h3>
+<pre><code class="lang-javascript">net.createServer([options][, connectionListener])
+</code></pre>
+<ul>
+<li>options.allowHalfOpen 是否允许单方面连接,默认值为false</li>
+<li>connectionListener参数用于指定当客户端与服务器建立连接时所要调用的回调函数，回调中有一个参数socket,指的是TCP服务器监听的socket端口对象</li>
+</ul>
+<p>也可以通过监听connection事件的方式来指定监听函数</p>
+<pre><code class="lang-javascript">server.on(<span class="hljs-string">'connection'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">socket</span>)</span>{});
+</code></pre>
+<h4 id="t21.1.1 启动TCP服务器">1.1.1 启动TCP服务器 <a href="#t21.1.1 启动TCP服务器"> # </a></h4>
+<p>可以使用listen方法通知服务器开始监听客户端的连接</p>
+<pre><code class="lang-javascript">server.listen(port,[host],[backlog],[callback])
+</code></pre>
+<ul>
+<li>port 必须指定的端口号</li>
+<li>host 指定需要监听的IP地址或主机名，如果省略的话服务器将监听来自于任何客户端的连接</li>
+<li>backlog指定位于等待队列中的客户端连接的最大数量，默认值为511</li>
+</ul>
+<pre><code class="lang-javascript">server.on(<span class="hljs-string">'listening'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{});
+</code></pre>
+<h4 id="t31.1.2 使用TCP服务器">1.1.2 使用TCP服务器 <a href="#t31.1.2 使用TCP服务器"> # </a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">socket</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'客户端已连接'</span>);
+});
+server.listen(<span class="hljs-number">8080</span>,<span class="hljs-string">'localhost'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'服务器开始监听'</span>);
+});
+</code></pre>
+<h4 id="t41.1.3 address">1.1.3 address <a href="#t41.1.3 address"> # </a></h4>
+<pre><code class="lang-javascript">server.address()
+</code></pre>
+<ul>
+<li>port 端口号</li>
+<li>address TCP服务器监听的地址</li>
+<li>family 协议的版本</li>
+</ul>
+<h4 id="t51.1.4 getConnections">1.1.4 getConnections <a href="#t51.1.4 getConnections"> # </a></h4>
+<p>查看当前与TCP服务器建立连接的客户端的连接数量以及设置最大连接数量</p>
+<pre><code class="lang-javascript">server.getConnections(callback);
+ server.maxConnections = <span class="hljs-number">2</span>;
+</code></pre>
+<h4 id="t61.1.5 close">1.1.5 close <a href="#t61.1.5 close"> # </a></h4>
+<p>使用close方法可以显式拒绝所有的客户端的连接请求,当所有已连接的客户端关闭后服务器会自动关闭,并触发服务器的close事件。</p>
+<pre><code class="lang-javascript">server.close();
+server.on(<span class="hljs-string">'close'</span>,callback);
+</code></pre>
+<h3 id="t71.2 socket">1.2 socket <a href="#t71.2 socket"> # </a></h3>
+<h4 id="t81.2.1 address">1.2.1 address <a href="#t81.2.1 address"> # </a></h4>
+<p>net.Socket代表一个socket端口对象,它是一个可读可写流。</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">let</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+<span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">socket</span>)</span>{
+  server.getConnections(<span class="hljs-function">(<span class="hljs-params">err,count</span>)=&gt;</span>{
+      server.maxConnections = <span class="hljs-number">1</span>;
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'最大连接数量%d,当前连接数量%d'</span>,server.maxConnections,count); 
+  });  
+  <span class="hljs-keyword">let</span> address = socket.address();
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'客户端地址 %s'</span>,util.inspect(address));
+});
+</code></pre>
+<h4 id="t91.2.2 读取数据">1.2.2 读取数据 <a href="#t91.2.2 读取数据"> # </a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    socket.setEncoding(<span class="hljs-string">'utf8'</span>);
+    socket.on(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'本次收到的内容为%s,累计收到的字节数是%d'</span>, data, socket.bytesRead);
+    });
+});
+</code></pre>
+<h4 id="t101.2.3 监听关闭事件">1.2.3 监听关闭事件 <a href="#t101.2.3 监听关闭事件"> # </a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    socket.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'客户端已经关闭'</span>);
+    });
+});
+</code></pre>
+<h4 id="t111.2.4 pipe">1.2.4 pipe <a href="#t111.2.4 pipe"> # </a></h4>
+<p>pipe方法可以将客户端发送的数据写到文件或其它目标中。</p>
+<pre><code class="lang-javascript">socket.pipe(destinatin,[options]);
+</code></pre>
+<ul>
+<li>options.end 设置为false时当客户端结束写操作或关闭后并不会关闭目标对象，还可以继续写入数据</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">let</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+<span class="hljs-keyword">let</span> ws = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>).createWriteStream(path.resolve(__dirname, <span class="hljs-string">'msg.txt'</span>));
+<span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    socket.on(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(data);
+    });
+    socket.pipe(ws, { <span class="hljs-attr">end</span>: <span class="hljs-literal">false</span> });
+    socket.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        ws.end(<span class="hljs-string">'over'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            socket.unpipe(ws);
+        });
+    });
+});
+</code></pre>
+<h4 id="t121.2.5 unpipe">1.2.5 unpipe <a href="#t121.2.5 unpipe"> # </a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+<span class="hljs-keyword">let</span> file = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>).createWriteStream(path.join(__dirname, <span class="hljs-string">'msg.txt'</span>));
+<span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    socket.pipe(file, {
+        <span class="hljs-attr">end</span>: <span class="hljs-literal">false</span>
+    });
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        file.end(<span class="hljs-string">'bye bye'</span>);
+        socket.unpipe(file);
+    }, <span class="hljs-number">5000</span>);
+    <span class="hljs-comment">// socket.on('end', function () {</span>
+    <span class="hljs-comment">//     file.end('bye bye');</span>
+    <span class="hljs-comment">// });</span>
+});
+server.listen(<span class="hljs-number">8080</span>);
+</code></pre>
+<h4 id="t131.2.5 pause&amp;resume">1.2.5 pause&amp;resume <a href="#t131.2.5 pause&amp;resume"> # </a></h4>
+<p><code>pause</code>可以暂停<code>data</code>事件触发，服务器会把客户端发送的数据暂存在缓存区里</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">const</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+<span class="hljs-keyword">let</span> file = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>).createWriteStream(path.join(__dirname, <span class="hljs-string">'msg.txt'</span>));
+<span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    socket.pause();
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        socket.resume();
+        socket.pipe(file);
+    }, <span class="hljs-number">10</span> * <span class="hljs-number">1000</span>);
+});
+server.listen(<span class="hljs-number">8080</span>);
+</code></pre>
+<h4 id="t141.2.6 setTimeout">1.2.6 setTimeout <a href="#t141.2.6 setTimeout"> # </a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">let</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+<span class="hljs-keyword">let</span> ws = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>).createWriteStream(path.resolve(__dirname, <span class="hljs-string">'msg.txt'</span>));
+<span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    socket.setTimeout(<span class="hljs-number">5</span> * <span class="hljs-number">1000</span>);
+    socket.pause();
+    socket.on(<span class="hljs-string">'timeout'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        socket.pipe(ws);
+    });
+
+    <span class="hljs-comment">//socket.setTimeout(0);取消超时时间的设置</span>
+});
+server.listen(<span class="hljs-number">8080</span>);
+</code></pre>
+<h3 id="t151.2 TCP客户端">1.2 TCP客户端 <a href="#t151.2 TCP客户端"> # </a></h3>
+<h4 id="t161.2.1 创建TCP客户端">1.2.1 创建TCP客户端 <a href="#t161.2.1 创建TCP客户端"> # </a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> socket = <span class="hljs-keyword">new</span> net.Socket([options])
+</code></pre>
+<ul>
+<li>fd socket文件描述符</li>
+<li>type 客户端所有协议</li>
+<li>allowHalfOpen 是否允许半连接,服务器收到FIN包时不回发FIN包，可以使服务器可以继续向客户端发数据</li>
+</ul>
+<pre><code class="lang-javascript">socket.connect(port, host, callback);
+socket.on(<span class="hljs-string">'connect'</span>, callback);
+</code></pre>
+<h4 id="t171.2.2 向服务器端写入数据、end 、error、destroy,close">1.2.2 向服务器端写入数据、end 、error、destroy,close <a href="#t171.2.2 向服务器端写入数据、end 、error、destroy,close"> # </a></h4>
+<ul>
+<li>write表示向服务器写入数据</li>
+<li>end 用于结束连接</li>
+<li>error 连接发生错误</li>
+<li>destroy 销毁流</li>
+<li>close 表示连接关闭成功，hasError=true代表有可能有错误<pre><code>socket.write(data,[encoding],[callback]);
+</code></pre></li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"客户端已经连接"</span>);
+    socket.setEncoding(<span class="hljs-string">'utf8'</span>);
+    socket.on(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"已接收客户端发送的数据:%s"</span>, data);
+        socket.write(<span class="hljs-string">'服务器:'</span> + data);
+    })
+    socket.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'与客户端通信过程中发生了错误，错误编码为%s'</span>, err.code);
+        socket.destroy();
+    });
+    socket.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'客户端已经关闭连接'</span>);
+        socket.destroy();
+    });
+    socket.on(<span class="hljs-string">'close'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">hasError</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(hasError ? <span class="hljs-string">'异常关闭'</span> : <span class="hljs-string">'正常关闭'</span>);
+    });
+});
+server.listen(<span class="hljs-number">808</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> client = <span class="hljs-keyword">new</span> net.Socket();
+    client.setEncoding(<span class="hljs-string">'utf8'</span>);
+    client.connect(<span class="hljs-number">808</span>, <span class="hljs-string">'127.0.0.1'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'客户端已连接'</span>);
+        client.write(<span class="hljs-string">'hello'</span>);
+        setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            client.end(<span class="hljs-string">'byebye'</span>);
+        }, <span class="hljs-number">5000</span>);
+    });
+    client.on(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'已经接收到客户端发过来的数据:%s'</span>, data);
+    });
+    client.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'与服务器通信过程中发生了错误，错误编码为%s'</span>, err.code);
+        client.destroy();
+    });
+
+});
+</code></pre>
+<h4 id="t181.2.3 close">1.2.3 close <a href="#t181.2.3 close"> # </a></h4>
+<p>停止server接受建立新的connections并保持已经存在的connections</p>
+<pre><code class="lang-javascript">  server.getConnections(<span class="hljs-function">(<span class="hljs-params">err, count</span>) =&gt;</span> {
+      <span class="hljs-keyword">if</span> (count == <span class="hljs-number">2</span>) server.close();
+ });
+</code></pre>
+<h4 id="t191.2.4 unref&amp;ref">1.2.4 unref&amp;ref <a href="#t191.2.4 unref&amp;ref"> # </a></h4>
+<p>unref方法指定发客户端连接被全部关闭时退出应用程序
+ 如果将allowHalfOpen方法，必须使用与客户端连接的socket端口对象的end 方法主动关闭服务器端连接</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">let</span> server = net.createServer({ <span class="hljs-attr">allowHalfOpen</span>: <span class="hljs-literal">true</span> }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"客户端已经连接"</span>);
+    socket.setEncoding(<span class="hljs-string">'utf8'</span>);
+    socket.on(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"已接收客户端发送的数据:%s"</span>, data);
+        socket.write(<span class="hljs-string">'服务器确认数据:'</span> + data);
+    })
+    socket.on(<span class="hljs-string">'error'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'与客户端通信过程中发生了错误，错误编码为%s'</span>, err.code);
+        socket.destroy();
+    });
+    socket.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'客户端已经关闭连接'</span>);
+        socket.end();
+        server.unref();
+    });
+    socket.on(<span class="hljs-string">'close'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">hasError</span>) </span>{
+        <span class="hljs-keyword">if</span> (hasError) {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'由于错误导致socket关闭'</span>);
+            server.unref();
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'端口正常关闭'</span>);
+        }
+    });
+    server.getConnections(<span class="hljs-function">(<span class="hljs-params">err, count</span>) =&gt;</span> {
+        <span class="hljs-keyword">if</span> (count == <span class="hljs-number">2</span>) server.close();
+    });
+});
+server.listen(<span class="hljs-number">808</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ });
+server.on(<span class="hljs-string">'close'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'服务器关闭'</span>);
+});
+</code></pre>
+<h4 id="t201.2.5 bufferSize">1.2.5 bufferSize <a href="#t201.2.5 bufferSize"> # </a></h4>
+<p>write的返回值和bufferSize属性值</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> server = net.createServer({ <span class="hljs-attr">allowHalfOpen</span>: <span class="hljs-literal">true</span> }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"客户端已经连接"</span>);
+    socket.setEncoding(<span class="hljs-string">'utf8'</span>);
+    <span class="hljs-keyword">let</span> rs = fs.createReadStream(path.resolve(__dirname, <span class="hljs-string">'a.txt'</span>), { <span class="hljs-attr">highWaterMark</span>: <span class="hljs-number">2</span> });
+    rs.on(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        <span class="hljs-keyword">let</span> flag = socket.write(data);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"flag:"</span>, flag);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'缓存字节:'</span> + socket.bufferSize);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'已发送字节:'</span> + socket.bytesWritten);
+    })
+    socket.on(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'data'</span>, data);
+    });
+    socket.on(<span class="hljs-string">'drain'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+        <span class="hljs-string">"缓存区已全部发送"</span>
+    });
+});
+</code></pre>
+<h4 id="t211.2.6 keepAlive">1.2.6 keepAlive <a href="#t211.2.6 keepAlive"> # </a></h4>
+<p>当服务器和客户端建立连接后，当一方主机突然断电、重启、系统崩溃等意外情况时，将来不及向另一方发送FIN包，这样另一方将永远处于连接状态。
+可以使用setKeepAlive方法来解决这一个问题</p>
+<pre><code>socket.setKeepAlive([enaable],[initialDelay]);
+</code></pre><ul>
+<li>enable 是否启用嗅探，为true时会不但向对方发送探测包，没有响应则认为对方已经关闭连接，自己则关闭连接</li>
+<li>initialDelay  多久发送一次探测包，单位是毫秒</li>
+</ul>
+<h2 id="t221.2.7 聊天室1.0">1.2.7 聊天室1.0 <a href="#t221.2.7 聊天室1.0"> # </a></h2>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * 1.创建一个服务器
+ * 2. 客户端可以连接服务器
+ * 3.客户端可以发言，然后广播给大家
+ * 4.客户端连接和退出后都要通知大家。
+ * 5.显示当前的在线人数
+ */</span>
+<span class="hljs-keyword">let</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>);
+<span class="hljs-keyword">let</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+<span class="hljs-keyword">let</span> clients = {};
+<span class="hljs-keyword">let</span> server = net.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    server.getConnections(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, count</span>) </span>{
+        socket.write(<span class="hljs-string">`weclome,there is <span class="hljs-subst">${count}</span> users now,please input your username\r\n`</span>);
+    });
+    <span class="hljs-keyword">let</span> nickname;
+    socket.setEncoding(<span class="hljs-string">'utf8'</span>);
+    socket.on(<span class="hljs-string">'data'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        data = data.replace(<span class="hljs-regexp">/\r\n/</span>, <span class="hljs-string">''</span>);
+        <span class="hljs-keyword">if</span> (data == <span class="hljs-string">'byebye'</span>) {
+            socket.end();
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">if</span> (nickname) {
+                broadcast(nickname, <span class="hljs-string">`<span class="hljs-subst">${nickname}</span>:<span class="hljs-subst">${data}</span>`</span>);
+            } <span class="hljs-keyword">else</span> {
+                nickname = data;
+                clients[nickname] = socket;
+                broadcast(nickname, <span class="hljs-string">`welcome <span class="hljs-subst">${nickname}</span> joined us!`</span>);
+            }
+        }
+
+    });
+    socket.on(<span class="hljs-string">'close'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        socket.destroy();
+    });
+}).listen(<span class="hljs-number">8088</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">broadcast</span>(<span class="hljs-params">nickname, msg</span>) </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> clients) {
+        <span class="hljs-keyword">if</span> (key != nickname) {
+            clients[key].write(msg + <span class="hljs-string">'\r\n'</span>);
+            clients[nickname].destroy();
+            <span class="hljs-keyword">delete</span> clients[nickname];
+        }
+    }
+}
+</code></pre>
+<h2 id="t231.2.8 聊天室2.0">1.2.8 聊天室2.0 <a href="#t231.2.8 聊天室2.0"> # </a></h2>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> key = scoket.remoteAddress+<span class="hljs-string">':'</span>+socket.remotePort;
+users[key] = {<span class="hljs-attr">name</span>:<span class="hljs-string">'匿名'</span>,socket};
+
+socket.on(<span class="hljs-string">'data'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    parse(data);
+});
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">parse</span>(<span class="hljs-params">msg</span>)</span>{
+  swtich(msg.type){
+   <span class="hljs-keyword">case</span> <span class="hljs-string">'secret'</span>:
+     secret(msg.user,msg.text);
+     <span class="hljs-keyword">break</span>;
+  }
+  <span class="hljs-keyword">case</span> <span class="hljs-string">'boardcast'</span>:
+     boardcast(message.text);
+     <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">'cname'</span>:
+     cname(messsage.text);
+     <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">'list'</span>:
+     list();
+     <span class="hljs-keyword">break</span>;   
+  <span class="hljs-keyword">default</span>:
+     socket.write(<span class="hljs-string">'不能识别命令'</span>);
+     <span class="hljs-keyword">break</span>;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">secret</span>(<span class="hljs-params">user,text</span>)</span>{
+
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">boardcast</span>(<span class="hljs-params">text</span>)</span>{
+
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cname</span>(<span class="hljs-params">text</span>)</span>{
+
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">list</span>(<span class="hljs-params"></span>)</span>{
+
+}
+</code></pre>
+<pre><code class="lang-javascript">b:text 广播
+c:nickname:text 私聊
+n:nickname 改名
+l 列出在线用户列表
+
+on('data',function(data){
+   if(data == 'quit){
+
+   }else if(data == 'help'){
+
+   }else(){
+     write(data);
+   }
+});
+function convert(){
+
+}
+</code></pre>
+<h3 id="t241.3 类方法">1.3 类方法 <a href="#t241.3 类方法"> # </a></h3>
+<ul>
+<li>isIP 判断字符串是否是IP</li>
+<li>isIPv4 判断字符串是否是IPv4地址</li>
+<li>isIPv6 判断字符串是否是IPv6地址</li>
+</ul>
+<h2 id="t252. UDP">2. UDP <a href="#t252. UDP"> # </a></h2>
+<h3 id="t262.1 创建socket">2.1 创建socket <a href="#t262.1 创建socket"> # </a></h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> socket = dgram.createSocket(type,[callback]);
+socket.on(<span class="hljs-string">'messsage'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg,rinfo</span>)</span>{});
+</code></pre>
+<ul>
+<li>type 必须输入，制定时udp4还是udp6</li>
+<li>callback 从该接口接收到数据时调用的回调函数<ul>
+<li>msg 接收到的数据</li>
+<li>rinfo 信息对象<ul>
+<li>address 发送着的地址</li>
+<li>family ipv4还是ipv6</li>
+<li>port 发送者的socket端口号</li>
+<li>size 发送者所发送的数据字节数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-javascript">socket.bind(port,[address],[callback]);
+socket.on(<span class="hljs-string">'listening'</span>,callabck;
+</code></pre>
+<ul>
+<li>port 绑定的端口号</li>
+<li>address 监听的地址</li>
+<li>callback 监听成功后的回调函数</li>
+</ul>
+<h3 id="t272.2 向外发送数据">2.2 向外发送数据 <a href="#t272.2 向外发送数据"> # </a></h3>
+<p> 如果发送数据前还没有绑定过地址和端口号，操作系统将为其分配一个随机端口并可以接收任何地址的数据</p>
+<pre><code class="lang-javascript"> socket.send(buf,offset,length,port,address,[callback]);
+</code></pre>
+<ul>
+<li>buffer 代表缓存区</li>
+<li>offset 从缓存区第几个字节开始发</li>
+<li>length 要发送的字节数</li>
+<li>port 对方的端口号</li>
+<li>address 接收数据的socket地址</li>
+<li><p>callback 制定当数据发送完毕时所需要的回调函数</p>
+<ul>
+<li>err 错误对象</li>
+<li>byets 实际发送的字节数</li>
+</ul>
+<h3 id="t282.3 address">2.3 address <a href="#t282.3 address"> # </a></h3>
+<p>获取此socket相关的地址信息</p>
+<pre><code>let address = socket.address();
+</code></pre></li>
+<li>port</li>
+<li>address</li>
+<li>family</li>
+</ul>
+<h3 id="t292.5 UDP服务器">2.5 UDP服务器 <a href="#t292.5 UDP服务器"> # </a></h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> dgram = <span class="hljs-built_in">require</span>(<span class="hljs-string">'dgram'</span>);
+<span class="hljs-keyword">var</span> socket = dgram.createSocket(<span class="hljs-string">'udp4'</span>);
+socket.on(<span class="hljs-string">'message'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg,rinfo</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(msg.toString());
+  <span class="hljs-built_in">console</span>.log(rinfo);
+   socket.send(msg,<span class="hljs-number">0</span>,msg.length,rinfo.port,rinfo.address);
+});
+socket.bind(<span class="hljs-number">41234</span>,<span class="hljs-string">'localhost'</span>);
+</code></pre>
+<h3 id="t302.6 UDP客户端">2.6 UDP客户端 <a href="#t302.6 UDP客户端"> # </a></h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> dgram = <span class="hljs-built_in">require</span>(<span class="hljs-string">'dgram'</span>);
+<span class="hljs-keyword">var</span> socket = dgram.createSocket(<span class="hljs-string">'udp4'</span>);
+socket.on(<span class="hljs-string">'message'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg,rinfo</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(msg.toString());
+    <span class="hljs-built_in">console</span>.log(rinfo);
+});
+socket.setTTL(<span class="hljs-number">128</span>);
+socket.send(<span class="hljs-keyword">new</span> Buffer(<span class="hljs-string">'珠峰培训'</span>),<span class="hljs-number">0</span>,<span class="hljs-number">6</span>,<span class="hljs-number">41234</span>,<span class="hljs-string">'localhost'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err,bytes</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'发送了个%d字节'</span>,bytes);
+});
+socket.on(<span class="hljs-string">'error'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>{
+    <span class="hljs-built_in">console</span>.error(err);
+});
+</code></pre>
+<h3 id="t312.7 广播">2.7 广播 <a href="#t312.7 广播"> # </a></h3>
+<p>创建一个UDP服务器并通过该服务器进行数据的广播</p>
+<h4 id="t322.7.1 服务器">2.7.1 服务器 <a href="#t322.7.1 服务器"> # </a></h4>
+<pre><code class="lang-javascript">let dgram = require('dgram');
+let server = dgram.createSocket('udp4);
+server.on('message',function(msg){
+  let buf = new Bufffer('已经接收客户端发送的数据'+msg);
+  server.setBroadcast(true);
+  server.send(buf,0,buf.length,41235,"192.168.1.255");
+});
+server.bind(41234,'192.168.1.100');
+</code></pre>
+<h4 id="t332.7.2 客户端">2.7.2 客户端 <a href="#t332.7.2 客户端"> # </a></h4>
+<pre><code class="lang-javascript">let dgram = require('dgram');
+let client = dgram.createSocket('udp4);
+client.bind(41235,'192.168.1.102);
+let buf = new Buffer('hello');
+client.send(buf,0,buf.length,41234,'192.168.1.100');
+client.on('message',function(msg,rinfo){
+  console.log('received : ',msg);
+});
+</code></pre>
+<h3 id="t342.8 组播">2.8 组播 <a href="#t342.8 组播"> # </a></h3>
+<ul>
+<li>所谓的组播，就是将网络中同一业务类型进行逻辑上的分组，从某个socket端口上发送的数据只能被该组中的其他主机所接收，不被组外的任何主机接收。</li>
+<li>实现组播时，并不直接把数据发送给目标地址，而是将数据发送到组播主机，操作系统将把该数据组播给组内的其他所有成员。</li>
+<li>在网络中，使用D类地址作为组播地址。范围是指 224.0.0.0 ~ 239.255.255.255,分为三类<ul>
+<li>局部组播地址: 224.0.0.0 ~ 224.0.0.255 为路由协议和其他用途保留</li>
+<li>预留组播地址: 224.0.1.0 ~ 238.255.255.255 可用于全球范围或网络协议</li>
+<li>管理权限组播地址 ： 239.0.0.0 ～ 239.255.255.255 组织内部使用，不可用于Internet</li>
+</ul>
+</li>
+</ul>
+<p>把该socket端口对象添加到组播组中。</p>
+<pre><code class="lang-javascript">socket.addMembership(multicastAddress,[multicastInterface]);
+</code></pre>
+<ul>
+<li>multicastAddress 必须指定，需要加入的组播组地址</li>
+<li>multicastInterface 可选参数，需要加入的组播组地址</li>
+</ul>
+<pre><code class="lang-javascript">socket.dropMembership(multicastAddress,[multicastInterface]);
+socket.setMulticastTTL(ttl);
+socket.setMulticastLoopback(flag);
+</code></pre>
+<h4 id="t352.8.1 服务器">2.8.1 服务器 <a href="#t352.8.1 服务器"> # </a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> dgram = <span class="hljs-built_in">require</span>(<span class="hljs-string">'dgram'</span>);
+<span class="hljs-keyword">let</span> server = dgram.createSocket(<span class="hljs-string">'udp4'</span>);
+server.on(<span class="hljs-string">'listening'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  server.MulticastTTL(<span class="hljs-number">128</span>);
+  server.setMulticastLoopback(<span class="hljs-literal">true</span>);
+  server.addMembership(<span class="hljs-string">'230.185.192.108'</span>);
+});
+setInterval(broadcast,<span class="hljs-number">1000</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">broadcast</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">let</span> buffer = Buffer.from(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().toLocaleString());
+  server.send(buffer,<span class="hljs-number">0</span>,buffer.length,<span class="hljs-number">8080</span>,<span class="hljs-string">"230.185.192.108"</span>);
+}
+</code></pre>
+<h4 id="t362.8.2 客户端">2.8.2 客户端 <a href="#t362.8.2 客户端"> # </a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> dgram = <span class="hljs-built_in">require</span>(<span class="hljs-string">'dgram'</span>);
+<span class="hljs-keyword">let</span> client = dgram.createSocket(<span class="hljs-string">'udp4'</span>);
+client.on(<span class="hljs-string">'listening'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    client.addMembership(<span class="hljs-string">'230.185.192.108'</span>);
+});
+client.on(<span class="hljs-string">'message'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">message,remote</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(message.toString());
+});
+client.bind(<span class="hljs-number">8080</span>,<span class="hljs-string">'192.168.1.103'</span>);
+</code></pre>
+<h2 id="t37附录">附录 <a href="#t37附录"> # </a></h2>
+<h3 id="t38软件">软件 <a href="#t38软件"> # </a></h3>
+<ul>
+<li>putty <a href="https://www.putty.org/">https://www.putty.org/</a> </li>
+<li>window用户装 科来网络分析系统 <a href="http://www.colasoft.com.cn/">http://www.colasoft.com.cn/</a></li>
+<li>mac用户装 wireshark <a href="https://www.wireshark.org/download.html">https://www.wireshark.org/download.html</a></li>
+</ul>
+<h3 id="t39telnet">telnet <a href="#t39telnet"> # </a></h3>
+<pre><code>FF FB 1F FF FB 20 FF FB 18 FF FB 27 FF FD 01 FF FB 03 FF FD 03
+FF FB 1F window size
+FF FB 20 terminal speed
+FF FB 18 terminal type
+FF FB 27 Telnet Environment Option
+FF FD 01 echo
+FF FB 03 suppress go ahead
+FF FD 03 suppress go ahead
+如果不需要這些, 改用RAW模式就可以了
+</code></pre><h2 id="t40打开telnet功能">打开telnet功能 <a href="#t40打开telnet功能"> # </a></h2>
+<p><a href="https://jingyan.baidu.com/article/6181c3e0b7cc4a152ef153b4.html">打开telnet功能</a></p>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+  // if (!$('.understand-me').length) {
+  //   var bar = $(window).height() - $('.navbar ').height() - $('.page-toc').position().top;
+  //   var count = bar / 26 / 2;
+  //   var barHeight = $('.page-toc').outerHeight();
+  //   $('.page-toc li').eq(0).children('a').addClass('red');
+  //   var arr = [];
+  //   $("h1,h2,h3,h4,h5,h6").each(function () {
+  //     arr.push($(this).position().top);
+  //   });
+  //   var timer
+  //   function dark() {
+  //     clearTimeout(timer)
+  //      timer = setTimeout(function () {
+  //      var top = Math.abs($('.page-toc > ul').position().top);
+  //      var cur = $('.content').scrollTop();
+  //      for (var i = arr.length; i >= 0; i--) {
+  //        if (arr[i] <= cur) {
+  //          break;
+  //        }
+  //      }
+  //      if (i === -1) {
+  //        i = 0;
+  //      }
+  //      $('.page-toc li a').removeClass('red');
+  //      $('.page-toc li').eq(i).children('a').addClass('red');
+  //      let height = $('.page-toc li').eq(i).position().top-$('.page-toc').height(); // 如果当前的offset出去了 回到中间可好？
+  //      $('.page-toc').scrollTop(height+$('.page-toc').height()/2);
+  //    },200)
+  //   }
+
+  //   $('.content').on('scroll', dark);
+  // }
+</script>
+<style>
+
+    /* ::-webkit-scrollbar{width:14px;}
+    ::-webkit-scrollbar-track{background-color:transparent;}
+    ::-webkit-scrollbar-thumb{background-color:transparent;}
+    ::-webkit-scrollbar-thumb:hover {background-color:transparent}
+    ::-webkit-scrollbar-thumb:active {background-color:transparent} */
+
+    .page-toc > ul .red {
+        background: #f3f3f3;
+        z-index: 1;
+        border-left: 3px solid #009a61;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        color: #000
+    }
+
+
+
+
+
+</style>
+
+
+</body></html>

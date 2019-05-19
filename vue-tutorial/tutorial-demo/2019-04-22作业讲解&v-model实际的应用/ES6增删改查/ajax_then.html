@@ -1,0 +1,53 @@
+<!DOCTYPE>
+ <html lang="zh-en">
+ <head>
+     <title>js实现简单留言板</title>
+     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+     <script src="js/jquery-1.11.0.min.js"></script>
+     <script type="text/javascript" src="js/ajax_then.js"></script>
+     <link href="css/bootstrap.min.css" rel="stylesheet"/>
+     <link href="css/demo.css" rel="stylesheet"/> 
+ </head> 
+ <body>
+     <div class="container">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-1 control-label">昵称：</label>
+                <div class="col-sm-11">
+                    <input type="email" class="form-control name" id="inputEmail3" placeholder="请输入昵称">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">留言：</label>
+                <div class="col-sm-11">
+                    <textarea class="form-control message" rows="5" placeholder="请输入内容"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-11">
+                    <button type="submit" class="btn btn-success submit">添加留言</button>
+                    <button class="btn btn-success update">修改留言</button>
+                    <button class="btn btn-primary viewMes">查看留言</button>
+                    <button class="btn btn-danger deleteAll">删除留言</button>
+                    <button class="btn btn-success queryThen">串行</button>
+                    <button class="btn btn-success queryWhen">并行</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">留言列表</div>
+                <div class="panel-body">
+                    <ul class="list-group messageList">
+                        <!-- <li class="list-group-item">张三
+                            <span>说：</span>大家好！
+                        </li> -->
+                    </ul>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

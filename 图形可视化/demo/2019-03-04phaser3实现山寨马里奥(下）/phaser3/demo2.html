@@ -1,0 +1,170 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>phaser3制作山寨马里奥</title>
+    <!--<script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>-->
+    <script src="assets/phaser.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var config = {    // 配置信息
+        type: Phaser.AUTO,  //渲染器   渲染模式    Phaser.canvas   /Phaser.WEBGL  
+        width: 800,     //当前画布尺寸
+        height: 600,
+        physics: {    //物理引擎   
+            default: 'arcade',  //提供一些物理属性和方法   弹跳  碰撞。。。
+            arcade: {
+                gravity: { y: 300 },  //模拟重力效果   
+                debug: false    //是否开启调试
+            }
+        }, 
+        scene: {  //舞台    动画场景
+            preload: preload,    //预加载   装载资源
+            create: create,   //初始化
+            update: update  //更新 监听键盘
+        }
+    };
+    var platforms,   //站台
+        player,      //人物动画
+        cursors,      //键盘事件
+        stars,  //星星
+        score = 0,   //计分变量
+        scoreText,    //计分内容
+        bombs,  //炸弹
+        gameover = false,  //游戏是否结束
+        music;  //音乐
+    var game = new Phaser.Game(config);      //实例化   通过Phaser.Game来创建游戏
+    //预加载   装载资源
+    function preload (){  
+        this.load.image('sky','assets/sky.png');  //背景天空
+        this.load.image('star','assets/star.png');  //星星
+        this.load.image('ground','assets/platform.png');  //站台
+        this.load.image('bomb','assets/bomb.png');  //炸弹
+        //动画人物   spritesheet精灵图加载
+        this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+        //预加载音乐
+        this.load.audio('song','assets/music/song.mp3');
+    };
+    //初始化
+    function create (){ 
+        //在3中是以中心点为原点 ； setOrigin(0,0)改变默认原点
+        this.add.image(0,0,'sky').setOrigin(0,0);
+        //this.add.image(100,100,'star').setOrigin(0,0);   //加载的顺序是由上到下
+        //添加组 静态组
+        platforms = this.physics.add.staticGroup(); 
+        //setScale(2)  缩放
+        platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+        platforms.create(600, 400, 'ground');
+        platforms.create(50, 250, 'ground');
+        platforms.create(750, 220, 'ground');
+        //人物添加坐标
+        player = this.physics.add.sprite(260, 450, 'dude');
+        //添加碰撞函数
+        player.setBounce(0.2); //弹力值 
+        player.setCollideWorldBounds(true);
+        //碰撞器
+        this.physics.add.collider(player,platforms);
+        //动画效果   anims管理动画
+        this.anims.create({  //向左跑的动画
+            key: 'left',
+            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),//向左动画的帧0123
+            frameRate: 10,  //每秒10帧
+            repeat: -1   //循环播放动画
+        });
+        this.anims.create({
+            key: 'turn',
+            frames: [ { key: 'dude', frame: 4 } ],
+            frameRate: 20
+        });
+        this.anims.create({
+            key: 'right',
+            frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+            frameRate: 10,
+            repeat: -1
+        });
+        //键盘管理程序
+        cursors = this.input.keyboard.createCursorKeys();
+
+        //添加星星 动态组
+        stars = this.physics.add.group({
+            key: 'star',    
+            repeat: 11,    //重复数量   12个   自动创建一个子元素，重复11次 一个12个
+            setXY: { x: 12, y: 0, stepX: 70 }  //(12,0)(82,0)(152,0)...
+        });
+        //碰撞器,星星不会与站台碰撞（不会出现在站台上）
+        this.physics.add.collider(stars,platforms);
+        //弹跳力
+        stars.children.iterate(function (child) {
+            //0.4,0.8反弹的范围
+            child.setBounceY(Phaser.Math.FloatBetween(0.2, 0.5));
+        });
+        //碰撞器,星星与精灵人物碰撞
+        this.physics.add.collider(player, stars, collectStar, null, this);
+
+        //计分   16,16表示文本的坐标    'score: 0'  初始化值   
+        scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+        //炸弹
+        bombs = this.physics.add.group();
+        //碰撞器,炸弹不会与站台碰撞（不会出现在站台上）
+        this.physics.add.collider(bombs,platforms);
+        //碰撞器,炸弹与精灵人物碰撞
+        this.physics.add.collider(player, bombs, hitBomb, null, this);
+        
+        //添加声音
+        music = this.sound.add('song');
+        music.play();//声音播放
+        //music.volume = 0.9;   //音量的大小
+    };
+    //更新 监听键盘
+    function update (){  //监听键盘
+        if(gameover) return;
+        if (cursors.left.isDown){  //按下左键
+            player.setVelocityX(-150);   //奔跑的速度
+            player.anims.play('left', true);  //播放向左的动画
+            //music.play();   //声音播放
+        }else if (cursors.right.isDown){
+            player.setVelocityX(150);
+            player.anims.play('right', true);
+        }else{
+            player.setVelocityX(0);
+            player.anims.play('turn');
+        }
+        if (cursors.up.isDown && player.body.touching.down){
+            player.setVelocityY(-330);  //弹跳高度   400像素/秒
+        }
+    };
+    //回调函数作用：让星星消失
+    function collectStar (player, star){
+        star.disableBody(true, true);  //星星消失
+        score +=10;   //计分添加
+        scoreText.setText('score:'+score);  //渲染内容
+        //判断是否已经吃光了全部的星星
+        //活动的星星countActive
+        if (stars.countActive(true) === 0){  //判断是否已经吃光了全部的星星
+            stars.children.iterate(function (child) {
+                //重启所有的星星 0表示Y轴落下的位置
+                child.enableBody(true, child.x, 0, true, true);   
+            });
+            var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+            var bomb = bombs.create(x, 16, 'bomb');//随机的坐标值
+             bomb.setBounce(1); //弹跳程度
+             bomb.setCollideWorldBounds(true);   //设置与边界的碰撞
+             bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);//随机速度和位置
+             bomb.allowGravity = false; //忽略重力影响
+        }
+    };
+    //回调函数作用：停止
+    function hitBomb(player, bomb){ 
+        this.physics.pause();   //停止
+        player.setTint(0xff0000);    //设置人物颜色
+        player.anims.play('turn');     //人物形态
+        scoreText.setText('Score: ' + '游戏结束'); 
+        gameover = true;  //游戏结束
+    };
+
+</script>
+
+</body>
+</html>

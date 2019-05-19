@@ -1,0 +1,11 @@
+img {
+    width: 100%;
+}
+
+.m-r-md {
+    margin-right: 5px;
+}
+.go-back {
+    float:right;
+    cursor:pointer;
+}

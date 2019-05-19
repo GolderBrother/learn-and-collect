@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>输入链接地址，然后点击按钮</h1>
+    <div id="content"></div>
+    <input type="text" id="link">
+    <button onclick="setup()">设置</button>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+        function setup() {
+            // " onclick=alert(1) //
+            let html = `<a href="${$('#link').val()}">点我</a>`;
+            $('#content').html(html);
+        }
+    </script>
+</body>
+
+</html>

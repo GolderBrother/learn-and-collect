@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+     .container{
+         margin-top:30px;
+     }
+     .user{
+         color:green;
+         cursor: pointer;
+     }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="text-center">欢迎来到珠峰聊天室</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group" id="messageBox" onclick="chooseUser(event)">
+
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-11">
+                            <input type="text" class="form-control" id="textMsg" onkeydown="handleKeyDown(event)">
+                        </div>
+                        <div class="col-md-1">
+                           <button class="btn btn-primary" onclick="send(event)">发言</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/locale/zh-cn.js"></script>
+    <script>
+       let textMsg = document.getElementById('textMsg');
+       let messageBox = document.getElementById('messageBox');
+       let socket = io.connect('/chat');
+       //socket.on('xxx')
+       socket.on('connect',function(){
+           console.log('连接成功');
+           //当连接成功之后客户端可以向服务器发送消息
+           //socket.send('hello');
+           //socket.emit('message','hello');
+       }); 
+       //客户端收到服务器发过来的消息后
+       socket.on('message',function(mssageObj){
+            let li = document.createElement('li');
+            li.innerHTML = `<span class="user">${mssageObj.username}</span>:${mssageObj.content} <span class="pull-right">${moment(mssageObj.createAt).fromNow()}</span>`;
+            li.className = 'list-group-item';
+            messageBox.appendChild(li);
+       });
+       socket.on('disconnect',function(){
+           console.log('连接断开');
+       });
+
+       function chooseUser(event){
+           if(event.target.className == 'user'){
+            let username = event.target.innerText;
+              textMsg.value = `@${username} `;
+           }
+       }
+       function handleKeyDown(event){
+         if(event.keyCode == 13){//如果说按下的回车键
+            send();
+         }
+       }
+       function send(){
+        let val = textMsg.value;
+        if(val){
+            socket.send(val);
+            textMsg.value = '';
+        }else{
+            alert('发言内容不能为空!');
+        }
+
+       }
+    </script>
+</body>
+</html>

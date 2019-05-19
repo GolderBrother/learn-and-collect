@@ -1,0 +1,9 @@
+{
+  "script": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "svg-captcha": "^1.3.12"
+  }
+}

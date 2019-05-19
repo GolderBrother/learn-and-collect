@@ -1,0 +1,25 @@
+.home-swipers{
+    position: relative;
+    img{
+        width:100%;
+    }
+    .dots{
+        width:100%;
+        position: absolute;
+        bottom:10px;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .dot{
+            width:8px;
+            height:8px;
+            border-radius: 50%;
+            background-color: #FFF;
+            margin-left:5px;
+            &.active{
+                background-color: gray;
+            }
+        }
+    }
+}

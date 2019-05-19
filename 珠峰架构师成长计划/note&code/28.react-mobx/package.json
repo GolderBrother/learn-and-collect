@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "webpack -w"
+  },
+  "devDependencies": {
+    "mobx": "^5.9.4",
+    "mobx-react": "^5.4.3"
+  }
+}

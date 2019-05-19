@@ -1,0 +1,70 @@
+<!DOCTYPE HTML> 
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  </head>
+  <body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+
+    <script type="text/javascript">
+    window.onload = function () {
+        //attribute 着色器变量类型  属性
+		var VSHADER_SOURCE =
+            "attribute vec4 a_Position;" +
+            "void main() {" +
+            "gl_Position = a_Position; " +
+            "gl_PointSize = 20.0; " +
+            "} ";
+        var FSHADER_SOURCE =
+            "void main() {" +
+            "gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);" +
+            "}";
+		var canvas = document.getElementById('canvas');
+		var gl = canvas.getContext('webgl');  
+		if (!gl) {
+			console.log("Failed");
+			return;
+		}
+		//编辑着色器
+		var vertShader = gl.createShader(gl.VERTEX_SHADER);  //创建顶点着色器  
+		gl.shaderSource(vertShader, VSHADER_SOURCE); //着色器使用GLSL程序
+		//gl.shaderSource(vertShader, document.getElementById("a").textContent);
+		gl.compileShader(vertShader); //编译着色器  把着色器源代码编译为目标代码
+
+		var fragShader = gl.createShader(gl.FRAGMENT_SHADER); //创建片元着色器   
+		gl.shaderSource(fragShader, FSHADER_SOURCE);
+		gl.compileShader(fragShader);
+
+		//合并程序
+		var shaderProgram = gl.createProgram();//创建着色器程序
+		gl.attachShader(shaderProgram, vertShader); //把顶点着色器添加到着色器程序 
+		gl.attachShader(shaderProgram, fragShader);
+		gl.linkProgram(shaderProgram); //链接着色器程序
+        gl.useProgram(shaderProgram);  //使用着色器程序
+        
+		var vertices = new Float32Array([    //32位的浮点型数组
+            0.0, 0.5, -0.5,0.0, 0.5,0.0
+        ]);
+        var n = 3;
+        //创建缓冲对象
+        var vertexBuffer = gl.createBuffer();
+        if(!vertexBuffer){
+            console.log("Failed");
+            return false;
+        }
+        gl.bindBuffer(gl.ARRAY_BUFFER,vertexBuffer);//将缓冲区对象绑定目标
+        gl.bufferData(gl.ARRAY_BUFFER,vertices,gl.STATIC_DRAW);//向缓冲区写入数据
+        var a_Position = gl.getAttribLocation(shaderProgram, 'a_Position');//获取坐标点
+        gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0);//将缓冲区对象分配给a_Position
+        gl.enableVertexAttribArray(a_Position);//连接
+        //线
+        //gl.drawArrays(gl.POINTS, 0, n);  //点
+       // gl.drawArrays(gl.LINES, 0, n);    //线
+       gl.drawArrays(gl.TRIANGLES, 0, n);   //三角形
+	}
+  </script>
+	
+ </body>
+ 
+</html>
+

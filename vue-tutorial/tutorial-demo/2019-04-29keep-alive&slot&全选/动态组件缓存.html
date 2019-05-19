@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>component</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <script>
+    window.onload = function(){
+        new Vue({
+            el:'#my',
+            data:{ 
+                flag2:'my-a'
+            },
+            components:{  // 局部组件
+              'my-a':{  //组件的名称
+                template:'<h1>组件A:{{title}}</h1>',
+                data(){
+                  return {
+                    title: Math.random()   //0-1随机数
+                  }
+                }
+              },
+              'my-b':{  //组件的名称
+                template:'<h1>组件B:{{title}}</h1>',
+                data(){
+                  return {
+                    title: Math.random()   //0-1随机数
+                  }
+                }
+              },
+              'my-c':{  //组件的名称
+                template:'<h1>组件C:{{title}}</h1>',
+                data(){
+                  return {
+                    title: Math.random()   //0-1随机数
+                  }
+                }
+              },
+            }
+        })
+    }
+    </script>
+</head> 
+<body>
+  <div id="my">
+      <button @click="flag2 ='my-a'">A按钮</button>
+      <button @click="flag2 ='my-b'">B按钮</button>
+      <button @click="flag2 ='my-c'">C按钮</button>
+      <!-- 只有my-a才有缓存 -->
+      <!-- 添加多个组件 include="my-a,my-b" -->
+      <!-- <keep-alive include="my-a">
+            <component :is="flag2"></component>
+      </keep-alive> -->
+      <!-- 除了my-a不被缓存 -->
+      <keep-alive exclude="my-a">
+            <component :is="flag2"></component>
+      </keep-alive>
+      
+  </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+.loading{
+	position: relative;
+	.bars{
+	  width:43px;
+	  height:43px;
+	  position: relative;
+	  margin:0 auto;
+	  .bar{
+		position: absolute;
+		top:0;
+		left:20px;
+		width:3px;
+		height:43px;
+		&::before{
+		  width:3px;
+		  content:'';
+		  display:block;
+		  height:21.5px;
+		  background-color: #000;
+		  border-radius: 10px;
+		}
+		&::after{
+		  width:3px;
+		  content:'';
+		  display:block;
+		  height:21.5px;
+		  background-color: #000;
+		  border-radius: 10px;
+		}
+		&:nth-child(2){
+		  transform: rotate(30deg);
+		}
+		&:nth-child(3){
+		  transform: rotate(60deg);
+		}
+		&:nth-child(4){
+		  transform: rotate(90deg);
+		}
+		&:nth-child(5){
+		  transform: rotate(120deg);
+		}
+		&:nth-child(6){
+		  transform: rotate(150deg);
+		}
+		&:nth-child(1):before{
+		  animation: fade 1.2s 0s infinite;
+		}
+		&:nth-child(2):before{
+		  animation: fade 1.2s .1s infinite;
+		}
+		&:nth-child(3):before{
+		  animation: fade 1.2s .2s infinite;
+		}
+		&:nth-child(4):before{
+		  animation: fade 1.2s .3s infinite;
+		}
+		&:nth-child(5):before{
+		  animation: fade 1.2s .4s infinite;
+		}
+		&:nth-child(6):before{
+		  animation: fade 1.2s .5s infinite;
+		}
+		&:nth-child(1):after{
+		  animation: fade 1.2s .6s infinite;
+		}
+		&:nth-child(2):after{
+		  animation: fade 1.2s .7s infinite;
+		}
+		&:nth-child(3):after{
+		  animation: fade 1.2s .8s infinite;
+		}
+		&:nth-child(4):after{
+		  animation: fade 1.2s .9s infinite;
+		}
+		&:nth-child(5):after{
+		  animation: fade 1.2s 1.0s infinite;
+		}
+		&:nth-child(6):after{
+		  animation: fade 1.2s 1.1s infinite;
+		}
+	  }
+	  .cover{
+			position: absolute;
+			top:50%;
+			left:50%;
+			margin-left:-10px;
+			margin-top:-10px;
+			width:20px;
+			height:20px;
+			border-radius: 50%;
+			background-color: #FFF;
+	  }
+	}
+  }
+  @keyframes fade {
+	0%{opacity:.1}
+	100%{opacity: 1}
+  }

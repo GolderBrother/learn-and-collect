@@ -1,0 +1,64 @@
+<div class="row" *ngIf="movie">
+  <!--电影基本信息-->
+  <div class="col-md-4">
+    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="" class="thumbnail">
+    <p>
+      <a *ngIf="movie.homepage" href="{{movie.homepage}}" class="btn btn-info btn-block" target="_blank">Visit Movies Website</a>
+    </p>
+  </div>
+  <div class="col-md-8">
+    <h2>{{movie.title}}
+      <small class="label label-warning">
+        {{movie.vote_average}}
+        <i class="glyphicon glyphicon-star"></i>
+      </small>
+    </h2>
+    <a class="go-back" (click)="goBack()">返回</a>
+    <p>{{movie.tagline}}</p>
+    <p>
+      <a routerLink="/genres/{{genre.id}}/{{genre.name}}" *ngFor="let genre of movie.genres" class="label label-info m-r-md">
+        {{genre.name}}
+      </a>
+    </p>
+    <h3>Overview</h3>
+    <p>
+      {{movie.overview}}
+    </p>
+    <!--Casts 演员表-->
+    <div class="row is-flex" *ngIf="cast && cast.length > 0">
+      <div class="col-md-12">
+        <h3 class="text-center">Cast</h3>
+      </div>
+      <div class="col-md-3" *ngFor="let actor of cast">
+        <div class="thumbnail">
+          <img src="https://image.tmdb.org/t/p/w500/{{actor.profile_path}}" alt="">
+          <div class="caption">
+            <h6 class="text-center"><a routerLink="/actor/{{actor.id}}">{{actor.name}}</a></h6>
+          </div>
+        </div >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row is-flex" *ngIf="similarMovies && similarMovies.length > 0">
+  <div class="col-md-12">
+    <h2>Similar Movies</h2>
+  </div>
+  <div class="col-md-2" *ngFor="let movie of similarMovies">
+    <movie-view [movie]="movie"></movie-view>
+  </div>
+</div>
+<!--Similar Movies-->
+<!--评论-->
+<div class="row" *ngIf="reviews && reviews.length > 0">
+  <div class="col-md-12">
+    <h2>Reviews</h2>
+  </div>
+  <div class="col-md-6" *ngFor="let review of reviews">
+    <div>
+      <p class="text-justify">{{review.content}}</p>
+      <div title="{{review.author}}"><a>{{review.author}}</a></div>
+    </div>
+  </div>
+</div>

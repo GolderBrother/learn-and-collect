@@ -1,0 +1,39 @@
+Arguments: 
+  E:\front-end\front-software\NodeJs\node.exe E:\front-end\front-software\NodeJs\node_modules\yarn\bin\yarn.js add webpack webpack-cli html-webpack-plugin
+
+PATH: 
+  E:\front-end\front-software\GIT\mingw32\bin;E:\front-end\front-software\GIT\usr\bin;C:\Users\Administrator\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\ruby\Ruby24-x64\bin;.;D:\JAVA\bin;C:\Program Files (x86)\Common Files\NetSarang;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;D:\JAVA\jre\bin;E:\front-end\front-software\GIT\cmd;E:\front-end\front-software\GIT\usr\bin;C:\Program Files (x86)\Git\cmd;E:\front-end\front-software\NodeJs;C:\Program Files\MySQL\MySQL Server 5.6\bin;E:\front-end\front-software\NodeJs;C:\WINDOWS\System32\OpenSSH;D:\Microsoft VS Code\bin;E:\front-end\front-software\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;E:\front-end\front-software\mongoDB\bin;D:\android-sdk-windows\tools;D:\android-sdk-windows\platform-tools;D:\cordova-app\gradle-4.1\bin;D:\Java\bin;D:\Java\jre\bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.11.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.npm.taobao.org registry.npm.taobao.org:80
+      at errnoException (dns.js:50:10)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+
+npm manifest: 
+  {
+    "name": "code",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

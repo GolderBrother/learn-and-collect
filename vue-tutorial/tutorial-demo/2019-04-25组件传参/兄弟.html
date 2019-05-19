@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兄弟</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <script>
+    window.onload = function(){
+        new Vue({
+            el:'#my',
+            data:{ 
+              obj:{name:'老张',age:50},
+              childHobby:''
+            },
+            methods:{
+              get:function(childData){   //获取小明的值 
+                this.childHobby = childData;   //获取的值传给childHobby
+              }
+            },
+            components:{  // 局部组件
+              'my-brother-a':{  //组件的名称
+                template:'#my-brother-a',
+                data(){
+                  return {
+                    obj:{name:'大明',age:20}
+                  }
+                },
+                props:['hobby']
+              },
+              'my-brother-b':{  //组件的名称
+                template:'#my-brother-b',
+                data(){
+                  return {
+                    obj:{name:'小明',age:18,hobby:'打游戏'}
+                  }
+                },
+                methods:{
+                  send:function(){
+                    this.$emit('pass',this.obj.hobby)   //传给父
+                  }
+                }
+              }
+            }
+        })
+    }
+    </script>
+    <template id="my-brother-a">
+        <div>
+          <h1>我是大哥</h1>
+          <p>姓名：{{obj.name}}</p>
+          <p>年龄：{{obj.age}}</p>
+          <p>小明的爱好：{{hobby}}</p>
+        </div>
+    </template>
+    <template id="my-brother-b">
+      <div>
+        <h1>我是弟弟</h1>
+        <p>姓名：{{obj.name}}</p>
+        <p>年龄：{{obj.age}}</p>
+        我的爱好：<input type="text" v-model="obj.hobby" @input="send()"/>
+        <button @click="send()">子传父</button>
+      </div>
+  </template>
+</head> 
+<body>
+  <div id="my">
+    {{childHobby}}
+     <my-brother-a :hobby="childHobby"></my-brother-a>
+     <my-brother-b v-on:pass="get"></my-brother-b>
+  </div>
+</body>
+</html>

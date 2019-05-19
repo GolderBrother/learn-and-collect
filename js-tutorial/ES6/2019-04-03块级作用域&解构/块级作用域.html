@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>作用域</title>
+</head>
+<body>
+  
+  <script> 
+    window.onload = function(){
+			//暂时性死区
+			//1)
+			var a = 1;
+			function f(){
+				if(true){
+					a = 2;
+					console.log(a);  //a is not defined
+					let a;
+				}
+			};
+			f();
+			//2)
+			let x = y, y=1;
+			//3)
+			function f(i) {
+				let i;   //error
+			};
+			f(2)
+
+			//块级作用域重要性
+			var a = 1;
+			function f(){
+				console.log(a);  //1
+				if(true){
+				 let a = 2;
+				}
+				console.log(a); //1
+			};
+			f();
+			//循环    循环结束后，并没有消失，i 成为全局变量
+			for(var i = 0;i<6;i++){};
+			console.log(i)   //6
+			for(let i = 0;i<6;i++){};
+			console.log(i)  //j is not defined
+
+			++i;  //先给i自动1，再计算
+			i++;//先计算，再自动1
+			//a = 5;
+			b = a++;  //先赋值，再自加  b= a; a = a+1;   //b = 5;
+			b = ++a;  //先自加，再赋值  a = a+1; b=a;  //b=6
+			//1)
+			var arr = [];
+			for(var i = 0;i<6;i++){
+				arr[i] = function(){
+					console.log(i)
+				}
+			};
+			arr[3]();   //6
+			//2)
+			var arr = [];
+			for(let i = 0;i<6;i++){
+				arr[i] = function(){
+					console.log(i)
+				}
+			};
+			arr[3]();    //3
+
+	}
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+<h3 class="orange-text">upcoming 最新影片</h3>
+<div class="row is-flex">
+  <div class="col-sm-6 col-md-4 col-lg-3 col-xs-6" *ngFor="let v of upcoming; let i = index;">
+     <movie-card [movie]="v" [type]="'movie'"></movie-card>
+    <!-- <div class="thumbnail">
+          <img src="https://image.tmdb.org/t/p/w300/{{v.poster_path}}" *ngIf="v.poster_path">
+          <div class="caption">
+              <h4 class="text-ellipsis">
+                <a title="title">name</a>
+              </h4>
+              <p><strong>First Air Date: </strong>{{v.first_air_date}}</p>
+              <p>
+                <a routerLink="/movie/{{v.id}}">View details &raquo;</a>
+                <small class="label label-success pull-right">
+                    {{v.vote_average}}
+                  <i class="glyphicon glyphicon-star"></i>
+                </small>
+              </p>
+            </div> 
+        </div>
+    </div> -->
+</div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工作流</title>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-2.2.0/build/g6.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-2.2.0/build/plugins.js"></script>
+</head>
+<body>
+<div id="c1"></div>
+
+<script>
+window.onload = function(){
+    var data = {
+        nodes: [{//节点信息
+            id: '经理'
+        }, {
+            id: '前端'
+        }, {
+            id: '后端'
+        }, {
+            id: '测试'
+        }, {
+            id: '上线'
+        }],
+        edges: [{//节点连线
+            source: '经理',   //根源
+            target: '前端'  //目标
+        }, {
+            source: '经理',
+            target: '后端'
+        }, {
+            source: '前端',
+            target: '测试'
+        }, {
+            source: '后端',
+            target: '测试'
+        }, {
+            source: '测试',
+            target: '上线'
+        }]
+    };
+        
+    var graph = new G6.Graph({//实例化图形
+        container: 'c1',//图形dom
+        fitView: 'cc',//图形位置 centercenter
+        height: window.innerHeight, // 画布高
+        plugins: [new G6.Plugins['layout.dagre']({
+                    rankdir: 'LR',//布局方向 可取值为： 'TB', 'BT', 'LR', or 'RL' 默认值为 'TB'
+                })],//有向分层图布局
+    });
+    graph.node({//图形节点 
+        label: function label(model) {//节点标签
+            return model.id;
+        },
+        style: {
+            stroke: '#f00',//  图形 边框颜色
+            fill: '#f60',//图形 填充颜色
+            fillOpacity: 0.45,//透明度
+            lineWidth: 2//边框宽度
+        }
+    });
+    graph.edge({//连接线
+        style: {
+            endArrow: true//结束箭头
+        }
+    });
+    graph.read(data);//渲染
+}
+
+</script>
+</body>
+</html>

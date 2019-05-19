@@ -1,0 +1,11 @@
+*{
+     margin: 0 auto;
+     padding: 0;
+     font-family: "Microsoft YaHei","sans-serif";
+ }
+ .container{
+    margin-top:20px;
+ }
+.btn {
+     padding: 5px 10px;
+}

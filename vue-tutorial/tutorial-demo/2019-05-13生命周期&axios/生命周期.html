@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script type="text/javascript" src='js/axios.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my', //挂载元素
+			data:{
+				name:'abc'
+			},
+			created:function(){   //钩子函数创建后的状态  结束loading动画
+				this.name = 'xyz';
+				this.$nextTick(function(){  //DOM加载渲染完成后执行
+					var dom = document.getElementById("h1");   //操作DOM  
+					console.log(dom.innerHTML)
+				})
+				
+			},
+			mounted:function(){   //钩子函数挂载后的状态  虚拟DOM创建完成，数据马上就要渲染
+				var dom = document.getElementById("h1");
+				console.log(dom.innerHTML)
+			}
+		})
+	}
+	</script>
+</head>
+<body> 
+	<div id="my">
+		<h1 id="h1">{{name}}</h1>
+    </div>
+	
+</body>
+</html>

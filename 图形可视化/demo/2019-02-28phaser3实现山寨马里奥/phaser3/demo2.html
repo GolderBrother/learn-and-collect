@@ -1,0 +1,98 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>phaser3制作山寨马里奥</title>
+    <!--<script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>-->
+    <script src="assets/phaser.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var config = {    // 配置信息
+        type: Phaser.AUTO,  //渲染器   渲染模式    Phaser.canvas   /Phaser.WEBGL  
+        width: 800,     //当前画布尺寸
+        height: 600,
+        physics: {    //物理引擎   
+            default: 'arcade',  //提供一些物理属性和方法   弹跳  碰撞。。。
+            arcade: {
+                gravity: { y: 300 },  //模拟重力效果   
+                debug: false    //是否开启调试
+            }
+        }, 
+        scene: {  //舞台    动画场景
+            preload: preload,    //预加载   装载资源
+            create: create,   //初始化
+            update: update  //更新 监听键盘
+        }
+    };
+    var platforms,player,cursors;
+    var game = new Phaser.Game(config);      //实例化   通过Phaser.Game来创建游戏
+    //预加载   装载资源
+    function preload (){  
+        this.load.image('sky','assets/sky.png');  //背景天空
+        this.load.image('star','assets/star.png');  //星星
+        this.load.image('ground','assets/platform.png');  //站台
+        //动画人物   spritesheet精灵图加载
+        this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+    };
+    //初始化
+    function create (){ 
+        //在3中是以中心点为原点 ； setOrigin(0,0)改变默认原点
+        this.add.image(0,0,'sky').setOrigin(0,0);
+        this.add.image(100,100,'star').setOrigin(0,0);   //加载的顺序是由上到下
+        //添加组
+        platforms = this.physics.add.staticGroup(); 
+        //setScale(2)  缩放
+        platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+        platforms.create(600, 400, 'ground');
+        platforms.create(50, 250, 'ground');
+        platforms.create(750, 220, 'ground');
+        //人物添加坐标
+        player = this.physics.add.sprite(260, 450, 'dude');
+        //添加碰撞函数
+        player.setBounce(0.2); //弹力值 
+        player.setCollideWorldBounds(true);
+        //碰撞器
+        this.physics.add.collider(player,platforms);
+        //动画效果   anims管理动画
+        this.anims.create({  //向左跑的动画
+            key: 'left',
+            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),//向左动画的帧0123
+            frameRate: 10,  //每秒10帧
+            repeat: -1   //循环播放动画
+        });
+        this.anims.create({
+            key: 'turn',
+            frames: [ { key: 'dude', frame: 4 } ],
+            frameRate: 20
+        });
+        this.anims.create({
+            key: 'right',
+            frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+            frameRate: 10,
+            repeat: -1
+        });
+        //键盘管理程序
+        cursors = this.input.keyboard.createCursorKeys();
+    };
+    //更新 监听键盘
+    function update (){  //监听键盘
+        if (cursors.left.isDown){  //按下左键
+            player.setVelocityX(-150);   //奔跑的速度
+            player.anims.play('left', true);  //播放向左的动画
+        }else if (cursors.right.isDown){
+            player.setVelocityX(150);
+            player.anims.play('right', true);
+        }else{
+            player.setVelocityX(0);
+            player.anims.play('turn');
+        }
+        if (cursors.up.isDown && player.body.touching.down){
+            player.setVelocityY(-330);  //弹跳高度   400像素/秒
+        }
+    };
+
+</script>
+
+</body>
+</html>

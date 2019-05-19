@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>filters</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <script>
+    window.onload = function(){
+      //全局过滤器
+      //过滤器使用：{{}} v-bind
+      Vue.filter('addZero',function(type){
+        return type<10 ? '0'+type : type;
+      });
+        new Vue({
+            el:'#my',
+            data:{ 
+                str:123,
+                d:1556025620,
+            },
+            filters:{   //局部过滤器
+                number:function(data,n){   //n参数
+                  return data.toFixed(n);
+                },
+                toShortShow:function(data,n){
+                  if(data.length >=n){
+                    var str = data.substr(0,n);
+                    return str +'...';
+                  }else {
+                    return data;
+                  }
+                },
+                date:function(data){
+                  var d = new Date(data*1000);
+                  return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+                },
+                msg:function(data){
+                  return data.replace(/world/,'guys');
+                }
+            }
+        })
+    }
+    </script>
+</head> 
+<body>
+  <div id="my">
+      <h1> {{ 1 | addZero}}</h1>
+      <div v-bind:id="1 | addZero"></div>
+      <h1> {{ 3.1113325325 | number(2)}}</h1>
+      <div>
+        <input type="text" v-model="str" />
+        <span :title="str">{{str | toShortShow(10)}}</span>
+      </div>
+      <h1> {{d | date}}</h1> 
+
+      <div v-html="$options.filters.msg('<h1>hello world</h1>')"></div>
+  </div>
+</body>
+</html>

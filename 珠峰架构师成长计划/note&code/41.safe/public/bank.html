@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的银行</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p>用户名
+                            <span id="username"></span>
+                        </p>
+                        <p>余额
+                            <span id="money"></span>
+                        </p>
+                    </div>
+                    <div class="panel-body">
+                        <form onsubmit="transfer(event)">
+                            <div class="form-group">
+                                <label for="target">转账用户</label>
+                                <input id="target" class="form-control" placeholder="请输入的用户名">
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">金额</label>
+                                <input id="amount" class="form-control" placeholder="请输入转账的金额">
+                            </div>
+                            <div class="form-group">
+                                <label for="captcha" id="captcha-label"></label>
+                                <input id="captcha" class="form-control" placeholder="请输入验证码">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+        $(function () {
+            $.get('/api/user').then(data => {
+                console.log(data);
+                console.log(data.user.username);
+                if (data.code == 0) {
+                    $('#username').html(data.user.username);
+                    $('#money').html(data.user.money);
+                } else {
+                    alert('用户未登录');
+                    location.href = '/login.html';
+                }
+            });
+        });
+
+        function transfer(event) {
+            event.preventDefault();
+            let target = $('#target').val();
+            let amount = $('#amount').val();
+            $.post('/api/transfer', {
+                target,
+                amount
+            }).then(data => {
+                if (data.code == 0) {
+                    alert('转账成功');
+                    location.reload();
+                } else {
+                    alert('用户未登录');
+                    location.href = '/login.html';
+                }
+            });
+        }
+
+        function getCaptCha() {
+            $.get('/api/captcha').then(data => {
+                if (data.code === 0) {
+                    $('#captcha-label').html(data.captcha);
+                } else {
+                    alert('用户未登录');
+                    location.href = '/login.html';
+                }
+            })
+        }
+        getCaptCha();
+
+        function getClientToken() {
+            const result = document.cookie.match(/token=([^;]+)/);
+            return result ? result[1] : "";
+        }
+
+        function transfer(event) {
+            event.preventDefault();
+            let target = $('#target').val(),
+                amount = $('#amount').val(),
+                captcha = $('#captcha').val(),
+                clientToken = getClientToken();
+            $.post('/api/transfer',{
+                target,
+                amout,
+                captcha,
+                clientToken
+            }).then(data => {
+                console.log(data);
+            })
+        }
+    </script>
+</body>
+
+</html>

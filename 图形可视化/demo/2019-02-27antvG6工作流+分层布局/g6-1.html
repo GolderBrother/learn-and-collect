@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>分层布局</title>
+    <script src="https://gw.alipayobjects.com/os/antv/assets/g6/1.2.5/g6.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/assets/g6-plugins/1.0.1/g6-plugins.min.js"></script>
+</head>
+<body>
+    <div id="toolBar">
+        <button id="addCircle">新增圆</button>
+        <button id="addRect">新增矩形</button>
+        <button id="delete">删除选中</button>
+        <button id="addLine">添加直线</button>
+        <button id="addArrowLine">添加箭头直线</button>
+        <button id="addSmooth">添加曲线</button>
+        <button id="drag">拖拽模式</button>
+        <button id="edit">编辑模式</button>
+        <button id="clearView">清空视图</button>
+        <button id="reLayout">自动布局</button>
+        <label>视图方向:
+            <select id="ViewLy">
+                <option selected value="TB">上下</option>
+                <option value="BT">下上</option>
+                <option value="LR">左右</option>
+                <option value="RL">右左</option>
+            </select>
+        </label>
+    </div>
+    <div id="c1"></div>
+
+    <script type="text/javascript">
+    window.onload = function(){
+        var data = {
+            nodes: [   //节点
+                { id: '0', label: '起始', shape: 'circle', size: 50 },
+                { id: '1', label: '步骤一' },
+                { id: '2', label: '步骤二' },
+                { id: '3', label: '条件' },
+                { id: '4.1', label: '分步骤一' },
+                { id: '4.2', label: '分步骤二' },
+                { id: '5', label: '汇总' },
+                { id: '6', label: '结束', shape: 'circle', size: 40 },
+            ],
+            edges: [  //连线
+                { id: '0-1', source: '0', target: '1' },
+                { id: '1-2', source: '1', target: '2' },
+                { id: '2-3', source: '2', target: '3' },
+                { id: '3-4.1', source: '3', target: '4.1' },
+                { id: '3-4.2', source: '3', target: '4.2' },
+                { id: '4.1-5', source: '4.1', target: '5' },
+                { id: '4.2-5', source: '4.2', target: '5' },
+                { id: '5-6', source: '5', target: '6' },
+            ]
+        };
+        var net = null;
+        var sel = null;
+        // net = new G6.Net({//网图类
+        //     id: 'c1',              // 容器ID
+        //     mode: 'edit',  // 编辑模式
+        //     height: 400,    // 画布高
+        //     fitView: 'autoZoom', //自动缩放
+        //     grid: {//背景网格
+        //         forceAlign: true, // 是否支持网格对齐
+        //         cell: 30,         // 网格大小 
+        //     },
+        //     plugins: [new G6.Plugins['layout.dagre']({//有向分层图布局 plugin.layout.dagre
+        //         rankdir: 'TB',//布局方向 可取值为： 'TB', 'BT', 'LR', or 'RL' 默认值为 'TB'
+        //     })],
+        // });
+        // if (data) net.source(data.nodes, data.edges);    //设置数据
+
+        // net.tooltip({    //指示信息
+        //     title: '节点信息', // 标题
+        //     split: ':',  // 分割符号
+        //     dx: 10,       // 水平偏移
+        //     dy: 10        //  竖直偏移
+        // });
+        // net.node().tooltip(['id', 'label']);
+        // net.render();   //渲染
+        
+        function reLoadNet(v) {
+            const layout_dagre = new G6.Plugins['layout.dagre']({
+                rankdir: v||'TB',//布局方向 可取值为： 'TB', 'BT', 'LR', or 'RL' 默认值为 'TB'
+            });
+            if (net) {
+                data = net.save().source;
+                net.destroy();
+                net = null
+            };
+            net = new G6.Net({//网图类
+                id: 'c1',              // 容器ID
+                mode: 'edit',  // 编辑模式
+                //fitView: 'cc', // 自适应窗口默认为左上
+                height: 400,    // 画布高
+                fitView: 'autoZoom', //自动缩放
+                grid: {//背景网格
+                    forceAlign: true, // 是否支持网格对齐
+                    cell: 10,         // 网格大小 
+                },
+                plugins: [layout_dagre],
+            });
+            if (data) net.source(data.nodes, data.edges);
+            net.tooltip({
+                title: '节点信息', // @type {String} 标题
+                split: ':',  // @type {String} 分割符号
+                dx: 10,       // @type {Number} 水平偏移
+                dy: 10        // @type {Number} 竖直偏移
+            });
+            net.node().tooltip(['id', 'label']);
+            net.render();
+        }
+        reLoadNet();
+
+        //事件
+        net.on('itemmouseenter',e =>{   //移入
+            //alert('ok');
+            const item = e.item;
+            net.update(item,{
+                color:'red',
+            });
+            net.refresh();
+        });
+        net.on('itemmouseleave',e =>{   //移出
+            const item = e.item;
+            net.update(item,{
+                color:null,
+            });
+            net.refresh();
+        });
+        net.on('itemmousedown',e =>{   //按下
+            const item = e.item;
+            net.update(item,{
+                color:'#333',
+            });
+            net.refresh();
+        });
+        net.on('itemmouseup',e =>{   //松开
+            const item = e.item;
+            net.update(item,{
+                color:null,
+            });
+            net.refresh();
+        });
+        net.on('itemactived',e =>{   //激活
+            sel = e.item;
+        });
+        net.on('itemunactived',e =>{   //未激活
+            sel = null;
+        });
+
+        //按钮触发
+        $("#addCircle").click(function(){   //新增圆
+            net.add('node',{
+                shape:'circle',   
+                x:200,
+                y:200
+            });
+            net.refresh();
+        });
+        $("#addRect").click(function(){   //新增圆
+            net.add('node',{
+                shape:'rect',   
+                x:200,
+                y:200
+            });
+            net.refresh();
+        });
+        $("#delete").click(function(){   //删除
+            if(sel){
+                net.remove(sel);
+            }
+            sel = null;
+        });
+        $("#addLine").click(function(){   //添加直线
+            net.beginAdd('edge',{
+                shape:'line'     //arrow箭头   smooth曲线
+            })
+        });
+        $('#drag').on('click', () => {//拖拽模式
+            net.changeMode('drag');
+        });
+
+        $('#edit').on('click', () => {//编辑模式
+            net.changeMode('edit');
+        });
+
+        $("#clearView").click(() => {    //清空视频
+            net.changeData();
+        });
+        $("#reLayout").on('click', () => {   //自动布局
+            var a = net.save();
+            net.changeData();
+            a.source.edges.forEach((v, i) => {
+                delete v.x;
+                delete v.y;
+            });
+            a.source.nodes.forEach((v, i) => {
+                delete v.x;
+                delete v.y;
+            });
+            net.source(a.source.nodes, a.source.edges);
+            net.render();
+        });
+        $("#ViewLy").change(function () {    //视图方向
+            reLoadNet(this.value);
+        });
+    }
+    </script>
+</body>
+</html>

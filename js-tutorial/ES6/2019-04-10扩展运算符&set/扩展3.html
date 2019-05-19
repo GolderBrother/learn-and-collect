@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>扩展</title>
+</head>
+<body>
+  
+  <script> 
+    window.onload = function(){
+		//扩展   扩展运算符  ...    用于从对象中取出属性值，拷贝到当前的对象中
+		//对象中的扩展运算符
+		var o = {a:1,b:2};
+		var o2 = {...o};//{a:1,b:2}  ==== Object.assign({},o);
+		var o3 = {...o,c:3};   //合并{a: 1, b: 2, c: 3}
+		var o3 = {...o,b:3};   //属性重名会覆盖
+		var o4 = {...o,...{c:3,d:4}}; 
+		//数组中的扩展运算符   参数序列   序列化 JSON.stringify(o)    
+		var arr = [1,2,3,4];
+		var arr2 = [...arr];  //[1,2,3,4]
+		//[3,10]  1、计算数组的和
+		function fun(a,b){
+			return a+b   
+		};
+		var n = [3,10];
+		fun(...n);  //3,10
+		//2、数组的合并
+		//push   追加
+		var arr3 = [1,2,3];
+		var arr4 = [4,5];
+		arr3.push(arr4);
+		console.log(arr3);  //[1,2,3,[4,5]]
+		//concat()   合并
+		var a = arr3.concat(arr4);
+		console.log(a)   //[1,2,3,4,5]
+		//ES6
+		arr3.push(...arr4);  //[1,2,3,4,5]
+		//另一种简洁
+		var a2 = [...arr3,...arr4];  //[1,2,3,4,5]   数据是追加，不会去重等处理
+		var a3 = [1,...arr3,2,...arr4,...[6,7]];
+		
+		//深拷贝和浅拷贝
+		var a=1,b=a;
+		a= 10;
+		b  //1
+		//数组  引用  浅拷贝
+		var a =[1,2,3],b=a;
+		a[0]= 100;
+		b; //[100,2,3]
+		//对象   浅拷贝
+		var a = {x:1,y:2},b =a;
+		a.x=100;
+		b  //{x: 100, y: 2}
+		//深拷贝处理方式：
+		//ES5  数组 concat
+		var a = [1,2,3];
+		var b = a.slice();  //a.concat()
+		b[1] = 100;
+		//ES6
+		var b2 = [...a];
+		b2[1]= 100;
+		//对象
+		var a = {x:1,y:2};
+		var b = {...a};
+		a.x=100;
+		b;
+		
+		//扩展运算符和解构结合
+		let [a,...b] =[1,2,3,4,5];
+		let [a,...b] =[];
+		//坑  扩展运算符用于数组解构，只能放在参数的最后一位
+		let [...a,b] =[1,2,3,4,5];   //error
+		let [a,...b,c] =[1,2,3,4,5];   //error
+
+
+		//实际运用   VUE 穿梭框 
+	}
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>指令 v-model</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my',
+			data:{
+				input:'123',
+				check:true,
+				check2:false,
+				check3:['学生'] ,   //check3:['0','1']
+				check4:['2'] ,
+				lists:[{name:'学生',id:2},{name:'老师',id:1},{name:'管理员',id:0}],
+				check5:['1'] ,
+				radio:'0',  //单选框
+				selected:'管理员',  //下拉框 lists[0].name
+				selected1:'1'
+			}
+		})
+	}
+	</script>
+</head>
+<body> 
+	<div id="my">
+		<!-- 输入框 -->
+		<input type="text" v-model="input" :disabled="input==1"/>
+		{{input}}
+		<!-- 复选框 -->
+		<div>
+			<input type="checkbox" v-model="check" />
+			<input type="checkbox" v-model="check2" />
+		</div>
+		<div>
+			<input type="checkbox" v-model="check3" value="老师" />老师
+			<input type="checkbox" v-model="check3"  value="学生"/>学生
+			<input type="checkbox" v-model="check3"  value="管理员"/>管理员
+			{{check3}}
+		</div>
+		<div>
+			<input type="checkbox" v-model="check4" value="1" />老师
+			<input type="checkbox" v-model="check4"  value="2"/>学生
+			<input type="checkbox" v-model="check4"  value="0"/>管理员
+			{{check4}}
+		</div>
+		<!-- 动态数据 -->
+		<div v-for="v in lists">
+			<input type="checkbox" v-model="check5" :value="v.id" />{{v.name}}
+		</div>
+		{{check5}}
+
+		<!-- 单选框 -->
+		<div>
+			<input type="radio" v-model="radio" value="0" name="test"/>男
+			<input type="radio" v-model="radio" value="1" name="test"/>女
+			{{radio}}
+		</div>
+		
+		<!-- 下拉框 -->
+		<div>
+			<select v-model="selected">
+				<option>学生</option>
+				<option>老师</option>
+				<option>管理员</option>
+			</select>
+			{{selected}}
+		</div>
+		<div>
+			<select v-model="selected1">
+				<option value="2">学生</option>
+				<option value="1">老师</option>
+				<option value="0">管理员</option>
+			</select>
+			{{selected1}}
+		</div>
+		<!-- 动态数据 -->
+		<div>
+			<select v-model="selected1">
+				<option  v-for="list in lists" :value="list.id">{{list.name}}</option>
+			</select>
+			{{selected1}}
+		</div>
+	</div>
+</body>
+</html>

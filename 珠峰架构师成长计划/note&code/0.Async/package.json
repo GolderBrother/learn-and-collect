@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "event": "^1.0.0",
+    "events": "^3.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "presets": ["@babel/preset-env"],
+    // webpack打包的时候，会自动优化重复引入公共方法的问题
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "corejs": false,
+                "helpers": false,
+                "regenerator": false,
+                "useESMOdules": false
+            }
+        ]
+    ]
+}

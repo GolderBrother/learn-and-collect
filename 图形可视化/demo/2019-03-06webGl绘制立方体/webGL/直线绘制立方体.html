@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+</head>
+<body>
+<canvas id="webgl" width="500" height="500" style="background-color: #0d72da"></canvas>
+<script>
+    var canvasElement=document.getElementById('webgl');
+    var gl=canvasElement.getContext('webgl');
+    //顶点着色器源码
+    var vertexShaderSource = '' +
+        //attribute声明vec4类型变量apos  
+        'attribute vec4 apos;'+
+        'void main(){' +
+        //设置几何体轴旋转角度为30度，并把角度值转化为浮点值
+        'float radian = radians(30.0);'+
+        //求解旋转角度余弦值
+        'float cos = cos(radian);'+
+        //求解旋转角度正弦值
+        'float sin = sin(radian);'+
+        //引用上面的计算数据，创建绕x轴旋转矩阵
+        'mat4 mx = mat4(1,0,0,0,  0,cos,-sin,0,  0,sin,cos,0,  0,0,0,1);'+
+        //引用上面的计算数据，创建绕y轴旋转矩阵
+        'mat4 my = mat4(cos,0,-sin,0,  0,1,0,0,  sin,0,cos,0,  0,0,0,1);'+
+        //两个旋转矩阵、顶点齐次坐标连乘
+        '   gl_Position = mx*my*apos;' +
+        '}';
+    //片元着色器源码
+    var fragShaderSource = '' +
+        'void main(){' +
+        '   gl_FragColor = vec4(1.0,1.0,1.0,1.0);' +
+        '}';
+    //初始化着色器
+    var program = initShader();
+    //获取顶点着色器的位置变量apos
+    var aposLocation = gl.getAttribLocation(program,'apos');
+    //8个顶点坐标数组
+    //Float32Array  32位浮点型数组
+    var data=new Float32Array([
+        0.5,  0.5,  0.5,  //顶点0
+        -0.5,  0.5,  0.5,  //顶点1
+        -0.5, -0.5,  0.5,
+        0.5, -0.5,  0.5,
+        0.5,  0.5, -0.5,
+        -0.5,  0.5, -0.5,
+        -0.5, -0.5, -0.5,
+        0.5, -0.5, -0.5,
+    ]);
+    //顶点索引数组
+    //Uint8Array  8位无符号整型数组   0-255
+    var indexes = new Uint8Array([
+        0,1,2,3,
+        4,5,6,7,
+        0,4,
+        1,5,
+        2,6,
+        3,7
+    ]);
+    //创建缓冲区对象
+    var indexesBuffer=gl.createBuffer();
+    //将缓冲区对象绑定目标
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,indexesBuffer);
+    //向缓冲区写入数据  indexes
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,indexes,gl.STATIC_DRAW);
+    //创建缓冲区对象
+    var buffer=gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buffer);
+    gl.bufferData(gl.ARRAY_BUFFER,data,gl.STATIC_DRAW);
+    //缓冲区中的数据按照一定的规律传递给位置变量apos
+    gl.vertexAttribPointer(aposLocation,3,gl.FLOAT,false,0,0);
+    //允许数据传递 
+    gl.enableVertexAttribArray(aposLocation);
+    //drawArrays
+    //gl.LINE_LOOP 绘制模式 gl.LINES(独立线段)  gl.TRIANGLES   gl.LINE_LOOP(首尾相连闭合线段)
+    //4 绘制顶点的个数
+    //gl.UNSIGNED_BYTE  数据类型
+    //0 从第几个开始绘制
+    //第一个面
+    gl.drawElements(gl.LINE_LOOP,4,gl.UNSIGNED_BYTE,0);
+    //第二个面
+    gl.drawElements(gl.LINE_LOOP,4,gl.UNSIGNED_BYTE,4);
+    //4条线段
+    gl.drawElements(gl.LINES,8,gl.UNSIGNED_BYTE,8);
+
+    //着色器
+    function initShader() {
+        //创建顶点着色器
+        var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+        //创建片元着色器
+        var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+        //着色器使用GLSL程序代码的字符串。
+        gl.shaderSource(vertexShader,vertexShaderSource);
+        gl.shaderSource(fragmentShader,fragShaderSource);
+        //编译着色器  把着色器源代码编译成目标代码
+        gl.compileShader(vertexShader);
+        gl.compileShader(fragmentShader);
+        ////合并程序
+        var program = gl.createProgram();//创建着色器程序
+        gl.attachShader(program,vertexShader);//创建着色器程序息附加到着色器程序
+        gl.attachShader(program,fragmentShader);
+        gl.linkProgram(program);//链接着色器程序
+        gl.useProgram(program);//使用着色器程序
+        return program;
+    }
+
+</script>
+</body>
+</html>

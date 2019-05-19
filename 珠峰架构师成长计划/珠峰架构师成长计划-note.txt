@@ -1,0 +1,189 @@
+﻿
+如何进入大厂公开课：
+自我介绍三点：特点、技术特点、优势
+将在珠峰架构课学习的知识点应用到实际项目中
+
+死磕算法
+
+项目的技术架构吸引人
+
+http://zhufengpeixun.com/plan/html
+14.http-1
+2. URI和URL
+2.1 URI
+URI(Uniform Resource Identifier)是统一资源标识符,在某个规则下能把这个资源独一无二标示出来，比如人的身份证号
+
+Uniform 不用根据上下文来识别资源指定的访问方式
+Resource 可以标识的任何东西
+Identifier 表示可标识的对象
+2.2 URL
+统一资源定位符，表示资源的地点，URL时使用浏览器访问WEB页面时需要输入的网页地址
+
+Uniform 不用根据上下文来识别资源指定的访问方式
+Resource 可以标识的任何东西
+Location 定位
+2.2.1 URL的格式
+url
+
+协议类型
+登录信息
+服务器地址
+服务器端口号
+带层次的文件路径
+查询字符串
+片段标识符
+
+3.HTTP
+请求的一方叫客户端，响应的一方叫服务器端
+通过请求和响应达成通信
+HTTP是一种不保存状态的协议
+
+(1)请求行
+
+方法
+
+GET 获取资源
+POST 向服务器端发送数据，传输实体主体
+PUT 传输文件
+HEAD 获取报文首部
+DELETE 删除文件
+OPTIONS 询问支持的方法
+TRACE 追踪路径
+
+协议/版本号
+URL
+
+(2)请求头
+通用首部(General Header)
+请求首部(Request Header)
+响应首部(Response Header)
+实体首部(Entity Header Fields)
+
+(3)请求体
+
+2019.3.31
+看到  4.Web服务器
+http://zhufengpeixun.com/plan/html/14.http-1.html
+
+4.2 通信转发程序:代理、网关
+4.2.1 代理 #
+代理就是客户端和服务器的中间人
+
+4.2.2 网关
+接收从客户端发送来的数据时，会转发给其他服务器处理，再由自己返回
+
+使通信线路上的服务器提供非HTTP协议服务
+提高通信安全性
+
+
+15.http-2
+1. HTTP服务器 #
+HTTP全称是超文本传输协议，构建于TCP之上，属于应用层协议。
+
+1.8.querystring
+querystring模块用来转换URL字符串和URL中的查询字符串
+1.8.1 parse方法用来把字符串转换成对象
+querystring.parse(str, [sep], [eq], [options])
+
+1.9 querystring
+url.parse(urlStr,[parseQueryString]);
+href 被转换的原URL字符串
+protocal 客户端发出请求时使用的协议
+slashes 在协议与路径之间是否使用了//分隔符
+host URL字符串中的完整地址和端口号
+auth URL字符串中的认证部分
+hostname URL字符串中的完整地址
+port URL字符串中的端口号
+pathname URL字符串的路径，不包含查询字符串
+search 查询字符串，包含?
+path 路径，包含查询字符串
+query 查询字符串，不包含起始字符串?
+hash 散列字符串，包含#
+
+1.10 发送服务器响应流
+http.ServerResponse对象表示响应对象
+
+1.10.1 writeHead
+response.writeHead(statusCode,[reasonPhrase],[headers]);
+content-type 内容类型
+location 将客户端重定向到另外一个URL地址
+content-disposition 指定一个被下载的文件名
+content-length 服务器响应内容的字节数
+set-cookie 在客户端创建Cookie
+content-encoding 指定服务器响应内容的编码方式
+cache-cache 开启缓存机制
+expires 用于制定缓存过期时间
+etag 指定当服务器响应内容没有变化不重新下载数据
+
+1.10.2 Header #
+设置、获取和删除Header
+
+response.setHeader('Content-Type','text/html;charset=utf-8');
+response.getHeader('Content-Type');
+response.removeHeader('Content-Type');
+response.headersSent 判断响应头是否已经发送
+
+1.10.3 headersSent #
+判断响应头是否已经发送
+
+let http = require('http');
+let server = http.createServer(function(req,res){
+  console.log(resopnse.headersSent?"响应头已经发送":"响应头未发送!");
+  res.writeHead(200,'ok);
+  console.log(resopnse.headersSent?"响应头已经发送":"响应头未发送!");
+});
+
+2. HTTP客户端
+2.1 向其他网站请求数据
+let req = http.request(options,callback);
+req.on('request',callback);
+request.write(chunk,[encoding]);
+request.end([chunk],[encoding]);
+host 指定目标域名或主机名
+hostname 指定目标域名或主机名，如果和host都指定了，优先使用hostname
+port 指定目标服务器的端口号
+localAddress 本地接口
+socketPath 指定Unix域端口
+method 指定HTTP请求的方式
+path 指定请求路径和查询字符串
+headers 指定客户端请求头对象
+auth 指定认证部分
+agent 用于指定HTTP代理，在Node.js中，使用http.Agent类代表一个HTTP代理，默认使用keep-alive连接，同时使用http.Agent对象来实现所有的HTTP客户端请求
+
+
+
+19.缓存-cache
+1. 缓存作用
+减少了冗余的数据传输，节省了网费。
+减少了服务器的负担， 大大提高了网站的性能
+加快了客户端加载网页的速度
+2. 缓存分类
+强制缓存如果生效，不需要再和服务器发生交互，而对比缓存不管是否生效，都需要与服务端发生交互
+两类缓存规则可以同时存在，强制缓存优先级高于对比缓存，也就是说，当执行强制缓存的规则时，如果缓存生效，直接使用缓存，不再执行对比缓存规则
+
+2.1 强制缓存 强制缓存，在缓存数据未失效的情况下，可以直接使用缓存数据，那么浏览器是如何判断缓存数据是否失效呢？ 我们知道，在没有缓存数据的时候，浏览器向服务器请求数据时，服务器会将数据和缓存规则一并返回，缓存规则信息包含在响应header中。
+
+2.2 对比缓存
+对比缓存，顾名思义，需要进行比较判断是否可以使用缓存。
+浏览器第一次请求数据时，服务器会将缓存标识与数据一起返回给客户端，客户端将二者备份至缓存数据库中。
+再次请求数据时，客户端将备份的缓存标识发送给服务器，服务器根据缓存标识进行判断，判断成功后，返回304状态码，通知客户端比较成功，可以使用缓存数据。
+
+4. 通过最后修改时间来判断缓存是否可用
+Last-Modified：响应时告诉客户端此资源的最后修改时间
+If-Modified-Since：当资源过期时（使用Cache-Control标识的max-age），发现资源具有Last-Modified声明，则再次向服务器请求时带上头If-Modified-Since。
+服务器收到请求后发现有头If-Modified-Since则与被请求资源的最后修改时间进行比对。若最后修改时间较新，说明资源又被改动过，则响应最新的资源内容并返回200状态码；
+若最后修改时间和If-Modified-Since一样，说明资源没有修改，则响应304表示未更新，告知浏览器继续使用所保存的缓存文件。
+
+7.如何干脆不发请求
+浏览器会将文件缓存到Cache目录，第二次请求时浏览器会先检查Cache目录下是否含有该文件，如果有，并且还没到Expires设置的时间，即文件还没有过期，那么此时浏览器将直接从Cache目录中读取文件，而不再发送请求
+Expires是服务器响应消息头字段，在响应http请求时告诉浏览器在过期时间前浏览器可以直接从浏览器缓存取数据，而无需再次请求,这是HTTP1.0的内容，现在浏览器均默认使用HTTP1.1,所以基本可以忽略
+Cache-Control与Expires的作用一致，都是指明当前资源的有效期，控制浏览器是否直接从浏览器缓存取数据还是重新发请求到服务器取数据,如果同时设置的话，其优先级高于Expires
+
+Cache-Control #
+private 客户端可以缓存
+public 客户端和代理服务器都可以缓存
+max-age=60 缓存内容将在60秒后失效
+no-cache 需要使用对比缓存验证数据,强制向源服务器再次验证
+no-store 所有内容都不会缓存，强制缓存和对比缓存都不会触发
+
+

@@ -1,0 +1,18 @@
+<h3 class="orange-text">女装</h3>
+<div class="row is-flex">
+  <div class="col-sm-6 col-md-4 col-lg-3 col-xs-6"*ngFor="let v of arr; let i = index;">
+      <div class="thumbnail">
+        <!--<img [src]="v.product_img_url" >-->
+        <img src="{{v.product_img_url}}" >
+        <div class="caption">
+          <a  title="{{v.product_name}}">{{v.product_name}}</a>
+          <p>
+            <small class="label label-success pull-right">
+              8
+              <i class="glyphicon glyphicon-star"></i>
+            </small>
+          </p>
+        </div> 
+      </div>
+    </div>
+</div>

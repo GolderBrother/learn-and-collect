@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script type="text/javascript" src='js/axios.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my', //挂载元素
+			data:{
+				name:'abc'
+			},
+			beforeCreate:function(){   //钩子函数创建前的状态  el 和data并未初始化   加个loading动画
+				console.log('创建前的状态','el:' +this.$el);  //undefined
+				console.log('创建前的状态','data:' +this.$data); //undefined
+				console.log('创建前的状态','name:' +this.name);  //undefined
+			},
+			created:function(){   //钩子函数创建后的状态  结束loading动画
+				console.log('创建后的状态','el:' +this.$el);  //undefined
+				console.log('创建后的状态','data:' +this.$data); //初始化
+				console.log('创建后的状态','name:' +this.name);  //初始化
+			},
+			beforeMount:function(){   //钩子函数挂载前的状态  虚拟DOM创建完成，数据马上就要渲染   拿到数据后
+				console.log('挂载前的状态','el:' +this.$el);  //已被初始化
+				console.log(this.$el);  // {{name}}  虚拟DOM解析，但没有渲染
+				console.log('挂载前的状态','data:' +this.$data); //已被初始化
+				console.log('挂载前的状态','name:' +this.name);  //已被初始化
+			},
+			mounted:function(){   //钩子函数挂载后的状态  虚拟DOM创建完成，数据马上就要渲染
+				console.log('挂载后的状态','el:' +this.$el);  //已被初始化
+				console.log(this.$el);
+				console.log('挂载后的状态','data:' +this.$data); //已被初始化
+				console.log('挂载后的状态','name:' +this.name);  //已被初始化
+			},
+			beforeUpdate:function(){   //钩子函数更新前的状态   修改时
+				console.log('更新前的状态','el:' +this.$el);  //已被初始化
+				console.log(this.$el);  
+				console.log('更新前的状态','data:' +this.$data); //已被初始化
+				console.log('更新前的状态','name:' +this.name);  //已被初始化
+			},
+			updated:function(){   //钩子函数更新后的状态 修改时
+				console.log('更新后的状态','el:' +this.$el);  //已被初始化
+				console.log(this.$el);
+				console.log('更新后的状态','data:' +this.$data); //已被初始化
+				console.log('更新后的状态','name:' +this.name);  //已被初始化
+			},
+			beforeDestroy:function(){   //钩子函数销毁后的状态 用于定时器的清除   清除事件等等
+				console.log('销毁前的状态','el:' +this.$el);  
+				console.log(this.$el);  
+				console.log('销毁前的状态','data:' +this.$data); 
+				console.log('销毁前的状态','name:' +this.name);  
+			},
+			destroyed:function(){   //钩子函数销毁后的状态 
+				console.log('销毁后的状态','el:' +this.$el);  
+				console.log(this.$el);
+				console.log('销毁后的状态','data:' +this.$data); 
+				console.log('销毁后的状态','name:' +this.name);  
+			} 
+		})
+	}
+	</script>
+</head>
+<body> 
+	<div id="my">
+		{{name}}
+		<input type="text" v-model="name" />
+    </div>
+	
+</body>
+</html>

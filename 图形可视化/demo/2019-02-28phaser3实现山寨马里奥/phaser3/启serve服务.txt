@@ -1,0 +1,5 @@
+全局安装serve服务
+1、输入npm install -g serve   或者  cnpm install -g serve
+
+2、进入当前目录后，输入 serve 
+在浏览器输入 http://localhost:5000/home

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AJAX</title>
+    <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+  </head>
+  <body>
+  <button class="btn" onclick="getData()">click1</button>
+  <button class="btn2">click2</button>
+    <script type="text/javascript">
+	    function getXMLHttpRequest() { 
+	          var xmlhttp; 
+	          if(window.ActiveXObject) { 
+							//IE5/IE6
+	                   xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");   
+	          }else if (window.XMLHttpRequest) {
+							// 
+	                   xmlhttp= new XMLHttpRequest(); ////创建XMLHttpRequest 对象 用于和服务器交换数据。
+	          }else { 
+	                   xmlhttp= null; 
+	          } 
+	          return xmlhttp; 
+		} 
+		   
+		function getData() { 
+	          var xmlhttp = getXMLHttpRequest(); 
+						//向服务器发送请求
+	          xmlhttp.open("get","http://localhost:3333/info",true);
+	          xmlhttp.send();   //get
+						//post
+			  		//xmlhttp.setRequestHeader("Content-Type", "application/json");  //使用contentType: “application/json”则data只能是json字符串
+		      	//xmlhttp.send(JSON.stringify({"name":"John", "age":"24"}));
+	          xmlhttp.onreadystatechange= function() { 
+	                   if(xmlhttp.readyState == 4 && xmlhttp.status == 200) { 
+	                           console.log(xmlhttp.responseText); 
+	                   } 
+	          }; 
+		} 
+
+		//jquery
+		$(".btn2").on('click',function() {
+		  $.ajax({
+				type:"get",  //请求类型  get post put delete
+				url:"http://localhost:3000/map/get",  //请求接口地址
+				async:true,//async 异步  sync同步
+				//data:{username:"aaa", content:"123456"},  //传给后端 
+				dataType:"json",  //返回类型
+				success:function(res) {  //请求成功
+					var obj = res;
+					alert(JSON.stringify(res));
+				},
+				error:function() {   //请求失败
+
+				}
+		  })
+		})
+		
+    </script>
+  </body>
+</html>

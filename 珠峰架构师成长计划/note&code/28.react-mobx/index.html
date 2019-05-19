@@ -1,0 +1,862 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            珠峰架构师成长计划
+        
+    </div>
+<ul><li><a href="../index.html">0.Async</a></li><li><a href="../html/0.editor.html">0.editor</a></li><li><a href="../html/0.module.html">0.module</a></li><li><a href="../html/1.ES2015.html">1.ES2015</a></li><li><a href="../html/2.Promise.html">2.Promise</a></li><li><a href="../html/3.Node.html">3.Node</a></li><li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li><li><a href="../html/5.REPL.html">5.REPL</a></li><li><a href="../html/6.NodeCore.html">6.NodeCore</a></li><li><a href="../html/7.module&amp;NPM.html">7.module&amp;NPM</a></li><li><a href="../html/8.Encoding.html">8.Encoding</a></li><li><a href="../html/9.Buffer.html">9.Buffer</a></li><li><a href="../html/10.fs.html">10.fs</a></li><li><a href="../html/11.Stream-1.html">11.Stream-1</a></li><li><a href="../html/11.Stream-2.html">11.Stream-2</a></li><li><a href="../html/11.Stream-3.html">11.Stream-3</a></li><li><a href="../html/11.Stream-4.html">11.Stream-4</a></li><li><a href="../html/12-Network-2.html">12-Network-2</a></li><li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li><li><a href="../html/12.Network-1.html">12.Network-1</a></li><li><a href="../html/13.tcp.html">13.tcp</a></li><li><a href="../html/14.http-1.html">14.http-1</a></li><li><a href="../html/14.http-2.html">14.http-2</a></li><li><a href="../html/15.compress.html">15.compress</a></li><li><a href="../html/16.crypto.html">16.crypto</a></li><li><a href="../html/17.process.html">17.process</a></li><li><a href="../html/18.yargs.html">18.yargs</a></li><li><a href="../html/19.cache.html">19.cache</a></li><li><a href="../html/20.action.html">20.action</a></li><li><a href="../html/21.https.html">21.https</a></li><li><a href="../html/22.cookie.html">22.cookie</a></li><li><a href="../html/23.session.html">23.session</a></li><li><a href="../html/24.express-1.html">24.express-1</a></li><li><a href="../html/24.express-2.html">24.express-2</a></li><li><a href="../html/24.express-3.html">24.express-3</a></li><li><a href="../html/24.express-4.html">24.express-4</a></li><li><a href="../html/25.koa-1.html">25.koa-1</a></li><li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li><li><a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a></li><li><a href="../html/26.webpack-3.tapable.html">26.webpack-3.tapable</a></li><li><a href="../html/26.webpack-4-AST.html">26.webpack-4-AST</a></li><li><a href="../html/26.webpack-5-source.html">26.webpack-5-source</a></li><li><a href="../html/26.webpack-6-loader.html">26.webpack-6-loader</a></li><li><a href="../html/26.webpack-7-plugin.html">26.webpack-7-plugin</a></li><li><a href="../html/26.webpack-8-hand.html">26.webpack-8-hand</a></li><li><a href="../html/27.react-1.html">27.react-1</a></li><li><a href="../html/27.react-2.html">27.react-2</a></li><li><a href="../html/27.react-3.html">27.react-3</a></li><li><a href="../html/27.react-4-immutable.html">27.react-4-immutable</a></li><li><a href="../html/27.react-5-react-dom-diff.html">27.react-5-react-dom-diff</a></li><li><a href="../html/27.react-6.html">27.react-6</a></li><li class="active"><a href="../html/28.react-mobx.html">28.react-mobx</a></li><li><a href="../html/28.redux-0.html">28.redux-0</a></li><li><a href="../html/28.redux-1.html">28.redux-1</a></li><li><a href="../html/28.redux-2-中间件.html">28.redux-2-中间件</a></li><li><a href="../html/28.redux-3-saga.html">28.redux-3-saga</a></li><li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li><li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li><li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li><li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li><li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li><li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li><li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li><li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li><li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li><li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li><li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li><li><a href="../html/30.cms-4-egg.html">30.cms-4-egg</a></li><li><a href="../html/30.cms-5-api.html">30.cms-5-api</a></li><li><a href="../html/30.cms-6-roadhog.html">30.cms-6-roadhog</a></li><li><a href="../html/30.cms-7-umi.html">30.cms-7-umi</a></li><li><a href="../html/30.cms-8-dva.html">30.cms-8-dva</a></li><li><a href="../html/30.cms-9-dva.html">30.cms-9-dva</a></li><li><a href="../html/30.cms-10-dva.html">30.cms-10-dva</a></li><li><a href="../html/30.cms-11-front.html">30.cms-11-front</a></li><li><a href="../html/31.cms-12-api.html">31.cms-12-api</a></li><li><a href="../html/31.cms-13-front.html">31.cms-13-front</a></li><li><a href="../html/31.cms-14-deploy.html">31.cms-14-deploy</a></li><li><a href="../html/32.ant.html">32.ant</a></li><li><a href="../html/33.redis.html">33.redis</a></li><li><a href="../html/34.unittest.html">34.unittest</a></li><li><a href="../html/35.jwt.html">35.jwt</a></li><li><a href="../html/36.websocket-1.html">36.websocket-1</a></li><li><a href="../html/36.websocket-2.html">36.websocket-2</a></li><li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li><li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li><li><a href="../html/38.chat-3.html">38.chat-3</a></li><li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li><li><a href="../html/38.chat.html">38.chat</a></li><li><a href="../html/38.chat2.html">38.chat2</a></li><li><a href="../html/38.chat2.html">38.chat2</a></li><li><a href="../html/39.crawl-0.html">39.crawl-0</a></li><li><a href="../html/39.crawl-1.html">39.crawl-1</a></li><li><a href="../html/39.crawl-2.html">39.crawl-2</a></li><li><a href="../html/40.deploy.html">40.deploy</a></li><li><a href="../html/41.safe.html">41.safe</a></li><li><a href="../html/42.test.html">42.test</a></li><li><a href="../html/43.nginx.html">43.nginx</a></li><li><a href="../html/44.enzyme.html">44.enzyme</a></li><li><a href="../html/45.docker.html">45.docker</a></li><li><a href="../html/46.elastic.html">46.elastic</a></li><li><a href="../html/47.oauth.html">47.oauth</a></li><li><a href="../html/48.wxpay.html">48.wxpay</a></li><li><a href="../html/49.nunjucks.html">49.nunjucks</a></li><li><a href="../html/50.ketang.html">50.ketang</a></li><li><a href="../html/index.html">index</a></li><li><a href="../html/51.typescript.html">51.typescript</a></li><li><a href="../html/52.UML.html">52.UML</a></li><li><a href="../html/53.design.html">53.design</a></li><li><a href="../html/index.html">index</a></li></ul></div>
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01. mobx">1. mobx</a></li><li><a href="#t12. mobx vs redux">2. mobx vs redux</a></li><li><a href="#t23. 核心思想">3. 核心思想</a></li><li><a href="#t34. 环境准备">4. 环境准备</a><ul><li><a href="#t44.1 安装依赖模块">4.1 安装依赖模块</a></li><li><a href="#t54.2 webpack.config.js">4.2 webpack.config.js</a></li><li><a href="#t64.3 package.json">4.3 package.json</a></li></ul></li><li><a href="#t75. Decorator">5. Decorator</a><ul><li><a href="#t85.1 类的修饰">5.1 类的修饰</a></li><li><a href="#t95.2 修饰属性">5.2 修饰属性</a></li><li><a href="#t105.3 修饰方法">5.3 修饰方法</a></li></ul></li><li><a href="#t116. Proxy">6. Proxy</a></li><li><a href="#t127. mobx">7. mobx</a><ul><li><a href="#t137.1 observable">7.1 observable</a><ul><li><a href="#t147.1.1 引用类型 (observable)">7.1.1 引用类型 (observable)</a></li><li><a href="#t157.1.2 基本类型(observable.box)">7.1.2 基本类型(observable.box)</a></li><li><a href="#t167.1.3 decorator">7.1.3 decorator</a></li></ul></li></ul></li><li><a href="#t178. 使用对可观察对象做出响应">8. 使用对可观察对象做出响应</a><ul><li><a href="#t188.1 computed">8.1 computed</a></li><li><a href="#t198.2 autorun">8.2 autorun</a></li><li><a href="#t208.3 when">8.3 when</a></li><li><a href="#t218.4 reaction">8.4 reaction</a></li></ul></li><li><a href="#t229. action">9. action</a><ul><li><a href="#t239.1 action">9.1 action</a></li><li><a href="#t249.2 action.bound">9.2 action.bound</a></li><li><a href="#t259.3 runInAction">9.3 runInAction</a></li></ul></li><li><a href="#t2610. mobx应用">10. mobx应用</a><ul><li><a href="#t2710.1 计数器">10.1 计数器</a></li><li><a href="#t2810.2 TODO">10.2 TODO</a></li></ul></li><li><a href="#t2911.优化">11.优化</a><ul><li><a href="#t3011.1 observe">11.1 observe</a></li><li><a href="#t3111.2 spy">11.2 spy</a></li><li><a href="#t3211.3 toJS">11.3 toJS</a></li><li><a href="#t3311.4 trace">11.4 trace</a></li><li><a href="#t3412. 优化">12. 优化</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01. mobx">1. mobx <a href="#t01. mobx"> # </a></h2>
+<p>mobx是一个简单可扩展的状态管理库</p>
+<h2 id="t12. mobx vs redux">2. mobx vs redux <a href="#t12. mobx vs redux"> # </a></h2>
+<p>mobx学习成本更低，性能更好的的状态解决方案</p>
+<ul>
+<li>开发难度低</li>
+<li>开发代码量少</li>
+<li>渲染性能好</li>
+</ul>
+<h2 id="t23. 核心思想">3. 核心思想 <a href="#t23. 核心思想"> # </a></h2>
+<p>状态变化引起的副作用应该被自动触发</p>
+<ul>
+<li>应用逻辑只需要修改状态数据即可,mobx回自动渲染UI，无需人工干预</li>
+<li>数据变化只会渲染对应的组件</li>
+<li>MobX提供机制来存储和更新应用状态供 React 使用</li>
+<li>eact 通过提供机制把应用状态转换为可渲染组件树并对其进行渲染</li>
+</ul>
+<p><img src="https://cn.mobx.js.org/flow.png" alt="flow"></p>
+<h2 id="t34. 环境准备">4. 环境准备 <a href="#t34. 环境准备"> # </a></h2>
+<h3 id="t44.1 安装依赖模块">4.1 安装依赖模块 <a href="#t44.1 安装依赖模块"> # </a></h3>
+<pre><code class="lang-js">pm i webpack webpack-cli babel-core babel-loader babel-preset-env babel-preset-react babel-preset-stage<span class="hljs-number">-0</span> babel-plugin-transform-decorators-legacy mobx mobx-react -D
+</code></pre>
+<h3 id="t54.2 webpack.config.js">4.2 webpack.config.js <a href="#t54.2 webpack.config.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path=<span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">'development'</span>,
+    <span class="hljs-attr">entry</span>: path.resolve(__dirname,<span class="hljs-string">'src/index.js'</span>),
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">path</span>: path.resolve(__dirname,<span class="hljs-string">'dist'</span>),
+        <span class="hljs-attr">filename</span>:<span class="hljs-string">'main.js'</span>
+    },
+    <span class="hljs-attr">module</span>: {
+        <span class="hljs-attr">rules</span>: [
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.jsx?$/</span>,
+                <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+                <span class="hljs-attr">use</span>: {
+                    <span class="hljs-attr">loader</span>: <span class="hljs-string">'babel-loader'</span>,
+                    <span class="hljs-attr">options</span>: {
+                        <span class="hljs-attr">presets</span>: [<span class="hljs-string">'env'</span>,<span class="hljs-string">'react'</span>,<span class="hljs-string">'stage-0'</span>],
+                        <span class="hljs-attr">plugins</span>:[<span class="hljs-string">'transform-decorators-legacy'</span>]
+                    }
+                }
+            }
+        ]
+    },
+    <span class="hljs-attr">devtool</span>:<span class="hljs-string">'inline-source-map'</span>
+}
+</code></pre>
+<h3 id="t64.3 package.json">4.3 package.json <a href="#t64.3 package.json"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-string">"scripts"</span>: {
+    <span class="hljs-string">"start"</span>: <span class="hljs-string">"webpack -w"</span>
+},
+</code></pre>
+<h2 id="t75. Decorator">5. Decorator <a href="#t75. Decorator"> # </a></h2>
+<h3 id="t85.1 类的修饰">5.1 类的修饰 <a href="#t85.1 类的修饰"> # </a></h3>
+<ul>
+<li>修饰器（Decorator）函数，用来修改类的行为</li>
+<li>修饰器是一个对类进行处理的函数。修饰器函数的第一个参数，就是所要修饰的目标类</li>
+<li>修饰器本质就是编译时执行的函数</li>
+<li>如果想添加实例属性，可以通过目标类的prototype对象操作</li>
+</ul>
+<pre><code class="lang-js">@testable
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+
+}
+<span class="hljs-comment">//修改了Person的类的行为，增加了静态属性isTestable</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testable</span>(<span class="hljs-params">target</span>) </span>{
+    target.isTestable=<span class="hljs-literal">true</span>;
+}
+<span class="hljs-built_in">console</span>.log(Person.isTestable)
+
+@decorator
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span></span>{}
+---------------
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span></span>{}
+A = decorator(A);
+</code></pre>
+<h3 id="t95.2 修饰属性">5.2 修饰属性 <a href="#t95.2 修饰属性"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span></span>{
+    @readonly PI=<span class="hljs-number">3.14</span>;
+}
+
+<span class="hljs-comment">//descriptor {value:func,enumerable:false,configurable:true,writable:true}</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">readonly</span>(<span class="hljs-params">target,name,descriptor</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(descriptor);
+    descriptor.writable=<span class="hljs-literal">false</span>;
+}
+<span class="hljs-keyword">let</span> c1=<span class="hljs-keyword">new</span> Circle();
+c1.PI=<span class="hljs-number">3.15</span>;
+<span class="hljs-built_in">console</span>.log(c1.PI);
+</code></pre>
+<h3 id="t105.3 修饰方法">5.3 修饰方法 <a href="#t105.3 修饰方法"> # </a></h3>
+<ul>
+<li>修饰器不仅可以修饰类，还可以修饰类的属性。</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Calculator</span></span>{
+    <span class="hljs-comment">//@logger</span>
+    add(a,b) {
+        <span class="hljs-keyword">return</span> a+b; 
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logger</span>(<span class="hljs-params">target,name,descriptor</span>) </span>{
+    <span class="hljs-keyword">let</span> oldValue=descriptor.value;
+    descriptor.value=<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${name}</span>(<span class="hljs-subst">${<span class="hljs-built_in">Array</span>.prototype.join.call(<span class="hljs-built_in">arguments</span>,<span class="hljs-string">','</span>)}</span>)`</span>);
+        <span class="hljs-keyword">return</span> oldValue.apply(<span class="hljs-keyword">this</span>,<span class="hljs-built_in">arguments</span>);
+    }
+}
+<span class="hljs-keyword">let</span> oldDescriptor=<span class="hljs-built_in">Object</span>.getOwnPropertyDescriptor(Calculator.prototype,<span class="hljs-string">'add'</span>);
+logger(Calculator.prototype,<span class="hljs-string">'add'</span>,oldDescriptor);
+<span class="hljs-built_in">Object</span>.defineProperty(Calculator.prototype,<span class="hljs-string">'add'</span>,oldDescriptor);
+
+<span class="hljs-keyword">let</span> calculator=<span class="hljs-keyword">new</span> Calculator();
+<span class="hljs-keyword">let</span> ret = calculator.add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+<span class="hljs-built_in">console</span>.log(ret);
+</code></pre>
+<h2 id="t116. Proxy">6. Proxy <a href="#t116. Proxy"> # </a></h2>
+<ul>
+<li>Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写</li>
+<li>get方法用于拦截某个属性的读取操作，可以接受三个参数，依次为目标对象、属性名和 proxy 实例本身</li>
+<li>set方法用来拦截某个属性的赋值操作，可以接受四个参数，依次为目标对象、属性名、属性值和 Proxy 实例本身</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> proxy = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>(target, handler);
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> p1=<span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>({<span class="hljs-attr">name</span>:<span class="hljs-string">'zfpx'</span>},{
+    <span class="hljs-attr">get</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target,key,receiver</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`getting <span class="hljs-subst">${key}</span>`</span>);
+        <span class="hljs-built_in">console</span>.log(receiver);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Reflect</span>.get(target,key,receiver);
+    },
+    <span class="hljs-attr">set</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target,key,value,receiver</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`setting <span class="hljs-subst">${key}</span>`</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Reflect</span>.set(target,key,value,receiver);
+    }
+});
+<span class="hljs-built_in">console</span>.log(p1.name);
+</code></pre>
+<h2 id="t127. mobx">7. mobx <a href="#t127. mobx"> # </a></h2>
+<h3 id="t137.1 observable">7.1 observable <a href="#t137.1 observable"> # </a></h3>
+<ul>
+<li>MobX为现有的数据结构(如对象，数组和类实例)添加了可观察的功能。</li>
+<li><code>observable</code>就是一种让数据的变化可以被观察的方法</li>
+<li>先把数据转化成可以被观察的对象，那么对这些数据的修改就可以备监视</li>
+</ul>
+<h4 id="t147.1.1 引用类型 (observable)">7.1.1 引用类型 (observable) <a href="#t147.1.1 引用类型 (observable)"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">对象</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">数组</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> {observable,isArrayLike}=<span class="hljs-built_in">require</span>(<span class="hljs-string">'mobx'</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">observable2</span>(<span class="hljs-params">target</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>(target,{});
+}
+<span class="hljs-keyword">const</span> p1=observable2({<span class="hljs-attr">name</span>:<span class="hljs-string">'zfpx'</span>});
+<span class="hljs-built_in">console</span>.log(p1.name);
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> {observable}=<span class="hljs-built_in">require</span>(<span class="hljs-string">'mobx'</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">observable2</span>(<span class="hljs-params">target</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Proxy</span>(target,{
+
+    });
+}
+<span class="hljs-keyword">const</span> p1=observable([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]);
+p1.push(<span class="hljs-number">4</span>);
+p1.pop();
+<span class="hljs-built_in">console</span>.log(p1);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.isArray(p1));
+</code></pre>
+<h4 id="t157.1.2 基本类型(observable.box)">7.1.2 基本类型(observable.box) <a href="#t157.1.2 基本类型(observable.box)"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">String</td>
+<td style="text-align:left">字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">布尔值</td>
+</tr>
+<tr>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">数字</td>
+</tr>
+<tr>
+<td style="text-align:left">Symbol</td>
+<td style="text-align:left">独一无二的值</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> {observable}=<span class="hljs-built_in">require</span>(<span class="hljs-string">'mobx'</span>);
+<span class="hljs-keyword">let</span> num=observable.box(<span class="hljs-number">10</span>);
+<span class="hljs-keyword">let</span> str=observable.box(<span class="hljs-string">'hello'</span>);
+<span class="hljs-keyword">let</span> bool=observable.box(<span class="hljs-literal">true</span>);
+<span class="hljs-built_in">console</span>.log(num.get(),str.get(),bool.get());
+num.set(<span class="hljs-number">100</span>);
+str.set(<span class="hljs-string">'world'</span>);
+bool.set(<span class="hljs-literal">false</span>);
+<span class="hljs-built_in">console</span>.log(num.get(),str.get(),bool.get());
+</code></pre>
+<h4 id="t167.1.3 decorator">7.1.3 decorator <a href="#t167.1.3 decorator"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> {observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+    @observable name=<span class="hljs-string">'zfpx'</span>;
+    @observable age=<span class="hljs-number">9</span>;
+    @observable isMarried=<span class="hljs-literal">false</span>;
+
+    @observable hobbies=[];
+    @observable home={<span class="hljs-attr">name</span>:<span class="hljs-string">'北京'</span>};
+    @observable skills=<span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+}
+</code></pre>
+<h2 id="t178. 使用对可观察对象做出响应">8. 使用对可观察对象做出响应 <a href="#t178. 使用对可观察对象做出响应"> # </a></h2>
+<h3 id="t188.1 computed">8.1 computed <a href="#t188.1 computed"> # </a></h3>
+<ul>
+<li>计算值(computed values)是可以根据现有的状态或其它计算值衍生出的值</li>
+<li>组合已有的可观察数据，成为新的可观察数据</li>
+<li>既是反应又是可观察数据</li>
+<li>可以作为函数使用也可以作为decorator使用</li>
+<li>使用 .get() 来获取计算的当前值</li>
+<li>使用 .observe(callback) 来观察值的改变。</li>
+<li>computed值可以引用其它computed的值，但是不能循环引用</li>
+</ul>
+<pre><code class="lang-js">
+<span class="hljs-keyword">let</span> {observable,computed} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'mobx'</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+    @observable name=<span class="hljs-string">'zfpx'</span>;
+    @observable age=<span class="hljs-number">9</span>;
+    @observable area=<span class="hljs-string">'010'</span>;
+    @observable number=<span class="hljs-string">"18910092296"</span>
+
+    @observable province=<span class="hljs-string">"广东"</span>;
+    @observable city=<span class="hljs-string">"东莞"</span>;
+    @computed get home() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.province+<span class="hljs-keyword">this</span>.city;
+    }
+}
+
+<span class="hljs-keyword">let</span> store=<span class="hljs-keyword">new</span> Store();
+<span class="hljs-keyword">let</span> cell = computed(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> store.area+<span class="hljs-string">'-'</span>+store.number;
+});
+cell.observe(<span class="hljs-function"><span class="hljs-params">change</span>=&gt;</span><span class="hljs-built_in">console</span>.log(change));
+<span class="hljs-built_in">console</span>.log(cell.get());
+store.area=<span class="hljs-string">'020'</span>;
+store.number=<span class="hljs-string">'15718856132'</span>;
+<span class="hljs-built_in">console</span>.log(cell.get());
+<span class="hljs-built_in">console</span>.log(store.home);
+store.province=<span class="hljs-string">'山东'</span>;
+store.city=<span class="hljs-string">'济南'</span>;
+<span class="hljs-built_in">console</span>.log(store.home);
+</code></pre>
+<h3 id="t198.2 autorun">8.2 autorun <a href="#t198.2 autorun"> # </a></h3>
+<ul>
+<li>如果使用修饰器模式，则不能再用observe方法了</li>
+<li>当你想创建一个响应式函数，而该函数本身永远不会有观察者时,可以使用 mobx.autorun</li>
+<li>当使用 autorun 时，所提供的函数总是立即被触发一次，然后每次它的依赖关系改变时会再次被触发</li>
+<li>数据渲染后自动渲染</li>
+</ul>
+<pre><code class="lang-js">autorun(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-comment">//console.log(store.province,store.city);</span>
+    <span class="hljs-built_in">console</span>.log(store.home);
+});
+
+store.province=<span class="hljs-string">'山东'</span>;
+store.city=<span class="hljs-string">'济南'</span>;
+</code></pre>
+<h3 id="t208.3 when">8.3 when <a href="#t208.3 when"> # </a></h3>
+<ul>
+<li>when 观察并运行给定的 <code>predicate</code>，直到返回true。 </li>
+<li>一旦返回 true，给定的 effect 就会被执行，然后 autorunner(自动运行程序) 会被清理。 </li>
+<li>该函数返回一个清理器以提前取消自动运行程序。</li>
+</ul>
+<pre><code class="lang-js">when(predicate: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> boolean, effect?: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">void</span>, options?)
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> dispose = when(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> store.age&gt;=<span class="hljs-number">18</span>,()=&gt;{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'你已经成年了!'</span>)
+});
+dispose();
+store.age=<span class="hljs-number">10</span>;
+store.age=<span class="hljs-number">20</span>;
+store.age=<span class="hljs-number">30</span>;
+</code></pre>
+<h3 id="t218.4 reaction">8.4 reaction <a href="#t218.4 reaction"> # </a></h3>
+<ul>
+<li><code>autorun</code>的变种，<code>autorun</code>会自动触发，<code>reaction</code>对于如何追踪<code>observable</code>赋予了更细粒度的控制</li>
+<li>它接收两个函数参数，第一个(数据 函数)是用来追踪并返回数据作为第二个函数(效果 函数)的输入</li>
+<li>不同于<code>autorun</code>的是当创建时效果 函数不会直接运行，只有在数据表达式首次返回一个新值后才会运行</li>
+<li>可以用在登录信息存储和写缓存逻辑</li>
+</ul>
+<pre><code class="lang-js">reaction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> [store.province,store.city],arr =&gt; <span class="hljs-built_in">console</span>.log(arr.join(<span class="hljs-string">','</span>)));
+store.province=<span class="hljs-string">'山东'</span>;
+store.city=<span class="hljs-string">'济南'</span>;
+</code></pre>
+<h2 id="t229. action">9. action <a href="#t229. action"> # </a></h2>
+<ul>
+<li>前面的方式每次修改都会触发<code>autorun</code>和<code>reaction</code>执行</li>
+<li>用户一次操作需要修改多个变量，但是视图更新只需要一次</li>
+<li>任何应用都有动作,动作是任何用来修改状态的东西</li>
+<li>动作会分批处理变化并只在(最外层的)动作完成后通知计算值和反应</li>
+<li>这将确保在动作完成之前，在动作期间生成的中间值或未完成的值对应用的其余部分是不可见的<h3 id="t239.1 action">9.1 action <a href="#t239.1 action"> # </a></h3>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> {observable,computed,autorun,when,reaction,action} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'mobx'</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+    @observable province=<span class="hljs-string">"广东"</span>;
+    @observable city=<span class="hljs-string">"东莞"</span>;
+    @action moveHome(province,city) {
+         <span class="hljs-keyword">this</span>.province=province;
+         <span class="hljs-keyword">this</span>.city=city;
+    }
+}
+<span class="hljs-keyword">let</span> store=<span class="hljs-keyword">new</span> Store();
+reaction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> [store.province,store.city],arr =&gt; <span class="hljs-built_in">console</span>.log(arr.join(<span class="hljs-string">','</span>)));
+store.moveHome(<span class="hljs-string">'山东'</span>,<span class="hljs-string">'济南'</span>);
+</code></pre>
+<h3 id="t249.2 action.bound">9.2 action.bound <a href="#t249.2 action.bound"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> {observable,computed,autorun,when,reaction,action} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'mobx'</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+    @observable province=<span class="hljs-string">"广东"</span>;
+    @observable city=<span class="hljs-string">"东莞"</span>;
+    @action.bound moveHome(province,city) {
+         <span class="hljs-keyword">this</span>.province=province;
+         <span class="hljs-keyword">this</span>.city=city;
+    }
+}
+<span class="hljs-keyword">let</span> store=<span class="hljs-keyword">new</span> Store();
+reaction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> [store.province,store.city],arr =&gt; <span class="hljs-built_in">console</span>.log(arr.join(<span class="hljs-string">','</span>)));
+<span class="hljs-keyword">let</span> moveHome=store.moveHome;
+moveHome(<span class="hljs-string">'山东'</span>,<span class="hljs-string">'济南'</span>);
+</code></pre>
+<h3 id="t259.3 runInAction">9.3 runInAction <a href="#t259.3 runInAction"> # </a></h3>
+<pre><code class="lang-js">runInAction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    store.province=<span class="hljs-string">'山东'</span>;
+    store.city=<span class="hljs-string">'济南'</span>;
+});
+</code></pre>
+<h2 id="t2610. mobx应用">10. mobx应用 <a href="#t2610. mobx应用"> # </a></h2>
+<ul>
+<li>mobx-react 核心是将render方法包装为autorun</li>
+<li>谁用到了可观察属性，就需要被observer修饰，按需渲染<pre><code class="lang-js">cnpm i react react-dom mobx-react -S
+</code></pre>
+</li>
+</ul>
+<h3 id="t2710.1 计数器">10.1 计数器 <a href="#t2710.1 计数器"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
+<span class="hljs-keyword">import</span> {observable,action} <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>;
+<span class="hljs-keyword">import</span> {observer} <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx-react'</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+    @observable number=<span class="hljs-number">0</span>;
+    @action.bound add() {
+        <span class="hljs-keyword">this</span>.number++;
+    }
+}
+<span class="hljs-keyword">let</span> store=<span class="hljs-keyword">new</span> Store();
+
+@observer
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{store.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{store.add}</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Counter</span>/&gt;</span></span>,<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#root'</span>));
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
+<span class="hljs-keyword">import</span> {observable,action} <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>;
+<span class="hljs-keyword">import</span> {observer} <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx-react'</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span> </span>{
+    @observable counter={<span class="hljs-attr">number</span>:<span class="hljs-number">0</span>};
+    @action.bound add() {
+        <span class="hljs-keyword">this</span>.counter.number++;
+    }
+}
+<span class="hljs-keyword">let</span> store=<span class="hljs-keyword">new</span> Store();
+@observer
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{this.props.counter.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.props.add}</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Counter</span>
+    <span class="hljs-attr">counter</span>=<span class="hljs-string">{store.counter}</span>
+    <span class="hljs-attr">add</span>=<span class="hljs-string">{store.add}</span>
+/&gt;</span>,document.querySelector('#root'));
+</span></code></pre>
+<h3 id="t2810.2 TODO">10.2 TODO <a href="#t2810.2 TODO"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component,Fragment} <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
+<span class="hljs-keyword">import</span> {observable,action, computed} <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>;
+<span class="hljs-keyword">import</span> {observer,PropTypes <span class="hljs-keyword">as</span> ObservablePropTypes} <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx-react'</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span></span>{
+    id=<span class="hljs-built_in">Math</span>.random();
+    @observable text=<span class="hljs-string">''</span>;
+    @observable completed=<span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">constructor</span>(text) {
+        <span class="hljs-keyword">this</span>.text=text;
+    }
+    @action.bound toggle() {
+        <span class="hljs-keyword">this</span>.completed=!<span class="hljs-keyword">this</span>.completed;
+    }
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span></span>{
+    @observable todos=[];
+    @computed get left() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.todos.filter(<span class="hljs-function"><span class="hljs-params">todo</span>=&gt;</span>!todo.completed).length;
+    }
+    @computed get filterTodos() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.todos.filter(<span class="hljs-function"><span class="hljs-params">todo</span> =&gt;</span> {
+            <span class="hljs-keyword">switch</span> (<span class="hljs-keyword">this</span>.filter) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'completed'</span>:
+                    <span class="hljs-keyword">return</span> todo.completed;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">'uncompleted'</span>:
+                    <span class="hljs-keyword">return</span> !todo.completed;
+                <span class="hljs-keyword">default</span>:
+                    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+            }
+        });
+    }
+    @observable filter=<span class="hljs-string">'all'</span>;
+    @action.bound changeFilter(filter) {
+
+        <span class="hljs-keyword">this</span>.filter=filter;
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.filter);
+    }
+    @action.bound addTodo(text) {
+        <span class="hljs-keyword">this</span>.todos.push(<span class="hljs-keyword">new</span> Todo(text));
+    }
+    @action.bound removeTodo(todo) {
+        <span class="hljs-keyword">this</span>.todos.remove(todo);
+    }
+}
+@observer
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+    <span class="hljs-keyword">static</span> porpTypes={
+        <span class="hljs-attr">todo</span>: PropTypes.shape({
+            <span class="hljs-attr">id</span>: PropTypes.number.isRequired,
+            <span class="hljs-attr">text</span>: PropTypes.string.isRequired,
+            <span class="hljs-attr">completed</span>:PropTypes.bool.isRequired
+        }).isRequired
+    }
+    render() {
+        <span class="hljs-keyword">let</span> {todo}=<span class="hljs-keyword">this</span>.props;
+        <span class="hljs-keyword">return</span> (
+            &lt;Fragment&gt;
+                &lt;input
+                    type="checkbox"
+                    onChange={todo.toggle}
+                    checked={todo.completed} /&gt;
+                &lt;span className={todo.completed? 'completed':''}&gt;{todo.text}&lt;/span&gt;
+
+            &lt;/Fragment&gt;
+        )
+    }
+}
+@observer
+class TodoList extends Component{
+    static propsTypes={
+        store: PropTypes.shape({
+            addTodo:PropTypes.func,
+            todos:ObservablePropTypes.observableArrayOf(ObservablePropTypes.observableObject)
+        }).isRequired
+    };
+    state={text:''}
+    handleSubmit=(event) =&gt; {
+        event.preventDefault();
+        this.props.store.addTodo(this.state.text);
+        this.setState({text:''});
+    }
+    handleChange=(event) =&gt; {
+        this.setState({text:event.target.value});
+    }
+    render() {
+        let {filterTodos,left,removeTodo,filter,changeFilter}=this.props.store;
+        return (
+            &lt;div className="todo-list"&gt;
+                &lt;form onSubmit={this.handleSubmit}&gt;
+                    &lt;input placeholder="请输入待办事项" type="text" value={this.state.text} onChange={this.handleChange}/&gt;
+                &lt;/form&gt;
+                &lt;ul&gt;
+                    {
+                        filterTodos.map(todo =&gt; (
+                            &lt;li key={todo.id}&gt;
+                                &lt;TodoItem todo={todo} /&gt;
+                                &lt;button onClick={()=&gt;removeTodo(todo)}&gt;X&lt;/button&gt;
+                            &lt;/li&gt;
+                        ))
+                    }
+                &lt;/ul&gt;
+                &lt;p&gt;
+                    &lt;span&gt;你还有{left}件待办事项!&lt;/span&gt;
+                    &lt;button
+                        onClick={()=&gt;changeFilter('all')}
+                        className={filter==='all'?'active':''}&gt;全部&lt;/button&gt;
+                    &lt;button onClick={() =&gt; changeFilter('uncompleted')}
+                        className={filter==='uncompleted'?'active':''}&gt;未完成&lt;/button&gt;
+                    &lt;button
+                        onClick={()=&gt;changeFilter('completed')}
+                        className={filter==='completed'?'active':''}&gt;已完成&lt;/button&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+let store=new Store();
+ReactDOM.render(&lt;TodoList store={store}/&gt;,document.querySelector('#root'));
+</code></pre>
+<h2 id="t2911.优化">11.优化 <a href="#t2911.优化"> # </a></h2>
+<h3 id="t3011.1 observe">11.1 observe <a href="#t3011.1 observe"> # </a></h3>
+<pre><code class="lang-js">    <span class="hljs-keyword">constructor</span>() {
+        observe(<span class="hljs-keyword">this</span>.todos,change =&gt; {
+            <span class="hljs-built_in">console</span>.log(change);
+            <span class="hljs-keyword">this</span>.disposers.forEach(<span class="hljs-function"><span class="hljs-params">disposer</span> =&gt;</span> disposer());
+            <span class="hljs-keyword">this</span>.disposers=[];
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> todo <span class="hljs-keyword">of</span> change.object) {
+                <span class="hljs-keyword">this</span>.disposers.push(observe(todo,change =&gt; {
+                    <span class="hljs-keyword">this</span>.save();
+                    <span class="hljs-comment">//console.log(change)</span>
+                }));
+            }
+            <span class="hljs-keyword">this</span>.save();
+        });
+    }
+</code></pre>
+<h3 id="t3111.2 spy">11.2 spy <a href="#t3111.2 spy"> # </a></h3>
+<pre><code class="lang-js">spy(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
+    <span class="hljs-comment">//console.log(event);</span>
+})
+</code></pre>
+<h3 id="t3211.3 toJS">11.3 toJS <a href="#t3211.3 toJS"> # </a></h3>
+<pre><code class="lang-js">    <span class="hljs-keyword">constructor</span>() {
+        observe(<span class="hljs-keyword">this</span>.todos,change =&gt; {
+            <span class="hljs-built_in">console</span>.log(change);
+            <span class="hljs-keyword">this</span>.disposers.forEach(<span class="hljs-function"><span class="hljs-params">disposer</span> =&gt;</span> disposer());
+            <span class="hljs-keyword">this</span>.disposers=[];
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> todo <span class="hljs-keyword">of</span> change.object) {
+                <span class="hljs-keyword">this</span>.disposers.push(observe(todo,change =&gt; {
+                    <span class="hljs-keyword">this</span>.save();
+                    <span class="hljs-comment">//console.log(change)</span>
+                }));
+            }
+            <span class="hljs-keyword">this</span>.save();
+        });
+    }
+    save() {
+        localStorage.setItem(<span class="hljs-string">'todos'</span>,<span class="hljs-built_in">JSON</span>.stringify(toJS(<span class="hljs-keyword">this</span>.todos)));
+    }
+</code></pre>
+<h3 id="t3311.4 trace">11.4 trace <a href="#t3311.4 trace"> # </a></h3>
+<pre><code class="lang-js">trace
+</code></pre>
+<h3 id="t3412. 优化">12. 优化 <a href="#t3412. 优化"> # </a></h3>
+<ul>
+<li>把视图拆解的更细致</li>
+<li>使用专门的视图渲染列表数据</li>
+<li><p>尽可能晚的解构使用数据</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component,Fragment} <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
+<span class="hljs-keyword">import</span> {trace,observable,action, computed, observe, spy,toJS} <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>;
+<span class="hljs-keyword">import</span> {observer,PropTypes <span class="hljs-keyword">as</span> ObservablePropTypes} <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx-react'</span>;
+spy(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
+  <span class="hljs-comment">//console.log(event);</span>
+})
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span></span>{
+  id=<span class="hljs-built_in">Math</span>.random();
+  @observable text=<span class="hljs-string">''</span>;
+  @observable completed=<span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">constructor</span>(text) {
+      <span class="hljs-keyword">this</span>.text=text;
+
+  }
+  @action.bound toggle() {
+      <span class="hljs-keyword">this</span>.completed=!<span class="hljs-keyword">this</span>.completed;
+  }
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Store</span></span>{
+  disposers=[];
+  <span class="hljs-keyword">constructor</span>() {
+      observe(<span class="hljs-keyword">this</span>.todos,change =&gt; {
+          <span class="hljs-built_in">console</span>.log(change);
+
+          <span class="hljs-keyword">this</span>.disposers.forEach(<span class="hljs-function"><span class="hljs-params">disposer</span> =&gt;</span> disposer());
+          <span class="hljs-keyword">this</span>.disposers=[];
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> todo <span class="hljs-keyword">of</span> change.object) {
+              <span class="hljs-keyword">this</span>.disposers.push(observe(todo,change =&gt; {
+                  <span class="hljs-keyword">this</span>.save();
+                  <span class="hljs-comment">//console.log(change)</span>
+              }));
+          }
+          <span class="hljs-keyword">this</span>.save();
+      });
+  }
+  save() {
+      localStorage.setItem(<span class="hljs-string">'todos'</span>,<span class="hljs-built_in">JSON</span>.stringify(toJS(<span class="hljs-keyword">this</span>.todos)));
+  }
+  @observable todos=[];
+  @computed get left() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.todos.filter(<span class="hljs-function"><span class="hljs-params">todo</span>=&gt;</span>!todo.completed).length;
+  }
+  @computed get filterTodos() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.todos.filter(<span class="hljs-function"><span class="hljs-params">todo</span> =&gt;</span> {
+          <span class="hljs-keyword">switch</span> (<span class="hljs-keyword">this</span>.filter) {
+              <span class="hljs-keyword">case</span> <span class="hljs-string">'completed'</span>:
+                  <span class="hljs-keyword">return</span> todo.completed;
+              <span class="hljs-keyword">case</span> <span class="hljs-string">'uncompleted'</span>:
+                  <span class="hljs-keyword">return</span> !todo.completed;
+              <span class="hljs-keyword">default</span>:
+                  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+          }
+      });
+  }
+  @observable filter=<span class="hljs-string">'all'</span>;
+  @action.bound changeFilter(filter) {
+
+      <span class="hljs-keyword">this</span>.filter=filter;
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.filter);
+  }
+  @action.bound addTodo(text) {
+      <span class="hljs-keyword">this</span>.todos.push(<span class="hljs-keyword">new</span> Todo(text));
+  }
+  @action.bound removeTodo(todo) {
+      <span class="hljs-keyword">this</span>.todos.remove(todo);
+  }
+}
+@observer
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+  <span class="hljs-keyword">static</span> porpTypes={
+      <span class="hljs-attr">todo</span>: PropTypes.shape({
+          <span class="hljs-attr">id</span>: PropTypes.number.isRequired,
+          <span class="hljs-attr">text</span>: PropTypes.string.isRequired,
+          <span class="hljs-attr">completed</span>:PropTypes.bool.isRequired
+      }).isRequired
+  }
+  render() {
+      trace();
+      <span class="hljs-keyword">let</span> {todo}=<span class="hljs-keyword">this</span>.props;
+      <span class="hljs-keyword">return</span> (
+          &lt;Fragment&gt;
+              &lt;input
+                  type="checkbox"
+                  onChange={todo.toggle}
+                  checked={todo.completed} /&gt;
+              &lt;span className={todo.completed? 'completed':''}&gt;{todo.text}&lt;/span&gt;
+
+          &lt;/Fragment&gt;
+      )
+  }
+}
+@observer
+class TodoFooter extends Component{
+  static propTypes={
+
+  };
+  render() {
+      trace();
+      let {left,filter} = this.props.store;
+      return (
+          &lt;div&gt;
+                  &lt;span&gt;你还有{left}件待办事项!&lt;/span&gt;
+                  &lt;button
+                      onClick={()=&gt;changeFilter('all')}
+                      className={filter==='all'?'active':''}&gt;全部&lt;/button&gt;
+                  &lt;button onClick={() =&gt; changeFilter('uncompleted')}
+                      className={filter==='uncompleted'?'active':''}&gt;未完成&lt;/button&gt;
+                  &lt;button
+                      onClick={()=&gt;changeFilter('completed')}
+                      className={filter==='completed'?'active':''}&gt;已完成&lt;/button&gt;
+              &lt;/div&gt;
+      )
+  }
+}    
+@observer
+class TodoViews extends Component{
+  render() {
+      return (
+              &lt;ul&gt;
+                  {
+                      this.props.store.filterTodos.map(todo =&gt; (
+                          &lt;li key={todo.id}&gt;
+                              &lt;TodoItem todo={todo} /&gt;
+                              &lt;button onClick={()=&gt;removeTodo(todo)}&gt;X&lt;/button&gt;
+                          &lt;/li&gt;
+                      ))
+                  }
+              &lt;/ul&gt;
+      )
+  }
+}    
+@observer
+class TodoHeader extends Component{
+  state={text:''}
+  handleSubmit=(event) =&gt; {
+      event.preventDefault();
+      this.props.store.addTodo(this.state.text);
+      this.setState({text:''});
+  }
+  handleChange=(event) =&gt; {
+      this.setState({text:event.target.value});
+  }
+  render() {
+      return (
+          &lt;form onSubmit={this.handleSubmit}&gt;
+                  &lt;input placeholder="请输入待办事项" type="text" value={this.state.text} onChange={this.handleChange}/&gt;
+              &lt;/form&gt;
+      )
+  }
+}
+@observer
+class TodoList extends Component{
+  static propsTypes={
+      store: PropTypes.shape({
+          addTodo:PropTypes.func,
+          todos:ObservablePropTypes.observableArrayOf(ObservablePropTypes.observableObject)
+      }).isRequired
+  };
+
+  render() {
+      trace();
+      return (
+          &lt;div className="todo-list"&gt;
+              &lt;TodoHeader store={this.props.store}/&gt;
+              &lt;TodoViews store={this.props.store}/&gt;
+              &lt;TodoFooter store={this.props.store}/&gt;
+          &lt;/div&gt;
+      )
+  }
+}
+let store=new Store();
+ReactDOM.render(&lt;TodoList store={store}/&gt;,document.querySelector('#root'));
+</code></pre>
+</li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+  // if (!$('.understand-me').length) {
+  //   var bar = $(window).height() - $('.navbar ').height() - $('.page-toc').position().top;
+  //   var count = bar / 26 / 2;
+  //   var barHeight = $('.page-toc').outerHeight();
+  //   $('.page-toc li').eq(0).children('a').addClass('red');
+  //   var arr = [];
+  //   $("h1,h2,h3,h4,h5,h6").each(function () {
+  //     arr.push($(this).position().top);
+  //   });
+  //   var timer
+  //   function dark() {
+  //     clearTimeout(timer)
+  //      timer = setTimeout(function () {
+  //      var top = Math.abs($('.page-toc > ul').position().top);
+  //      var cur = $('.content').scrollTop();
+  //      for (var i = arr.length; i >= 0; i--) {
+  //        if (arr[i] <= cur) {
+  //          break;
+  //        }
+  //      }
+  //      if (i === -1) {
+  //        i = 0;
+  //      }
+  //      $('.page-toc li a').removeClass('red');
+  //      $('.page-toc li').eq(i).children('a').addClass('red');
+  //      let height = $('.page-toc li').eq(i).position().top-$('.page-toc').height(); // 如果当前的offset出去了 回到中间可好？
+  //      $('.page-toc').scrollTop(height+$('.page-toc').height()/2);
+  //    },200)
+  //   }
+
+  //   $('.content').on('scroll', dark);
+  // }
+</script>
+<style>
+
+    /* ::-webkit-scrollbar{width:14px;}
+    ::-webkit-scrollbar-track{background-color:transparent;}
+    ::-webkit-scrollbar-thumb{background-color:transparent;}
+    ::-webkit-scrollbar-thumb:hover {background-color:transparent}
+    ::-webkit-scrollbar-thumb:active {background-color:transparent} */
+
+    .page-toc > ul .red {
+        background: #f3f3f3;
+        z-index: 1;
+        border-left: 3px solid #009a61;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        color: #000
+    }
+
+
+
+
+
+</style>
+
+
+</body></html>

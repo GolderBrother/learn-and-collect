@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>$set&$delete</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <script>
+    window.onload = function(){
+      //在data的对象或数组对象中添加新的属性的值，不会触发视图更新
+        new Vue({
+            el:'#my',
+            data:{ 
+                obj:{
+                  id:1,
+                  name:'zy'
+                }
+            },
+            methods:{
+              update:function(){
+                this.obj.name = 'XXXX'
+              },
+              add:function(){
+                //this.obj.age = 18;   //不会触发视图渲染
+                //this.$set(target,key,value)
+                this.$set(this.obj,'age',18);  //触发视图渲染
+                console.log(this.obj);
+              },
+              del:function(){
+                //delete this.obj.name;  ////不会触发视图渲染
+                this.$delete(this.obj,'age');
+                console.log(this.obj);
+              }
+            }
+        })
+    }
+    </script>
+    
+</head> 
+<body>
+  <div id="my">
+      <h1>{{obj.name}}</h1>
+      <h1>{{obj.age}}</h1>
+      <button @click="update">update</button>
+      <button @click="add">add</button>
+      <button @click="del">del</button>
+  </div>
+</body>
+</html>

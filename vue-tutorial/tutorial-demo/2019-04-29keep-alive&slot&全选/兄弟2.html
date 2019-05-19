@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兄弟</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <script>
+    window.onload = function(){
+      var vm = new Vue();  //定义一个空的对象    相当于第三方
+        var a = {  //组件的名称
+                template:'#my-a',
+                data(){
+                  return {
+                    name:'A组件'
+                  }
+                },
+                methods:{
+                  send:function(){
+                    vm.$emit('data-a',this.name);//发射
+                  }
+                }
+              };
+        var b = {  //组件的名称
+          template:'#my-b',
+          data(){
+            return {
+              nameA:''
+            }
+          },
+          mounted:function(){   //生命周期
+            vm.$on('data-a',item =>{   //接收   data-a接收名称    item参数
+              this.nameA = item;
+            })
+          }
+        };
+        new Vue({
+            el:'#my',
+            data:{ 
+              obj:{name:'老张',age:50}
+            },
+            components:{  // 局部组件
+              'my-a':a,
+              'my-b':b
+            }
+        })
+    }
+    </script>
+    <template id="my-a">
+        <div>
+          <h1>我是A组件</h1>
+          <button @click="send()">发送到B</button>
+        </div>
+    </template>
+    <template id="my-b">
+      <div>
+        <p>B组件</p>
+        <h1>{{nameA}}</h1>
+      </div>
+  </template>
+</head> 
+<body>
+  <div id="my">
+     <my-a></my-a>
+     <my-b></my-b>
+  </div>
+</body>
+</html>

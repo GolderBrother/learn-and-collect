@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>二级目录</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src='js/vue.js'></script>
+	<script src='js/index.js'></script>
+</head>
+<body>
+	<div class="tree" id='my'>
+		<ul>
+			<li class="p_item" v-for="(list,index) in lists">
+				<a class="p_title" @click="cur(index)">{{list.name}}
+					<b :class="index==n ?'down':'up'">^</b>
+				</a>
+				<ul class="c_item" v-show="index == n">
+					<li v-for="sub in list.subLists">
+						<a>{{sub.name}}</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+   </div>
+	
+</body>
+</html>

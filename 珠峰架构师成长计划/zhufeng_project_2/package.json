@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dva-cli": "^1.0.0-beta.4",
+    "styled-components": "^4.1.3"
+  }
+}

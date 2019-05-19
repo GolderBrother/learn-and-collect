@@ -1,0 +1,556 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            珠峰架构师成长计划
+        
+    </div>
+<ul><li><a href="../index.html">0.Async</a></li><li><a href="../html/0.editor.html">0.editor</a></li><li><a href="../html/0.module.html">0.module</a></li><li><a href="../html/1.ES2015.html">1.ES2015</a></li><li><a href="../html/2.Promise.html">2.Promise</a></li><li><a href="../html/3.Node.html">3.Node</a></li><li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li><li><a href="../html/5.REPL.html">5.REPL</a></li><li><a href="../html/6.NodeCore.html">6.NodeCore</a></li><li><a href="../html/7.module&amp;NPM.html">7.module&amp;NPM</a></li><li><a href="../html/8.Encoding.html">8.Encoding</a></li><li><a href="../html/9.Buffer.html">9.Buffer</a></li><li><a href="../html/10.fs.html">10.fs</a></li><li><a href="../html/11.Stream-1.html">11.Stream-1</a></li><li><a href="../html/11.Stream-2.html">11.Stream-2</a></li><li><a href="../html/11.Stream-3.html">11.Stream-3</a></li><li><a href="../html/11.Stream-4.html">11.Stream-4</a></li><li><a href="../html/12-Network-2.html">12-Network-2</a></li><li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li><li><a href="../html/12.Network-1.html">12.Network-1</a></li><li><a href="../html/13.tcp.html">13.tcp</a></li><li><a href="../html/14.http-1.html">14.http-1</a></li><li><a href="../html/14.http-2.html">14.http-2</a></li><li><a href="../html/15.compress.html">15.compress</a></li><li><a href="../html/16.crypto.html">16.crypto</a></li><li><a href="../html/17.process.html">17.process</a></li><li><a href="../html/18.yargs.html">18.yargs</a></li><li><a href="../html/19.cache.html">19.cache</a></li><li><a href="../html/20.action.html">20.action</a></li><li><a href="../html/21.https.html">21.https</a></li><li><a href="../html/22.cookie.html">22.cookie</a></li><li><a href="../html/23.session.html">23.session</a></li><li><a href="../html/24.express-1.html">24.express-1</a></li><li><a href="../html/24.express-2.html">24.express-2</a></li><li><a href="../html/24.express-3.html">24.express-3</a></li><li><a href="../html/24.express-4.html">24.express-4</a></li><li><a href="../html/25.koa-1.html">25.koa-1</a></li><li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li><li><a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a></li><li><a href="../html/26.webpack-3.tapable.html">26.webpack-3.tapable</a></li><li><a href="../html/26.webpack-4-AST.html">26.webpack-4-AST</a></li><li><a href="../html/26.webpack-5-source.html">26.webpack-5-source</a></li><li><a href="../html/26.webpack-6-loader.html">26.webpack-6-loader</a></li><li class="active"><a href="../html/26.webpack-7-plugin.html">26.webpack-7-plugin</a></li><li><a href="../html/26.webpack-8-hand.html">26.webpack-8-hand</a></li><li><a href="../html/27.react-1.html">27.react-1</a></li><li><a href="../html/27.react-2.html">27.react-2</a></li><li><a href="../html/27.react-3.html">27.react-3</a></li><li><a href="../html/27.react-4-immutable.html">27.react-4-immutable</a></li><li><a href="../html/27.react-5-react-dom-diff.html">27.react-5-react-dom-diff</a></li><li><a href="../html/27.react-6.html">27.react-6</a></li><li><a href="../html/28.react-mobx.html">28.react-mobx</a></li><li><a href="../html/28.redux-0.html">28.redux-0</a></li><li><a href="../html/28.redux-1.html">28.redux-1</a></li><li><a href="../html/28.redux-2-中间件.html">28.redux-2-中间件</a></li><li><a href="../html/28.redux-3-saga.html">28.redux-3-saga</a></li><li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li><li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li><li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li><li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li><li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li><li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li><li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li><li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li><li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li><li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li><li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li><li><a href="../html/30.cms-4-egg.html">30.cms-4-egg</a></li><li><a href="../html/30.cms-5-api.html">30.cms-5-api</a></li><li><a href="../html/30.cms-6-roadhog.html">30.cms-6-roadhog</a></li><li><a href="../html/30.cms-7-umi.html">30.cms-7-umi</a></li><li><a href="../html/30.cms-8-dva.html">30.cms-8-dva</a></li><li><a href="../html/30.cms-9-dva.html">30.cms-9-dva</a></li><li><a href="../html/30.cms-10-dva.html">30.cms-10-dva</a></li><li><a href="../html/30.cms-11-front.html">30.cms-11-front</a></li><li><a href="../html/31.cms-12-api.html">31.cms-12-api</a></li><li><a href="../html/31.cms-13-front.html">31.cms-13-front</a></li><li><a href="../html/31.cms-14-deploy.html">31.cms-14-deploy</a></li><li><a href="../html/32.ant.html">32.ant</a></li><li><a href="../html/33.redis.html">33.redis</a></li><li><a href="../html/34.unittest.html">34.unittest</a></li><li><a href="../html/35.jwt.html">35.jwt</a></li><li><a href="../html/36.websocket-1.html">36.websocket-1</a></li><li><a href="../html/36.websocket-2.html">36.websocket-2</a></li><li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li><li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li><li><a href="../html/38.chat-3.html">38.chat-3</a></li><li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li><li><a href="../html/38.chat.html">38.chat</a></li><li><a href="../html/38.chat2.html">38.chat2</a></li><li><a href="../html/38.chat2.html">38.chat2</a></li><li><a href="../html/39.crawl-0.html">39.crawl-0</a></li><li><a href="../html/39.crawl-1.html">39.crawl-1</a></li><li><a href="../html/39.crawl-2.html">39.crawl-2</a></li><li><a href="../html/40.deploy.html">40.deploy</a></li><li><a href="../html/41.safe.html">41.safe</a></li><li><a href="../html/42.test.html">42.test</a></li><li><a href="../html/43.nginx.html">43.nginx</a></li><li><a href="../html/44.enzyme.html">44.enzyme</a></li><li><a href="../html/45.docker.html">45.docker</a></li><li><a href="../html/46.elastic.html">46.elastic</a></li><li><a href="../html/47.oauth.html">47.oauth</a></li><li><a href="../html/48.wxpay.html">48.wxpay</a></li><li><a href="../html/49.nunjucks.html">49.nunjucks</a></li><li><a href="../html/50.ketang.html">50.ketang</a></li><li><a href="../html/index.html">index</a></li><li><a href="../html/51.typescript.html">51.typescript</a></li><li><a href="../html/52.UML.html">52.UML</a></li><li><a href="../html/53.design.html">53.design</a></li><li><a href="../html/index.html">index</a></li></ul></div>
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01. plugin">1. plugin</a><ul><li><a href="#t11.1 为什么需要一个插件">1.1 为什么需要一个插件</a></li><li><a href="#t21.2 可以加载插件的常用对象">1.2 可以加载插件的常用对象</a></li></ul></li><li><a href="#t32. 创建插件">2. 创建插件</a></li><li><a href="#t43. Compiler 和 Compilation">3. Compiler 和 Compilation</a></li><li><a href="#t54. 基本插件架构">4. 基本插件架构</a></li><li><a href="#t65. 访问 compilation 对象">5. 访问 compilation 对象</a></li><li><a href="#t76. 异步编译插件">6. 异步编译插件</a></li><li><a href="#t87. 输出文件列表">7. 输出文件列表</a></li><li><a href="#t98. InlineWebpackPlugin">8. InlineWebpackPlugin</a></li><li><a href="#t109.自动上传资源文件到CDN">9.自动上传资源文件到CDN</a></li><li><a href="#t1110.自动外链">10.自动外链</a><ul><li><a href="#t1210.1 使用外部类库">10.1 使用外部类库</a></li><li><a href="#t1310.2 思路">10.2 思路</a></li></ul></li><li><a href="#t1410.3 使用plugins">10.3 使用plugins</a></li><li><a href="#t15参考">参考</a><ul><li><a href="#t16核心流程">核心流程</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01. plugin">1. plugin <a href="#t01. plugin"> # </a></h2>
+<p>插件向第三方开发者提供了 webpack 引擎中完整的能力。使用阶段式的构建回调，开发者可以引入它们自己的行为到 webpack 构建流程中。创建插件比创建 loader 更加高级，因为你将需要理解一些 webpack 底层的内部特性来做相应的钩子</p>
+<h3 id="t11.1 为什么需要一个插件">1.1 为什么需要一个插件 <a href="#t11.1 为什么需要一个插件"> # </a></h3>
+<ul>
+<li>webpack基础配置无法满足需求</li>
+<li>插件几乎能够任意更改webpack编译结果</li>
+<li>webpack内部也是通过大量内部插件实现的</li>
+</ul>
+<h3 id="t21.2 可以加载插件的常用对象">1.2 可以加载插件的常用对象 <a href="#t21.2 可以加载插件的常用对象"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">对象</th>
+<th style="text-align:left">钩子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Compiler</td>
+<td style="text-align:left">run,compile,compilation,make,emit,done</td>
+</tr>
+<tr>
+<td style="text-align:left">Compilation</td>
+<td style="text-align:left">buildModule,normalModuleLoader,succeedModule,finishModules,seal,optimize,after-seal</td>
+</tr>
+<tr>
+<td style="text-align:left">Module Factory</td>
+<td style="text-align:left">beforeResolver,afterResolver,module,parser</td>
+</tr>
+<tr>
+<td style="text-align:left">Module</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Parser</td>
+<td style="text-align:left">program,statement,call,expression</td>
+</tr>
+<tr>
+<td style="text-align:left">Template</td>
+<td style="text-align:left">hash,bootstrap,localVars,render</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t32. 创建插件">2. 创建插件 <a href="#t32. 创建插件"> # </a></h2>
+<p>webpack 插件由以下组成：</p>
+<ul>
+<li>一个 JavaScript 命名函数。</li>
+<li>在插件函数的 prototype 上定义一个 apply 方法。</li>
+<li>指定一个绑定到 webpack 自身的事件钩子。</li>
+<li>处理 webpack 内部实例的特定数据。</li>
+<li>功能完成后调用 webpack 提供的回调。</li>
+</ul>
+<h2 id="t43. Compiler 和 Compilation">3. Compiler 和 Compilation <a href="#t43. Compiler 和 Compilation"> # </a></h2>
+<p>在插件开发中最重要的两个资源就是<code>compiler</code>和<code>compilation</code>对象。理解它们的角色是扩展webpack引擎重要的第一步。</p>
+<ul>
+<li><p>compiler 对象代表了完整的 webpack 环境配置。这个对象在启动 webpack 时被一次性建立，并配置好所有可操作的设置，包括 options，loader 和 plugin。当在 webpack 环境中应用一个插件时，插件将收到此 compiler 对象的引用。可以使用它来访问 webpack 的主环境。</p>
+</li>
+<li><p>compilation 对象代表了一次资源版本构建。当运行 webpack 开发环境中间件时，每当检测到一个文件变化，就会创建一个新的 compilation，从而生成一组新的编译资源。一个 compilation 对象表现了当前的模块资源、编译生成资源、变化的文件、以及被跟踪依赖的状态信息。compilation 对象也提供了很多关键时机的回调，以供插件做自定义处理时选择使用。</p>
+</li>
+<li><p><a href="https://github.com/webpack/webpack/blob/master/lib/Compiler.js">Compiler</a></p>
+</li>
+<li><a href="https://github.com/webpack/webpack/blob/master/lib/Compilation.js">Compilation</a></li>
+<li><a href="https://github.com/webpack/webpack/blob/master/lib/Parser.js">Parser</a></li>
+<li><a href="https://github.com/webpack/webpack/blob/master/lib/NormalModuleFactory.js">NormalModuleFactory</a></li>
+</ul>
+<h2 id="t54. 基本插件架构">4. 基本插件架构 <a href="#t54. 基本插件架构"> # </a></h2>
+<ul>
+<li>插件是由「具有 apply 方法的 prototype 对象」所实例化出来的。</li>
+<li>这个 apply 方法在安装插件时，会被 webpack compiler 调用一次。</li>
+<li>apply 方法可以接收一个 webpack compiler 对象的引用，从而可以在回调函数中访问到 compiler 对象。</li>
+</ul>
+<p>webpack/lib/webpack.js:35</p>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (options.plugins &amp;&amp; <span class="hljs-built_in">Array</span>.isArray(options.plugins)) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> plugin <span class="hljs-keyword">of</span> options.plugins) {
+        plugin.apply(compiler);
+    }
+}
+</code></pre>
+<p>一个简单的插件结构如下：</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DonePlugin</span></span>{
+    <span class="hljs-keyword">constructor</span>(options) {
+        <span class="hljs-keyword">this</span>.options=options;
+    }
+    apply(compiler) {
+        compiler.hooks.done.tap(<span class="hljs-string">'DonePlugin'</span>, ()=&gt; {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hello '</span>,<span class="hljs-keyword">this</span>.options.name);
+        });
+    }
+}
+<span class="hljs-built_in">module</span>.exports=DonePlugin;
+</code></pre>
+<p>然后，要安装这个插件，只需要在你的 webpack 配置的 plugin 数组中添加一个实例：</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> DonePlugin=<span class="hljs-built_in">require</span>(<span class="hljs-string">'./plugins/DonePlugin'</span>);
+<span class="hljs-built_in">module</span>.exports={
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">'./src/index.js'</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">path</span>: path.resolve(<span class="hljs-string">'build'</span>),
+        <span class="hljs-attr">filename</span>:<span class="hljs-string">'bundle.js'</span>
+    },
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> DonePlugin({<span class="hljs-attr">name</span>:<span class="hljs-string">'zfpx'</span>})
+    ]
+}
+</code></pre>
+<p>webpack/lib/Compiler.js:251</p>
+<pre><code class="lang-js"><span class="hljs-keyword">this</span>.emitRecords(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> {
+    <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> finalCallback(err);
+        <span class="hljs-keyword">this</span>.hooks.done.callAsync(stats, err =&gt; {});
+});
+</code></pre>
+<h2 id="t65. 访问 compilation 对象">5. 访问 compilation 对象 <a href="#t65. 访问 compilation 对象"> # </a></h2>
+<p>使用 compiler 对象时，你可以绑定提供了编译 compilation 引用的回调函数，然后拿到每次新的 compilation 对象。这些 compilation 对象提供了一些钩子函数，来钩入到构建流程的很多步骤中。</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CompilationPlugin</span></span>{
+    <span class="hljs-keyword">constructor</span>(options) {
+        <span class="hljs-keyword">this</span>.options=options;
+    }
+    apply(compiler) {
+        compiler.hooks.compilation.tap(<span class="hljs-string">'CompilationPlugin'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">compilation</span>) </span>{
+            compilation.hooks.optimize.tap(<span class="hljs-string">'optimize'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'资源正在被优化'</span>);
+            });
+        });
+    }
+}
+<span class="hljs-built_in">module</span>.exports=CompilationPlugin;
+</code></pre>
+<p>webpack/lib/Compiler.js:496</p>
+<pre><code class="lang-js">newCompilation(params) {
+        <span class="hljs-keyword">const</span> compilation = <span class="hljs-keyword">this</span>.createCompilation();
+        <span class="hljs-keyword">this</span>.hooks.compilation.call(compilation, params);
+        <span class="hljs-keyword">return</span> compilation;
+    }
+</code></pre>
+<p>webpack/lib/Compilation.js:1183</p>
+<pre><code class="lang-js">seal(callback) {
+        <span class="hljs-keyword">this</span>.hooks.seal.call();
+        <span class="hljs-keyword">this</span>.hooks.optimize.call();
+}
+</code></pre>
+<p>关于 compiler, compilation 的可用回调，和其它重要的对象的更多信息，请查看 <a href="https://doc.webpack-china.org/api/plugins/">插件</a> 文档。 </p>
+<h2 id="t76. 异步编译插件">6. 异步编译插件 <a href="#t76. 异步编译插件"> # </a></h2>
+<ul>
+<li>有一些编译插件中的步骤是异步的，这样就需要额外传入一个 callback 回调函数，并且在插件运行结束时，必须调用这个回调函数。</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CompilationAsyncPlugin</span></span>{
+    <span class="hljs-keyword">constructor</span>(options) {
+        <span class="hljs-keyword">this</span>.options=options;
+    }
+    apply(compiler) {
+        compiler.hooks.emit.tapAsync(<span class="hljs-string">'EmitPlugin'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">compilation,callback</span>) </span>{
+            setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'异步任务完成'</span>);
+                callback();
+            },<span class="hljs-number">500</span>);
+        });
+    }
+}
+<span class="hljs-built_in">module</span>.exports=CompilationAsyncPlugin;
+</code></pre>
+<p><code>emit</code>事件在即将写入文件前触发 
+webpack/lib/Compiler.js:364</p>
+<pre><code class="lang-js"><span class="hljs-keyword">this</span>.hooks.emit.callAsync(compilation, err =&gt; {
+    <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> callback(err);
+    outputPath = compilation.getPath(<span class="hljs-keyword">this</span>.outputPath);
+    <span class="hljs-keyword">this</span>.outputFileSystem.mkdirp(outputPath, emitFiles);
+});
+</code></pre>
+<h2 id="t87. 输出文件列表">7. 输出文件列表 <a href="#t87. 输出文件列表"> # </a></h2>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileListPlugin</span></span>{
+    <span class="hljs-keyword">constructor</span>(options) {
+        <span class="hljs-keyword">this</span>.options = options;
+    }
+    apply(compiler) {
+        compiler.hooks.emit.tap(<span class="hljs-string">'FileListPlugin'</span>, (compilation) =&gt;{
+            <span class="hljs-keyword">let</span> filelist=<span class="hljs-string">'## 文件列表'</span>;
+            filelist = <span class="hljs-built_in">Object</span>.keys(compilation.assets).reduce(<span class="hljs-function">(<span class="hljs-params">filelist,filename</span>)=&gt;</span>filelist+<span class="hljs-string">'\r\n- '</span>+filename,filelist);
+            compilation.assets[<span class="hljs-keyword">this</span>.options.name?<span class="hljs-keyword">this</span>.options.name:<span class="hljs-string">'filelist.md'</span>]={
+                source() {
+                    <span class="hljs-keyword">return</span> filelist;
+                },
+                size() {
+                    <span class="hljs-keyword">return</span> filelist.length
+                }
+            }
+        });
+    }
+}
+<span class="hljs-built_in">module</span>.exports=FileListPlugin;
+</code></pre>
+<h2 id="t98. InlineWebpackPlugin">8. InlineWebpackPlugin <a href="#t98. InlineWebpackPlugin"> # </a></h2>
+<p>有些时候我们希望把脚本和样式单独内联在HTML页面里面</p>
+<ul>
+<li><a href="https://github.com/jantimon/html-webpack-plugin">html-webpack-plugin</a></li>
+<li><a href="https://github.com/DustinJackson/html-webpack-inline-source-plugin">html-webpack-inline-source-plugin</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InlineWebpackPlugin</span> </span>{
+    <span class="hljs-keyword">constructor</span>(options) {
+        <span class="hljs-keyword">this</span>.options = options;
+    }
+    apply(compiler) {
+        compiler.hooks.compilation.tap(<span class="hljs-string">'InlineWebpackPlugin'</span>, compilation =&gt; {
+            compilation.hooks.htmlWebpackPluginAlterAssetTags.tapAsync(<span class="hljs-string">'InlineWebpackPlugin'</span>, (htmlPluginData, callback) =&gt; {
+                <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.options.inlineSource) {
+                    <span class="hljs-keyword">return</span> callback(<span class="hljs-literal">null</span>, htmlPluginData);
+                }
+                <span class="hljs-built_in">console</span>.log(htmlPluginData);
+                <span class="hljs-comment">/**
+                 * { head:[ { tagName: 'link',
+                              selfClosingTag: false,
+                              voidTag: true,
+                              attributes: [Object] } ],
+                    body: [ { tagName: 'script', closeTag: true, attributes: [Object] } ],
+                 */</span>
+                htmlPluginData = <span class="hljs-keyword">this</span>.processTags(compilation, htmlPluginData);
+                callback(<span class="hljs-literal">null</span>, htmlPluginData);
+            });
+        });
+    }
+    processTags(compilation, htmlPluginData) {
+        htmlPluginData.head = htmlPluginData.head.map(<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-keyword">this</span>.processTag(compilation, tag));
+        htmlPluginData.body = htmlPluginData.body.map(<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-keyword">this</span>.processTag(compilation, tag));
+        <span class="hljs-keyword">return</span> htmlPluginData;
+    }
+    processTag(compilation, tag) {
+        <span class="hljs-keyword">let</span> inlineSource = <span class="hljs-keyword">this</span>.options.inlineSource;
+        <span class="hljs-keyword">let</span> assetUrl;
+        <span class="hljs-keyword">if</span> (tag.tagName == <span class="hljs-string">'link'</span> &amp;&amp; inlineSource.test(tag.attributes.href)) {
+            assetUrl = tag.attributes.href;
+            tag = {
+                <span class="hljs-attr">tagName</span>: <span class="hljs-string">'style'</span>,
+                <span class="hljs-attr">closeTag</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">attributes</span>: { <span class="hljs-attr">type</span>: <span class="hljs-string">'text/css'</span> }
+            }
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tag.tagName == <span class="hljs-string">'script'</span> &amp;&amp; inlineSource.test(tag.attributes.src)) {
+            assetUrl = tag.attributes.src;
+            tag = {
+                <span class="hljs-attr">tagName</span>: <span class="hljs-string">'script'</span>,
+                <span class="hljs-attr">closeTag</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">attributes</span>: { <span class="hljs-attr">type</span>: <span class="hljs-string">'text/javascript'</span> }
+            }
+        }
+        <span class="hljs-keyword">if</span> (assetUrl) {
+            <span class="hljs-keyword">let</span> asset = compilation.assets[assetUrl];
+            tag.innerHTML = asset.source();
+            <span class="hljs-keyword">delete</span> compilation.assets[assetUrl];
+        }
+        <span class="hljs-keyword">return</span> tag;
+    }
+}
+
+<span class="hljs-built_in">module</span>.exports = InlineWebpackPlugin;
+</code></pre>
+<p>webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> InlineWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./plugins/InlineWebpackPlugin'</span>);
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'html-webpack-plugin'</span>);
+<span class="hljs-keyword">const</span> MiniCssExtractPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'mini-css-extract-plugin'</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">'development'</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">"./src/index.js"</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">path</span>: resolve(<span class="hljs-string">"dist"</span>),
+        <span class="hljs-attr">filename</span>: <span class="hljs-string">"bundle.js"</span>
+    },
+    <span class="hljs-attr">resolveLoader</span>: {
+        <span class="hljs-attr">modules</span>: [path.resolve(<span class="hljs-string">'./loaders'</span>), <span class="hljs-string">'node_modules'</span>]
+    },
+    <span class="hljs-attr">module</span>: {
+        <span class="hljs-attr">rules</span>: [
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>,
+                <span class="hljs-attr">use</span>: [{ <span class="hljs-attr">loader</span>: MiniCssExtractPlugin.loader }, <span class="hljs-string">'css-loader'</span>]
+            }
+        ]
+    },
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>: <span class="hljs-string">'./src/index.html'</span>,
+            <span class="hljs-attr">filename</span>: <span class="hljs-string">'index.html'</span>
+        }),
+        <span class="hljs-keyword">new</span> InlineWebpackPlugin({
+            <span class="hljs-attr">inlineSource</span>: <span class="hljs-regexp">/\.(js|css)$/</span>
+        }),
+        <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
+            <span class="hljs-attr">filename</span>: <span class="hljs-string">'[name].css'</span>,
+            <span class="hljs-attr">chunkFilename</span>: <span class="hljs-string">'[id].css'</span>
+        })
+    ]
+}
+</code></pre>
+<h2 id="t109.自动上传资源文件到CDN">9.自动上传资源文件到CDN <a href="#t109.自动上传资源文件到CDN"> # </a></h2>
+<ul>
+<li><a href="https://developer.qiniu.com/kodo/sdk/1289/nodejs">qiniu</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> qiniu = <span class="hljs-built_in">require</span>(<span class="hljs-string">'qiniu'</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UploadPlugin</span> </span>{
+    <span class="hljs-keyword">constructor</span>(options = {}) {
+        <span class="hljs-keyword">let</span> { bucket = <span class="hljs-string">''</span>, domain = <span class="hljs-string">""</span>, accessKey = <span class="hljs-string">''</span>, secretKey = <span class="hljs-string">''</span> } = options;
+        <span class="hljs-keyword">let</span> mac = <span class="hljs-keyword">new</span> qiniu.auth.digest.Mac(accessKey, secretKey);
+        <span class="hljs-keyword">let</span> putPolicy = <span class="hljs-keyword">new</span> qiniu.rs.PutPolicy({ <span class="hljs-attr">scope</span>: bucket });
+        <span class="hljs-keyword">this</span>.uploadToken = putPolicy.uploadToken(mac);
+        <span class="hljs-keyword">let</span> config = <span class="hljs-keyword">new</span> qiniu.conf.Config();
+        <span class="hljs-keyword">this</span>.formUploader = <span class="hljs-keyword">new</span> qiniu.form_up.FormUploader(config);
+        <span class="hljs-keyword">this</span>.putExtra = <span class="hljs-keyword">new</span> qiniu.form_up.PutExtra();
+    }
+    apply(compiler) {
+        compiler.hooks.afterEmit.tapPromise(<span class="hljs-string">'UploadPlugin'</span>, compilation =&gt; {
+            <span class="hljs-keyword">let</span> assets = compilation.assets;
+            <span class="hljs-keyword">let</span> promises = <span class="hljs-built_in">Object</span>.entries(assets).map(<span class="hljs-function">(<span class="hljs-params">[key, value]</span>) =&gt;</span> <span class="hljs-keyword">this</span>.upload(key, value.source()));
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.all(promises);
+        });
+    }
+    upload(key, value) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'value'</span>, value)
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+            <span class="hljs-keyword">this</span>.formUploader.put(<span class="hljs-keyword">this</span>.uploadToken, key, value, <span class="hljs-keyword">this</span>.putExtra, (err, body, info) =&gt; {
+                err ? reject(err) : resolve(body);
+            });
+        });
+    }
+}
+<span class="hljs-built_in">module</span>.exports = UploadPlugin;
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">new</span> UploadPlugin({
+    <span class="hljs-attr">bucket</span>: <span class="hljs-string">'cnpmjs'</span>,
+    <span class="hljs-attr">domain</span>: <span class="hljs-string">"img.zhufenpeixun.cn"</span>,
+    <span class="hljs-attr">accessKey</span>: <span class="hljs-string">'fi5imW04AkxJItuFbbRy1ffH1HIoo17HbWOXw5fV'</span>,
+    <span class="hljs-attr">secretKey</span>: <span class="hljs-string">'ru__Na4qIor4-V7U4AOJyp2KBUYEw1NWduiJ4Pby'</span>
+})
+</code></pre>
+<h2 id="t1110.自动外链">10.自动外链 <a href="#t1110.自动外链"> # </a></h2>
+<h3 id="t1210.1 使用外部类库">10.1 使用外部类库 <a href="#t1210.1 使用外部类库"> # </a></h3>
+<ul>
+<li>手动指定  external</li>
+<li>手动引入 script</li>
+</ul>
+<blockquote>
+<p>能否检测代码中的import自动处理这个步骤?</p>
+</blockquote>
+<h3 id="t1310.2 思路">10.2 思路 <a href="#t1310.2 思路"> # </a></h3>
+<p>解决import自动处理<code>external</code>和<code>script</code>的问题，需要怎么实现，该从哪方面开始考虑</p>
+<ul>
+<li><code>依赖</code> 当检测到有<code>import</code>该<code>library</code>时，将其设置为不打包类似<code>exteral</code>,并在指定模版中加入script,那么如何检测import那？这里就用<code>Parser</code></li>
+<li><code>external依赖</code>
+需要了解external是如何实现的，webpack的external是通过插件<code>ExternalsPlugin</code>实现的，ExternalsPlugin通过 tap NormalModuleFactory 在每次创建Module的时候判断是否是ExternalModule</li>
+<li>webpack4加入了模块类型之后，<code>Parser</code>获取需要指定类型moduleType,一般使用<code>javascript/auto</code>即可</li>
+</ul>
+<h2 id="t1410.3 使用plugins">10.3 使用plugins <a href="#t1410.3 使用plugins"> # </a></h2>
+<pre><code class="lang-js">plugins: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>: <span class="hljs-string">'./src/index.html'</span>,
+            <span class="hljs-attr">filename</span>:<span class="hljs-string">'index.html'</span>
+        }),
+        <span class="hljs-keyword">new</span> AutoExternalPlugin({
+            <span class="hljs-attr">jquery</span>: {
+                <span class="hljs-attr">expose</span>: <span class="hljs-string">'$'</span>,
+                <span class="hljs-attr">url</span>: <span class="hljs-string">'https://cdn.bootcss.com/jquery/3.1.0/jquery.js'</span>
+            }
+        })
+    ]
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ExternalModule = <span class="hljs-built_in">require</span>(<span class="hljs-string">'webpack/lib/ExternalModule'</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AutoExternalPlugin</span> </span>{
+    <span class="hljs-keyword">constructor</span>(options) {
+        <span class="hljs-keyword">this</span>.options = options;
+        <span class="hljs-keyword">this</span>.externalModules = {};
+    }
+    apply(compiler) {
+        <span class="hljs-comment">//1.在解析语法树的过程中查找那些需要外部引入的模块名称</span>
+        compiler.hooks.normalModuleFactory.tap(<span class="hljs-string">'AutoExternalPlugin'</span>, normalModuleFactory =&gt; {
+            normalModuleFactory.hooks.parser
+                .for(<span class="hljs-string">'javascript/auto'</span>)
+                .tap(<span class="hljs-string">'AutoExternalPlugin'</span>, parser =&gt; {
+                    parser.hooks.import.tap(<span class="hljs-string">'AutoExternalPlugin'</span>, (statement, source) =&gt; {
+                        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.options[source])
+                            <span class="hljs-keyword">this</span>.externalModules[source] = <span class="hljs-literal">true</span>;
+                    });
+                });
+            <span class="hljs-comment">//2.在生产模块的过程中发现如果是外部模块则返回外部模块</span>
+            normalModuleFactory.hooks.factory.tap(<span class="hljs-string">'AutoExternalPlugin'</span>, factory =&gt; <span class="hljs-function">(<span class="hljs-params">data, callback</span>) =&gt;</span> {
+                <span class="hljs-keyword">const</span> dependency = data.dependencies[<span class="hljs-number">0</span>];
+                <span class="hljs-keyword">let</span> value = dependency.request;
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.externalModules[value]) {
+                    <span class="hljs-keyword">let</span> varName = <span class="hljs-keyword">this</span>.options[value].expose;
+                    callback(<span class="hljs-literal">null</span>, <span class="hljs-keyword">new</span> ExternalModule(varName, <span class="hljs-string">'window'</span>));
+                } <span class="hljs-keyword">else</span> {
+                    factory(data, callback);
+                }
+            });
+        });
+        compiler.hooks.compilation.tap(<span class="hljs-string">'AutoExternalPlugin'</span>, compilation =&gt; {
+            <span class="hljs-comment">//3.向body底部插入全局变量的脚本</span>
+            compilation.hooks.htmlWebpackPluginAlterAssetTags.tapAsync(<span class="hljs-string">'normalModuleFactory'</span>, (htmlPluginData, callback) =&gt; {
+                <span class="hljs-built_in">Object</span>.values(<span class="hljs-keyword">this</span>.externalModules).forEach(<span class="hljs-function"><span class="hljs-params">src</span> =&gt;</span> {
+                    htmlPluginData.body.unshift({
+                        <span class="hljs-attr">tagName</span>: <span class="hljs-string">'script'</span>,
+                        <span class="hljs-attr">closeTag</span>: <span class="hljs-literal">true</span>,
+                        <span class="hljs-attr">attributes</span>: { <span class="hljs-attr">type</span>: <span class="hljs-string">'text/javascript'</span>, src }
+                    });
+                });
+            });
+        });
+    }
+}
+<span class="hljs-built_in">module</span>.exports = AutoExternalPlugin;
+</code></pre>
+<h2 id="t15参考">参考 <a href="#t15参考"> # </a></h2>
+<ul>
+<li><a href="https://developer.qiniu.com/kodo/sdk/1289/nodejs">Node.js SDK</a></li>
+<li><a href="https://webpack.js.org/contribute/writing-a-plugin/">writing-a-plugin</a></li>
+<li><a href="https://webpack.js.org/api/plugins/">api/plugins</a></li>
+<li><a href="http://www.css88.com/doc/webpack2/api/plugins/">插件 API</a></li>
+</ul>
+<h3 id="t16核心流程">核心流程 <a href="#t16核心流程"> # </a></h3>
+<pre><code>- webpack-cli/cli.js   compiler = webpack(options);
+- webpack/webpack.js compiler = `new Compiler`(options.context);
+- webpack-cli/cli.js   compiler.`run`(compilerCallback);
+- Compiler.js `run`(callback)
+-             this.hooks.`beforeRun`.callAsync
+-             this.hooks.`run`.callAsync
+-             this.`readRecords`
+-             this.`compile`(onCompiled);
+-             const params = this.newCompilationParams();
+-             this.hooks.`beforeCompile`.callAsync
+-             this.hooks.`compile`.call(params);
+-             const compilation = this.newCompilation(params);
+-             this.hooks.`make`.callAsync
+- SingleEntryPlugin.js compilation.addEntry(context, dep, name, callback);
+- Compilation.js addEntry
+-                this._addModuleChain
+-                const moduleFactory = this.dependencyFactories.get(Dep);
+-                moduleFactory.create
+- NormalModuleFactory create(data, callback)
+-                      this.hooks.`beforeResolve`.callAsync
+-                      const factory = this.hooks.factory.call(null);
+-                      factory(result, (err, module)
+-                      let resolver = this.hooks.resolver.call(null);
+-                      resolver(result
+-                      this.hooks.resolver.tap("NormalModuleFactory"
+-                      const result = this.ruleSet.exec({
+-                     getParser(type, parserOptions) 
+-                     this.hooks.afterResolve.callAsync
+-                     let createdModule = this.hooks.createModule.call(result);
+-                     createdModule = new NormalModule(result);
+-                     createdModule = this.hooks.`module`.call(createdModule, result); 
+- Compilation.js      const addModuleResult = this.addModule(module);
+-                     this.buildModule(module
+-                     this.hooks.buildModule.call(module);
+-                     module.build(
+- NormalModule.js     build(options, compilation, resolver, fs, callback) 
+-                     return this.doBuild(options, compilation, resolver, fs
+-                     runLoaders()
+-                     this._source = this.createSource(
+-                     this._ast =
+-                      const result = this.parser.parse(this._ast
+- Compilation.js      this.hooks.succeedModule.call(module);
+-                        this.processModuleDependencies
+-                          if (module) 
+- Compiler.js        compilation.finish()
+-                    compilation.seal
+-                    this.hooks.afterCompile
+</code></pre>
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+  // if (!$('.understand-me').length) {
+  //   var bar = $(window).height() - $('.navbar ').height() - $('.page-toc').position().top;
+  //   var count = bar / 26 / 2;
+  //   var barHeight = $('.page-toc').outerHeight();
+  //   $('.page-toc li').eq(0).children('a').addClass('red');
+  //   var arr = [];
+  //   $("h1,h2,h3,h4,h5,h6").each(function () {
+  //     arr.push($(this).position().top);
+  //   });
+  //   var timer
+  //   function dark() {
+  //     clearTimeout(timer)
+  //      timer = setTimeout(function () {
+  //      var top = Math.abs($('.page-toc > ul').position().top);
+  //      var cur = $('.content').scrollTop();
+  //      for (var i = arr.length; i >= 0; i--) {
+  //        if (arr[i] <= cur) {
+  //          break;
+  //        }
+  //      }
+  //      if (i === -1) {
+  //        i = 0;
+  //      }
+  //      $('.page-toc li a').removeClass('red');
+  //      $('.page-toc li').eq(i).children('a').addClass('red');
+  //      let height = $('.page-toc li').eq(i).position().top-$('.page-toc').height(); // 如果当前的offset出去了 回到中间可好？
+  //      $('.page-toc').scrollTop(height+$('.page-toc').height()/2);
+  //    },200)
+  //   }
+
+  //   $('.content').on('scroll', dark);
+  // }
+</script>
+<style>
+
+    /* ::-webkit-scrollbar{width:14px;}
+    ::-webkit-scrollbar-track{background-color:transparent;}
+    ::-webkit-scrollbar-thumb{background-color:transparent;}
+    ::-webkit-scrollbar-thumb:hover {background-color:transparent}
+    ::-webkit-scrollbar-thumb:active {background-color:transparent} */
+
+    .page-toc > ul .red {
+        background: #f3f3f3;
+        z-index: 1;
+        border-left: 3px solid #009a61;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        color: #000
+    }
+
+
+
+
+
+</style>
+
+
+</body></html>

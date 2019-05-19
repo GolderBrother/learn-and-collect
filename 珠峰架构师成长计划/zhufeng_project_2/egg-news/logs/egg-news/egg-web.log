@@ -1,0 +1,16 @@
+2018-12-15 17:07:01,755 INFO 28780 [egg:logger] init all loggers with options: {"dir":"C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\logs\\egg-news","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","disableConsoleAfterReady":false,"outputJSON":false,"buffer":false,"appLogName":"egg-news-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"allowDebugAtProd":false,"type":"application"}
+2018-12-15 17:07:01,768 INFO 28780 [egg-schedule]: register schedule C:\vipdata\vipproject\zhufeng_project_2\egg-news\node_modules\_egg-logrotator@3.0.5@egg-logrotator\app\schedule\clean_log.js
+2018-12-15 17:07:01,769 INFO 28780 [egg-schedule]: register schedule C:\vipdata\vipproject\zhufeng_project_2\egg-news\node_modules\_egg-logrotator@3.0.5@egg-logrotator\app\schedule\rotate_by_file.js
+2018-12-15 17:07:01,770 INFO 28780 [egg-multipart] stream mode enable
+2018-12-15 17:07:01,920 INFO 28780 [egg-static] starting static serve /public/ -> C:\vipdata\vipproject\zhufeng_project_2\egg-news\app\public
+2018-12-15 17:07:01,925 INFO 28780 [egg-security] use methodnoallow middleware
+2018-12-15 17:07:01,926 INFO 28780 [egg-security] use noopen middleware
+2018-12-15 17:07:01,928 INFO 28780 [egg-security] use nosniff middleware
+2018-12-15 17:07:01,929 INFO 28780 [egg-security] use xssProtection middleware
+2018-12-15 17:07:01,930 INFO 28780 [egg-security] use xframe middleware
+2018-12-15 17:07:01,931 INFO 28780 [egg-security] use dta middleware
+2018-12-15 17:07:01,931 INFO 28780 [egg-security] compose 6 middlewares into one security middleware
+2018-12-15 17:07:01,949 INFO 28780 [egg:core] dump config after load, 7ms
+2018-12-15 17:07:01,964 INFO 28780 [egg-watcher:application] watcher start success
+2018-12-15 17:07:01,975 INFO 28780 [egg:core] dump config after ready, 10ms
+2018-12-15 17:07:02,032 INFO 28780 [egg-view-nunjucks] loading templates from ["C:\\vipdata\\vipproject\\zhufeng_project_2\\egg-news\\app\\view"]

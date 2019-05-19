@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>指令 v-bind</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my',
+			data:{
+				c:'c',
+				c2:'c2',
+				s:{background:'red'},
+				s1:{color:'green'},
+				flag:true,
+				src:'https://www.baidu.com/img/bd_logo1.png'
+			},
+			methods:{
+				fun:function(type){
+					if(type>20){
+						return 'c2'
+					}else {
+						return 'c'
+					}
+				}
+			}
+		})
+	}
+	</script>
+	<style>
+		.c {
+			color:#f60;
+		}
+		.c2 {
+			border:1px solid #ccc;
+		}
+	</style>
+</head>
+<body> 
+	<div id="my">
+		<!-- 单个引用 -->
+		<div v-bind:class="'c'">按钮</div>
+		<div v-bind:class="c">按钮</div>
+		<!-- 多个引用 -->
+		<div v-bind:class="['c','c2']">按钮</div>
+		<div v-bind:class="[c,c2]">按钮</div>
+		<!-- 条件 -->
+		<div :class="{'c2':flag}">按钮</div>
+		<div :class="flag ? 'c':''">按钮</div>
+		<div :class="flag ? 'c':'c2'">按钮</div>
+		<div :class="fun(25)">函数</div>
+
+		<!-- style  与class相同-->
+		<div :style="{color:'blue',fontSize:'25px',marginTop:'15px'}">style</div>
+		<div :style="s">style</div>
+		<div :style="[s,s1]">style</div>
+
+		<img :src="flag ?src:''" />
+		<a :href="src" >aaaa</a>
+	</div>
+</body>
+</html>

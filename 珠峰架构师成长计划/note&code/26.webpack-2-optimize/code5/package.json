@@ -1,0 +1,8 @@
+{
+  "script": {
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build"
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^3.3.2"
+  }
+}

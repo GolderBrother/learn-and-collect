@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>component</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <script>
+    window.onload = function(){
+        //全局   方式一
+        var c = Vue.extend({
+          template:'<div>hello world</div>'
+        });
+        Vue.component('hello',c)   //hello  名称   c模板字符串
+        //方式二
+        Vue.component('hello2',{   //hello  名称   c模板字符串
+          template:'<div>hello world</div>'
+        }) ; 
+        var B = {  //组件的名称
+                template:'#my-b',
+                data(){
+                  return {
+                    title:'B组件'
+                  }
+                }
+              };
+        new Vue({
+            el:'#my',
+            data:{ 
+                arr:[1,2,3,4],
+                flag:'a',
+                flag2:'my-a'
+            },
+            components:{  // 局部组件
+              'my-name':{  //组件的名称
+                template:'#my-name',
+                data(){
+                  return {
+                    arr:[1,2,3,45,4]
+                  }
+                }
+              },
+              'my-a':{  //组件的名称
+                template:'#my-a',
+                data(){
+                  return {
+                    title:'A组件'
+                  }
+                }
+              },
+              'my-b':B,
+              'my-li':{  //组件的名称
+                template:'#my-li'
+              },
+            }
+        })
+    }
+    </script>
+    <template id="my-name">
+        <div>
+          <ul>
+            <li v-for="v in arr">{{v}}</li>
+          </ul>
+        </div>
+    </template>
+    <template id="my-a">
+      <div>
+        <h1>{{title}}</h1>
+      </div>
+  </template>
+  <template id="my-b">
+    <div>
+      <h1>{{title}}</h1>
+    </div>
+</template>
+<template id="my-li">
+  <li>2345</li>
+</template>
+</head> 
+<body>
+  <div id="my">
+      
+      <!-- <h1>1244</h1>
+      <my-name></my-name>
+      <my-a></my-a>
+      <hello></hello>
+      <my-b></my-b>
+      <ul>
+        <li is="my-li"></li>
+      </ul> -->
+
+      <!-- 动态组件 -->
+      <!-- <button @click="flag ='a'">A按钮</button>
+      <button @click="flag ='b'">B按钮</button>
+      <my-a v-if="flag=='a'"></my-a>
+      <my-b v-if="flag=='b'"></my-b> -->
+      <!-- 动态组件 flag2 判断的是组件的名称 -->
+      <button @click="flag2 ='my-a'">A按钮</button>
+      <button @click="flag2 ='my-b'">B按钮</button>
+      <component :is="flag2"></component>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>watch</title>
+    <script type="text/javascript" src='vue.js'></script>
+    <script>
+    window.onload = function(){
+      //计算属性  计算   watch 观察（观察某个特定的值变化，进行相应的变化）
+       var vm = new Vue({
+            el:'#my',
+            data:{ 
+                name:'Qwer',
+                age:18,
+                person:''
+            },
+            watch:{   //局部定义
+              name:function(newValue,oldValue){
+                this.person = newValue +" "+ this.age
+              },
+              age:function(newValue,oldValue){
+                this.person = this.name +" " + newValue
+              },
+            },
+            computed:{
+              user:function(){
+                return this.name +" " + this.age;
+              }
+            }
+        })
+    }
+    </script>
+    
+</head> 
+<body>
+  <div id="my">
+      <input type="text" v-model="name" />
+      <input type="text" v-model="age" />
+      <div>计算属性：{{user}}</div>
+      <div>watch:{{person}}</div>
+  </div>
+</body>
+</html>

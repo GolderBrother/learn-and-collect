@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>扩展</title>
+</head>
+<body>
+  
+  <script> 
+    window.onload = function(){
+		//扩展   字符串
+		//常用方法
+		charAt(); //var str = 'hello world'; str.charAt(index)
+		indexOf(); // var str = 'hello world'; str.indexOf('w')
+		lastIndexOf();//最后一次出现的位置
+		substr();  //var str = 'hello world'; str.substr(start,length)
+		substring(); //var str = 'hello world'; str.substring(start,stop)  不包含stop
+		slice();
+		split();  //var str = 'hello' ; str.split('',2)  =====["h", "e"]
+		toLowerCase();
+		toUpperCase();
+		//ES6
+		startsWith();  //返回布尔值 表示参数字符串是否在原字符串的头部
+		endsWith();  //返回布尔值    尾部
+		includes();  //返回布尔值   是否包含参数字符串
+		var str = 'hello world';
+		if(str.indexOf('h') != -1){
+			console.log('ok')
+		};
+		str.includes('h');  //是否匹配h
+		str.includes('h',3);  //第二个参数表示搜 索的位置   从第3个开始搜索h
+
+		//字符串循环
+		for(let s of 'hello') {
+			console.log(s)
+		};
+
+		repeat(3);   //重复次数
+		'x'.repeat(3);   //'xxx'
+		var str = 'hello';
+		str.repeat(2);
+		str.repeat(0);
+		str.repeat(2.5);  //向下取整
+
+		//补全
+		padStart();
+		'x'.padStart(5,'yz');//5表示指定的长度，在头部补全   yzyzx
+		'x'.padEnd(5,'yz');  //xyzyz
+
+		
+
+	}
+  </script>
+</body>
+</html>

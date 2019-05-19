@@ -1,0 +1,24 @@
+
+<h3 class="orange-text">{{genresName}}</h3>
+<div class="row is-flex">
+  <div class="col-sm-6 col-md-4 col-lg-3 col-xs-6" *ngFor="let movie of movies">
+    <!--<div class="thumbnail">
+        <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" *ngIf="movie.poster_path">
+        <img src="assets/abstract-image.jpg" *ngIf="!movie.poster_path">
+        <div class="caption">
+          <h4 class="text-ellipsis">
+            <a  title="{{movie.title}}">{{movie.title}}</a>
+          </h4>
+          <p><strong>First Air Date: </strong>{{movie.release_date}}</p>
+          <p>
+            <a >View details &raquo;</a>
+            <small class="label label-success pull-right">
+              {{movie.vote_average}}
+              <i class="glyphicon glyphicon-star"></i>
+            </small>
+          </p>
+        </div> 
+      </div>-->
+      <movie-view [movie]="movie"></movie-view>
+  </div>
+</div>

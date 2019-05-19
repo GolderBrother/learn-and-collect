@@ -1,0 +1,17 @@
+{
+  "name": "7.umi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.4.0",
+    "react-transition-group": "^2.5.1"
+  }
+}

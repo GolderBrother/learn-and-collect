@@ -1,0 +1,14 @@
+<% include header.html%>
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <input type="text" class="form-control" name="keyword" placeholder="请输入关键字">
+        </form>
+        <ul class="list-group">
+            <%for(let i=0;i<articles.length;i++){%>
+                <li class="list-group-item"><a href="/detail/<%=articles[i].id%>"><%=articles[i].title%></a></li>
+            <%}%>
+        </ul>
+    </div>
+</div>
+<% include footer.html%>

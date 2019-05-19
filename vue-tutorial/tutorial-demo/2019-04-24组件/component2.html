@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>component</title>
+    <script type="text/javascript" src='js/vue.js'></script>
+    <style>
+    ul,li {
+    	padding:0;
+    	margin:0;
+    }
+    .tab-tit li{
+      padding: 10px 15px;
+	    text-align: center;
+	    list-style:none;
+	    cursor:pointer;
+		display: inline-block;
+    }
+    .tab-tit .active{
+      color: #09f;
+    	border-bottom: 1px solid #09f;
+    }
+    .tab-con div{
+      margin:30px;
+    }
+    </style>
+    <script>
+    window.onload = function(){
+        new Vue({
+            el:'#my',
+            data:{ 
+              lists:[{title:'List1',content:'a111'},
+                        {title:'List2',content:'a222'},
+                        {title:'List3',content:'a3333'},
+                        {title:'List4',content:'a4444'},
+                        {title:'List5',content:'a55555'}],
+              lists2:[{title:'列表A',content:'AAAA'},
+                        {title:'列表B',content:'BBBB'}],
+            },
+            components:{  // 局部组件
+              'my-tab':{  //组件的名称
+                template:'#my-tab',
+                data(){
+                  return {
+                    n:0,
+                    // lists:[{title:'a1',content:'a111'},
+                    //     {title:'a2',content:'a222'},
+                    //     {title:'a3',content:'a3333'},
+                    //     {title:'a4',content:'a4444'},
+                    //     {title:'a5',content:'a55555'}],
+                  }
+                },
+                methods:{
+                  action:function(num){
+                      this.n = num;
+                  }
+                },
+                props:['data','title']     //组件中父-子传参
+              }
+            }
+        })
+    }
+    </script>
+    <template id="my-tab">
+      <div>
+        <ul class="tab-tit">
+          <li v-for="(v,index) in data" :class="n==index?'active':''" 
+            v-on:click="action(index)">
+            {{v.title}}
+          </li>   
+        </ul>
+        <div class="tab-con">
+          <div v-for="(v,index) in data" v-show="n==index">
+            {{v.content}} {{title}}
+          </div>
+        </div>
+      </div>
+    </template>
+</head> 
+<body>
+  <div id="my">
+      <my-tab :data="lists" :title="'hello'"></my-tab>
+      <my-tab :data="lists2"></my-tab>
+  </div>
+</body>
+</html>

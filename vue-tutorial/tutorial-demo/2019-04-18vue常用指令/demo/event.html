@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script>
+	window.onload = function(){
+		new Vue({
+			el:'#my',
+			data:{
+				sign:'签到'
+			},
+			methods:{
+				action1:function(){
+					console.log('1111')
+				},
+				action2:function(e){
+					console.log('2222'); 
+					//e.stopPropagation() 阻止事件冒泡
+					//e.preventDefault()    //阻 止默认行为
+				},
+				action3:function(){
+					console.log('sign');
+					this.sign = '已签到'
+				}
+			}
+		})
+	}
+	</script>
+</head>
+<body> 
+	<div id="my">
+		<!-- event.type    事件类型
+		event.target    目标对象
+		event.stopPropagation()  阻止事件冒泡
+		event.preventDefault()    阻 止默认行为 -->
+		<div @click="action1()">
+			<button  @click="action2($event)">按钮</button>
+			<button  @click.stop="action2()">按钮</button>
+		</div>
+
+
+		<a href="http://www.baidu.com" @click="action2($event)" >按钮</a>
+		<a href="http://www.baidu.com" @click.prevent.stop="action2($event)" >按钮</a>
+
+		<!-- 只执行一次 -->
+		<div @click.once="action3()">{{sign}}</div>
+	</div>
+</body>
+</html>

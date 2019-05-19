@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>set&map</title>
+</head>
+<body>
+  
+  <script> 
+    window.onload = function(){
+		//set   map   ES6添加数据格式     array   object
+		//set   类似于array   但是成员的值是唯一的
+		//map   类似于object    键值对   键可以是其它的类型
+		//数组
+		var arr = new Array();   //arr[0]
+		var o = new Object();   //o.name
+		var s = new Set();
+		s.add(1).add(2).add(3);   //数据是唯一的
+		console.log(s);
+		//2种方式
+		var s2 = new Set([1,4,5,2,6,6,4,6,6,6,7,78,8,'8']);
+		//3种方式
+		var s3 = new Set();
+		[1,4,5,2,6,6,4,6,6,6,7,78,8,8].forEach((item)=>{
+			s3.add(item)
+		});
+		//具体方法
+		add(1)  ; //添加
+		s2.delete(name);  //删除单个   按名称   返回true   false
+		s2.has(2) ; //判断是否为set成员   返回有true   没有false
+		s2.clear(); //清除全部     没有返回值
+		size   //长度
+		if(s2.has(2)){}
+
+		//转为数组   Array.from();
+		var s4 = new Set([1,4,5,2,6,6]);
+		let arr = Array.from(s4);
+		//另一种
+		var arr2 = [1,4,5,2,6,6];
+		var arr3 = Array.from(new Set(arr2));   //OK
+		//另简洁
+		[...new Set(arr2)]   //OK
+		//数组转为set数据结构
+		var arr2 = [1,4,5,2,6,6];
+		let s5 = new Set(arr2);
+
+		//循环  for of
+		var s4 = new Set([1,4,5,2,6,6]);
+		for(let v of s4.keys()){   //values();    entries()  键值对
+			console.log(v)
+		};
+		s4.forEach((value,key)=>{
+
+		});
+
+		//思考：1、大于10的数据且去重
+		var arr = [1,2,4,5,62,6,36,73,46,35,62,36,10];
+		filter()  //数组的过滤   返回的是满足条件数组
+		var a = arr.filter(function(item,index){
+			return item>10
+		});
+		[...new Set(a)];
+		//[4]
+		//2、 取二组数的交集
+		var arr = [1,2,3,45,6,3,6,3,4];
+		var arr2 = [2,4,6,6,3,6,7,8,9,9];
+		var a2 = arr2.filter((item)=> new Set(arr).has(item));
+		[...new Set(a2)];
+		//3、并集
+		var a3 = [...new Set([...arr1,...arr2])];
+		//差集
+		var a4 = arr2.filter((item)=> !new Set(arr).has(item));
+		[...new Set(a2)];
+
+		//map  
+		var m = new Map();
+		m.set('name','abc').set('age',18);
+		var b = {name:'b'};
+		m.set(b,'value');
+		//具体方法：
+		.set()
+		.get()
+		.has()
+		.delete()
+		.clear()
+		.size
+		//接受一个数组来作为参数
+		var m = new Map([['name','abc'],['name2','abc2'],['name3','abc3']]);
+		for(let v of m.keys()){   //values();    entries()  键值对
+			console.log(v)  //name  name2  name3
+		};
+		for(let [key,value] of m){   //values();    entries()  键值对
+			console.log(key,value)  
+		};
+		
+		//其它结构的转换
+		//1、map转为数组
+		var m = new Map([['name','abc'],['name2','abc2'],['name3','abc3']]);
+		[...m.keys()] ; // ["name", "name2", "name3"]
+		[...m.values()];//["abc", "abc2", "abc3"]
+		[...m];//[['name','abc'],['name2','abc2'],['name3','abc3']];
+		//2、数组转为map
+		var a = [['name','abc'],['name2','abc2'],['name3','abc3']];
+		new Map(a);
+		//3、Map转为对象
+		var m = new Map([['name','abc'],['name2','abc2'],['name3','abc3']]);
+		var  obj = {}; 
+		for(let [k,v] of m){
+			obj[k] = v;
+		};
+		console.log(obj);
+		//4、对象转为map
+		var obj2 = {flag:true,lists:'lists'};
+		var m2 = new Map();
+		for(let k in obj2){
+			m2.set(k,obj2[k])
+		};
+		// for(let k of Object.keys(obj2)){
+		// 	m2.set(k,obj2[k])
+		// };
+	}
+  </script>
+</body>
+</html>
