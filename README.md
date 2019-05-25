@@ -284,12 +284,20 @@
 - [收藏的面试指南](./booksdata/interview.md)
 - [二万五千字面试指南](https://juejin.im/post/5ba34e54e51d450e5162789b)
 
-- [(1)【半月刊 4】前端高频面试题及答案汇总](https://juejin.im/post/5cb3376bf265da039c0543da)
+-【半月刊 4】前端高频面试题及答案汇总](https://juejin.im/post/5cb3376bf265da039c0543da)
 
 
-- [(2)【周刊-2】三年大厂面试官-前端面试题披露（偏难）](https://juejin.im/post/5cb0315f518825215e61ec14)
+- [【周刊-2】三年大厂面试官-前端面试题披露（偏难）](https://juejin.im/post/5cb0315f518825215e61ec14)
 
-- [(3)【周刊-1】三年大厂面试官-面试题精选及答案](https://juejin.im/post/5ca9de22e51d452b5372ed90)
+- [【周刊-1】三年大厂面试官-面试题精选及答案](https://juejin.im/post/5ca9de22e51d452b5372ed90)
+
+- [【每天一道大厂前端面试题】](https://github.com/Advanced-Frontend/Daily-Interview-Question)
+
+- [中高级前端大厂面试秘籍，为你保驾护航金三银四，直通大厂(上)](https://juejin.im/post/5c64d15d6fb9a049d37f9c20)
+
+- [(中篇)中高级前端大厂面试秘籍，寒冬中为您保驾护航，直通大厂](https://juejin.im/post/5c92f499f265da612647b754)
+
+- [(下篇)中高级前端大厂面试秘籍，寒冬中为您保驾护航，直通大厂](https://juejin.im/post/5cc26dfef265da037b611738)
 
 
 ### chrome常用插件
