@@ -1,3 +1,12 @@
+# React16.8.6 + typescript3.5.1 手写一个简单版的ant design的Form表单组件
+功能点:
+  * 表单验证
+  * 表单取值
+
+使用的技术点:
+  * HOC(高阶组件:高阶(代理)组件概念类似于高阶函数，传入一个组件，返回一个基于源组件装饰过后的新组件)
+  
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,14 +75,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-## React16.8.6 + typescript3.5.1 手写一个简单版的ant design的Form表单组件
-功能点:
-  * 表单验证
-  * 表单取值
-
-使用的技术点:
-  * HOC(高阶组件:高阶(代理)组件概念类似于高阶函数，传入一个组件，返回一个基于源组件装饰过后的新组件)
-  
 
 
