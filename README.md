@@ -299,6 +299,9 @@
 
 - [(下篇)中高级前端大厂面试秘籍，寒冬中为您保驾护航，直通大厂](https://juejin.im/post/5cc26dfef265da037b611738)
 
+### 小程序相关
+#### Taro
+- [Awesome Taro](https://github.com/NervJS/awesome-taro)
 
 ### chrome常用插件
 
