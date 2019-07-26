@@ -233,6 +233,8 @@
 - [让你英语进阶的资料](https://github.com/byoungd/English-level-up-tips-for-Chinese)
 - [2018值得关注的开源项目](https://juejin.im/post/5b7a8dc2e51d4538b81efff6)
 - [nodejs最佳实践](https://github.com/i0natan/nodebestpractices/blob/master/README.chinese.md)
+- [一个合格(优秀)的前端都应该阅读这些文章](https://juejin.im/post/5d387f696fb9a07eeb13ea60)
+> 如果你能做到每日消化一篇，或许，你只要一年，就能拿下各个大厂 offer！！！
 
 ### 代码编辑器相关
 
@@ -321,6 +323,11 @@ https://github.com/TKkk-iOSer/WeChatPlugin-MacOS
 
 - [收藏的vpn](./booksdata/vpn.md)
 - [科学上网翻墙](https://github.com/yangguangyu/sphard3.github.io)
+
+### 收藏的好的文章
+
+- [一个合格(优秀)的前端都应该阅读这些文章](https://juejin.im/post/5d387f696fb9a07eeb13ea60)
+> 如果你能做到每日消化一篇，或许，你只要一年，就能拿下各个大厂 offer！！！
 
 ### 总结
  - 把平时看到有用的常用的项目都收藏起来方便自己查找
