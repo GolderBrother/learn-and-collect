@@ -95,6 +95,8 @@
 * [react高阶组件](https://segmentfault.com/a/1190000010845410)
 * [从零开始搭建webpack+react开发环境](https://juejin.im/post/5af17cd5518825670d731065)
 * [webpack4 babel7 搭建react开发环境](https://imweb.io/topic/5b8699a96a0f1b02454de3c0)
+* [React.js 小书](http://huziketang.mangojuice.top/books/react/)
+* [React 源码解析](https://react.jokcy.me/)
 
 ### 能让我成长的优秀项目
 - [PanJiaChen/vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)  # vue 后台项目
