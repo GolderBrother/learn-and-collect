@@ -334,6 +334,9 @@ https://github.com/TKkk-iOSer/WeChatPlugin-MacOS
 > 如果你能做到每日消化一篇，或许，你只要一年，就能拿下各个大厂 offer！！！
 - [前端进阶必备，github 优质资源整理分享！](https://juejin.im/post/5d3edad9f265da03a652f133#heading-17)
 
+### 前端所有技术栈网站资源汇总
+- [印记中文维护](https://docschina.org/)
+
 ### 总结
  - 把平时看到有用的常用的项目都收藏起来方便自己查找
 
