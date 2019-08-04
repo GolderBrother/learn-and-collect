@@ -82,6 +82,8 @@
 * [简单理解vuex](http://www.cnblogs.com/kongsanpang/p/6236527.html)
 * [vue-cli prxoy解决开发环境的跨域](http://www.jianshu.com/p/95b2caf7e0da)
 * [mac设置环境变量以及查看](https://www.jianshu.com/p/acb1f062a925)
+* [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
+* [Vue.js 服务器端渲染指南](https://ssr.vuejs.org/zh/)
 
 ### react相关知识
 * [react官网](https://facebook.github.io/react/)
