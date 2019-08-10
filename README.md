@@ -190,8 +190,10 @@
 | Experess | [http://www.expressjs.com.cn/](http://www.expressjs.com.cn/) | nodejs 框架|
 | Express中文文档 | https://www.zybuluo.com/bajian/note/444152#reqapp | nodejs框架 |
 | Koa中文文档 | https://koa.bootcss.com/ | nodejs框架 |
-| Eggjs中文文档 | https://docs.nestjs.cn/ | nodejs框架 |
-| Nestjs | https://eggjs.org/ | nodejs框架 |
+| Eggjs中文文档 | https://eggjs.org/zh-cn/intro/quickstart.html | nodejs框架 |
+| Nestjs | https://docs.nestjs.com/first-steps | nodejs框架 |
+| Nestjs中文文档 | https://docs.nestjs.com/first-steps | nodejs框架 |
+| Nestjs中文文档2 | https://www.gitbook.com/book/exlley/nest-js | nodejs框架 |
 | pm2 | http://www.cnblogs.com/chyingp/p/pm2-documentation.html   | node生产环境部署工具 |
 | ThinkPHP5 | [https://www.kancloud.cn/manual/thinkphp5/118003](https://www.kancloud.cn/manual/thinkphp5/118003) | php TP 框架|
 | Mamp | [https://www.mamp.info/en/](https://www.mamp.info/en/) |  mac PHP集成环境 |
