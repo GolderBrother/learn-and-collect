@@ -103,6 +103,10 @@
 * [React.js 小书](http://huziketang.mangojuice.top/books/react/)
 * [React 源码解析](https://react.jokcy.me/)
 
+### Flutter相关知识
+* [Flutter完整开发实战详解](https://juejin.im/post/5d6cb579f265da03da24aeb9
+* [技术胖的Flutter学习视频](https://jspang.com/posts/2019/01/20/flutter-base.html)
+
 ### 能让我成长的优秀项目
 - [PanJiaChen/vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)  # vue 后台项目
 - [lin-xin/vue-manage-system](https://github.com/lin-xin/vue-manage-system) # vue 后台模板
@@ -313,6 +317,10 @@
 - [(下篇)中高级前端大厂面试秘籍，寒冬中为您保驾护航，直通大厂](https://juejin.im/post/5cc26dfef265da037b611738)
 
 - [前端 100 问：能搞懂 80% 的请把简历给我](https://juejin.im/post/5d23e750f265da1b855c7bbe)
+
+- [50 个JS 必须懂的面试题为你助力金九银十](https://juejin.im/post/5d6c53476fb9a06acc009e00)
+
+- [面试分享：两年工作经验成功面试阿里P6总结](https://juejin.im/post/5d690c726fb9a06b155dd40d)
 
 ### 小程序相关
 #### Taro
