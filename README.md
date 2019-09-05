@@ -65,6 +65,8 @@
 * [二哲 | 为了想保护的人而努力](http://www.meckodo.com/)
 * [珠峰架构师成长计划](http://zhufengpeixun.com/plan/index.html)
 
+### 一些实用的技术文章
+* [前端优质文章](https://github.com/qq449245884/xiaozhi)
 
 ### 实用技巧
 * [express-session实现简单身份认证](http://www.cnblogs.com/chyingp/p/express-session.html)
@@ -268,7 +270,7 @@
 **经典书籍**
 
 - 《重构》。可能是该主题最经典的一本书。相信学习后，既能够改善现有代码，也能够写出更好的代码。
-- https://www.kancloud.cn/sstd521/refactor/194211 
+- [重构改善既有代码的设计](https://www.kancloud.cn/sstd521/refactor/194211 )
 - 《代码整洁之道》。Rober C．Martin的经典著作，专业程序员必读的一本书。
 - 《程序员的职业素养》。也是Bob大叔的著作，前辈大牛几十年的心得体会，相信我们这些后生能够从中学到很多。
 - 《编写可读代码的艺术》。非常好的一本书，浅显易懂。我之前写了一篇读书笔记。有计划再读一遍。
