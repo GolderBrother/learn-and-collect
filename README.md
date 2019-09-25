@@ -343,7 +343,8 @@ https://github.com/TKkk-iOSer/WeChatPlugin-MacOS
 ### 科学上网
 
 - [收藏的vpn](./booksdata/vpn.md)
-- [科学上网翻墙](https://github.com/yangguangyu/sphard3.github.io)
+- [科学上网翻墙](https://github.com/yangguangyu/sphard3.github.io
+- [为什么要自己搭建翻墙服务？](https://github.com/xiaoming2028/FreeNetwork/wiki)
 
 ### 收藏的好的文章
 
