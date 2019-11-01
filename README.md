@@ -195,7 +195,7 @@
 | 技术名称 | 网站 | 描述 |
 | ------ | ------ | ------|
 | Node | [http://nodejs.cn/](http://nodejs.cn/) | nodejs中文网 |
-| Node-mirrors | [hhttps://npm.taobao.org/mirrors/node/](https://npm.taobao.org/mirrors/node/) | nodejs各种版本的阿里云镜像下载地址 |
+| Node-mirrors | [https://npm.taobao.org/mirrors/node/](https://npm.taobao.org/mirrors/node/) | nodejs各种版本的阿里云镜像下载地址 |
 | Experess | [http://www.expressjs.com.cn/](http://www.expressjs.com.cn/) | nodejs 框架|
 | Express中文文档 | https://www.zybuluo.com/bajian/note/444152#reqapp | nodejs框架 |
 | Koa中文文档 | https://koa.bootcss.com/ | nodejs框架 |
