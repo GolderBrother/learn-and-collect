@@ -355,5 +355,8 @@ https://github.com/TKkk-iOSer/WeChatPlugin-MacOS
 ### 前端所有技术栈网站资源汇总
 - [印记中文维护](https://docschina.org/)
 
+### 阿里云服务器
+- [跟你拼了](https://www.aliyun.com/1111/2019/group-buying-share?spm=5176.11131957.sdxmirvvc.2.26eb3ab1YFLgmW)
+
 ### 总结
  - 把平时看到有用的常用的项目都收藏起来方便自己查找
