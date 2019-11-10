@@ -1,0 +1,23 @@
+
+[简单三步同步你的 VSCode 用户配置](http://www.imooc.com/article/251855)
+
+```
+vscode-sync-token(GitHub Token):
+a447d4b019dbc00ff061ead0d36f740914f3ad0b
+
+Gist ID(GitHub Gist):
+9c0f826b111477f5efc503622a0d2ccd。
+```
+
+Sync: 上传完成。Gist ID:9c0f826b111477f5efc503622a0d2ccd。请复制这个 ID 并将其用于其他设备来下载配置。
+
+上传成功后会控制台 output 中会出现一系列信息，记住两个关键的信息，Github Token 相当于密码，Github Gist 是你保存在 Github Gist 的 id，以后下载配置都要使用到这两个信息
+
+可以通过 ```https://gist.github.com/<username>/<gist id>``` 访问到这个信息
+好了，此时你的配置已经成功同步到 Github Gist 啦，以后都可以随时随地一键配置 VSCode 了！
+
+### 配置新设备的 VSCode
+
+安装好 Settings Sync 拓展，ctrl（mac 是 command） + shift + p，输入 sync，点击 Sync: Download Settings，输入 access token 和 gist id，泡杯咖啡，
+
+> 等待同步完成。
