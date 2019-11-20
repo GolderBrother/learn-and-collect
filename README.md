@@ -106,7 +106,7 @@
 * [React 源码解析](https://react.jokcy.me/)
 
 ### Flutter相关知识
-* [Flutter完整开发实战详解](https://juejin.im/post/5d6cb579f265da03da24aeb9
+* [Flutter完整开发实战详解](https://juejin.im/post/5d6cb579f265da03da24aeb9)
 * [技术胖的Flutter学习视频](https://jspang.com/posts/2019/01/20/flutter-base.html)
 
 ### 能让我成长的优秀项目
@@ -357,6 +357,9 @@ https://github.com/TKkk-iOSer/WeChatPlugin-MacOS
 
 ### 阿里云服务器
 - [跟你拼了](https://www.aliyun.com/1111/2019/group-buying-share?spm=5176.11131957.sdxmirvvc.2.26eb3ab1YFLgmW)
+
+### VsCode 插件
+- [27 个提升开发幸福度的 VsCode 插件](https://juejin.im/post/5dd480c66fb9a01ff0135466?utm_source=gold_browser_extension)
 
 ### 总结
  - 把平时看到有用的常用的项目都收藏起来方便自己查找
